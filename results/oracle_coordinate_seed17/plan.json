@@ -1,0 +1,34 @@
+{
+  "original": "/home/sadasue/mywam/results/oracle_transport_seed17",
+  "original_summary_sha256": "903d362552f45b6ed860b554e08553c4b7de46d8bfec0b948b6adf2b96d3fe59",
+  "config": {
+    "scenes": [
+      "0016",
+      "0020",
+      "0030",
+      "0061",
+      "0065",
+      "0081",
+      "0123",
+      "0128"
+    ],
+    "grid": 14,
+    "channels": 32,
+    "frames": 24,
+    "strides": [
+      1,
+      4
+    ],
+    "seed": 17,
+    "fit_tracks": 8192,
+    "query_tracks": 8192,
+    "prior_ratio": 0.001,
+    "computation": "CPU float64, 2 threads; no CUDA, training or checkpoint changes",
+    "scope": "Oracle correspondence diagnostic on eight synthetic rendered validation scenes; not recognition or tracking accuracy",
+    "selection": "First eight prepared fixed-validation scene IDs, sorted before examining outcomes",
+    "limitations": "Current/previous GT coordinates estimate operators; held-out tracks evaluate memory. Dense oracle maps are not deployable. No new evidence is written after frame zero. Untrained RGB projections and random state values do not measure learned visual representations."
+  },
+  "source_sha256": "e91ee8abbc1c31c008112ac53761ba49bed9345f5d6c1c7bf2c1efa2aa60cbb0",
+  "scope": "Control memory resampling using identical adjacent-frame oracle flow maps.\n\nRepeated: H_t = W_t H_(t-1).\nAddress: C_t = W_t C_(t-1), H_read_t = sample(H_0, C_t).\nThe latter preserves H_0 but adds two coordinates per grid cell. Coordinates\nstill accumulate correspondence/interpolation errors. No learned model result.\n",
+  "limits": "Oracle adjacent flow in both arms; no new observations. Same maps, fit/query cohorts, fixed prior, dense output grid. Address method uses 2 extra scalars per cell. Coordinate averaging still loses multimodal associations. Not recognition performance or fixed-budget victory."
+}

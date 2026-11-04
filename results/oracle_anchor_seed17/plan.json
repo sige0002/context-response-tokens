@@ -1,0 +1,35 @@
+{
+  "original": "/home/sadasue/mywam/results/oracle_transport_seed17",
+  "original_summary_sha256": "903d362552f45b6ed860b554e08553c4b7de46d8bfec0b948b6adf2b96d3fe59",
+  "config": {
+    "scenes": [
+      "0016",
+      "0020",
+      "0030",
+      "0061",
+      "0065",
+      "0081",
+      "0123",
+      "0128"
+    ],
+    "grid": 14,
+    "channels": 32,
+    "frames": 24,
+    "strides": [
+      1,
+      4
+    ],
+    "seed": 17,
+    "fit_tracks": 8192,
+    "query_tracks": 8192,
+    "prior_ratio": 0.001,
+    "computation": "CPU float64, 2 threads; no CUDA, training or checkpoint changes",
+    "scope": "Oracle correspondence diagnostic on eight synthetic rendered validation scenes; not recognition or tracking accuracy",
+    "selection": "First eight prepared fixed-validation scene IDs, sorted before examining outcomes",
+    "limitations": "Current/previous GT coordinates estimate operators; held-out tracks evaluate memory. Dense oracle maps are not deployable. No new evidence is written after frame zero. Untrained RGB projections and random state values do not measure learned visual representations."
+  },
+  "source_sha256": "5297a06323eadb78ea20ff62abdd63f73cbcb6ef7f33bf80fab5cae55fb9bc32",
+  "scope": "Follow-up diagnostic: read once from an immutable initial memory.\n\nThis uses privileged frame-zero/current GT correspondences. It is not a causal\ncorrespondence estimator and does not establish an implementable architecture's\naccuracy. It tests whether repeated regridding is a useful failure mode to study.\n",
+  "hypothesis": "A fixed anchor avoids accumulated interpolation; GT long-range correspondence may be much harder to learn than adjacent-frame flow.",
+  "limits": "Oracle initial-to-current associations are privileged. Fitting-track visibility coverage differs from adjacent-frame fitting. No trained model, recognition score, SOTA claim, or deployable fixed-budget victory."
+}

@@ -1,0 +1,44 @@
+{
+  "config": {
+    "scenes": [
+      "0016",
+      "0020",
+      "0030",
+      "0061",
+      "0065",
+      "0081",
+      "0123",
+      "0128"
+    ],
+    "grid": 14,
+    "channels": 32,
+    "frames": 24,
+    "strides": [
+      1,
+      4
+    ],
+    "seed": 17,
+    "fit_tracks": 8192,
+    "query_tracks": 8192,
+    "prior_ratio": 0.001,
+    "computation": "CPU float64, 2 threads; no CUDA, training or checkpoint changes",
+    "scope": "Oracle correspondence diagnostic on eight synthetic rendered validation scenes; not recognition or tracking accuracy",
+    "selection": "First eight prepared fixed-validation scene IDs, sorted before examining outcomes",
+    "limitations": "Current/previous GT coordinates estimate operators; held-out tracks evaluate memory. Dense oracle maps are not deployable. No new evidence is written after frame zero. Untrained RGB projections and random state values do not measure learned visual representations."
+  },
+  "root": "/home/sadasue/mywam/data/cotracker3_kubric/scenes",
+  "sources": {
+    "/home/sadasue/mywam/exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "/home/sadasue/mywam/kubric_data.py": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa"
+  },
+  "metadata": {
+    "0016": "d0fde128aefebaa06f28e0f23d9e401884e404b43a7c6e66b404636f498829b1",
+    "0020": "3334c7f6bf8ee4591652aa0a1428f71a18f1387ab615449116d344cff5aef70e",
+    "0030": "8391c75657e403f74c366175350cb040640502147f308136f1eced68b880dbde",
+    "0061": "eecd0f083fd68dbacc95e657c26733dfcf3a0d946e22af8025b0dcbfed5fbe13",
+    "0065": "3ca1f4e75f71ce8bc1efd5d5008e976778fa415fb061722b281c7d14a9684e8e",
+    "0081": "362165f6cff1c6310f58e1bcc675281450729de93094484363ab0fdc5b1e3fdf",
+    "0123": "3ddd4293328b3afc84ce51f1877db1f4bca881c55bb5c5efb73d7e75f72b8c0f",
+    "0128": "d9503f2f15265327ccfe056c0dbd8c81b91510a8a7852f980266e4a5f9791e46"
+  }
+}

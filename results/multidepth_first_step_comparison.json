@@ -1,0 +1,72 @@
+{
+  "initial_weights_equal": true,
+  "input_order_equal": true,
+  "rng_equal": true,
+  "losses": [
+    10.238082885742188,
+    10.238082885742188
+  ],
+  "activations": [],
+  "gradients": [
+    {
+      "name": "encoder.core.mamba_blocks.0.mamba.A_log",
+      "max_abs": 1.1368683772161603e-13,
+      "relative_l2": 1.7109768180034735e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.0.mamba.D",
+      "max_abs": 1.0186340659856796e-10,
+      "relative_l2": 1.7428061482860358e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.0.mamba.dt_proj.bias",
+      "max_abs": 4.547473508864641e-13,
+      "relative_l2": 2.0205800410622032e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.1.mamba.A_log",
+      "max_abs": 4.547473508864641e-13,
+      "relative_l2": 1.987594515640012e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.1.mamba.D",
+      "max_abs": 1.3096723705530167e-10,
+      "relative_l2": 1.8949607749618735e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.1.mamba.dt_proj.bias",
+      "max_abs": 1.3642420526593924e-12,
+      "relative_l2": 2.2693163259646099e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.2.mamba.A_log",
+      "max_abs": 2.2737367544323206e-13,
+      "relative_l2": 2.0331218308911048e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.2.mamba.D",
+      "max_abs": 1.1641532182693481e-10,
+      "relative_l2": 1.799806739199994e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.2.mamba.dt_proj.bias",
+      "max_abs": 6.821210263296962e-13,
+      "relative_l2": 2.1426104979127558e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.3.mamba.A_log",
+      "max_abs": 1.9895196601282805e-13,
+      "relative_l2": 1.765478145898669e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.3.mamba.D",
+      "max_abs": 1.1641532182693481e-10,
+      "relative_l2": 1.6734698249365465e-07
+    },
+    {
+      "name": "encoder.core.mamba_blocks.3.mamba.dt_proj.bias",
+      "max_abs": 2.2737367544323206e-13,
+      "relative_l2": 2.359852970812426e-07
+    }
+  ]
+}

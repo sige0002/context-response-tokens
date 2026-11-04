@@ -1,0 +1,112 @@
+{
+  "scope": "Real synthetic scenes: learning/checkpoint/resume integration only, not tracking accuracy",
+  "source_encoder": {
+    "step": 3,
+    "epoch": 1,
+    "cursor": 4,
+    "checkpoint_sha256": "21a895d6987a73a9d9d5fb56de5061f45829ac0af1152f797c7f8abe648d20c8",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/video_training_fixture/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/video_training_fixture/val.jsonl",
+      "classes": 174,
+      "kind": "gmmix",
+      "placement": "after_encoder",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 2,
+      "accumulation": 2,
+      "steps": 3,
+      "warmup": 1,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 2,
+      "save_every": 1,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_gmmix_video.py": "731b8f8b25704019676db24809430af942ec7f08bf1075b97b362569fd9c9f40",
+        "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab",
+        "gmmix_checkpoint.py": "389fbd8bcd342edf77b3abe2ebbb3146ed9758f8fe9e7a7146eb65dee843efc3",
+        "video_data.py": "46df706ffef2f35d33031e794aaa0c504550081268b6ff1c9bf80eaa77347fb3",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "train_video.py": "aadd5e9c20e2c685d5a8f6286e8c5961fa00571f13c3953f7faec461bb388f56",
+        "baselines/gmmix/pyproject.toml": "060c6721eae020ee7c0583d1bb837cb0c641d1c95ac85a82b572b9688fc08073",
+        "baselines/gmmix/uv.lock": "d2a9fd0cfa3ff0f59dc097eceff28bb21fba745c81a13a2c132c98bacab8c4d0",
+        "baselines/gmmix/source_manifest.json": "af8c95eb8ae03c79ab52ebe3bad4e9751b1d1c1b33c6d1a8d0323ef9d432c7b7",
+        "vendor/frozen-video/models/ssm_modules/mamba_modules.py": "f1ea9f55ae640610c92429f85aa35d8bf2f2fd0e024c0bd9d6748f45b0b1c8a7",
+        "vendor/frozen-video/models/rvm_modules/rvm_blocks.py": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c"
+      },
+      "encoder_architecture": {
+        "kind": "gmmix",
+        "placement": "after_encoder",
+        "layers": 4,
+        "state_size": 16,
+        "spatial_heads": 16,
+        "mamba_dropout": 0.1,
+        "chunk_size": 512
+      },
+      "core_reference_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "core_reference_files": {
+        "models/ssm_modules/mamba_modules.py": "f1ea9f55ae640610c92429f85aa35d8bf2f2fd0e024c0bd9d6748f45b0b1c8a7",
+        "models/rvm_modules/rvm_blocks.py": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c"
+      },
+      "selective_scan_extension_sha256": "bdcf98985cc567c41267d7301a79108644f10dce5260cb33b9fbe80b99431730",
+      "causal_conv1d_available": false,
+      "train_sha256": "f314ba7d951a2be536ead91bef97da903f4d001c2d23dc3cf7cb9af66154c336",
+      "val_sha256": "0bf880deed10b0934b8b19fd5d334eecd3a12a54faaeed2167d3af9e541bb5b8"
+    }
+  },
+  "comparisons": {
+    "resumed": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    },
+    "repeat": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    }
+  },
+  "probe_encoder_bitwise_unchanged": true,
+  "adapt_backbone_bitwise_unchanged": true,
+  "adapt_changed_parameter_tensors_by_layer": {
+    "spatial_blocks.0": 12,
+    "spatial_blocks.1": 12,
+    "spatial_blocks.2": 12,
+    "spatial_blocks.3": 12,
+    "mamba_blocks.0": 11,
+    "mamba_blocks.1": 11,
+    "mamba_blocks.2": 11,
+    "mamba_blocks.3": 11,
+    "gates.0": 2,
+    "gates.1": 2,
+    "gates.2": 2,
+    "gates.3": 2,
+    "output_norm.weight": 1,
+    "output_norm.bias": 1
+  },
+  "steps": 3,
+  "train_scenes": 3,
+  "validation_scenes": 1,
+  "frames": 4,
+  "queries": 8,
+  "scheduled_validation_preserved_across_stop": true,
+  "encoder_type": "gmmix",
+  "predeclared_tolerances": {
+    "weights": 5e-06,
+    "loss": 0.001,
+    "normalized_xy": 0.001
+  },
+  "script_sha256": "4b3c31f485e4199064b16ddfc8c33197845e4243b68e2d35caa5de9a465c390e"
+}

@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-11-05T08:10:38.195728+09:00",
+  "latest_logged_step": 2200,
+  "budget": 20000,
+  "latest_validation": {
+    "event": "validation",
+    "step": 2000,
+    "loss": 2.883294346943391,
+    "accuracy": 0.29071316139968517,
+    "samples": 24777
+  },
+  "seconds_per_update_recent_median": 2.2463055285159497,
+  "remaining_updates": 17800,
+  "remaining_full_validations": 18,
+  "assumed_seconds_per_full_validation": [
+    900,
+    960
+  ],
+  "eta_hours": [
+    15.606732890995529,
+    15.90673289099553
+  ],
+  "estimated_completion": [
+    "2026-11-05T23:47:02.434136+09:00",
+    "2026-11-06T00:05:02.434136+09:00"
+  ],
+  "scope": "Primary training plus scheduled validation only. Excludes subsequent models, auxiliary final evaluations, replication, and extra interruptions."
+}

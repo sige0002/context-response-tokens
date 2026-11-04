@@ -1,0 +1,972 @@
+{
+  "scope": "Engineering subset",
+  "videos": 1,
+  "verification": {
+    "normal_branch_max_xy": 0.0,
+    "normal_branch_max_visibility_logit": 0.0,
+    "tolerances": {
+      "normalized_xy": 1e-06,
+      "visibility_logit": 1e-05
+    },
+    "baseline_report_sha256": "9c9e9fc616ba206cc33b09a6b8729fa758760937d251b9d45733c1ebab3e7901",
+    "engineering_subset": true
+  },
+  "official_metric": {
+    "upstream_file_sha256": "90cd01e53e23f6d489d3a6cd840cfd93fed4c1a6f4a0dfd373933cc164f0e570",
+    "local_file_sha256": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "comparison": "Full function AST, excluding source locations"
+  },
+  "checkpoint_sha256": "2a4cb5b1dceeb3a3022d106b142cf09ac31032cb85b8be98491cc05e76708c8c",
+  "dataset_extraction_sha256": "d464a3f3d9d16853858cdde6b28e4bc9a62f3b00ec17da81412955dcfaea0864",
+  "primary": "All-post-query average Jaccard: normal state minus reset every frame",
+  "secondary": "Reset every 24 frames; all age and reappearance strata are exploratory",
+  "age_bins": [
+    [
+      1,
+      8
+    ],
+    [
+      9,
+      24
+    ],
+    [
+      25,
+      64
+    ],
+    [
+      65,
+      128
+    ],
+    [
+      129,
+      null
+    ]
+  ],
+  "reappearance_gap_bins": [
+    [
+      1,
+      7
+    ],
+    [
+      8,
+      23
+    ],
+    [
+      24,
+      null
+    ]
+  ],
+  "aggregation": "Unweighted video means within each GT-only eligible stratum; no comparison with fewer than one visible target",
+  "intervals": "Paired duplicate-RGB cluster bootstrap, 10000 draws, seed 17; none with fewer than two clusters",
+  "limits": "Shared full-history query anchors remain. Reset shifts state distributions. Strata differ in target support; across-age changes do not isolate forgetting. Units are frames, not seconds. No multiple-testing or training-seed adjustment.",
+  "strata": {
+    "all_post_query": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 11152,
+        "visible_positions": 9548,
+        "occluded_positions": 1604
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8561692969870875
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8561692969870875
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8561692969870875
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "age_1_8": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 304,
+        "visible_positions": 304,
+        "occluded_positions": 0
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "age_9_24": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 608,
+        "visible_positions": 583,
+        "occluded_positions": 25
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9588815789473685
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9588815789473685
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9588815789473685
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "age_25_64": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 1520,
+        "visible_positions": 1429,
+        "occluded_positions": 91
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9401315789473684
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9401315789473684
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.9401315789473684
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "age_65_128": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 2432,
+        "visible_positions": 2156,
+        "occluded_positions": 276
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8865131578947368
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8865131578947368
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8865131578947368
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "age_129_plus": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 6288,
+        "visible_positions": 5076,
+        "occluded_positions": 1212
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8072519083969466
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8072519083969466
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 0.8072519083969466
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "reappearance_gap_1_7": {
+      "videos": 0,
+      "unique_rgb_videos": 0,
+      "excluded_without_visible_positions": 1,
+      "counts": {
+        "evaluated_positions": 0,
+        "visible_positions": 0,
+        "occluded_positions": 0
+      },
+      "conditions": {},
+      "full_minus_reset": {}
+    },
+    "reappearance_gap_8_23": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 1,
+        "visible_positions": 1,
+        "occluded_positions": 0
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    },
+    "reappearance_gap_24_plus": {
+      "videos": 1,
+      "unique_rgb_videos": 1,
+      "excluded_without_visible_positions": 0,
+      "counts": {
+        "evaluated_positions": 1,
+        "visible_positions": 1,
+        "occluded_positions": 0
+      },
+      "conditions": {
+        "full": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_1": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        },
+        "reset_24": {
+          "average_jaccard": 0.0,
+          "average_pts_within_thresh": 0.0,
+          "occlusion_accuracy": 1.0
+        }
+      },
+      "full_minus_reset": {
+        "reset_1": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        },
+        "reset_24": {
+          "average_jaccard": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "average_pts_within_thresh": {
+            "difference": 0.0,
+            "interval": null
+          },
+          "occlusion_accuracy": {
+            "difference": 0.0,
+            "interval": null
+          }
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "gear_v2_9-basket_front_right_rgb_img-0",
+      "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c",
+      "strata": {
+        "all_post_query": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 11152,
+              "visible_positions": 9548,
+              "occluded_positions": 1604
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8561692969870875
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 11152,
+              "visible_positions": 9548,
+              "occluded_positions": 1604
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8561692969870875
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 11152,
+              "visible_positions": 9548,
+              "occluded_positions": 1604
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8561692969870875
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "age_1_8": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 304,
+              "visible_positions": 304,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 304,
+              "visible_positions": 304,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 304,
+              "visible_positions": 304,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "age_9_24": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 608,
+              "visible_positions": 583,
+              "occluded_positions": 25
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9588815789473685
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 608,
+              "visible_positions": 583,
+              "occluded_positions": 25
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9588815789473685
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 608,
+              "visible_positions": 583,
+              "occluded_positions": 25
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9588815789473685
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "age_25_64": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 1520,
+              "visible_positions": 1429,
+              "occluded_positions": 91
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9401315789473684
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 1520,
+              "visible_positions": 1429,
+              "occluded_positions": 91
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9401315789473684
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 1520,
+              "visible_positions": 1429,
+              "occluded_positions": 91
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.9401315789473684
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "age_65_128": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 2432,
+              "visible_positions": 2156,
+              "occluded_positions": 276
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8865131578947368
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 2432,
+              "visible_positions": 2156,
+              "occluded_positions": 276
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8865131578947368
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 2432,
+              "visible_positions": 2156,
+              "occluded_positions": 276
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8865131578947368
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "age_129_plus": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 6288,
+              "visible_positions": 5076,
+              "occluded_positions": 1212
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8072519083969466
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 6288,
+              "visible_positions": 5076,
+              "occluded_positions": 1212
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8072519083969466
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 6288,
+              "visible_positions": 5076,
+              "occluded_positions": 1212
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 0.8072519083969466
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "reappearance_gap_1_7": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 0,
+              "visible_positions": 0,
+              "occluded_positions": 0
+            },
+            "metrics": null,
+            "eligibility": "No GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 0,
+              "visible_positions": 0,
+              "occluded_positions": 0
+            },
+            "metrics": null,
+            "eligibility": "No GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 0,
+              "visible_positions": 0,
+              "occluded_positions": 0
+            },
+            "metrics": null,
+            "eligibility": "No GT-visible selected target positions"
+          }
+        },
+        "reappearance_gap_8_23": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        },
+        "reappearance_gap_24_plus": {
+          "full": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_1": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          },
+          "reset_24": {
+            "counts": {
+              "evaluated_positions": 1,
+              "visible_positions": 1,
+              "occluded_positions": 0
+            },
+            "metrics": {
+              "average_jaccard": 0.0,
+              "average_pts_within_thresh": 0.0,
+              "occlusion_accuracy": 1.0
+            },
+            "eligibility": "Has GT-visible selected target positions"
+          }
+        }
+      },
+      "raw_label_audits": {
+        "full": {
+          "id": "gear_v2_9-basket_front_right_rgb_img-0",
+          "metrics": {
+            "occlusion_accuracy": 0.8561692969870875,
+            "pts_within_1": 0.0,
+            "jaccard_1": 0.0,
+            "pts_within_2": 0.0,
+            "jaccard_2": 0.0,
+            "pts_within_4": 0.0,
+            "jaccard_4": 0.0,
+            "pts_within_8": 0.0,
+            "jaccard_8": 0.0,
+            "pts_within_16": 0.0,
+            "jaccard_16": 0.0,
+            "average_jaccard": 0.0,
+            "average_pts_within_thresh": 0.0
+          },
+          "query_coordinate_max_abs_difference": 0.0,
+          "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c",
+          "predictions_sha256": "5a5241e82cb39b275946b22fef388048df193893c8accbfc9ef65782536b7f60"
+        },
+        "reset_1": {
+          "id": "gear_v2_9-basket_front_right_rgb_img-0",
+          "metrics": {
+            "occlusion_accuracy": 0.8561692969870875,
+            "pts_within_1": 0.0,
+            "jaccard_1": 0.0,
+            "pts_within_2": 0.0,
+            "jaccard_2": 0.0,
+            "pts_within_4": 0.0,
+            "jaccard_4": 0.0,
+            "pts_within_8": 0.0,
+            "jaccard_8": 0.0,
+            "pts_within_16": 0.0,
+            "jaccard_16": 0.0,
+            "average_jaccard": 0.0,
+            "average_pts_within_thresh": 0.0
+          },
+          "query_coordinate_max_abs_difference": 0.0,
+          "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c",
+          "predictions_sha256": "bc94b393c65aea0302dd42b5db728a344d12a7f6071f1293d6306f6e30614381"
+        },
+        "reset_24": {
+          "id": "gear_v2_9-basket_front_right_rgb_img-0",
+          "metrics": {
+            "occlusion_accuracy": 0.8561692969870875,
+            "pts_within_1": 0.0,
+            "jaccard_1": 0.0,
+            "pts_within_2": 0.0,
+            "jaccard_2": 0.0,
+            "pts_within_4": 0.0,
+            "jaccard_4": 0.0,
+            "pts_within_8": 0.0,
+            "jaccard_8": 0.0,
+            "pts_within_16": 0.0,
+            "jaccard_16": 0.0,
+            "average_jaccard": 0.0,
+            "average_pts_within_thresh": 0.0
+          },
+          "query_coordinate_max_abs_difference": 0.0,
+          "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c",
+          "predictions_sha256": "1f2b49d04d2e8f52eb02c0067a30bc2bb449a4bb2c7e7a1027ced24ff540a55c"
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "analyze_point_history.py": "255d09c80b62ca4fa24bf7ae97cbcbace2efb2c429e8c00a0f88514a85def337",
+    "audit_robotap_predictions.py": "cf64538425f5e60dc423a973c0facaea2a1acb75df11e8fa38edeb0f28edc304",
+    "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+    "evaluate_point_history.py": "ecd5927139608718e5c58eb1800f320829b9824f2a7eb5c6219fcc373b1ad3e2",
+    "summarize_points.py": "2b4c7e55c5ca0e866a09e72061af7f6d6409dd5057f1b0a7224e6a82d20713dd",
+    "paired_metrics.py": "f596cbda1f0ad0ee41454fc8b71c4710a6fe0d898c57da31f686d9b3d4882426",
+    "robotap_data.py": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32"
+  }
+}

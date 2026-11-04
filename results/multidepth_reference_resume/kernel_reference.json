@@ -1,0 +1,48 @@
+{
+  "scope": "Native FP32 forward/backward versus independent FP64 recurrence on two real-input sequences",
+  "sequences": 2,
+  "frames": 8,
+  "predeclared_relative_l2_tolerance": 0.0001,
+  "forward": {
+    "max_abs": 2.421157312415545e-07,
+    "relative_l2": 1.1631822711488538e-07
+  },
+  "gradients": {
+    "u": {
+      "max_abs": 8.232509665021936e-12,
+      "relative_l2": 1.2037610007720214e-07
+    },
+    "delta": {
+      "max_abs": 3.5332221371213667e-15,
+      "relative_l2": 1.6545207353951239e-07
+    },
+    "A": {
+      "max_abs": 1.1447340279663703e-15,
+      "relative_l2": 1.3977010305335756e-07
+    },
+    "B": {
+      "max_abs": 2.85008480283624e-13,
+      "relative_l2": 9.179581268291179e-07
+    },
+    "C": {
+      "max_abs": 5.872051521327353e-13,
+      "relative_l2": 9.085702943362565e-07
+    },
+    "D": {
+      "max_abs": 9.968311491867629e-13,
+      "relative_l2": 6.336237686768036e-08
+    },
+    "z": {
+      "max_abs": 3.332494362114167e-12,
+      "relative_l2": 1.2153770986759855e-07
+    },
+    "delta_bias": {
+      "max_abs": 8.33579048482261e-15,
+      "relative_l2": 1.4211004479828283e-07
+    }
+  },
+  "source_sha256": "133ec4c4af4530cea957c5edb734c21d15025843bba9af98c6d65d51b85273cb",
+  "capture_sha256": "2f3088456720166a83d6a86811b8a5c5d8746207a1d48e8a02a08dd822bdc73a",
+  "kernel_sha256": "bdcf98985cc567c41267d7301a79108644f10dce5260cb33b9fbe80b99431730",
+  "passed": true
+}

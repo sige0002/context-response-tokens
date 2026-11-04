@@ -1,0 +1,329 @@
+{
+  "scope": "implementation and optimization diagnostics, not a generalization benchmark",
+  "data": {
+    "train": {
+      "videos": 2784,
+      "classes": 174,
+      "per_class_counts": [
+        16
+      ],
+      "official_label_or_order_errors": [],
+      "identical_frames": [],
+      "short_clips": [],
+      "unique_frame_files": 16704,
+      "unique_frame_contents": 16704
+    },
+    "val": {
+      "videos": 696,
+      "classes": 174,
+      "per_class_counts": [
+        4
+      ],
+      "official_label_or_order_errors": [],
+      "identical_frames": [],
+      "short_clips": [],
+      "unique_frame_files": 4176,
+      "unique_frame_contents": 4176
+    },
+    "cross_split_overlap": {
+      "id": 0,
+      "path": 0,
+      "frame_sha256": 0
+    }
+  },
+  "preprocessing": {
+    "max_abs_difference": 0.0,
+    "minimum": -1.0,
+    "maximum": 1.0,
+    "size": [
+      3,
+      224,
+      224
+    ],
+    "processor": {
+      "_processor_class": "SiglipProcessor",
+      "image_processor_type": "SiglipImageProcessor",
+      "do_resize": true,
+      "size": {
+        "height": 224,
+        "width": 224
+      },
+      "resample": 2,
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "do_convert_rgb": null
+    }
+  },
+  "pretrained_backbone": {
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "tensors": 208,
+    "changed_tensors": [],
+    "all_frozen": true
+  },
+  "real_clip_forward": {
+    "ids": [
+      "6",
+      "15"
+    ],
+    "identity_max_abs": 0.0,
+    "future_leak_max_abs": 0.0,
+    "batch_stream_rmse": 0.003763039130717516,
+    "batch_stream_max_abs": 0.6786823272705078,
+    "batch_stream_logit_max_abs": 0.015625,
+    "batch_stream_prediction_equal": true
+  },
+  "trained_gradients": {
+    "adapters": {
+      "3": {
+        "gain_mean_abs": 0.005321882665157318,
+        "gain_max_abs": 0.020084120333194733,
+        "gain_gradient": 7.38116455078125,
+        "down_gradient": 0.9099025726318359,
+        "up_gradient": 0.82100510597229,
+        "mixer_gradient": 0.6614004969596863,
+        "all_gradients_finite": true
+      },
+      "7": {
+        "gain_mean_abs": 0.004482943098992109,
+        "gain_max_abs": 0.014821113087236881,
+        "gain_gradient": 19.582746505737305,
+        "down_gradient": 3.2613508701324463,
+        "up_gradient": 2.040341377258301,
+        "mixer_gradient": 3.0857043266296387,
+        "all_gradients_finite": true
+      },
+      "11": {
+        "gain_mean_abs": 0.003228454850614071,
+        "gain_max_abs": 0.031450048089027405,
+        "gain_gradient": 27.08318328857422,
+        "down_gradient": 2.315291404724121,
+        "up_gradient": 2.0410375595092773,
+        "mixer_gradient": 1.6659202575683594,
+        "all_gradients_finite": true
+      }
+    },
+    "input_gradient_norm_per_frame": [
+      0.09309609979391098,
+      0.11553661525249481,
+      0.12879985570907593,
+      0.42778486013412476,
+      0.16010242700576782,
+      1.9172956943511963
+    ],
+    "frozen_backbone_has_grad": false
+  },
+  "validation_recount": {
+    "epoch": 3,
+    "correct": 44,
+    "total": 696,
+    "accuracy": 0.06321839080459771,
+    "saved_accuracy": 0.06321839080459771,
+    "changed_predictions": 0
+  },
+  "counterfactual_overfit": {
+    "source_ids": [
+      "6",
+      "15",
+      "52",
+      "57"
+    ],
+    "clips": 8,
+    "classes": 2,
+    "frames": 6,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "fresh_adapters": true,
+    "pretrained_frozen_backbone": true,
+    "artificial_order_labels": true,
+    "updates": 100,
+    "trace": [
+      {
+        "updates": 10,
+        "loss": 0.6942359805107117,
+        "accuracy": 0.5,
+        "samples": 8,
+        "predictions": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "updates": 20,
+        "loss": 0.6935181617736816,
+        "accuracy": 0.5,
+        "samples": 8,
+        "predictions": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "updates": 30,
+        "loss": 0.6934506893157959,
+        "accuracy": 0.5,
+        "samples": 8,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "updates": 40,
+        "loss": 0.6932643949985504,
+        "accuracy": 0.5,
+        "samples": 8,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "updates": 50,
+        "loss": 0.5819544345140457,
+        "accuracy": 0.625,
+        "samples": 8,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "updates": 60,
+        "loss": 0.5106302499771118,
+        "accuracy": 0.625,
+        "samples": 8,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "updates": 70,
+        "loss": 0.47388899326324463,
+        "accuracy": 0.75,
+        "samples": 8,
+        "predictions": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "updates": 80,
+        "loss": 0.32779403030872345,
+        "accuracy": 0.75,
+        "samples": 8,
+        "predictions": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "updates": 90,
+        "loss": 0.06396599858999252,
+        "accuracy": 1.0,
+        "samples": 8,
+        "predictions": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "updates": 100,
+        "loss": 4.7408872887899633e-05,
+        "accuracy": 1.0,
+        "samples": 8,
+        "predictions": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    ],
+    "current_only": {
+      "loss": 3.4468910694122314,
+      "accuracy": 0.5,
+      "samples": 8,
+      "predictions": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "interpretation": "Memorization of paired clips; not recognition accuracy or generalization."
+  }
+}

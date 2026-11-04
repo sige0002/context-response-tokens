@@ -1,0 +1,25 @@
+{
+  "scope": "Three-video evaluator/trainer consistency check; not accuracy research",
+  "predictions_equal": true,
+  "accuracy_recount_equal": true,
+  "validation_loss_difference": 0.0,
+  "checkpoint_sha256": "e1f3fe78eacf615411e1bfdf93e5ac12b8b2ece18c5a877140f77435e10bdcf5",
+  "evaluation_sha256": "ec87779b9035039caabb834c9f43c849ded5d39c2f217a1342070dbf3ded8ff0",
+  "clip_stream": {
+    "full": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0008329154494805116,
+      "prediction_disagreements": 0
+    },
+    "current": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0009023982400231125,
+      "prediction_disagreements": 0
+    },
+    "reverse_history": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0008752117238785571,
+      "prediction_disagreements": 0
+    }
+  }
+}

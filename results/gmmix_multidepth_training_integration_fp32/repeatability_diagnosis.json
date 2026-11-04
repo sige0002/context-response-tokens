@@ -1,0 +1,316 @@
+{
+  "resumed": {
+    "differences": [
+      {
+        "key": "encoder.core.spatial_blocks.2.sa_attn.in_proj_weight",
+        "max_abs": 0.00015642307698726654,
+        "l2": 0.0008380560320802033,
+        "relative_l2": 2.469350874889642e-05,
+        "different": 1572768
+      },
+      {
+        "key": "encoder.core.gates.0.weight",
+        "max_abs": 0.00014866702258586884,
+        "l2": 0.0037800734862685204,
+        "relative_l2": 0.00023619228159077466,
+        "different": 1163022
+      },
+      {
+        "key": "encoder.core.gates.3.weight",
+        "max_abs": 0.00014854967594146729,
+        "l2": 0.0032563116401433945,
+        "relative_l2": 0.00020343030337244272,
+        "different": 1161198
+      },
+      {
+        "key": "encoder.core.spatial_blocks.3.mlp.fc1.weight",
+        "max_abs": 0.00014436617493629456,
+        "l2": 0.0008159361896105111,
+        "relative_l2": 2.551032230257988e-05,
+        "different": 2170972
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.mlp.fc2.weight",
+        "max_abs": 0.00014367885887622833,
+        "l2": 0.0008548047626391053,
+        "relative_l2": 5.34045830136165e-05,
+        "different": 2264368
+      },
+      {
+        "key": "encoder.core.gates.1.weight",
+        "max_abs": 0.00014336011372506618,
+        "l2": 0.003367156023159623,
+        "relative_l2": 0.00021042069420218468,
+        "different": 1164161
+      },
+      {
+        "key": "readout.mlp_fc2.weight",
+        "max_abs": 0.00013876892626285553,
+        "l2": 0.0005472005577757955,
+        "relative_l2": 3.419234781176783e-05,
+        "different": 2185876
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.mlp.fc1.weight",
+        "max_abs": 0.00013536307960748672,
+        "l2": 0.0008337462204508483,
+        "relative_l2": 2.6061676180688664e-05,
+        "different": 2174841
+      },
+      {
+        "key": "encoder.core.gates.2.weight",
+        "max_abs": 0.00013331696391105652,
+        "l2": 0.0031463077757507563,
+        "relative_l2": 0.0001966459967661649,
+        "different": 1162006
+      },
+      {
+        "key": "encoder.core.spatial_blocks.1.mlp.fc2.weight",
+        "max_abs": 0.0001320457085967064,
+        "l2": 0.0008288996177725494,
+        "relative_l2": 5.1821563829435036e-05,
+        "different": 2264328
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.mlp.fc1.weight",
+        "max_abs": 0.00012974347919225693,
+        "l2": 0.0008196551352739334,
+        "relative_l2": 2.5612460376578383e-05,
+        "different": 2161386
+      },
+      {
+        "key": "encoder.core.spatial_blocks.3.mlp.fc2.weight",
+        "max_abs": 0.00012886710464954376,
+        "l2": 0.0007615711656399071,
+        "relative_l2": 4.760209412779659e-05,
+        "different": 2262345
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.mlp.fc2.weight",
+        "max_abs": 0.00012788362801074982,
+        "l2": 0.0009383303695358336,
+        "relative_l2": 5.864941340405494e-05,
+        "different": 2256874
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.sa_attn.in_proj_weight",
+        "max_abs": 0.00012204237282276154,
+        "l2": 0.0006407347391359508,
+        "relative_l2": 1.8881573851103894e-05,
+        "different": 1609627
+      },
+      {
+        "key": "encoder.core.spatial_blocks.3.sa_attn.out_proj.weight",
+        "max_abs": 0.00011644698679447174,
+        "l2": 0.00038182258140295744,
+        "relative_l2": 2.385764310020022e-05,
+        "different": 536138
+      },
+      {
+        "key": "readout.mlp_fc1.weight",
+        "max_abs": 0.00011487677693367004,
+        "l2": 0.0005522218416444957,
+        "relative_l2": 1.7262294932152145e-05,
+        "different": 2049512
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.sa_attn.out_proj.weight",
+        "max_abs": 0.00011197756975889206,
+        "l2": 0.0004412669804878533,
+        "relative_l2": 2.758216578513384e-05,
+        "different": 538501
+      },
+      {
+        "key": "encoder.core.mamba_blocks.1.mamba.out_proj.weight",
+        "max_abs": 0.00010911974823102355,
+        "l2": 0.0005176817649044096,
+        "relative_l2": 3.235608892282471e-05,
+        "different": 1112724
+      },
+      {
+        "key": "readout.out_proj.weight",
+        "max_abs": 0.00010626902803778648,
+        "l2": 0.0002648667723406106,
+        "relative_l2": 1.6559262803639285e-05,
+        "different": 515135
+      },
+      {
+        "key": "encoder.feature_mlps.3.mlp.0.weight",
+        "max_abs": 0.00010260194540023804,
+        "l2": 0.000449388608103618,
+        "relative_l2": 1.9855373466270976e-05,
+        "different": 1161859
+      }
+    ],
+    "differing_tensors": 143,
+    "rng_equal": true,
+    "cuda_rng_equal": true,
+    "losses": [
+      {
+        "step": 2,
+        "loss": 5.211378574371338
+      },
+      {
+        "step": 3,
+        "loss": 5.211075146993001
+      }
+    ]
+  },
+  "repeat": {
+    "differences": [
+      {
+        "key": "encoder.core.gates.0.weight",
+        "max_abs": 0.00014946050941944122,
+        "l2": 0.00353285763412714,
+        "relative_l2": 0.00022074536536820233,
+        "different": 1152666
+      },
+      {
+        "key": "encoder.core.gates.3.weight",
+        "max_abs": 0.00014760554768145084,
+        "l2": 0.0031314650550484657,
+        "relative_l2": 0.00019563081150408834,
+        "different": 1150728
+      },
+      {
+        "key": "encoder.core.gates.1.weight",
+        "max_abs": 0.0001456858590245247,
+        "l2": 0.003407806158065796,
+        "relative_l2": 0.00021296099293977022,
+        "different": 1154201
+      },
+      {
+        "key": "encoder.core.spatial_blocks.3.mlp.fc2.weight",
+        "max_abs": 0.00014312006533145905,
+        "l2": 0.0007649070466868579,
+        "relative_l2": 4.781060488312505e-05,
+        "different": 2157524
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.mlp.fc2.weight",
+        "max_abs": 0.0001414965372532606,
+        "l2": 0.0007879110053181648,
+        "relative_l2": 4.9247599235968664e-05,
+        "different": 2142252
+      },
+      {
+        "key": "encoder.core.gates.2.weight",
+        "max_abs": 0.00013786274939775467,
+        "l2": 0.003133344231173396,
+        "relative_l2": 0.00019583576067816466,
+        "different": 1151910
+      },
+      {
+        "key": "encoder.core.spatial_blocks.1.mlp.fc2.weight",
+        "max_abs": 0.0001355241984128952,
+        "l2": 0.0007141685928218067,
+        "relative_l2": 4.4648750190390274e-05,
+        "different": 2153468
+      },
+      {
+        "key": "readout.mlp_fc2.weight",
+        "max_abs": 0.00013405317440629005,
+        "l2": 0.00047666492173448205,
+        "relative_l2": 2.9784861908410676e-05,
+        "different": 2008640
+      },
+      {
+        "key": "encoder.core.spatial_blocks.3.mlp.fc1.weight",
+        "max_abs": 0.0001314440742135048,
+        "l2": 0.0007158652879297733,
+        "relative_l2": 2.2381596863851883e-05,
+        "different": 2038224
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.mlp.fc1.weight",
+        "max_abs": 0.00012676510959863663,
+        "l2": 0.0007999806548468769,
+        "relative_l2": 2.499767651897855e-05,
+        "different": 2020901
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.sa_attn.in_proj_weight",
+        "max_abs": 0.00012662075459957123,
+        "l2": 0.0006514082197099924,
+        "relative_l2": 1.9193888874724507e-05,
+        "different": 1444152
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.mlp.fc2.weight",
+        "max_abs": 0.00011692149564623833,
+        "l2": 0.0007639430114068091,
+        "relative_l2": 4.772792453877628e-05,
+        "different": 2155565
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.mlp.fc1.weight",
+        "max_abs": 0.00011200830340385437,
+        "l2": 0.0007250980706885457,
+        "relative_l2": 2.2665495635010302e-05,
+        "different": 2034289
+      },
+      {
+        "key": "encoder.feature_mlps.3.mlp.2.weight",
+        "max_abs": 0.00010593235492706299,
+        "l2": 0.0004884324152953923,
+        "relative_l2": 3.053672844544053e-05,
+        "different": 1162787
+      },
+      {
+        "key": "encoder.feature_mlps.1.mlp.2.weight",
+        "max_abs": 0.00010402407497167587,
+        "l2": 0.00048809239524416625,
+        "relative_l2": 3.0493301892420277e-05,
+        "different": 1162090
+      },
+      {
+        "key": "encoder.core.spatial_blocks.1.mlp.fc1.weight",
+        "max_abs": 0.00010077841579914093,
+        "l2": 0.0006739563541486859,
+        "relative_l2": 2.1070545699330978e-05,
+        "different": 2036142
+      },
+      {
+        "key": "encoder.feature_mlps.1.mlp.0.weight",
+        "max_abs": 0.0001004096120595932,
+        "l2": 0.0004458128532860428,
+        "relative_l2": 1.9697597963386215e-05,
+        "different": 1162238
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.sa_attn.out_proj.weight",
+        "max_abs": 0.00010029599070549011,
+        "l2": 0.0003979875473305583,
+        "relative_l2": 2.4881819626898505e-05,
+        "different": 493641
+      },
+      {
+        "key": "encoder.core.spatial_blocks.2.sa_attn.in_proj_bias",
+        "max_abs": 0.00010012063285103068,
+        "l2": 0.0005993084632791579,
+        "relative_l2": 0.10052955895662308,
+        "different": 2303
+      },
+      {
+        "key": "encoder.core.spatial_blocks.0.sa_attn.in_proj_weight",
+        "max_abs": 9.873323142528534e-05,
+        "l2": 0.0005901347030885518,
+        "relative_l2": 1.7390460925525986e-05,
+        "different": 1489972
+      }
+    ],
+    "differing_tensors": 143,
+    "rng_equal": true,
+    "cuda_rng_equal": true,
+    "losses": [
+      {
+        "step": 2,
+        "loss": 5.211452484130859
+      },
+      {
+        "step": 3,
+        "loss": 5.210859457651774
+      }
+    ]
+  }
+}

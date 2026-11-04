@@ -1,0 +1,24 @@
+{
+  "command": "CUDA_VISIBLE_DEVICES='' uv run --locked pytest -q test_kubric_data.py test_point_training.py test_point_readout.py test_point_evaluation.py test_point_experiments.py test_point_history.py",
+  "passed": 35,
+  "failed": 0,
+  "seconds": 2.41,
+  "log": "results/point_history_cpu_verification.log",
+  "log_sha256": "6ad21c23817fa4ad903e73c9b78608a2553a6a9a4e7f23ccf4f0a21dc46d4445",
+  "verified_at": "2026-11-04T20:33:55.045272+00:00",
+  "scope": "Storage/masked-label loss, point training and online history interventions; not recognition accuracy",
+  "source_sha256": {
+    "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+    "evaluate_point_history.py": "dbd0df9eeaa0590913fc38afeccd83ba7e84c0c1d841b589d19158e8204ed43c",
+    "check_point_history.py": "bb9bb596fb8ee74bd44261b2f064310e59310f1717a7543d86ab29febd1058b5",
+    "pause_training.py": "26a65916b123a0ede3510252dfe068d0104c81e8bacf0d1ff4444d4919494fe8",
+    "kubric_data.py": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa",
+    "prepare_kubric_points.py": "0938bd6193ce87210a6141746972c8efaf78b0f0eb75ff8b66751db6b8e7188f",
+    "test_kubric_data.py": "bb3841045f762ea39abee9e4347d51b8d72f637e94fa78b656046bea9545a456",
+    "test_point_training.py": "58a4d3bb8ef530366154ab086b6666b9a61882f7a1051e6851c1ed4556307b3f",
+    "test_point_readout.py": "34b196ce937e8114d6fcce491efe82ba2e0d920d1860972c92c6b0730d2c7f92",
+    "test_point_evaluation.py": "a6cbecc556be8d2e9ec8b7adfa4fc1ca927f4ef4daf0b1a298250859015bc006",
+    "test_point_experiments.py": "fd369e78778509a7c7493403fba22d9bd4d9f57cdf37d663cdaf839c2656626f",
+    "test_point_history.py": "3e69bf3d34d33c62e513950260c10b525406ba3a4a06450e0ec1216b10ae61fb"
+  }
+}

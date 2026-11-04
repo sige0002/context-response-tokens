@@ -1,0 +1,619 @@
+{
+  "scope": "Native GPU API/causality/reset checks on a real video prefix with arbitrary queries; not tracking accuracy",
+  "video_id": "gear_v2_9-basket_front_right_rgb_img-0",
+  "shard": "robotap_split0.pkl",
+  "frames": 12,
+  "video_prefix_sha256": "2ddc799b24b59b61172d6a68b6168a93dbc5346a7f5df972b2920cf36dd5ae99",
+  "query_xy": [
+    [
+      0.30000001192092896,
+      0.4000000059604645
+    ],
+    [
+      0.6000000238418579,
+      0.5
+    ],
+    [
+      0.5,
+      0.6000000238418579
+    ]
+  ],
+  "query_frames": [
+    2,
+    0,
+    7
+  ],
+  "periods": [
+    1,
+    4,
+    100
+  ],
+  "models": {
+    "mamba": {
+      "checkpoint_sha256": "a64637eba35a364cdb19f840d592d713c1c01e231f2f93a1754eb1eea97faee2",
+      "readout": "Fresh deterministic random point head",
+      "full_vs_standard_max_xy": 0.0,
+      "full_vs_standard_max_logit": 0.0,
+      "no_reset_branch_matches_standard": true,
+      "future_change_difference": 0,
+      "reset_effect_max_xy": {
+        "reset_1": 0.0378817617893219,
+        "reset_4": 0.03982231020927429,
+        "reset_100": 0.0
+      },
+      "state_bytes": {
+        "full": [
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_1": [
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_4": [
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_100": [
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 79027200,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 79027200,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 79027200,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ]
+      },
+      "reset_frames": {
+        "full": [],
+        "reset_1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reset_4": [
+          4,
+          8
+        ],
+        "reset_100": []
+      }
+    },
+    "gmmix": {
+      "checkpoint_sha256": "093f82be5ef699994575026062032d2fd9fcb777587d3c60148a1f2ab30d7754",
+      "readout": "Three-update engineering point checkpoint",
+      "full_vs_standard_max_xy": 0.0,
+      "full_vs_standard_max_logit": 0.0,
+      "no_reset_branch_matches_standard": true,
+      "future_change_difference": 0,
+      "reset_effect_max_xy": {
+        "reset_1": 0.0017865300178527832,
+        "reset_4": 0.0017865300178527832,
+        "reset_100": 0.0
+      },
+      "state_bytes": {
+        "full": [
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_1": [
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_4": [
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ],
+        "reset_100": [
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 1
+          },
+          {
+            "encoder": 96337920,
+            "queries": 2056,
+            "absolute_frames": 2
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 3
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 4
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 5
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 6
+          },
+          {
+            "encoder": 96337920,
+            "queries": 4112,
+            "absolute_frames": 7
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 8
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 9
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 10
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 11
+          },
+          {
+            "encoder": 96337920,
+            "queries": 6168,
+            "absolute_frames": 12
+          }
+        ]
+      },
+      "reset_frames": {
+        "full": [],
+        "reset_1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reset_4": [
+          4,
+          8
+        ],
+        "reset_100": []
+      }
+    }
+  },
+  "predeclared_tolerances": {
+    "normalized_xy": 1e-06,
+    "visibility_logit": 1e-05,
+    "future_change": 0
+  },
+  "sources": {
+    "check_point_history.py": "bb9bb596fb8ee74bd44261b2f064310e59310f1717a7543d86ab29febd1058b5",
+    "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+    "pause_training.py": "26a65916b123a0ede3510252dfe068d0104c81e8bacf0d1ff4444d4919494fe8",
+    "evaluate_point_tracks.py": "ee7543c3bddca74d3a3b887d9d32b8985453df43063c5be0d156e14bd522700f",
+    "point_readout.py": "ee7c3be5b2388b18c442a96df96f386df4e2ee42663662fb7fc70570c294f91d",
+    "point_checkpoint.py": "5fdcbef8927c18e73bb59f1ccdb3288d2a6bb4aa27e0d82643f402692d76b9f3",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab"
+  },
+  "initially_paused_compute_pids": [
+    3111357
+  ]
+}

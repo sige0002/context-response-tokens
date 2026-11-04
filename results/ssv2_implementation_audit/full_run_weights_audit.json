@@ -1,0 +1,35 @@
+{
+  "scope": "Saved-weight audit, not independent inference or proof of useful temporal memory",
+  "step": 2000,
+  "checkpoint_sha256": "b04bba4026311355328d9a4515f623c0ab751328c2dcf4c6d19dc5668c5ec063",
+  "model": "google/siglip2-base-patch16-224",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "spatial_tensors_equal_to_official": 208,
+  "all_model_tensors_finite": true,
+  "model_tensors": 270,
+  "temporal_gates": {
+    "encoder.adapters.3.gain": {
+      "elements": 768,
+      "nonzero": 768,
+      "mean_abs": 0.003613465465605259,
+      "max_abs": 0.012231535278260708
+    },
+    "encoder.adapters.7.gain": {
+      "elements": 768,
+      "nonzero": 768,
+      "mean_abs": 0.0033672135323286057,
+      "max_abs": 0.010752806439995766
+    },
+    "encoder.adapters.11.gain": {
+      "elements": 768,
+      "nonzero": 768,
+      "mean_abs": 0.0029473428148776293,
+      "max_abs": 0.023731639608740807
+    }
+  },
+  "all_optimizer_tensors_finite": true,
+  "optimizer_states": 62,
+  "optimizer_steps_min": 2000,
+  "optimizer_steps_max": 2000,
+  "audit_source_sha256": "2cbaecddf89649e04e52499530ccac80077f44c09f1f2612d6dde02998d1801a"
+}

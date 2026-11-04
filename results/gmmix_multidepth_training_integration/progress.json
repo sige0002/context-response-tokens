@@ -1,0 +1,19 @@
+{
+  "scope": "Three-update native multi-depth GMMix pipeline; not recognition accuracy",
+  "training_videos": 5,
+  "validation_videos": 3,
+  "steps": 3,
+  "comparisons": {
+    "resumed": {
+      "max_weight_difference": 0.0001584175042808056,
+      "max_validation_loss_difference": 0.00026639302571673795,
+      "predictions_equal": true
+    }
+  },
+  "predeclared_tolerances": {
+    "max_weight_difference": 5e-06,
+    "max_validation_loss_difference": 0.002,
+    "clip_stream_feature_relative_l2": 0.01,
+    "future_change_max_abs": 0.0
+  }
+}

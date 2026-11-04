@@ -1,0 +1,16 @@
+{
+  "scope": "Saved-prediction recount of a preselected 1024-video intermediate-checkpoint diagnostic; no additional model forward pass",
+  "verified_at": "2026-11-04T20:03:54.662383+00:00",
+  "checkpoint_step": 3500,
+  "checkpoint_sha256": "a64637eba35a364cdb19f840d592d713c1c01e231f2f93a1754eb1eea97faee2",
+  "report_sha256": "e3bb3e45c90c386d95708148521980f1459344d1c47e98875ea88dc364b3edde",
+  "correct": {
+    "full": 380,
+    "current": 113,
+    "reverse_history": 330
+  },
+  "samples": 1024,
+  "source_hashes_match": true,
+  "subset_hash_matches": true,
+  "history_plan": "results/ssv2_history_diagnostic_interim_seed17/plan.json"
+}

@@ -1,0 +1,73 @@
+{
+  "scope": "Real synthetic scenes: learning/checkpoint/resume integration only, not tracking accuracy",
+  "source_encoder": {
+    "step": 1500,
+    "epoch": 0,
+    "cursor": 48000,
+    "checkpoint_sha256": "c2b0128ad24cd5ee6c13c2eff1a553f0eceef463b98d8ba87dce580cc76242fd",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/videos_trainval/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 4,
+      "accumulation": 8,
+      "steps": 20000,
+      "warmup": 1000,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 1000,
+      "save_every": 500,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "aadd5e9c20e2c685d5a8f6286e8c5961fa00571f13c3953f7faec461bb388f56",
+        "video_data.py": "46df706ffef2f35d33031e794aaa0c504550081268b6ff1c9bf80eaa77347fb3",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "val_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac"
+    }
+  },
+  "comparisons": {
+    "resumed": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    },
+    "repeat": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    }
+  },
+  "probe_encoder_bitwise_unchanged": true,
+  "adapt_backbone_bitwise_unchanged": true,
+  "adapt_changed_parameter_tensors_by_layer": {
+    "3": 15,
+    "7": 15,
+    "11": 15
+  },
+  "steps": 3,
+  "train_scenes": 3,
+  "validation_scenes": 1,
+  "frames": 4,
+  "queries": 8,
+  "scheduled_validation_preserved_across_stop": true,
+  "script_sha256": "b4d4b777b22f160e495d73803c03fb90095389e8bcee993a387bb095939fb57a"
+}

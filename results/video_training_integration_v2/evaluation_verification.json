@@ -1,0 +1,20 @@
+{
+  "scope": "Three-video integration fixture; not recognition accuracy or proof of numerical equivalence",
+  "step": 3,
+  "samples": 3,
+  "saved_validation_predictions_equal": true,
+  "saved_validation_loss_absolute_difference": 0.00013669331868548795,
+  "loss_tolerance": 0.001,
+  "clip_stream_disagreements": {
+    "full": 0,
+    "current": 0,
+    "reverse_history": 0
+  },
+  "checkpoint_sha256": "ace87964bdb5a6211f4e7591bd90d3826d7aafeb03516b48e72019c1fc3d19b1",
+  "source_sha256": {
+    "evaluate_video.py": "2ae93acd9fa0919438d9f79e231cd17f195f0988f0f571e407d4a5c537ffa4b4",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "benchmark_streaming.py": "029f0a7bf236f5b37da01ff3efee2e0fbbc57f85b1ac0e89796d7c815dd04e75",
+    "test_video_evaluation.py": "0868594d067a51df26cd868411157033346ce15b7828408426752174ec9e8f41"
+  }
+}

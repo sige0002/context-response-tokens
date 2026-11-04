@@ -1,0 +1,143 @@
+{
+  "repeat": {
+    "top_differences": [
+      {
+        "name": "readout.attention.in_proj_weight",
+        "maximum": 0.0001360783353447914,
+        "l2": 0.0003880744334310293,
+        "rms": 2.189076724334882e-07,
+        "changed": 3028335,
+        "elements": 3145728
+      },
+      {
+        "name": "readout.ffn.0.weight",
+        "maximum": 9.964685887098312e-05,
+        "l2": 0.0004132796311751008,
+        "rms": 2.0194488570268732e-07,
+        "changed": 4077416,
+        "elements": 4194304
+      },
+      {
+        "name": "readout.query_encoder.0.weight",
+        "maximum": 9.958259761333466e-05,
+        "l2": 0.00029867139528505504,
+        "rms": 4.5762450895381335e-07,
+        "changed": 413802,
+        "elements": 425984
+      },
+      {
+        "name": "readout.attention.in_proj_bias",
+        "maximum": 9.028397471411154e-05,
+        "l2": 0.0006039803847670555,
+        "rms": 1.0897133506659884e-05,
+        "changed": 3071,
+        "elements": 3072
+      },
+      {
+        "name": "readout.project_tokens.weight",
+        "maximum": 8.577480912208557e-05,
+        "l2": 0.0001963842660188675,
+        "rms": 2.2147686706830427e-07,
+        "changed": 758324,
+        "elements": 786432
+      },
+      {
+        "name": "readout.output.1.weight",
+        "maximum": 7.542874664068222e-05,
+        "l2": 0.00012673369201365858,
+        "rms": 1.7503938920526707e-07,
+        "changed": 507711,
+        "elements": 524288
+      },
+      {
+        "name": "readout.query_encoder.2.weight",
+        "maximum": 6.627663969993591e-05,
+        "l2": 0.0001652830105740577,
+        "rms": 2.2827975953987334e-07,
+        "changed": 502623,
+        "elements": 524288
+      },
+      {
+        "name": "readout.ffn.2.weight",
+        "maximum": 6.057030986994505e-05,
+        "l2": 0.0003163603541906923,
+        "rms": 1.5460835811609286e-07,
+        "changed": 4133694,
+        "elements": 4194304
+      },
+      {
+        "name": "readout.attention.out_proj.weight",
+        "maximum": 5.835387855768204e-05,
+        "l2": 0.00015704894030932337,
+        "rms": 1.5341271364377462e-07,
+        "changed": 1017151,
+        "elements": 1048576
+      },
+      {
+        "name": "readout.project_position.weight",
+        "maximum": 4.982948303222656e-05,
+        "l2": 0.00012170745321782306,
+        "rms": 4.75423945545117e-07,
+        "changed": 60577,
+        "elements": 65536
+      },
+      {
+        "name": "readout.output.3.weight",
+        "maximum": 1.3148877769708633e-05,
+        "l2": 1.3381504686549306e-05,
+        "rms": 3.41436049211552e-07,
+        "changed": 1419,
+        "elements": 1536
+      },
+      {
+        "name": "readout.input_norm.weight",
+        "maximum": 3.635883331298828e-06,
+        "l2": 6.1189907683001366e-06,
+        "rms": 2.2080006090163806e-07,
+        "changed": 350,
+        "elements": 768
+      }
+    ],
+    "changed_tensors": 29,
+    "predictions": [
+      {
+        "step": 2,
+        "xy_max": 0.0013224482536315918,
+        "visibility_max": 0.0078125,
+        "query_equal": true
+      },
+      {
+        "step": 3,
+        "xy_max": 0.0012726783752441406,
+        "visibility_max": 0.0078125,
+        "query_equal": true
+      }
+    ],
+    "history_loss": [
+      1.5008201599121094,
+      1.4999094009399414
+    ]
+  },
+  "resumed": {
+    "top_differences": [],
+    "changed_tensors": 0,
+    "predictions": [
+      {
+        "step": 2,
+        "xy_max": 0.0,
+        "visibility_max": 0.0,
+        "query_equal": true
+      },
+      {
+        "step": 3,
+        "xy_max": 0.0,
+        "visibility_max": 0.0,
+        "query_equal": true
+      }
+    ],
+    "history_loss": [
+      1.5006228685379028,
+      1.5004414319992065
+    ]
+  }
+}

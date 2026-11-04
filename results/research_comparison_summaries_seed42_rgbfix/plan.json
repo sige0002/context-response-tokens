@@ -1,0 +1,32 @@
+{
+  "video_queue": "/home/sadasue/mywam/results/ssv2_full_comparisons_seed42_rgbfix",
+  "gmmix_queue": "/home/sadasue/mywam/results/ssv2_gmmix_comparison_seed42_rgbfix",
+  "point_queue": "/home/sadasue/mywam/results/point_comparisons_with_gmmix_seed42_rgbfix",
+  "plan_sha256": {
+    "/home/sadasue/mywam/results/ssv2_full_comparisons_seed42_rgbfix/plan.json": "fa5fa696981418061d729681a1f2789363d82ce2cda84e8eeeee68787e3e4864",
+    "/home/sadasue/mywam/results/ssv2_gmmix_comparison_seed42_rgbfix/plan.json": "9a680117a0563ad041cb378c5bd0d378d2f4326ca1f1d1ec9f9c6bb417e187fe",
+    "/home/sadasue/mywam/results/point_comparisons_with_gmmix_seed42_rgbfix/plan.json": "9acfc8c77a04352a1bc105a53e3788c267feb22076ed313e2c2be950d7a0fac4"
+  },
+  "source_sha256": {
+    "run_research_summaries.py": "7fabaaf90ea5916b8d8e8783ccea41d8ca818ff6407bd06fd3458e9d59cd0773",
+    "summarize_full_video.py": "7bf8521bde6c23ba74789bbc7634fc408c155f1bc9d5a459a634bada7b27115f",
+    "summarize_video.py": "ba3859ed2bbab6bf1ad3d25c138ca64f95bb320e7954e8e5293c25832b220adf",
+    "paired_metrics.py": "f596cbda1f0ad0ee41454fc8b71c4710a6fe0d898c57da31f686d9b3d4882426",
+    "summarize_points.py": "2b4c7e55c5ca0e866a09e72061af7f6d6409dd5057f1b0a7224e6a82d20713dd",
+    "point_checkpoint.py": "5fdcbef8927c18e73bb59f1ccdb3288d2a6bb4aa27e0d82643f402692d76b9f3",
+    "point_experiment.py": "09085dc70ef9d021487364dc2106b0683902c95fcff90e964985fe6ed3c9e4c0",
+    "run_point_comparisons.py": "59bbf6ffd64262c5beae133deed8c69cd1b1d75952e690b217bd9b84b580ecb2",
+    "run_video_comparisons.py": "8b317ecf2203f4a50db6c2ea9f4f30591cf6783bed878fd851a317d268daa822",
+    "gmmix_experiment.py": "3892deb44ceb8948ba1483619e9580fa301f7077a4bb96e8ed34da594bd1bba9",
+    "evaluate_temporal.py": "71fc4bc3f0cdf7dd55c2381899cc95ed93594f65b3470ac4d7bab14cec0bed20",
+    "summarize_temporal.py": "d3513ccea37ca0ed8d50a8647f3fc2b57faf56d91c830cf8462730ba0bfe083d"
+  },
+  "primary_video_contrast": "Mamba-3 interleaved minus time attention interleaved",
+  "primary_point_contrast": "Same contrast with frozen encoders (probe), average Jaccard",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 17,
+    "interval": "paired cluster percentile 95%",
+    "conditional_on": "fitted weights"
+  }
+}

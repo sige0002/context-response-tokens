@@ -1,0 +1,80 @@
+{
+  "qualification_version": 1,
+  "decision": "eligible_for_benchmark_with_nondeterministic_native_backward",
+  "scope": "Three-update implementation qualification; no recognition or timing claim",
+  "native_weight_gate": "failed_original_5e-6_criterion; not waived or relabeled as passed",
+  "native_bitwise_training": false,
+  "reference_resume_exact": true,
+  "evidence_sha256": {
+    "/home/sadasue/mywam/results/gmmix_multidepth_training_integration_fp32/progress.json": "104f082d23187d4bf141b9d72993448865f77e17339c01f206d6833922834e0d",
+    "/home/sadasue/mywam/results/gmmix_multidepth_training_integration_fp32/repeatability_diagnosis.json": "c2caf96cfa091dbb1ef8f53e348e45d85f911716cec99908d85b4f8f2f68ca4a",
+    "/home/sadasue/mywam/results/multidepth_reference_resume/verification.json": "3287adc5d9fd7197d7f353b8be0cb4dd72b1342ff6d27d3a9e84adf8d35c7f38",
+    "/home/sadasue/mywam/results/multidepth_reference_resume/kernel_reference.json": "98f3eac3f8ce6d689a0b1663d9d7d3bece0d4e055b76d42145700826fd248a88",
+    "/home/sadasue/mywam/results/multidepth_scan_diagnostic/report.json": "fcd86db1834ba428c81f065197f6adb6772d821b7718eec1175eae2b2582525f"
+  },
+  "sources": {
+    "qualify_multidepth.py": "f3067b90d052f1cb6ee9aef2352d4602d8c9125358d8338db0c3f13b0ccc8c0e",
+    "check_multidepth_training.py": "584061c88768029fd8f3f88ea234399b75bb80542bd5c74e8f70382ced0c806c",
+    "train_multidepth_video.py": "aa998188cccdf53e391225e0bc70ad0fe779b83837b0ba2ff4fb57bbe26425f6",
+    "multidepth_checkpoint.py": "e29930929cbe0bd453b79edc95cab78e55a61f0cd3ec88025634e525362caeff",
+    "evaluate_multidepth_video.py": "0376a0329c8319d5a81dd8712397599c5865eb2461019b70b0222d442a9596f8",
+    "gmmix_multidepth.py": "ad5d85858755e640531602a9b5fdf01d434df180795565b813a0e5456a748c8a",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab",
+    "reference_multidepth_training.py": "dde06b2d3fa9a076f36eeb4b177dcbc15ae1dff24fc818c2389a5885b03a955d",
+    "check_scan_reference.py": "133ec4c4af4530cea957c5edb734c21d15025843bba9af98c6d65d51b85273cb",
+    "diagnose_multidepth_scan.py": "15aebd03d4312c219aa31c5a8c69e45a1d3d75793f572b7cf759a122fb939857"
+  },
+  "comparisons": {
+    "resumed": {
+      "max_validation_loss_difference": 0.0003282229105634471,
+      "max_weight_difference": 0.00015642307698726654,
+      "predictions_equal": true
+    },
+    "repeat": {
+      "max_validation_loss_difference": 0.0005439122517900685,
+      "max_weight_difference": 0.00014946050941944122,
+      "predictions_equal": true
+    }
+  },
+  "spatial_tensors_unchanged": 208,
+  "enrichment_layers_updated": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "batchnorm_training_batches": [
+    5,
+    5,
+    5,
+    5
+  ],
+  "checkpoint_sha256": "c994ef7ec4602f996bccfc01d754478487af4a17ef06507e1a9f91a125930d37",
+  "evaluation_sha256": "a0f791fcc234cc14d71cef0de29451800f437031c9effacbe827aaf8d0d334b4",
+  "evaluation_matches_saved_validation": true,
+  "native_checks": {
+    "frames": 8,
+    "feature_relative_l2": 0.001959888730198145,
+    "future_change_max_abs": 0.0,
+    "state_bytes": 96337920,
+    "state_offset": 8,
+    "batchnorm_unchanged_in_eval": true
+  },
+  "clip_stream": {
+    "full": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0008736818098508451,
+      "prediction_disagreements": 0
+    },
+    "current": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0008644459662449029,
+      "prediction_disagreements": 0
+    },
+    "reverse_history": {
+      "logit_max_abs": 0.00390625,
+      "logit_rmse": 0.0009008234396011581,
+      "prediction_disagreements": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Three-update GMMix engineering checkpoint on one real 296-frame/38-query video; no accuracy claim",
+  "observed_at": "2026-11-04T20:33:55.045272+00:00",
+  "report_sha256": "d380693a1077b8cc4a6dde453dce1004ab65432f57a9ab3c3901224367a39091",
+  "raw_label_audits": {
+    "full": {
+      "path": "results/point_history_cli_integration/full/raw_label_metric_audit.json",
+      "sha256": "d7a44e3f8bdbca04af011fd74f05f4c60fd0733679edaf18f3eb05c7662e194a"
+    },
+    "reset_1": {
+      "path": "results/point_history_cli_integration/reset_1/raw_label_metric_audit.json",
+      "sha256": "7e6e1242efc5f7504c04a0322ecdc85a4b4539d07ff8c86c5d6231ac03be7085"
+    },
+    "reset_24": {
+      "path": "results/point_history_cli_integration/reset_24/raw_label_metric_audit.json",
+      "sha256": "31bc0017ff81f6d099d1aadb43aed95edbe6f51fa2fc33fd68923d257aebc7c3"
+    }
+  },
+  "full_evaluation_pending": true
+}

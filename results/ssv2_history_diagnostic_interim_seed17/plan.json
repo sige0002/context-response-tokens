@@ -1,0 +1,69 @@
+{
+  "scope": "Exploratory intermediate-checkpoint history diagnostic; not final model comparison",
+  "checkpoint": {
+    "step": 3500,
+    "epoch": 0,
+    "cursor": 112000,
+    "checkpoint_sha256": "a64637eba35a364cdb19f840d592d713c1c01e231f2f93a1754eb1eea97faee2",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/videos_trainval/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 4,
+      "accumulation": 8,
+      "steps": 20000,
+      "warmup": 1000,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 1000,
+      "save_every": 500,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "aadd5e9c20e2c685d5a8f6286e8c5961fa00571f13c3953f7faec461bb388f56",
+        "video_data.py": "46df706ffef2f35d33031e794aaa0c504550081268b6ff1c9bf80eaa77347fb3",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "val_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac"
+    }
+  },
+  "samples": 1024,
+  "sampling": "Uniform without replacement from validation; fixed seed before inference",
+  "sample_seed": 17,
+  "subset_sha256": "6cee5406ff56a4b27c236d3cfecb1597d93c39cb2fc35eff28dc4c28a1700b14",
+  "conditions": [
+    "full",
+    "current",
+    "reverse_history"
+  ],
+  "primary_inference_mode": "clip",
+  "intervention": "Identical preprocessed final image and number of frames across conditions; reverse only the past",
+  "source_sha256": {
+    "diagnose_video_history.py": "561f07b68f4ee38ab6080dbbf806ae5120cd0f456c38634dbd486cdbf977b1e7",
+    "video_data.py": "46df706ffef2f35d33031e794aaa0c504550081268b6ff1c9bf80eaa77347fb3",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "evaluate_temporal.py": "71fc4bc3f0cdf7dd55c2381899cc95ed93594f65b3470ac4d7bab14cec0bed20",
+    "summarize_temporal.py": "d3513ccea37ca0ed8d50a8647f3fc2b57faf56d91c830cf8462730ba0bfe083d"
+  },
+  "initially_paused_compute_pids": [
+    3111357
+  ]
+}

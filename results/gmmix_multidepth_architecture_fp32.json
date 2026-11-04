@@ -1,0 +1,41 @@
+{
+  "scope": "CPU construction of real native model; FP32 spatial enrichment; no GPU precision result in this record",
+  "observed_at": "2026-11-04T21:56:18.591134+00:00",
+  "model": "google/siglip2-base-patch16-224",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "architecture": {
+    "kind": "gmmix_multidepth",
+    "placement": "after_encoder",
+    "layers": 4,
+    "state_size": 16,
+    "spatial_heads": 16,
+    "mamba_dropout": 0.1,
+    "chunk_size": 512,
+    "feature_depths": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "feature_normalization": "frozen_post_layernorm",
+    "feature_precision": "float32"
+  },
+  "parameters": {
+    "spatial": 92884224,
+    "feature_enrichment": 9452544,
+    "temporal_core": 48164352,
+    "encoder": 150501120,
+    "readout": 6631854,
+    "trainable_total": 64248750
+  },
+  "enrichment": {
+    "source": "models/image_encoder/dino_wrappers.py",
+    "sha256": "72a4ee993f09995f7b839e2c1d29f0b815c3c65c4b1a069f9c5e421e659a698e"
+  },
+  "source_sha256": {
+    "gmmix_multidepth.py": "ad5d85858755e640531602a9b5fdf01d434df180795565b813a0e5456a748c8a",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+  },
+  "cpu_tests": "results/gmmix_multidepth_cpu_tests_fp32.log"
+}

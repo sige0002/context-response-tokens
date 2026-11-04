@@ -1,0 +1,87 @@
+{
+  "scope": "Real synthetic scenes: learning/checkpoint/resume integration only, not tracking accuracy",
+  "source_encoder": {
+    "step": 3,
+    "epoch": 1,
+    "cursor": 4,
+    "checkpoint_sha256": "e1f3fe78eacf615411e1bfdf93e5ac12b8b2ece18c5a877140f77435e10bdcf5",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/video_training_fixture/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/video_training_fixture/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 2,
+      "accumulation": 2,
+      "steps": 3,
+      "warmup": 1,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 2,
+      "save_every": 1,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "reproducibility": {
+        "deterministic_algorithms": true,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_allow_tf32": false,
+        "matmul_allow_tf32": false,
+        "cublas_workspace_config": ":4096:8"
+      },
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+        "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "f314ba7d951a2be536ead91bef97da903f4d001c2d23dc3cf7cb9af66154c336",
+      "val_sha256": "0bf880deed10b0934b8b19fd5d334eecd3a12a54faaeed2167d3af9e541bb5b8"
+    }
+  },
+  "comparisons": {
+    "resumed": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    },
+    "repeat": {
+      "max_weight_difference": 0.0,
+      "max_loss_difference": 0.0,
+      "max_normalized_xy_difference": 0.0
+    }
+  },
+  "probe_encoder_bitwise_unchanged": true,
+  "adapt_backbone_bitwise_unchanged": true,
+  "adapt_changed_parameter_tensors_by_layer": {
+    "3": 15,
+    "7": 15,
+    "11": 15
+  },
+  "steps": 3,
+  "train_scenes": 3,
+  "validation_scenes": 1,
+  "frames": 4,
+  "queries": 8,
+  "scheduled_validation_preserved_across_stop": true,
+  "encoder_type": "temporal",
+  "predeclared_tolerances": {
+    "weights": 5e-06,
+    "loss": 0.001,
+    "normalized_xy": 0.001
+  },
+  "script_sha256": "4b3c31f485e4199064b16ddfc8c33197845e4243b68e2d35caa5de9a465c390e"
+}

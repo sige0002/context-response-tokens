@@ -1,0 +1,34 @@
+[project]
+name = "mamba3-sandbox"
+version = "0.1.0"
+description = "Minimal Mamba-3 GPU experiments on NVIDIA GB10"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch==2.14.1+cu130",
+    "mamba-ssm",
+    "apache-tvm-ffi==0.1.9",
+    "numpy",
+    "pillow",
+    "pytest",
+    "transformers>=4.50,<5",
+    "huggingface-hub>=0.36.2",
+    "requests>=2.34.2",
+    "av>=19.0.2",
+]
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux' and platform_machine == 'aarch64'"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+nvidia-cusparselt-cu13 = { index = "pytorch-cu130" }
+mamba-ssm = { path = "vendor/mamba" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.extra-build-dependencies]
+mamba-ssm = ["torch==2.14.1+cu130"]

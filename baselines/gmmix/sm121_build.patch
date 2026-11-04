@@ -1,0 +1,40 @@
+--- upstream/setup.py
++++ local/setup.py
+@@ -201,6 +201,10 @@
+             cc_flag.append("arch=compute_121,code=sm_121")
+ 
+ 
++    # Local build target only: GB10 (SM121), same selective-scan sources.
++    if not HIP_BUILD:
++        cc_flag = ["-gencode", "arch=compute_121,code=sm_121"]
++
+     # HACK: The compiler flag -D_GLIBCXX_USE_CXX11_ABI is set to be the same as
+     # torch._C._GLIBCXX_USE_CXX11_ABI
+     # https://github.com/pytorch/pytorch/blob/8472c24e3b5b60150096486616d98b7bea01500b/torch/utils/cpp_extension.py#L920
+@@ -210,10 +214,10 @@
+     if HIP_BUILD:
+ 
+         extra_compile_args = {
+-            "cxx": ["-O3", "-std=c++17"],
++            "cxx": ["-O3", "-std=c++20"],
+             "nvcc": [
+                 "-O3",
+-                "-std=c++17",
++                "-std=c++20",
+                 f"--offload-arch={os.getenv('HIP_ARCHITECTURES', 'native')}",
+                 "-U__CUDA_NO_HALF_OPERATORS__",
+                 "-U__CUDA_NO_HALF_CONVERSIONS__",
+@@ -223,11 +227,11 @@
+         }
+     else:
+         extra_compile_args = {
+-            "cxx": ["-O3", "-std=c++17"],
++            "cxx": ["-O3", "-std=c++20"],
+             "nvcc": append_nvcc_threads(
+                 [
+                     "-O3",
+-                    "-std=c++17",
++                    "-std=c++20",
+                     "-U__CUDA_NO_HALF_OPERATORS__",
+                     "-U__CUDA_NO_HALF_CONVERSIONS__",
+                     "-U__CUDA_NO_BFLOAT16_OPERATORS__",

@@ -1,0 +1,193 @@
+{
+  "scope": "pilot validation; not a held-out test result",
+  "interval_scope": "conditional on weights and validation groups; excludes seed variation and selection bias",
+  "expected_epochs": 3,
+  "runs": [
+    {
+      "path": "results/ssv2_pilot_mamba_interleaved_seed42",
+      "kind": "mamba",
+      "placement": "interleaved",
+      "recorded_epochs": 3,
+      "best_epoch_zero_based": 2,
+      "accuracy": {
+        "full": 0.06321839080459771,
+        "current": 0.0617816091954023,
+        "reverse_history": 0.0617816091954023
+      },
+      "full_minus_ablation": {
+        "current": {
+          "delta_percentage_points": 0.14367816091954022,
+          "conditional_95_interval_pp": [
+            -0.8620689655172413,
+            1.1494252873563218
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 6,
+          "b_only_correct": 5
+        },
+        "reverse_history": {
+          "delta_percentage_points": 0.14367816091954022,
+          "conditional_95_interval_pp": [
+            0.0,
+            0.43103448275862066
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 1,
+          "b_only_correct": 0
+        }
+      }
+    },
+    {
+      "path": "results/ssv2_pilot_comparisons/none_interleaved_seed42",
+      "kind": "none",
+      "placement": "interleaved",
+      "recorded_epochs": 3,
+      "best_epoch_zero_based": 2,
+      "accuracy": {
+        "full": 0.05890804597701149,
+        "current": 0.05890804597701149,
+        "reverse_history": 0.05890804597701149
+      },
+      "full_minus_ablation": {
+        "current": {
+          "delta_percentage_points": 0.0,
+          "conditional_95_interval_pp": [
+            0.0,
+            0.0
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 0,
+          "b_only_correct": 0
+        },
+        "reverse_history": {
+          "delta_percentage_points": 0.0,
+          "conditional_95_interval_pp": [
+            0.0,
+            0.0
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 0,
+          "b_only_correct": 0
+        }
+      }
+    },
+    {
+      "path": "results/ssv2_pilot_comparisons/attention_interleaved_seed42",
+      "kind": "attention",
+      "placement": "interleaved",
+      "recorded_epochs": 3,
+      "best_epoch_zero_based": 2,
+      "accuracy": {
+        "full": 0.05747126436781609,
+        "current": 0.05459770114942529,
+        "reverse_history": 0.05603448275862069
+      },
+      "full_minus_ablation": {
+        "current": {
+          "delta_percentage_points": 0.28735632183908044,
+          "conditional_95_interval_pp": [
+            -0.14367816091954022,
+            0.8620689655172413
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 3,
+          "b_only_correct": 1
+        },
+        "reverse_history": {
+          "delta_percentage_points": 0.14367816091954022,
+          "conditional_95_interval_pp": [
+            -0.43103448275862066,
+            0.8620689655172413
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 3,
+          "b_only_correct": 2
+        }
+      }
+    },
+    {
+      "path": "results/ssv2_pilot_comparisons/mamba_late_seed42",
+      "kind": "mamba",
+      "placement": "late",
+      "recorded_epochs": 3,
+      "best_epoch_zero_based": 2,
+      "accuracy": {
+        "full": 0.07040229885057471,
+        "current": 0.05172413793103448,
+        "reverse_history": 0.07040229885057471
+      },
+      "full_minus_ablation": {
+        "current": {
+          "delta_percentage_points": 1.8678160919540232,
+          "conditional_95_interval_pp": [
+            0.5747126436781609,
+            3.3045977011494254
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 18,
+          "b_only_correct": 5
+        },
+        "reverse_history": {
+          "delta_percentage_points": 0.0,
+          "conditional_95_interval_pp": [
+            -0.7183908045977011,
+            0.7183908045977011
+          ],
+          "groups": 696,
+          "samples": 696,
+          "a_only_correct": 3,
+          "b_only_correct": 3
+        }
+      }
+    }
+  ],
+  "between_models": [
+    {
+      "reference": "results/ssv2_pilot_mamba_interleaved_seed42",
+      "other": "results/ssv2_pilot_comparisons/none_interleaved_seed42",
+      "delta_percentage_points": 0.43103448275862066,
+      "conditional_95_interval_pp": [
+        -1.293103448275862,
+        2.1551724137931036
+      ],
+      "groups": 696,
+      "samples": 696,
+      "a_only_correct": 21,
+      "b_only_correct": 18
+    },
+    {
+      "reference": "results/ssv2_pilot_mamba_interleaved_seed42",
+      "other": "results/ssv2_pilot_comparisons/attention_interleaved_seed42",
+      "delta_percentage_points": 0.5747126436781609,
+      "conditional_95_interval_pp": [
+        -1.0057471264367817,
+        2.1551724137931036
+      ],
+      "groups": 696,
+      "samples": 696,
+      "a_only_correct": 18,
+      "b_only_correct": 14
+    },
+    {
+      "reference": "results/ssv2_pilot_mamba_interleaved_seed42",
+      "other": "results/ssv2_pilot_comparisons/mamba_late_seed42",
+      "delta_percentage_points": -0.7183908045977011,
+      "conditional_95_interval_pp": [
+        -2.7298850574712645,
+        1.1494252873563218
+      ],
+      "groups": 696,
+      "samples": 696,
+      "a_only_correct": 21,
+      "b_only_correct": 26
+    }
+  ],
+  "equal_epoch_budget_recorded": true
+}

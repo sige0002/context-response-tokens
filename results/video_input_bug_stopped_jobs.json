@@ -1,0 +1,40 @@
+{
+  "reason": "Repeated raw-video reads produce different pixel tensors; suspend formal comparisons until fixed",
+  "jobs": [
+    {
+      "pid": 1142322,
+      "script": "run_research_summaries.py",
+      "output": "results/research_comparison_summaries_seed42_v2",
+      "signalled": "SIGTERM",
+      "terminal": true
+    },
+    {
+      "pid": 1109429,
+      "script": "run_point_comparisons.py",
+      "output": "results/point_comparisons_with_gmmix_seed42_v2",
+      "signalled": "SIGTERM",
+      "terminal": true
+    },
+    {
+      "pid": 730856,
+      "script": "run_gmmix_comparison.py",
+      "output": "results/ssv2_gmmix_comparison_seed42",
+      "signalled": "SIGTERM",
+      "terminal": true
+    },
+    {
+      "pid": 3331556,
+      "script": "run_video_comparisons.py",
+      "output": "results/ssv2_full_comparisons_seed42",
+      "signalled": "SIGTERM",
+      "terminal": true
+    },
+    {
+      "pid": 3111357,
+      "script": "train_video.py",
+      "output": "results/ssv2_full_mamba_interleaved_seed42",
+      "signalled": "SIGTERM",
+      "terminal": true
+    }
+  ]
+}

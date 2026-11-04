@@ -1,0 +1,62 @@
+{
+  "scope": "Real-image GPU and learning smoke test. One image and fixed mask, no held-out evaluation, not segmentation/recognition accuracy or a pretrained encoder.",
+  "source_url": "https://raw.githubusercontent.com/pytorch/hub/master/images/dog.jpg",
+  "image_path": "data/demo_dog.jpg",
+  "image_sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+  "config": {
+    "size": 128,
+    "width": 128,
+    "depth": 2,
+    "state": 64,
+    "scan_directions": 4,
+    "shared_direction_weights": true,
+    "train_steps": 20,
+    "seed": 42
+  },
+  "gpu": "NVIDIA GB10",
+  "torch": "2.14.1+cu130",
+  "encoder_parameters": 450064,
+  "demo_head_parameters": 387,
+  "feature_shape": [
+    1,
+    128,
+    32,
+    32
+  ],
+  "feature_dtype": "torch.float32",
+  "feature_bytes": 524288,
+  "finite_gradients": true,
+  "initial_mamba_gradient_norm": 0.12152233460714715,
+  "first_masked_mse": 0.1468849927186966,
+  "final_masked_mse": 0.012091328389942646,
+  "loss_history": [
+    0.1468849927186966,
+    0.10293702036142349,
+    0.0737718865275383,
+    0.05623331665992737,
+    0.04887695983052254,
+    0.04138357937335968,
+    0.03196326270699501,
+    0.02509729005396366,
+    0.023635948076844215,
+    0.023322852328419685,
+    0.022212916985154152,
+    0.0203799307346344,
+    0.018526507541537285,
+    0.01686769165098667,
+    0.015871763229370117,
+    0.015526334755122662,
+    0.01479512732475996,
+    0.013851575553417206,
+    0.012841115705668926,
+    0.01236371323466301
+  ],
+  "training_seconds_including_initial_compile": 56.941449414007366,
+  "encoder_batch1_warm_median_ms": 1.3189119696617126,
+  "incremental_peak_bytes": 27608576,
+  "precision": "FP32 weights and state parameters, BF16 autocast",
+  "sources": {
+    "vision_mamba3.py": "b268d2277ca9f5e13e208771800dc128b32c9c087d835bf2f4377fedb4c15cda",
+    "try_vision.py": "8c1bcfc1dfd3d4bc42dbab26f9390ed3f99e63d91c65a16b3ba8fedba3e6b1fa"
+  }
+}

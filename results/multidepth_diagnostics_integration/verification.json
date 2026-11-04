@@ -1,0 +1,179 @@
+{
+  "scope": "Engineering diagnostics; three-update fixtures, not performance evidence",
+  "sources": {
+    "check_multidepth_diagnostics.py": "3b58163fd4a7d1a042e679ae57a643319cbec3c2ff7a402b523808637985a346",
+    "benchmark_multidepth_video.py": "b1c7e8609d154e939b192133d0f6619834b97af935aa350b5ec8e8327ef782e7",
+    "benchmark_real_video.py": "15691f06f6db9fcd96c028632d6c81c773eb88d8b9fab3b49779efad850271ce",
+    "evaluate_multidepth_history.py": "d029f321d05f607b146e1f0388c4ec64b1a46112950587d231a7ae31789a74f7",
+    "evaluate_point_history.py": "ecd5927139608718e5c58eb1800f320829b9824f2a7eb5c6219fcc373b1ad3e2",
+    "analyze_point_history.py": "255d09c80b62ca4fa24bf7ae97cbcbace2efb2c429e8c00a0f88514a85def337",
+    "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+    "multidepth_point_checkpoint.py": "1752123811c1af3fb16708741bf0008b3884dc76eab97bc0f8676545f6650b55",
+    "multidepth_checkpoint.py": "e29930929cbe0bd453b79edc95cab78e55a61f0cd3ec88025634e525362caeff",
+    "gmmix_multidepth.py": "ad5d85858755e640531602a9b5fdf01d434df180795565b813a0e5456a748c8a",
+    "encoder_costs.py": "a06ec37e3f32aba872bed2e2e3cdf6383e33869fba8e794ac69002c3af47aae9"
+  },
+  "cost_video": {
+    "selection": "shortest",
+    "id": "gear_v2_12-basket_front_left_rgb_img-0",
+    "frames": 52,
+    "video_sha256": "a2a2fda4207f66710d8ba2a4fef5ef7e9dcda45c5e818d2dccecc9b03fc0efce",
+    "shard": "robotap_split2.pkl"
+  },
+  "video_checkpoint_sha256": "c994ef7ec4602f996bccfc01d754478487af4a17ef06507e1a9f91a125930d37",
+  "point_checkpoint_sha256": "bb6ad68d8f3f57774aeab1a417d58031726a2f4829ebce7b072e80e6d002edbe",
+  "ordinary_report_sha256": "178880d7af1ada4bb6c5a9b10ee8a9fb9c120759e3bab324e029b01069a0ca66",
+  "history_periods": [
+    1,
+    24
+  ],
+  "cost_repeats": 2,
+  "cost_warmup": 1,
+  "status": "passed_scoped_checks",
+  "cost": {
+    "directory": "/home/sadasue/mywam/results/multidepth_diagnostics_integration/cost",
+    "summary_sha256": "6d7166e1788b74e6b7dbeb2b57148dbc214c8779f50611b1a29013a5faf9587f",
+    "bins": [
+      {
+        "history_min": 0,
+        "history_max": 0,
+        "samples": 2,
+        "unique_frames": 1,
+        "gpu_ms": {
+          "p50": 31.548895835876465,
+          "p90": 31.549792289733887,
+          "minimum": 31.547775268554688,
+          "maximum": 31.550016403198242
+        },
+        "model_wall_ms": {
+          "p50": 31.787056010216475,
+          "p90": 31.789155211299658,
+          "minimum": 31.784432008862495,
+          "maximum": 31.789680011570454
+        },
+        "pipeline_wall_ms": {
+          "p50": 33.41438149800524,
+          "p90": 33.45957229612395,
+          "minimum": 33.35789300035685,
+          "maximum": 33.47086999565363
+        },
+        "state_bytes_min": 96337920,
+        "state_bytes_max": 96337920,
+        "torch_peak_allocated_bytes": 780295168
+      },
+      {
+        "history_min": 1,
+        "history_max": 7,
+        "samples": 14,
+        "unique_frames": 7,
+        "gpu_ms": {
+          "p50": 13.825600147247314,
+          "p90": 14.216432189941406,
+          "minimum": 13.010527610778809,
+          "maximum": 14.408063888549805
+        },
+        "model_wall_ms": {
+          "p50": 14.076145540457219,
+          "p90": 14.523507002741098,
+          "minimum": 13.228269992396235,
+          "maximum": 14.723700005561113
+        },
+        "pipeline_wall_ms": {
+          "p50": 15.158245456404984,
+          "p90": 15.726882172748446,
+          "minimum": 14.314369997009635,
+          "maximum": 16.11530501395464
+        },
+        "state_bytes_min": 96337920,
+        "state_bytes_max": 96337920,
+        "torch_peak_allocated_bytes": 744847360
+      },
+      {
+        "history_min": 8,
+        "history_max": 31,
+        "samples": 48,
+        "unique_frames": 24,
+        "gpu_ms": {
+          "p50": 13.485455989837646,
+          "p90": 14.222275066375733,
+          "minimum": 12.96025562286377,
+          "maximum": 14.295743942260742
+        },
+        "model_wall_ms": {
+          "p50": 13.815992511808872,
+          "p90": 14.525844668969512,
+          "minimum": 13.167919008992612,
+          "maximum": 14.61237098556012
+        },
+        "pipeline_wall_ms": {
+          "p50": 14.942092471756041,
+          "p90": 15.761219209525734,
+          "minimum": 14.203281956724823,
+          "maximum": 15.890471055172384
+        },
+        "state_bytes_min": 96337920,
+        "state_bytes_max": 96337920,
+        "torch_peak_allocated_bytes": 744847360
+      },
+      {
+        "history_min": 32,
+        "history_max": 127,
+        "samples": 40,
+        "unique_frames": 20,
+        "gpu_ms": {
+          "p50": 13.600208282470703,
+          "p90": 14.138252925872802,
+          "minimum": 13.054847717285156,
+          "maximum": 14.658368110656738
+        },
+        "model_wall_ms": {
+          "p50": 13.84687249083072,
+          "p90": 14.450602093711495,
+          "minimum": 13.317470904439688,
+          "maximum": 14.950597076676786
+        },
+        "pipeline_wall_ms": {
+          "p50": 14.948052470572293,
+          "p90": 15.63164854887873,
+          "minimum": 14.280561939813197,
+          "maximum": 15.919112018309534
+        },
+        "state_bytes_min": 96337920,
+        "state_bytes_max": 96337920,
+        "torch_peak_allocated_bytes": 744847360
+      }
+    ],
+    "frames_per_pass": 52,
+    "repeats": 2,
+    "torch_peak_allocated_bytes": 780295168,
+    "max_state_bytes": 96337920,
+    "scope": "Empirical timing distribution over fixed real frames and repeated passes; not a confidence interval",
+    "parameter_count": 150501120,
+    "parameter_bytes": 602004480,
+    "hardware": {
+      "gpu": "NVIDIA GB10",
+      "torch": "2.14.1+cu130",
+      "cuda": "13.0"
+    },
+    "repeated_final_outputs_equal": true,
+    "process_memory_after_pass": [
+      {
+        "mib": 1079.0,
+        "status": "reported",
+        "scope": "After pass, before clearing CUDA allocator cache; not peak"
+      },
+      {
+        "mib": 1079.0,
+        "status": "reported",
+        "scope": "After pass, before clearing CUDA allocator cache; not peak"
+      }
+    ],
+    "paused_compute_pids": [
+      1307038
+    ]
+  },
+  "history_analysis_sha256": "b3b536a2d53f16e0e296e6cd9c951a3faa5d6a14d4aaea9766e565aef7b65944",
+  "history_scope": "Engineering subset",
+  "history_videos": 1,
+  "history_analysis": "/home/sadasue/mywam/results/multidepth_diagnostics_integration/history/analysis.json"
+}

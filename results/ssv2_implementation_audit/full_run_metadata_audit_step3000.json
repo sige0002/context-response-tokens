@@ -1,0 +1,69 @@
+{
+  "scope": "Metadata/source verification and prediction recount; not an independent forward evaluation or a proof of no implementation bugs",
+  "run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42",
+  "sources_match": {
+    "train_video.py": true,
+    "video_data.py": true,
+    "temporal_readout.py": true,
+    "temporal_siglip.py": true,
+    "train_temporal.py": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "splits": {
+    "train": {
+      "samples": 168913,
+      "classes": 174,
+      "min_per_class": 91,
+      "max_per_class": 3284,
+      "official_labels_match": true,
+      "file_sizes_match": true,
+      "manifest_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "annotation_sha256": "b24e46090960a49d732a0d3633fd939030b4eb717e16728871a3180b8704192b"
+    },
+    "val": {
+      "samples": 24777,
+      "classes": 174,
+      "min_per_class": 15,
+      "max_per_class": 530,
+      "official_labels_match": true,
+      "file_sizes_match": true,
+      "manifest_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac",
+      "annotation_sha256": "fbdd69ac72b40b9e3ed3aaf484e1575777152565caed693b0ced2d4959fd3958"
+    }
+  },
+  "cross_split_overlap": {
+    "id": 0,
+    "group": 0,
+    "sha256": 0
+  },
+  "validation": [
+    {
+      "step": 1000,
+      "correct": 3978,
+      "samples": 24777,
+      "accuracy": 0.16055212495459498,
+      "reported_loss": 3.7078279917747348,
+      "predictions_sha256": "a4b29714b6a65666707167b0c0b64fa2d575ef66b8bdffbe3247a9e36f19c195"
+    },
+    {
+      "step": 2000,
+      "correct": 7201,
+      "samples": 24777,
+      "accuracy": 0.2906324413770836,
+      "reported_loss": 2.8797598651257323,
+      "predictions_sha256": "52638c2a52efc44bf9ab2946308595974703ac2b8a6bef56bd3fdc348ae53536"
+    },
+    {
+      "step": 3000,
+      "correct": 8754,
+      "samples": 24777,
+      "accuracy": 0.3533115389272309,
+      "reported_loss": 2.5881097396338695,
+      "predictions_sha256": "9f03d24b82efac6934ebbd0ece1ae0661701ded554f662c0ef64a23d564f7d4c"
+    }
+  ],
+  "video_hash_scope": "Hashes recorded during extraction; no content reread in this audit",
+  "config_sha256": "0c1e227f170ed7e4b0cd14c6fe1720ab905884b7cf8031f01ac52f1a9031cf06",
+  "audit_source_sha256": "944e3ed5223edd398714672c3310ffb82688b5b6e486e062be7055d25279fc10"
+}

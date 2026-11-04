@@ -1,0 +1,115 @@
+{
+  "purpose": "implementation verification, not accuracy evaluation",
+  "images": [
+    "data/demo_dog.jpg"
+  ],
+  "repeated_images": true,
+  "model": "google/siglip2-base-patch16-224",
+  "input_shape": [
+    1,
+    6,
+    3,
+    224,
+    224
+  ],
+  "gpu": "NVIDIA GB10",
+  "torch": "2.14.1+cu130",
+  "variants": {
+    "none": {
+      "checkpoint_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "parameters": 92884224,
+      "trainable_parameters": 0,
+      "output_shape": [
+        1,
+        6,
+        196,
+        768
+      ],
+      "initial_identity_max_abs": 0.0,
+      "future_leak_max_abs": 0.0,
+      "stream_batch_max_abs": 0.00019741058349609375,
+      "stream_batch_rmse": 6.441280675062444e-06,
+      "state_bytes_by_frame": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "step_gpu_ms": [
+        7.7979841232299805,
+        8.694592475891113,
+        7.80131196975708,
+        7.933375835418701,
+        7.80998420715332,
+        7.797120094299316
+      ],
+      "finite_backward_and_optimizer_step": null
+    },
+    "attention": {
+      "checkpoint_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "parameters": 94863360,
+      "trainable_parameters": 1979136,
+      "output_shape": [
+        1,
+        6,
+        196,
+        768
+      ],
+      "initial_identity_max_abs": 0.0,
+      "future_leak_max_abs": 0.0,
+      "stream_batch_max_abs": 0.016639351844787598,
+      "stream_batch_rmse": 0.0005629282677546144,
+      "state_bytes_by_frame": [
+        602112,
+        1204224,
+        1806336,
+        2408448,
+        3010560,
+        3612672
+      ],
+      "step_gpu_ms": [
+        10.754400253295898,
+        11.239168167114258,
+        11.084416389465332,
+        11.125120162963867,
+        11.364480018615723,
+        11.71776008605957
+      ],
+      "finite_backward_and_optimizer_step": true
+    },
+    "mamba": {
+      "checkpoint_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "parameters": 95386032,
+      "trainable_parameters": 2501808,
+      "output_shape": [
+        1,
+        6,
+        196,
+        768
+      ],
+      "initial_identity_max_abs": 0.0,
+      "future_leak_max_abs": 0.0,
+      "stream_batch_max_abs": 0.008982658386230469,
+      "stream_batch_rmse": 0.0004891279968433082,
+      "state_bytes_by_frame": [
+        79027200,
+        79027200,
+        79027200,
+        79027200,
+        79027200,
+        79027200
+      ],
+      "step_gpu_ms": [
+        9.988160133361816,
+        11.801631927490234,
+        11.676095962524414,
+        11.286911964416504,
+        11.725055694580078,
+        12.371487617492676
+      ],
+      "finite_backward_and_optimizer_step": true
+    }
+  }
+}

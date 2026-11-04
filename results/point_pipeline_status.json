@@ -1,0 +1,188 @@
+{
+  "scope": "Point probe/evaluation/data implementation status; no recognition performance or novelty claim",
+  "observed_at": "2026-11-04T21:31:26.986777+00:00",
+  "sources": {
+    "train_points.py": "95bdcaf0268f9bf9dcfc4f691da24b38403c914bce57a7d0416aff312012ea0a",
+    "point_readout.py": "ee7c3be5b2388b18c442a96df96f386df4e2ee42663662fb7fc70570c294f91d",
+    "point_checkpoint.py": "5fdcbef8927c18e73bb59f1ccdb3288d2a6bb4aa27e0d82643f402692d76b9f3",
+    "evaluate_point_tracks.py": "28247013e5b994dd188baee3e3abb509047ea86b6189f8262ea625208a01bf79",
+    "kubric_data.py": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa",
+    "prepare_kubric_points.py": "0938bd6193ce87210a6141746972c8efaf78b0f0eb75ff8b66751db6b8e7188f",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "test_point_training.py": "58a4d3bb8ef530366154ab086b6666b9a61882f7a1051e6851c1ed4556307b3f",
+    "test_point_readout.py": "34b196ce937e8114d6fcce491efe82ba2e0d920d1860972c92c6b0730d2c7f92",
+    "test_point_evaluation.py": "dfd9b3420e373635fa30089f957854f932cc08a94898a5042f4fe3464f81fada",
+    "test_kubric_data.py": "bb3841045f762ea39abee9e4347d51b8d72f637e94fa78b656046bea9545a456",
+    "test_tapvid_metrics.py": "0edf0409be68d7c6ede07bfc988585fda87f9e1595b7d2ddb667deda6ba322f1",
+    "check_point_training.py": "4b3c31f485e4199064b16ddfc8c33197845e4243b68e2d35caa5de9a465c390e",
+    "diagnose_point_learning.py": "83d5ce605f0eb561a117b8615c327277bd7241dc2c10822605f8725b5d057af3",
+    "point_experiment.py": "09085dc70ef9d021487364dc2106b0683902c95fcff90e964985fe6ed3c9e4c0",
+    "run_point_comparisons.py": "59bbf6ffd64262c5beae133deed8c69cd1b1d75952e690b217bd9b84b580ecb2",
+    "test_point_experiments.py": "d5200d0aae226625b6180ee2d44cceb9494300e1fc2f8fe85c4f9c7c4a2605c2",
+    "audit_robotap_predictions.py": "cf64538425f5e60dc423a973c0facaea2a1acb75df11e8fa38edeb0f28edc304",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+    "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab",
+    "gmmix_checkpoint.py": "389fbd8bcd342edf77b3abe2ebbb3146ed9758f8fe9e7a7146eb65dee843efc3",
+    "baselines/gmmix/pyproject.toml": "060c6721eae020ee7c0583d1bb837cb0c641d1c95ac85a82b572b9688fc08073",
+    "baselines/gmmix/uv.lock": "d2a9fd0cfa3ff0f59dc097eceff28bb21fba745c81a13a2c132c98bacab8c4d0",
+    "baselines/gmmix/source_manifest.json": "af8c95eb8ae03c79ab52ebe3bad4e9751b1d1c1b33c6d1a8d0323ef9d432c7b7",
+    "robotap_data.py": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007",
+    "run_video_comparisons.py": "8b317ecf2203f4a50db6c2ea9f4f30591cf6783bed878fd851a317d268daa822",
+    "gmmix_experiment.py": "3892deb44ceb8948ba1483619e9580fa301f7077a4bb96e8ed34da594bd1bba9",
+    "run_gmmix_comparison.py": "a3b0607042b95a81a4d3077efbc24ee83fa16cb1665882260a1fddee63d6e6e4",
+    "test_gmmix_experiments.py": "7f0487aa82bbddf51489c76246efb070d6d138a3ed5da963d130a2796b7448a4",
+    "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+    "evaluate_point_history.py": "ecd5927139608718e5c58eb1800f320829b9824f2a7eb5c6219fcc373b1ad3e2",
+    "check_point_history.py": "bb9bb596fb8ee74bd44261b2f064310e59310f1717a7543d86ab29febd1058b5",
+    "pause_training.py": "26a65916b123a0ede3510252dfe068d0104c81e8bacf0d1ff4444d4919494fe8",
+    "test_point_history.py": "3503c2e54ad6cd30fc1c1018e58a910a78038316f81f76db14929c214242faa0"
+  },
+  "completed": [
+    "FP32 query-coordinate preservation under autocast",
+    "Bilinear gather sampler independently matched to grid_sample values and feature gradients",
+    "Per-clip loss weighting checked for microbatch accumulation invariance",
+    "Self-contained point checkpoints and supervised probe/adapt trainer",
+    "Real GPU direct/resumed/repeated learning checks: exact equality in the tested three-update protocol",
+    "Probe encoder freeze and adapt backbone freeze verified; all three adapters update in adapt mode",
+    "One fixed synthetic training-clip memorization diagnostic passed",
+    "Real RoboTAP online CLI completed one 296-frame video with 38 queries",
+    "Full benchmark CLI rejects development or incomplete checkpoints",
+    "Pinned Kubric preparation and first-scene annotation/reader audit",
+    "Matched point probe/adapt experiment queue; partial results and wrong checkpoints rejected",
+    "Real pidfd dependency binding checked against live video/data processes",
+    "Real RoboTAP engineering prediction archive rescored against original annotations; all metrics and query coordinates match",
+    "Published GMMix added to full-video and point plans: 5 probes + 4 adaptations",
+    "GMMix point GPU training/restart/repeat exactly matched in three-update engineering fixture",
+    "GMMix point online CLI and independent raw-label rescoring passed on one real video",
+    "Full point queue now includes independent raw-label rescoring of every completed RoboTAP evaluation",
+    "Corrected the all-coordinates-finite assumption for upstream occluded Kubric labels; all visible coordinates must still be finite",
+    "Recovered scene 0488 without dropping or changing source annotation bytes; rehashed all 490 prior scenes",
+    "Conditional point-history state resets preserve absolute time and common query anchors",
+    "Mamba-3 and GMMix native GPU history paths exactly match ordinary full-history predictions on a 12-frame real prefix; future-change checks passed",
+    "Three-condition real 296-frame engineering CLI and independent original-label metrics checks passed"
+  ],
+  "in_progress": [
+    "Full SSv2 Mamba-3 training and matched control queue",
+    "Full 5869-scene Kubric release conversion",
+    "Published GMMix video queue waits for original video comparisons",
+    "Nine point runs wait for both video queues and data completion; no full point training started"
+  ],
+  "outstanding": [
+    "Full-data point training and matched encoder comparisons (queued; no full-data point training has started)",
+    "Full RoboTAP accuracy, history-use and long-history evaluation",
+    "Closest-prior architecture comparisons and multiple seeds",
+    "Supported IROS contribution and paper artifacts"
+  ],
+  "cpu_tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' uv run --locked pytest -q test_kubric_data.py test_point_training.py test_point_readout.py test_point_evaluation.py test_point_experiments.py test_point_history.py",
+    "passed": 35,
+    "failed": 0,
+    "seconds": 2.41,
+    "log": "results/point_history_cpu_verification.log",
+    "log_sha256": "6ad21c23817fa4ad903e73c9b78608a2553a6a9a4e7f23ccf4f0a21dc46d4445",
+    "verified_at": "2026-11-04T20:33:55.045272+00:00",
+    "scope": "Storage/masked-label loss, point training and online history interventions; not recognition accuracy",
+    "source_sha256": {
+      "point_history.py": "1314dc8b8365852fb590e9d3419c83de27830ad3a83388ceec431f7917b47342",
+      "evaluate_point_history.py": "dbd0df9eeaa0590913fc38afeccd83ba7e84c0c1d841b589d19158e8204ed43c",
+      "check_point_history.py": "bb9bb596fb8ee74bd44261b2f064310e59310f1717a7543d86ab29febd1058b5",
+      "pause_training.py": "26a65916b123a0ede3510252dfe068d0104c81e8bacf0d1ff4444d4919494fe8",
+      "kubric_data.py": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa",
+      "prepare_kubric_points.py": "0938bd6193ce87210a6141746972c8efaf78b0f0eb75ff8b66751db6b8e7188f",
+      "test_kubric_data.py": "bb3841045f762ea39abee9e4347d51b8d72f637e94fa78b656046bea9545a456",
+      "test_point_training.py": "58a4d3bb8ef530366154ab086b6666b9a61882f7a1051e6851c1ed4556307b3f",
+      "test_point_readout.py": "34b196ce937e8114d6fcce491efe82ba2e0d920d1860972c92c6b0730d2c7f92",
+      "test_point_evaluation.py": "a6cbecc556be8d2e9ec8b7adfa4fc1ca927f4ef4daf0b1a298250859015bc006",
+      "test_point_experiments.py": "fd369e78778509a7c7493403fba22d9bd4d9f57cdf37d663cdaf839c2656626f",
+      "test_point_history.py": "3e69bf3d34d33c62e513950260c10b525406ba3a4a06450e0ec1216b10ae61fb"
+    }
+  },
+  "gpu_evidence": {
+    "training": "results/point_training_integration_rgbfix_fp32/verification.json",
+    "memorization": "results/point_learning_diagnostic/diagnosis.json",
+    "online_cli": "results/point_online_integration_rgbfix_fp32/mamba/summary.json",
+    "historical_initial_readout": "results/point_readout_gpu_integration.json",
+    "gmmix_training": "results/gmmix_point_training_integration_rgbfix_fp32/verification.json",
+    "gmmix_online_cli": "results/point_online_integration_rgbfix_fp32/gmmix/summary.json",
+    "historical_scope": "Earlier Mamba-3 verification files retain the source hashes used at that time; current branch adds GMMix checkpoint support",
+    "point_history": "results/point_history_gpu_integration.json",
+    "point_history_cli": "results/point_history_cli_integration/verification.json",
+    "corrected_history_analysis": "results/point_history_corrected_cli_integration/analysis_verified.json"
+  },
+  "data_evidence": "results/kubric_data_integration.json",
+  "failed_attempt": {
+    "path": "results/point_training_integration/repeat_diagnosis.json",
+    "outcome": "Fresh repeated training exceeded predefined tolerance. Kept as evidence; deterministic settings and sampler were then changed, and v2 passed."
+  },
+  "point_experiment_plan": "results/point_comparisons_with_gmmix_seed42_rgbfix/plan.json",
+  "point_queue_pid": 1311522,
+  "raw_label_evidence": "results/point_online_integration_rgbfix_fp32/mamba/raw_label_metric_audit.json",
+  "gmmix_evidence": "results/gmmix_baseline_status.json",
+  "data_preparation_pid": 1097327,
+  "historical_cpu_tests": [
+    {
+      "command": "CUDA_VISIBLE_DEVICES='' uv run --locked pytest -q test_gmmix_experiments.py test_point_experiments.py test_point_training.py test_point_readout.py test_point_evaluation.py test_kubric_data.py test_tapvid_metrics.py",
+      "passed": 30,
+      "failed": 0,
+      "seconds": 2.64,
+      "verified_at": "2026-11-04T19:53:41.445641+00:00",
+      "scope": "CPU math, checkpoint/evaluation completeness, five-encoder/nine-run protocol, real pidfd binding; no full-data accuracy claim",
+      "log": "results/gmmix_point_comparison_cpu_tests.log",
+      "integration_evaluation_sha256": "762ac4029db616f73dc50e7cbbbb0c929ee06a9a5866ba1c1b66cc24c204c930"
+    }
+  ],
+  "data_repair_evidence": "results/kubric_0488_repair_verification.json",
+  "live_processes": {
+    "training": {
+      "pid": 1307038,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 train_video.py --output results/ssv2_full_mamba_interleaved_seed42_rgbfix "
+    },
+    "video": {
+      "pid": 1310800,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_video_comparisons.py --reference results/ssv2_full_mamba_interleaved_seed42_rgbfix --after-pid 1307038 --output results/ssv2_full_comparisons_seed42_rgbfix "
+    },
+    "gmmix": {
+      "pid": 1310938,
+      "state": "S",
+      "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_gmmix_comparison.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --integration results/gmmix_training_integration_rgbfix_fp32 --output results/ssv2_gmmix_comparison_seed42_rgbfix --after-video-pid 1310800 "
+    },
+    "points": {
+      "pid": 1311522,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_point_comparisons.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --gmmix-comparison results/ssv2_gmmix_comparison_seed42_rgbfix --output results/point_comparisons_with_gmmix_seed42_rgbfix --after-video-pid 1310800 --after-data-pid 1097327 --after-gmmix-pid 1310938 "
+    },
+    "analysis": {
+      "pid": 1311758,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_research_summaries.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --gmmix-comparison results/ssv2_gmmix_comparison_seed42_rgbfix --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --after-gmmix-pid 1310938 --after-point-pid 1311522 --output results/research_comparison_summaries_seed42_rgbfix "
+    },
+    "costs": {
+      "pid": 1317579,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_encoder_costs.py --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --after-point-pid 1311522 --output results/encoder_costs_seed42_rgbfix_v2 "
+    },
+    "history": {
+      "pid": 1328059,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_point_history_comparisons.py --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --cost-comparisons results/encoder_costs_seed42_rgbfix_v2 --after-cost-pid 1317579 --output results/point_history_comparisons_seed42_rgbfix "
+    },
+    "data": {
+      "pid": 1097327,
+      "state": "S",
+      "command": "/home/sadasue/mywam/.venv/bin/python3 prepare_kubric_points.py --workers 2 "
+    }
+  },
+  "rgb_repair_assessment": "results/ssv2_implementation_audit/current_assessment_rgbfix.json",
+  "precision_update": "Current TF32-off protocol: both encoders GPU training/restart/repeat matched exactly, probe/adapt semantics checked, one 296-frame real online video independently rescored. Not full-data accuracy.",
+  "point_history_comparisons_plan": "results/point_history_comparisons_seed42_rgbfix/plan.json",
+  "point_history_comparisons_pid": 1328059
+}

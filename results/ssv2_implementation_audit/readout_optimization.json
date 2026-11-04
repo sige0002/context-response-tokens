@@ -1,0 +1,66 @@
+{
+  "scope": "Optimization diagnostic, not a matched temporal-model benchmark",
+  "model": "google/siglip2-base-patch16-224",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "feature": "current-frame last_hidden_state.mean(patches), frozen, float32",
+  "train_samples": 2784,
+  "val_samples": 696,
+  "classes": 174,
+  "optimizer": "AdamW",
+  "lr": 0.01,
+  "weight_decay": 0.01,
+  "full_batch": true,
+  "predefined_updates": 300,
+  "selected_by_validation": false,
+  "trace": [
+    {
+      "updates": 0,
+      "train_loss": 5.357925891876221,
+      "train_accuracy": 0.005747126415371895,
+      "val_loss": 5.353278160095215,
+      "val_accuracy": 0.004310344811528921
+    },
+    {
+      "updates": 50,
+      "train_loss": 0.024735113605856895,
+      "train_accuracy": 1.0,
+      "val_loss": 6.874190330505371,
+      "val_accuracy": 0.06465516984462738
+    },
+    {
+      "updates": 100,
+      "train_loss": 0.011640339158475399,
+      "train_accuracy": 1.0,
+      "val_loss": 7.140709400177002,
+      "val_accuracy": 0.06609195470809937
+    },
+    {
+      "updates": 150,
+      "train_loss": 0.007970758713781834,
+      "train_accuracy": 1.0,
+      "val_loss": 7.285113334655762,
+      "val_accuracy": 0.06752873212099075
+    },
+    {
+      "updates": 200,
+      "train_loss": 0.005886858329176903,
+      "train_accuracy": 1.0,
+      "val_loss": 7.408195495605469,
+      "val_accuracy": 0.06752873212099075
+    },
+    {
+      "updates": 250,
+      "train_loss": 0.004575778264552355,
+      "train_accuracy": 1.0,
+      "val_loss": 7.5140156745910645,
+      "val_accuracy": 0.06609195470809937
+    },
+    {
+      "updates": 300,
+      "train_loss": 0.0036923557054251432,
+      "train_accuracy": 1.0,
+      "val_loss": 7.606071949005127,
+      "val_accuracy": 0.06752873212099075
+    }
+  ]
+}

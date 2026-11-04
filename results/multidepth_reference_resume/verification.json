@@ -1,0 +1,35 @@
+{
+  "scope": "Same production trainer with deterministic PyTorch scan; checkpoint logic isolated from native atomics",
+  "comparisons": {
+    "resumed": {
+      "different_tensors": 0,
+      "max_weight_difference": 0.0,
+      "history_equal": true,
+      "cpu_rng_equal": true,
+      "cuda_rng_equal": true,
+      "integer_buffers_equal": true,
+      "optimizer_equal": true
+    },
+    "repeat": {
+      "different_tensors": 0,
+      "max_weight_difference": 0.0,
+      "history_equal": true,
+      "cpu_rng_equal": true,
+      "cuda_rng_equal": true,
+      "integer_buffers_equal": true,
+      "optimizer_equal": true
+    }
+  },
+  "source_plan": {
+    "scope": "Resume/independent repeat diagnosis with upstream PyTorch scan; not native benchmark results",
+    "precision": "frozen/features FP32; temporal BF16 with FP32 reference scan",
+    "weight_tolerance": 5e-06,
+    "sources": {
+      "reference_multidepth_training.py": "dde06b2d3fa9a076f36eeb4b177dcbc15ae1dff24fc818c2389a5885b03a955d",
+      "train_multidepth_video.py": "aa998188cccdf53e391225e0bc70ad0fe779b83837b0ba2ff4fb57bbe26425f6",
+      "gmmix_multidepth.py": "ad5d85858755e640531602a9b5fdf01d434df180795565b813a0e5456a748c8a",
+      "check_scan_reference.py": "133ec4c4af4530cea957c5edb734c21d15025843bba9af98c6d65d51b85273cb"
+    }
+  },
+  "passed": true
+}

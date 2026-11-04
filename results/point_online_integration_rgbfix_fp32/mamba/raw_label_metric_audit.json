@@ -1,0 +1,56 @@
+{
+  "scope": "Engineering subset metric audit",
+  "videos": 1,
+  "report_sha256": "9c9e9fc616ba206cc33b09a6b8729fa758760937d251b9d45733c1ebab3e7901",
+  "original_report": "/home/sadasue/mywam/results/point_online_integration_rgbfix_fp32/mamba/summary.json",
+  "dataset_extraction_sha256": "d464a3f3d9d16853858cdde6b28e4bc9a62f3b00ec17da81412955dcfaea0864",
+  "metrics": {
+    "occlusion_accuracy": 0.8561692969870875,
+    "pts_within_1": 0.0,
+    "jaccard_1": 0.0,
+    "pts_within_2": 0.0,
+    "jaccard_2": 0.0,
+    "pts_within_4": 0.0,
+    "jaccard_4": 0.0,
+    "pts_within_8": 0.0,
+    "jaccard_8": 0.0,
+    "pts_within_16": 0.0,
+    "jaccard_16": 0.0,
+    "average_jaccard": 0.0,
+    "average_pts_within_thresh": 0.0
+  },
+  "rows": [
+    {
+      "id": "gear_v2_9-basket_front_right_rgb_img-0",
+      "metrics": {
+        "occlusion_accuracy": 0.8561692969870875,
+        "pts_within_1": 0.0,
+        "jaccard_1": 0.0,
+        "pts_within_2": 0.0,
+        "jaccard_2": 0.0,
+        "pts_within_4": 0.0,
+        "jaccard_4": 0.0,
+        "pts_within_8": 0.0,
+        "jaccard_8": 0.0,
+        "pts_within_16": 0.0,
+        "jaccard_16": 0.0,
+        "average_jaccard": 0.0,
+        "average_pts_within_thresh": 0.0
+      },
+      "query_coordinate_max_abs_difference": 0.0,
+      "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c",
+      "predictions_sha256": "5a5241e82cb39b275946b22fef388048df193893c8accbfc9ef65782536b7f60"
+    }
+  ],
+  "official_metric": {
+    "upstream_file_sha256": "90cd01e53e23f6d489d3a6cd840cfd93fed4c1a6f4a0dfd373933cc164f0e570",
+    "local_file_sha256": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "comparison": "Full function AST, excluding source locations"
+  },
+  "source_sha256": {
+    "audit_robotap_predictions.py": "cf64538425f5e60dc423a973c0facaea2a1acb75df11e8fa38edeb0f28edc304",
+    "robotap_data.py": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32"
+  },
+  "limits": "Saved predictions are rescored; no model forward pass, additional training, or generalization claim"
+}

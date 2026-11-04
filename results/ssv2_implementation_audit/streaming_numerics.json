@@ -1,0 +1,125 @@
+{
+  "scope": "Trained real-image numerical diagnosis, two six-frame clips",
+  "layers": {
+    "3": {
+      "helper_vs_official": {
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "reference_rms": 0.3072090744972229
+      },
+      "isolated_step_vs_full": {
+        "max_abs": 0.01605844497680664,
+        "rmse": 0.00012809806503355503,
+        "relative_l2": 0.0004169735766481608,
+        "reference_rms": 0.3072090744972229
+      },
+      "official_kernel_step_vs_full": {
+        "max_abs": 2.0,
+        "rmse": 0.01944139041006565,
+        "relative_l2": 0.0023159526754170656,
+        "reference_rms": 8.39455509185791
+      },
+      "fp32_reference_step_vs_full": {
+        "max_abs": 6.103515625e-05,
+        "rmse": 8.596376801506267e-07,
+        "relative_l2": 1.0241482328865459e-07,
+        "reference_rms": 8.393683433532715
+      },
+      "kernel_full_vs_reference": {
+        "max_abs": 0.977752685546875,
+        "rmse": 0.014496617950499058,
+        "relative_l2": 0.0017270866082981229,
+        "reference_rms": 8.393683433532715
+      },
+      "kernel_step_vs_reference": {
+        "max_abs": 1.022247314453125,
+        "rmse": 0.014547012746334076,
+        "relative_l2": 0.0017330904956907034,
+        "reference_rms": 8.393683433532715
+      }
+    },
+    "7": {
+      "helper_vs_official": {
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "reference_rms": 0.9584523439407349
+      },
+      "isolated_step_vs_full": {
+        "max_abs": 0.05776023864746094,
+        "rmse": 0.0005363241070881486,
+        "relative_l2": 0.0005595730035565794,
+        "reference_rms": 0.9584523439407349
+      },
+      "official_kernel_step_vs_full": {
+        "max_abs": 4.0,
+        "rmse": 0.11247937381267548,
+        "relative_l2": 0.002839172724634409,
+        "reference_rms": 39.61695098876953
+      },
+      "fp32_reference_step_vs_full": {
+        "max_abs": 0.00018310546875,
+        "rmse": 4.690310561272781e-06,
+        "relative_l2": 1.183777413871212e-07,
+        "reference_rms": 39.621559143066406
+      },
+      "kernel_full_vs_reference": {
+        "max_abs": 2.9212646484375,
+        "rmse": 0.08343227952718735,
+        "relative_l2": 0.0021057291887700558,
+        "reference_rms": 39.621559143066406
+      },
+      "kernel_step_vs_reference": {
+        "max_abs": 2.74493408203125,
+        "rmse": 0.07686764001846313,
+        "relative_l2": 0.0019400458550080657,
+        "reference_rms": 39.621559143066406
+      }
+    },
+    "11": {
+      "helper_vs_official": {
+        "max_abs": 0.0,
+        "rmse": 0.0,
+        "relative_l2": 0.0,
+        "reference_rms": 2.6651206016540527
+      },
+      "isolated_step_vs_full": {
+        "max_abs": 0.12580108642578125,
+        "rmse": 0.0010071994038298726,
+        "relative_l2": 0.00037791888462379575,
+        "reference_rms": 2.6651206016540527
+      },
+      "official_kernel_step_vs_full": {
+        "max_abs": 16.0,
+        "rmse": 0.16256757080554962,
+        "relative_l2": 0.002584511414170265,
+        "reference_rms": 62.90069580078125
+      },
+      "fp32_reference_step_vs_full": {
+        "max_abs": 0.00048828125,
+        "rmse": 6.94007439960842e-06,
+        "relative_l2": 1.1030144975165967e-07,
+        "reference_rms": 62.919158935546875
+      },
+      "kernel_full_vs_reference": {
+        "max_abs": 5.4962158203125,
+        "rmse": 0.1134551391005516,
+        "relative_l2": 0.0018031889339908957,
+        "reference_rms": 62.919158935546875
+      },
+      "kernel_step_vs_reference": {
+        "max_abs": 10.740478515625,
+        "rmse": 0.12665340304374695,
+        "relative_l2": 0.002012954093515873,
+        "reference_rms": 62.919158935546875
+      }
+    }
+  },
+  "encoder": {
+    "max_abs": 0.6786823272705078,
+    "rmse": 0.003763039130717516,
+    "relative_l2": 0.0020960590336471796,
+    "reference_rms": 1.795292615890503
+  }
+}

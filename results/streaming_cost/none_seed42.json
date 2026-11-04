@@ -1,0 +1,127 @@
+{
+  "scope": "Repeated-image kernel timing only; not recognition or memory retention accuracy",
+  "architecture": {
+    "kind": "none",
+    "every": 4,
+    "width": 256,
+    "state_size": 64,
+    "freeze_backbone": true,
+    "placement": "interleaved"
+  },
+  "trained_checkpoint": false,
+  "checkpoint": {},
+  "batch_size": 1,
+  "warmup": 5,
+  "repeats": 50,
+  "include_readout": false,
+  "image_sha256": "f3f87bb8ab3c26c7ecfd3ac60421d7f32b0503d1d6c5baf8bac42ed93d86351a",
+  "gpu": "NVIDIA GB10",
+  "torch": "2.14.1+cu130",
+  "initial_paused_compute_pids": [
+    3111357
+  ],
+  "precision": {
+    "spatial": "float32",
+    "temporal": "bfloat16"
+  },
+  "timing_scope": "One current frame; excludes image decoding, preprocessing, prefill, and state copying",
+  "allocation_scope": "Current process only; peak increment above baseline holding prefill plus copied input state. Not total GPU usage.",
+  "model_parameter_bytes": 371536896,
+  "histories": [
+    {
+      "history_frames": 0,
+      "state_bytes_before": 0,
+      "state_bytes_after": 0,
+      "gpu_ms": {
+        "p50": 7.876816034317017,
+        "p90": 8.430940818786622,
+        "minimum": 7.838687896728516,
+        "maximum": 8.816927909851074
+      },
+      "synchronized_wall_ms": {
+        "p50": 8.203684934414923,
+        "p90": 8.763560221996158,
+        "minimum": 8.073460077866912,
+        "maximum": 9.206602931953967
+      },
+      "peak_allocated_increment_bytes": 6623232,
+      "baseline_allocated_bytes": 405695488
+    },
+    {
+      "history_frames": 6,
+      "state_bytes_before": 0,
+      "state_bytes_after": 0,
+      "gpu_ms": {
+        "p50": 7.858576059341431,
+        "p90": 8.00457615852356,
+        "minimum": 7.748511791229248,
+        "maximum": 9.157119750976562
+      },
+      "synchronized_wall_ms": {
+        "p50": 8.214396482799202,
+        "p90": 8.462217426858842,
+        "minimum": 8.075764053501189,
+        "maximum": 9.397051995620131
+      },
+      "peak_allocated_increment_bytes": 6623232,
+      "baseline_allocated_bytes": 405695488
+    },
+    {
+      "history_frames": 32,
+      "state_bytes_before": 0,
+      "state_bytes_after": 0,
+      "gpu_ms": {
+        "p50": 7.856287956237793,
+        "p90": 7.882812595367431,
+        "minimum": 7.83187198638916,
+        "maximum": 8.52723217010498
+      },
+      "synchronized_wall_ms": {
+        "p50": 8.217140450142324,
+        "p90": 8.249257900752127,
+        "minimum": 8.147557033225894,
+        "maximum": 8.823096984997392
+      },
+      "peak_allocated_increment_bytes": 6623232,
+      "baseline_allocated_bytes": 405695488
+    },
+    {
+      "history_frames": 128,
+      "state_bytes_before": 0,
+      "state_bytes_after": 0,
+      "gpu_ms": {
+        "p50": 7.912368059158325,
+        "p90": 7.93428144454956,
+        "minimum": 7.888800144195557,
+        "maximum": 8.436896324157715
+      },
+      "synchronized_wall_ms": {
+        "p50": 8.230053004808724,
+        "p90": 8.307167515158653,
+        "minimum": 8.12736398074776,
+        "maximum": 8.877528947778046
+      },
+      "peak_allocated_increment_bytes": 6623232,
+      "baseline_allocated_bytes": 405695488
+    },
+    {
+      "history_frames": 256,
+      "state_bytes_before": 0,
+      "state_bytes_after": 0,
+      "gpu_ms": {
+        "p50": 7.972032070159912,
+        "p90": 8.579830169677734,
+        "minimum": 7.887519836425781,
+        "maximum": 9.651616096496582
+      },
+      "synchronized_wall_ms": {
+        "p50": 8.334485988598317,
+        "p90": 8.954270882532,
+        "minimum": 8.151588961482048,
+        "maximum": 9.704974014312029
+      },
+      "peak_allocated_increment_bytes": 6623232,
+      "baseline_allocated_bytes": 405695488
+    }
+  ]
+}

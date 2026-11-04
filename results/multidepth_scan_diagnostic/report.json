@@ -1,0 +1,499 @@
+{
+  "scope": "Same-input native backward repeats on two actual SSv2 microbatches",
+  "repeats": 8,
+  "calls": [
+    {
+      "index": 0,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 20957,
+          "max_abs": 8.526512829121202e-14,
+          "relative_l2": 1.9527736583313526e-07,
+          "repeat": 3
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1278,
+          "max_abs": 2.3283064365386963e-10,
+          "relative_l2": 2.0394911359744583e-07,
+          "repeat": 2
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1325,
+          "max_abs": 3.126388037344441e-13,
+          "relative_l2": 2.1793302096284606e-07,
+          "repeat": 1
+        }
+      }
+    },
+    {
+      "index": 1,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 21158,
+          "max_abs": 7.105427357601002e-14,
+          "relative_l2": 1.8663355660919478e-07,
+          "repeat": 7
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1293,
+          "max_abs": 2.3283064365386963e-10,
+          "relative_l2": 2.0216627660829545e-07,
+          "repeat": 6
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1327,
+          "max_abs": 1.0231815394945443e-12,
+          "relative_l2": 2.2266102917001263e-07,
+          "repeat": 6
+        },
+        "dB": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 5.820766091346741e-11,
+          "relative_l2": 5.474265890370589e-06,
+          "repeat": 4
+        },
+        "dC": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 1.1368683772161603e-13,
+          "relative_l2": 5.088696575228369e-09,
+          "repeat": 6
+        }
+      }
+    },
+    {
+      "index": 2,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 20934,
+          "max_abs": 3.410605131648481e-13,
+          "relative_l2": 2.064957698166836e-07,
+          "repeat": 3
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1304,
+          "max_abs": 2.6193447411060333e-10,
+          "relative_l2": 2.0978799852855445e-07,
+          "repeat": 6
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1338,
+          "max_abs": 1.3642420526593924e-12,
+          "relative_l2": 2.1994343057940569e-07,
+          "repeat": 3
+        }
+      }
+    },
+    {
+      "index": 3,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 21186,
+          "max_abs": 1.7053025658242404e-13,
+          "relative_l2": 2.3248506408890535e-07,
+          "repeat": 2
+        },
+        "dB": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 2.842170943040401e-14,
+          "relative_l2": 2.380821095826491e-09,
+          "repeat": 1
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1323,
+          "max_abs": 2.0372681319713593e-10,
+          "relative_l2": 2.197719197738479e-07,
+          "repeat": 1
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1331,
+          "max_abs": 2.3874235921539366e-12,
+          "relative_l2": 4.679996266077069e-07,
+          "repeat": 1
+        },
+        "dC": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 1.7763568394002505e-15,
+          "relative_l2": 6.828365650690671e-11,
+          "repeat": 2
+        }
+      }
+    },
+    {
+      "index": 4,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 20980,
+          "max_abs": 1.5631940186722204e-13,
+          "relative_l2": 1.7651785810812726e-07,
+          "repeat": 1
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1275,
+          "max_abs": 2.9103830456733704e-10,
+          "relative_l2": 2.2048465098123415e-07,
+          "repeat": 7
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1342,
+          "max_abs": 9.094947017729282e-13,
+          "relative_l2": 2.3352673395038437e-07,
+          "repeat": 3
+        }
+      }
+    },
+    {
+      "index": 5,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 21178,
+          "max_abs": 2.2737367544323206e-13,
+          "relative_l2": 2.3903129431346315e-07,
+          "repeat": 3
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1315,
+          "max_abs": 2.3283064365386963e-10,
+          "relative_l2": 2.0203266615226312e-07,
+          "repeat": 3
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1327,
+          "max_abs": 1.3642420526593924e-12,
+          "relative_l2": 1.939139053774852e-07,
+          "repeat": 4
+        },
+        "dB": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 3.637978807091713e-12,
+          "relative_l2": 2.9423983960441547e-07,
+          "repeat": 5
+        }
+      }
+    },
+    {
+      "index": 6,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 20954,
+          "max_abs": 1.7053025658242404e-13,
+          "relative_l2": 1.953909816165833e-07,
+          "repeat": 5
+        },
+        "dC": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 2.168404344971009e-19,
+          "relative_l2": 7.947814329139612e-15,
+          "repeat": 1
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1283,
+          "max_abs": 1.7462298274040222e-10,
+          "relative_l2": 1.5972798905750096e-07,
+          "repeat": 4
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1328,
+          "max_abs": 1.5916157281026244e-12,
+          "relative_l2": 2.635026419284259e-07,
+          "repeat": 1
+        }
+      }
+    },
+    {
+      "index": 7,
+      "differences": {
+        "dA": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            16
+          ],
+          "different": 21209,
+          "max_abs": 1.4210854715202004e-13,
+          "relative_l2": 1.985071378385328e-07,
+          "repeat": 2
+        },
+        "dD": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1308,
+          "max_abs": 2.3283064365386963e-10,
+          "relative_l2": 2.0282291757212079e-07,
+          "repeat": 1
+        },
+        "ddelta_bias": {
+          "dtype": "torch.float32",
+          "shape": [
+            1536
+          ],
+          "different": 1342,
+          "max_abs": 6.821210263296962e-13,
+          "relative_l2": 2.0557128266318614e-07,
+          "repeat": 5
+        },
+        "dC": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 3.725290298461914e-09,
+          "relative_l2": 0.00015563653141725808,
+          "repeat": 3
+        },
+        "dB": {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            392,
+            1,
+            16,
+            8
+          ],
+          "different": 1,
+          "max_abs": 9.094947017729282e-13,
+          "relative_l2": 8.496100889487934e-08,
+          "repeat": 7
+        }
+      }
+    }
+  ],
+  "order": [
+    2,
+    4,
+    3,
+    0
+  ],
+  "reference_comparison": {
+    "call": 1,
+    "gradients": {
+      "du": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          392,
+          1536,
+          8
+        ],
+        "different": 1411727,
+        "max_abs": 2.384185791015625e-07,
+        "relative_l2": 0.0028983766678720713
+      },
+      "ddelta": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          392,
+          1536,
+          8
+        ],
+        "different": 1325311,
+        "max_abs": 4.656612873077393e-10,
+        "relative_l2": 0.0029058901127427816
+      },
+      "dA": {
+        "dtype": "torch.float32",
+        "shape": [
+          1536,
+          16
+        ],
+        "different": 24576,
+        "max_abs": 1.0685141660360387e-10,
+        "relative_l2": 0.0005823481478728354
+      },
+      "dB": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          392,
+          1,
+          16,
+          8
+        ],
+        "different": 21758,
+        "max_abs": 3.725290298461914e-09,
+        "relative_l2": 0.0024670001585036516
+      },
+      "dC": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          392,
+          1,
+          16,
+          8
+        ],
+        "different": 21355,
+        "max_abs": 7.450580596923828e-09,
+        "relative_l2": 0.00255648628808558
+      },
+      "dD": {
+        "dtype": "torch.float32",
+        "shape": [
+          1536
+        ],
+        "different": 1536,
+        "max_abs": 2.1106097847223282e-07,
+        "relative_l2": 0.0003732910845428705
+      },
+      "dz": {
+        "dtype": "torch.bfloat16",
+        "shape": [
+          392,
+          1536,
+          8
+        ],
+        "different": 1503540,
+        "max_abs": 1.1920928955078125e-07,
+        "relative_l2": 0.0031862976029515266
+      },
+      "ddelta_bias": {
+        "dtype": "torch.float32",
+        "shape": [
+          1536
+        ],
+        "different": 1536,
+        "max_abs": 1.04046193882823e-09,
+        "relative_l2": 0.0004337986756581813
+      }
+    }
+  },
+  "source_sha256": {
+    "diagnose_multidepth_scan.py": "15aebd03d4312c219aa31c5a8c69e45a1d3d75793f572b7cf759a122fb939857",
+    "gmmix_multidepth.py": "ad5d85858755e640531602a9b5fdf01d434df180795565b813a0e5456a748c8a",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "scope": "Three-update real-video training/restart checks, not recognition accuracy",
+  "train_samples": 5,
+  "val_samples": 3,
+  "steps": 3,
+  "frames": 8,
+  "comparisons": {
+    "resumed": {
+      "max_weight_difference": 1.1920928955078125e-07,
+      "max_validation_loss_difference": 0.0,
+      "predictions_equal": true
+    },
+    "repeat": {
+      "max_weight_difference": 2.7408823370933533e-06,
+      "max_validation_loss_difference": 0.0006361007690429688,
+      "predictions_equal": true
+    }
+  },
+  "predeclared_tolerances": {
+    "max_weight_difference": 5e-06,
+    "max_validation_loss_difference": 0.002
+  },
+  "checkpoint_sha256": "aaba0c0a9ae19df7b43b71cf6c2ad459d8a7f13c4354d9327349b21e27aa7407",
+  "evaluation_matches_saved_validation": true,
+  "evaluation_sha256": "4790ca5db68fc1ba034eb57291ee6fe875a783dd0a5f3383b6cf51dccc44eeff",
+  "clip_stream": {
+    "full": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0010135073061689483,
+      "prediction_disagreements": 0
+    },
+    "current": {
+      "logit_max_abs": 0.0029296875,
+      "logit_rmse": 0.0008653007622080131,
+      "prediction_disagreements": 0
+    },
+    "reverse_history": {
+      "logit_max_abs": 0.0078125,
+      "logit_rmse": 0.0010902595651823158,
+      "prediction_disagreements": 0
+    }
+  },
+  "scheduled_validation_preserved_across_stop": true,
+  "sources": {
+    "check_gmmix_training.py": "551f5aa2bf5b406979abe92ff9cfe9d35ea32e273e57a0d9d6edf7c4da499bfe",
+    "train_gmmix_video.py": "0f232776c6fc5409d448c408a8a1b48f994ff761e4f1099bf1863a7e84c04fe2",
+    "gmmix_checkpoint.py": "389fbd8bcd342edf77b3abe2ebbb3146ed9758f8fe9e7a7146eb65dee843efc3",
+    "evaluate_gmmix_video.py": "e5579793cde4c42a5b38873d4c3d05cf7521d720f2730f9c05c54f04ba6dd72d",
+    "gmmix_siglip.py": "d6a080affd3e8497d9dc7785b21281b43f2fedc9a127516ac05f9d6bfc7a11ab"
+  }
+}

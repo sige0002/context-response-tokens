@@ -1,0 +1,38 @@
+{
+  "scope": "Three-update real-video pipeline/resume check; not recognition accuracy",
+  "training_videos": 5,
+  "validation_videos": 3,
+  "frames": 8,
+  "steps": 3,
+  "effective_batch_target": 4,
+  "included_partial_batch_samples": 1,
+  "resumed_parameter_max_abs": 3.725290298461914e-09,
+  "repeated_parameter_max_abs": 0.0,
+  "parameter_tolerance": 1e-06,
+  "validation_loss_tolerance": 0.001,
+  "validation_loss_max_abs": {
+    "repeat": 0.00015195210774709977,
+    "resume": 0.0009552637736005565
+  },
+  "validation_predictions_equal": true,
+  "saved_storage_locations": {
+    "direct": {
+      "cuda:0": 394,
+      "cpu": 64
+    },
+    "direct_repeat": {
+      "cuda:0": 394,
+      "cpu": 64
+    },
+    "resumed": {
+      "cuda:0": 394,
+      "cpu": 64
+    }
+  },
+  "gain_absolute_sums": {
+    "encoder.adapters.3.gain": 0.11036722362041473,
+    "encoder.adapters.7.gain": 0.10491320490837097,
+    "encoder.adapters.11.gain": 0.11124411225318909
+  },
+  "readout": "attention"
+}

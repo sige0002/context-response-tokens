@@ -1,0 +1,18 @@
+{
+  "scope": "Actual failed upstream scene, storage/annotation validation; not model accuracy",
+  "source_sha256": "1983029f39125a19031b7d6e2231d2c61bff7f20afb8b73ec9b586a03cf41906",
+  "all_original_coordinate_bytes_preserved": true,
+  "all_original_occlusion_values_preserved": true,
+  "frames": 120,
+  "tracks": 32768,
+  "nonfinite_occluded_track_frames": 1,
+  "visible_coordinates_finite": true,
+  "existing_scenes_rehashed": 490,
+  "sources": {
+    "prepare_kubric_points.py": "0938bd6193ce87210a6141746972c8efaf78b0f0eb75ff8b66751db6b8e7188f",
+    "kubric_data.py": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "migration": "data/cotracker3_kubric/source_migrations/occluded_nonfinite_v2.json",
+  "scene_metadata_sha256": "eeaecbfebc94a649d8cfd276680a1d2db21e895019c5787f7dff57eff23d745d"
+}

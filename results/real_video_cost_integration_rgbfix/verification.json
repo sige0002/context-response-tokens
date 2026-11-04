@@ -1,0 +1,499 @@
+{
+  "scope": "Two three-update engineering checkpoints, one real video. Measurement validation only; no full-trained model comparison",
+  "source": "encoder_costs.py",
+  "source_sha256": "a06ec37e3f32aba872bed2e2e3cdf6383e33869fba8e794ac69002c3af47aae9",
+  "measurements": [
+    {
+      "model": "mamba_interleaved",
+      "video": {
+        "id": "gear_v2_9-basket_front_right_rgb_img-0",
+        "shard": "robotap_split0.pkl",
+        "frames": 296,
+        "height": 222,
+        "width": 296,
+        "tracks": 38,
+        "first_visible_queries": 38,
+        "visible_positions_after_query": 9548,
+        "evaluated_positions_including_occlusions": 11152,
+        "query_first_frame": 0,
+        "query_last_frame": 35,
+        "visible_out_of_bounds_positions": 0,
+        "visible_xy_min": 0.004918050020933151,
+        "visible_xy_max": 0.9881756901741028,
+        "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c"
+      },
+      "measurement": {
+        "directory": "results/real_video_cost_integration_rgbfix/mamba",
+        "summary_sha256": "a35239553e80496aa977ed8c35f3dc38ef53ce02313c509516852dc66b50cb92",
+        "bins": [
+          {
+            "history_min": 0,
+            "history_max": 0,
+            "samples": 3,
+            "unique_frames": 1,
+            "gpu_ms": {
+              "p50": 15.661888122558594,
+              "p90": 15.706790161132812,
+              "minimum": 15.279711723327637,
+              "maximum": 15.718015670776367
+            },
+            "model_wall_ms": {
+              "p50": 15.717512113042176,
+              "p90": 15.760047198273242,
+              "minimum": 15.329626970924437,
+              "maximum": 15.770680969581008
+            },
+            "pipeline_wall_ms": {
+              "p50": 17.230326076969504,
+              "p90": 17.272886773571372,
+              "minimum": 16.69130497612059,
+              "maximum": 17.28352694772184
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 576963072
+          },
+          {
+            "history_min": 1,
+            "history_max": 7,
+            "samples": 21,
+            "unique_frames": 7,
+            "gpu_ms": {
+              "p50": 11.843263626098633,
+              "p90": 12.741727828979492,
+              "minimum": 11.43734359741211,
+              "maximum": 13.027359962463379
+            },
+            "model_wall_ms": {
+              "p50": 12.168093933723867,
+              "p90": 13.10570805799216,
+              "minimum": 11.80499093607068,
+              "maximum": 13.419596944004297
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.426683959551156,
+              "p90": 14.364715898409486,
+              "minimum": 12.968588969670236,
+              "maximum": 14.714154996909201
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 628995584
+          },
+          {
+            "history_min": 8,
+            "history_max": 31,
+            "samples": 72,
+            "unique_frames": 24,
+            "gpu_ms": {
+              "p50": 11.574399948120117,
+              "p90": 12.482498836517333,
+              "minimum": 11.448800086975098,
+              "maximum": 12.564831733703613
+            },
+            "model_wall_ms": {
+              "p50": 11.908150976523757,
+              "p90": 12.780867458786815,
+              "minimum": 11.673247092403471,
+              "maximum": 13.35354894399643
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.104028475936502,
+              "p90": 13.997992675285786,
+              "minimum": 12.57323008030653,
+              "maximum": 14.504251885227859
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 628995584
+          },
+          {
+            "history_min": 32,
+            "history_max": 127,
+            "samples": 288,
+            "unique_frames": 96,
+            "gpu_ms": {
+              "p50": 11.58616018295288,
+              "p90": 12.411801719665528,
+              "minimum": 11.396096229553223,
+              "maximum": 17.774784088134766
+            },
+            "model_wall_ms": {
+              "p50": 11.96070242440328,
+              "p90": 12.744264502543956,
+              "minimum": 11.622847989201546,
+              "maximum": 18.01546197384596
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.181868998799473,
+              "p90": 13.89776844298467,
+              "minimum": 12.596654007211328,
+              "maximum": 20.055970991961658
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 628995584
+          },
+          {
+            "history_min": 128,
+            "history_max": 255,
+            "samples": 384,
+            "unique_frames": 128,
+            "gpu_ms": {
+              "p50": 11.571135997772217,
+              "p90": 12.42989740371704,
+              "minimum": 11.4268159866333,
+              "maximum": 13.211456298828125
+            },
+            "model_wall_ms": {
+              "p50": 11.973654967732728,
+              "p90": 12.797642732039094,
+              "minimum": 11.703790980391204,
+              "maximum": 13.695882982574403
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.20719748036936,
+              "p90": 13.982115942053497,
+              "minimum": 12.605389929376543,
+              "maximum": 15.195608953945339
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 628995584
+          },
+          {
+            "history_min": 256,
+            "history_max": null,
+            "samples": 120,
+            "unique_frames": 40,
+            "gpu_ms": {
+              "p50": 11.569551944732666,
+              "p90": 12.37307233810425,
+              "minimum": 11.404031753540039,
+              "maximum": 13.046591758728027
+            },
+            "model_wall_ms": {
+              "p50": 11.92971901036799,
+              "p90": 12.631294724997135,
+              "minimum": 11.565390974283218,
+              "maximum": 13.321532984264195
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.122748991008848,
+              "p90": 13.791526388376951,
+              "minimum": 12.518126051872969,
+              "maximum": 14.576761983335018
+            },
+            "state_bytes_min": 79027200,
+            "state_bytes_max": 79027200,
+            "torch_peak_allocated_bytes": 628995584
+          }
+        ],
+        "frames_per_pass": 296,
+        "repeats": 3,
+        "torch_peak_allocated_bytes": 628995584,
+        "max_state_bytes": 79027200,
+        "scope": "Empirical timing distribution over fixed real frames and repeated passes; not a confidence interval",
+        "parameter_count": 95386032,
+        "parameter_bytes": 381544128,
+        "hardware": {
+          "gpu": "NVIDIA GB10",
+          "torch": "2.14.1+cu130",
+          "cuda": "13.0"
+        },
+        "repeated_final_outputs_equal": true,
+        "process_memory_after_pass": [
+          {
+            "mib": 998.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          },
+          {
+            "mib": 998.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          },
+          {
+            "mib": 998.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          }
+        ],
+        "paused_compute_pids": [
+          1307038
+        ]
+      }
+    },
+    {
+      "model": "gmmix_after_encoder",
+      "video": {
+        "id": "gear_v2_9-basket_front_right_rgb_img-0",
+        "shard": "robotap_split0.pkl",
+        "frames": 296,
+        "height": 222,
+        "width": 296,
+        "tracks": 38,
+        "first_visible_queries": 38,
+        "visible_positions_after_query": 9548,
+        "evaluated_positions_including_occlusions": 11152,
+        "query_first_frame": 0,
+        "query_last_frame": 35,
+        "visible_out_of_bounds_positions": 0,
+        "visible_xy_min": 0.004918050020933151,
+        "visible_xy_max": 0.9881756901741028,
+        "video_sha256": "a606a92ccdd703876e0c1ded96982ac532750667a57b573c797162631daef82c"
+      },
+      "measurement": {
+        "directory": "results/real_video_cost_integration_rgbfix/gmmix",
+        "summary_sha256": "c5a7a4273b652e9996b3857fbdaf70d92ada8a841591ddf9d2faf3a3252b89f0",
+        "bins": [
+          {
+            "history_min": 0,
+            "history_max": 0,
+            "samples": 3,
+            "unique_frames": 1,
+            "gpu_ms": {
+              "p50": 30.83590316772461,
+              "p90": 31.53854751586914,
+              "minimum": 30.808895111083984,
+              "maximum": 31.714208602905273
+            },
+            "model_wall_ms": {
+              "p50": 31.117019010707736,
+              "p90": 32.402699859812856,
+              "minimum": 31.10479307360947,
+              "maximum": 32.724120072089136
+            },
+            "pipeline_wall_ms": {
+              "p50": 32.65055106021464,
+              "p90": 33.98640942759812,
+              "minimum": 32.45493699796498,
+              "maximum": 34.32037401944399
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 742458368
+          },
+          {
+            "history_min": 1,
+            "history_max": 7,
+            "samples": 21,
+            "unique_frames": 7,
+            "gpu_ms": {
+              "p50": 12.640000343322754,
+              "p90": 13.216256141662598,
+              "minimum": 12.039263725280762,
+              "maximum": 13.344832420349121
+            },
+            "model_wall_ms": {
+              "p50": 12.991567957215011,
+              "p90": 13.594191055744886,
+              "minimum": 12.309425044804811,
+              "maximum": 14.197677955962718
+            },
+            "pipeline_wall_ms": {
+              "p50": 14.177471050061285,
+              "p90": 14.8599169915542,
+              "minimum": 13.403231976553798,
+              "maximum": 15.494221006520092
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 707010560
+          },
+          {
+            "history_min": 8,
+            "history_max": 31,
+            "samples": 72,
+            "unique_frames": 24,
+            "gpu_ms": {
+              "p50": 12.212736129760742,
+              "p90": 12.976636409759521,
+              "minimum": 12.02451229095459,
+              "maximum": 13.079968452453613
+            },
+            "model_wall_ms": {
+              "p50": 12.727695982903242,
+              "p90": 13.372080528642982,
+              "minimum": 12.18355295713991,
+              "maximum": 13.805933995172381
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.862719002645463,
+              "p90": 14.542556321248412,
+              "minimum": 13.202447909861803,
+              "maximum": 14.92129301186651
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 707010560
+          },
+          {
+            "history_min": 32,
+            "history_max": 127,
+            "samples": 288,
+            "unique_frames": 96,
+            "gpu_ms": {
+              "p50": 12.224592208862305,
+              "p90": 12.988710594177245,
+              "minimum": 11.960960388183594,
+              "maximum": 13.444095611572266
+            },
+            "model_wall_ms": {
+              "p50": 12.794120470061898,
+              "p90": 13.54481732705608,
+              "minimum": 12.036146013997495,
+              "maximum": 14.231101959012449
+            },
+            "pipeline_wall_ms": {
+              "p50": 14.027008030097932,
+              "p90": 14.877781027462333,
+              "minimum": 12.91219296399504,
+              "maximum": 15.86158003192395
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 707010560
+          },
+          {
+            "history_min": 128,
+            "history_max": 255,
+            "samples": 384,
+            "unique_frames": 128,
+            "gpu_ms": {
+              "p50": 12.154783725738525,
+              "p90": 12.996476459503175,
+              "minimum": 12.012063980102539,
+              "maximum": 19.17795181274414
+            },
+            "model_wall_ms": {
+              "p50": 12.600016430951655,
+              "p90": 13.546513358596712,
+              "minimum": 12.221792945638299,
+              "maximum": 19.22922593075782
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.938359450548887,
+              "p90": 14.95693459874019,
+              "minimum": 13.226207112893462,
+              "maximum": 21.372486953623593
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 707010560
+          },
+          {
+            "history_min": 256,
+            "history_max": null,
+            "samples": 120,
+            "unique_frames": 40,
+            "gpu_ms": {
+              "p50": 12.150320053100586,
+              "p90": 12.995206546783447,
+              "minimum": 11.999263763427734,
+              "maximum": 13.556032180786133
+            },
+            "model_wall_ms": {
+              "p50": 12.745256477501243,
+              "p90": 13.355040666647255,
+              "minimum": 12.311985017731786,
+              "maximum": 14.004862983711064
+            },
+            "pipeline_wall_ms": {
+              "p50": 13.997830974403769,
+              "p90": 14.731616550125182,
+              "minimum": 13.227825053036213,
+              "maximum": 15.470845974050462
+            },
+            "state_bytes_min": 96337920,
+            "state_bytes_max": 96337920,
+            "torch_peak_allocated_bytes": 707010560
+          }
+        ],
+        "frames_per_pass": 296,
+        "repeats": 3,
+        "torch_peak_allocated_bytes": 742458368,
+        "max_state_bytes": 96337920,
+        "scope": "Empirical timing distribution over fixed real frames and repeated passes; not a confidence interval",
+        "parameter_count": 141048576,
+        "parameter_bytes": 564194304,
+        "hardware": {
+          "gpu": "NVIDIA GB10",
+          "torch": "2.14.1+cu130",
+          "cuda": "13.0"
+        },
+        "repeated_final_outputs_equal": true,
+        "process_memory_after_pass": [
+          {
+            "mib": 1039.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          },
+          {
+            "mib": 1039.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          },
+          {
+            "mib": 1039.0,
+            "status": "reported",
+            "scope": "After pass, before clearing CUDA allocator cache; not peak"
+          }
+        ],
+        "paused_compute_pids": [
+          1307038
+        ]
+      }
+    }
+  ],
+  "comparison": {
+    "comparisons": [
+      {
+        "other": "gmmix_after_encoder",
+        "video_id": "gear_v2_9-basket_front_right_rgb_img-0",
+        "bins": [
+          {
+            "history_min": 0,
+            "history_max": 0,
+            "mamba_over_other_gpu_median": 0.5079107959760236,
+            "mamba_over_other_pipeline_median": 0.5277193038853487
+          },
+          {
+            "history_min": 1,
+            "history_max": 7,
+            "mamba_over_other_gpu_median": 0.9369670335772572,
+            "mamba_over_other_pipeline_median": 0.9470436520124734
+          },
+          {
+            "history_min": 8,
+            "history_max": 31,
+            "mamba_over_other_gpu_median": 0.9477319271571677,
+            "mamba_over_other_pipeline_median": 0.945271160256211
+          },
+          {
+            "history_min": 32,
+            "history_max": 127,
+            "mamba_over_other_gpu_median": 0.9477747793135719,
+            "mamba_over_other_pipeline_median": 0.9397491589450129
+          },
+          {
+            "history_min": 128,
+            "history_max": 255,
+            "mamba_over_other_gpu_median": 0.9519820556962773,
+            "mamba_over_other_pipeline_median": 0.9475431830572618
+          },
+          {
+            "history_min": 256,
+            "history_max": null,
+            "mamba_over_other_gpu_median": 0.9522014147915621,
+            "mamba_over_other_pipeline_median": 0.9374844584853836
+          }
+        ],
+        "mamba_over_other_torch_peak": 0.8471796010520553
+      }
+    ],
+    "ratio_interpretation": "Below one favors interleaved Mamba for time/memory",
+    "scope": "Paired implementation cost on the listed fixed real videos; no accuracy or retention claim",
+    "limits": "Conditional timing distributions, not confidence intervals. PyTorch peak excludes driver/context and non-PyTorch allocations. No throughput claim or generalized robot-success claim."
+  }
+}

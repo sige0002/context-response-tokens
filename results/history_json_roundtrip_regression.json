@@ -1,0 +1,20 @@
+{
+  "scope": "Real 296-frame engineering history artifact; CPU recount, no GPU/model training",
+  "original_python_equality": false,
+  "serialized_value_equality": true,
+  "differing_top_level_fields": [
+    "age_bins",
+    "reappearance_gap_bins"
+  ],
+  "source_sha256": {
+    "run_multidepth_diagnostics.py": "f7a2991e8aa93b65e365984eeaf294815903cbd7fde2bd262f87edb411608b24",
+    "summarize_six_models.py": "f6acb52f5f35aef9d25d423925fa382824cb1ff7c71096ae795de36e3ffcdd6e",
+    "analyze_point_history.py": "255d09c80b62ca4fa24bf7ae97cbcbace2efb2c429e8c00a0f88514a85def337"
+  },
+  "analysis_sha256": "b3b536a2d53f16e0e296e6cd9c951a3faa5d6a14d4aaea9766e565aef7b65944",
+  "affected_paths": [
+    "run_multidepth_diagnostics.py resume verification",
+    "summarize_six_models.py history verification"
+  ],
+  "other_active_training_sources_changed": false
+}

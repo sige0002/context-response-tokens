@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-05T07:49:26.023369+09:00",
+  "old_queue": "results/multidepth_diagnostics_seed42_rgbfix",
+  "old_status_sha256": "9751929b1fb451c57dd47eaf00275c09ed9aa4022b44aa2a163bbfd9d90fc877",
+  "new_queue": "results/multidepth_diagnostics_seed42_rgbfix_v2",
+  "new_plan_sha256": "12622fbea3ab27d8c04ff600a064e6c549f973523a2b5b54797b4bb851255c7f",
+  "reason": "Normalize Python tuple bins to their JSON-array values before comparing a resumed history recount. No GPU work had started in old queue.",
+  "changed_sources": [
+    "run_multidepth_diagnostics.py"
+  ],
+  "training_protocol_changed": false,
+  "main_trainer_pid": 1307038,
+  "new_diagnostic_pid": 1442294,
+  "dependency_point_pid": 1428396,
+  "real_artifact_regression": "results/history_json_roundtrip_regression.json",
+  "regression_sha256": "69e96aa884f3f37069f30d9572332449d1db1670555c696e46ab606d5c3caaeb"
+}

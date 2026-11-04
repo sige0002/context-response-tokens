@@ -1,0 +1,16 @@
+rules:
+  - id: implicit-video-rgb-conversion
+    languages: [python]
+    severity: ERROR
+    message: Use video_data.frame_to_rgb for production video decoding; the default ARM64 conversion can leave odd-width RGB edges unwritten.
+    patterns:
+      - pattern-either:
+          - pattern: $FRAME.to_image()
+          - pattern: $FRAME.to_ndarray(format="rgb24")
+          - pattern: $FRAME.to_rgb()
+    paths:
+      exclude:
+        - audit_video_rgb.py
+        - vendor/**
+        - baselines/**
+        - results/**

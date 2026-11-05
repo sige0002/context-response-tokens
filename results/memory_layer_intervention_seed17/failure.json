@@ -1,0 +1,7 @@
+{
+  "error": "ValueError: Current adapter computation or absolute offset was altered",
+  "completed_clips": 0,
+  "cause": "Deleting and reinserting one layer changes dict key insertion order; cached-key order is not module execution order.",
+  "resolution": "Canonicalize cached keys by encoder layer order, name them state_layer_keys, and test partial-state erasure. Re-run in a new directory.",
+  "reference_replays_first_clip_passed": true
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "summary_sha256": "1a34b7c33f20646cf43ceacf0b9597858f7808b171f93723a9005c0eb2454003",
+  "counts": {
+    "full_stream": 105,
+    "reset_all": 26,
+    "clear_4": 106,
+    "clear_8": 72,
+    "clear_12": 50
+  },
+  "predictions_recounted": 1740,
+  "scope": "Original manifest recount and artifact checks; not a new GPU forward or a re-decode of every source video."
+}

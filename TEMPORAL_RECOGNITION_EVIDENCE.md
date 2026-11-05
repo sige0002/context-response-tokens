@@ -66,6 +66,61 @@
 独立再計数は全1,740件の予測クラスについて一致した。
 重みの変更や新しいモデルの採用はしていない。
 
+## 各深さの「過去状態」だけを消す診断
+
+以前の[層を外す診断](TEMPORAL_LAYER_DIAGNOSTIC.md)は、履歴だけでなく、その層が現在画像へ適用する変換も除去していた。
+そこで[状態だけを消す処理](exploration/memory_layer_intervention.py)を追加した。
+第4・8・12層の全アダプタを毎フレーム実行し、選んだ1層の過去状態だけを次のフレームの直前に破棄する。
+他の層の状態と、絶対観測番号は維持する。Mambaの選択層では、SSM行列だけでなく位相・前回K/Vを含む4状態すべてを初期化する。
+
+対象は上記と同じ4,000更新checkpoint・同じ348動画・同じRGB・同じ分類器である。
+通常履歴と全状態消去の基準値には、検証済みの`full_stream`と`current_only`を再利用する。
+このMamba実装では全層の状態を毎回消すと、最後のフレームの出力は現在画像だけの逐次処理と同じになる。
+ただしAttentionでは絶対位置の扱いが異なるため、現在画像だけを時刻0へ戻す対照と一般に同一視しない。
+
+[実行計画](results/memory_layer_intervention_seed17_v2/plan.json)では、以下の3介入と、先頭・末尾の2動画での基準値のnative再実行を固定した。
+全348動画で入力と元ファイルhashを再確認し、主学習の途中checkpointへ差し替えない。
+
+| 介入 | 維持する過去状態 | その時刻のアダプタ計算 |
+| --- | --- | --- |
+| `clear_4` | 第8・12層 | 全3層を実行 |
+| `clear_8` | 第4・12層 | 全3層を実行 |
+| `clear_12` | 第4・8層 | 全3層を実行 |
+
+[CPU検査](exploration/test_memory_layer_intervention.py)では、小型の実Attentionエンコーダで、全アダプタの実行回数、
+絶対位置の維持、呼び出し間の状態初期化、重み不変、選んだ層以外の履歴保持を確認した。
+最初のGPU実行は、状態を消して再登録したときの辞書の挿入順を、層の実行順と誤って比較する検査で止まった。
+[失敗記録](results/memory_layer_intervention_seed17/failure.json)を保持し、状態の所属層を正規順序で記録するよう修正した。
+修正後に3件のCPU検査を再実行し、新しい出力先でGPU評価を開始した。
+
+全348動画の評価を完了した。[全予測と集計](results/memory_layer_intervention_seed17_v2/summary.json)、
+[元ラベルからの再計数](results/memory_layer_intervention_seed17_v2/verification.json)を保存した。
+新たに計算した3介入の1,044予測と、再利用した2基準の696予測、計1,740件の再計数が一致した。
+事前に指定した2動画では、通常履歴・全状態消去の両方で元の基準logitと完全一致した。
+
+| 条件 | 正解数 / 348 | 正解率 | 通常履歴との差 | 通常から正解を得た / 失った本数 |
+| --- | ---: | ---: | ---: | ---: |
+| 通常履歴（基準を再利用） | 105 | 30.17% | — | — |
+| 第4層の過去状態だけ消去 | 106 | 30.46% | +0.29 pp | 7 / 6 |
+| 第8層の過去状態だけ消去 | 72 | 20.69% | −9.48 pp | 12 / 45 |
+| 第12層の過去状態だけ消去 | 50 | 14.37% | −15.80 pp | 13 / 68 |
+| 全層の過去状態を消去（現在画像のみの基準を再利用） | 26 | 7.47% | −22.70 pp | 8 / 87 |
+
+**このcheckpoint・集合では、第8・12層の状態を失う影響が大きい。**
+第4層の状態消去は正解数で1本の増加だったが、50動画で予測が変わった。
+精度差の探索的な区間は−1.15〜+1.72 ppであり、「第4層の記憶は不要」「同等性を証明した」とは言わない。
+第8層は−12.07〜−6.90 pp、第12層は−18.97〜−12.64 ppだった。
+これらは各クラス内で対応を保つ2,000回bootstrapで、重み固定・観測済み小集合・多重比較未補正である。
+
+今回の実装は捨てる状態も毎回作るため、全介入で状態計上は79,027,200 bytesのままだった。
+これは記憶の使われ方の診断であり、省メモリ化や速度改善の結果ではない。
+最終checkpointでも同じ傾向が続くか、状態保持を減らして再学習したモデルが精度を保てるかは未検証である。
+
+この診断は、学習済みモデルが各深さの状態へどれだけ依存するかを測る。
+他層経由の履歴は残るので、ある層を消して精度が保たれても、その層単独に記憶能力がないとは結論しない。
+層間の効果も単純には足し合わせられない。再学習した軽量モデルの性能、長期保持、Attentionへの優位性は別に検証する。
+主学習とGPUを共有する診断であり、経過時間を性能比較には使わない。
+
 ## 関連研究から分かる評価の範囲
 
 | 一次資料 | 実際に測るもの | 今回への含意 |
@@ -215,6 +270,19 @@ OVO注釈の監査は、上記の固定版JSONを提供元から取得してか�
 uv run --locked python -m exploration.audit_ovo_memory \
   --annotations results/long_memory_benchmark_audit/raw/ovo_bench_new.json \
   --output results/new_ovo_annotation_audit.json
+```
+
+層ごとの状態消去は、上の検証済み履歴診断と保存済み4,000更新checkpointを使う。
+`--resume`は未開始の計画を実行する指定であり、途中で失敗した評価の部分再開はしない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_memory_layer_intervention.py
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.evaluate_memory_layers \
+  --output results/new_memory_layer_intervention --plan-only
+uv run --locked python -m exploration.evaluate_memory_layers \
+  --output results/new_memory_layer_intervention --resume
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.evaluate_memory_layers \
+  --output results/new_memory_layer_intervention --verify
 ```
 
 RIVERの注釈を取得・監査する場合は次を実行する。ダウンロード対象は注釈JSONだけである。

@@ -1,0 +1,101 @@
+{
+  "config": {
+    "seed": 17,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "conditions": [
+      "siglip_only",
+      "mamba_full",
+      "mamba_reset1"
+    ],
+    "steps": 1024,
+    "checkpoints": [
+      0,
+      256,
+      1024
+    ],
+    "rank": 32,
+    "dim": 768,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "queries": 64,
+    "targets_per_update": 3,
+    "evaluation_queries": 128,
+    "grid": 14,
+    "methods": [
+      "center",
+      "field_top1",
+      "field_top4",
+      "static_query"
+    ],
+    "topk": 4,
+    "refinement_steps": [
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "precision": "CPU FP32, 2 threads",
+    "supervision": "Visibility-masked correspondence CE with bilinear target-cell weights; no feature teacher or encoder update",
+    "schedule": "Same scenes, frame-zero queries and three random future targets in all conditions",
+    "transform": "x + U V x, rank32, zero-initialized U. Shared between reference/current; LN and L2 follow transformation.",
+    "scope": "Short-budget linear readout of fixed 4000-update features; not retraining the encoder",
+    "limits": "24 training / 8 repeatedly inspected rendered validation scenes, one seed. A limited linear probe does not settle general representation quality."
+  },
+  "train_cache": "/home/sadasue/mywam/results/temporal_metric_cache_seed17",
+  "train_cache_plan_sha256": "3d1a66b2395fe44c4fea1f71e8c330a7de9a1b28b6d18155236f6ab62438d6d1",
+  "train_cache_summary_sha256": "3f1c742e72aa03bed7c98da9b2ecc47a55d514767955c239f41db4a9aa680bcc",
+  "probe_run": "/home/sadasue/mywam/results/temporal_feature_probe_seed17_v1",
+  "probe_plan_sha256": "dae6d0b037f39b6ea496120f764d1033a7ff80e3eab5cdcfa872f05517fb926f",
+  "probe_summary_sha256": "44366ab24ce505c965e2b25b6dfeb30df6149026e7a83978408c90f8b2eb88f1",
+  "schedule_sha256": "dcb129da9459882c9397e329fbca7829aede13efba36865f0c1df2d468c1c8ff",
+  "training_coverage": {
+    "targets": 196608,
+    "visible": 163841,
+    "invisible": 32767
+  },
+  "sources": {
+    "/home/sadasue/mywam/exploration/train_temporal_metric_probe.py": "4ee4fe2810b5addd3f89a8040f619eede0cf3191e764b6fe2d9521b79cca4d20",
+    "exploration/linear_correspondence_metric.py": "48472f361941e7f9f8c7a780a96fc893440e405932305a6e9d13f8627a95561f",
+    "exploration/continuous_matching.py": "96c61ad771137ac0093e1438dc3e92d002a1238f43c16f8c9afdd461012431f7",
+    "exploration/evaluate_continuous_matching.py": "83f8df57c3e267d2e4fd492b05140e0d8e7ed29b7d22ac10525bb0b404c4e069",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

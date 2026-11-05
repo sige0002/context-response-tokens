@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "source_sha256": "29643c8459c818292e99d42d7a91ea671e00e5cbd430de554af8f84c935bd832",
+  "summary_sha256": "6c6e595a778d200676f5f0f4197afdcf7aec310678d34507dbd4204f351b83c2",
+  "prediction_files": 72,
+  "recounted_rows": 1152,
+  "final_matching_rerun_calls": 576,
+  "schedule_regenerated_exactly": true,
+  "initial_weights_identical": true,
+  "initial_predictions_match_fixed_probe": true,
+  "trained_projections_updated": true,
+  "ground_truth_and_queries_match_original": true,
+  "scope": "All saved prediction curves independently rescored. Final CPU readouts rerun on all validation features; GPU encoders and intermediate readout forwards are not rerun."
+}

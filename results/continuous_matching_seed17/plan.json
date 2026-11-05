@@ -1,0 +1,62 @@
+{
+  "config": {
+    "seed": 17,
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "evaluation_queries": 128,
+    "grid": 14,
+    "depths": {
+      "4": "Raw block4 cosine",
+      "12": "Pretrained post-layernorm, then parameter-free LN at each sampled position"
+    },
+    "methods": [
+      "center",
+      "field_top1",
+      "field_top4",
+      "static_query"
+    ],
+    "topk": 4,
+    "coarse_offsets": [
+      -0.5,
+      -0.25,
+      0.0,
+      0.25,
+      0.5
+    ],
+    "refinement_steps": [
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "model": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "precision": "CPU FP32",
+    "visibility": "Always visible; no threshold tuned",
+    "scope": "No trained readout, encoder update or temporal state. Query appearance sampled from first image; no query coordinates in matching function.",
+    "limits": "8 previously inspected rendered validation scenes; no held-out test. Bilinear features add no image observations. Similarity improvement is not a correctness guarantee."
+  },
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "reference_run": "/home/sadasue/mywam/results/correlation_readout_seed17",
+  "reference_plan_sha256": "28fd310bd04d6bb0d2637b58bf325881979192a8f8bead2d804f5a2846498780",
+  "control_run": "/home/sadasue/mywam/results/correspondence_motion_controls_seed17",
+  "control_summary_sha256": "1f1b5b576b4dbbf2e944a978a92b79142b7ec2756c45de1776c82c40c98589c1",
+  "sources": {
+    "/home/sadasue/mywam/exploration/evaluate_continuous_matching.py": "83f8df57c3e267d2e4fd492b05140e0d8e7ed29b7d22ac10525bb0b404c4e069",
+    "exploration/continuous_matching.py": "96c61ad771137ac0093e1438dc3e92d002a1238f43c16f8c9afdd461012431f7",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

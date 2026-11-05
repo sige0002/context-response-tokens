@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "source_sha256": "1a00771a067df6f04ceed0040b75317eb873e0e945927600dc53280233446282",
+  "summary_sha256": "bd373bfdb5d28b58d5015b01d6b3af42adf223176c35a2ab7271ed5de5919737",
+  "prediction_files": 16,
+  "recounted_rows": 256,
+  "max_mean_error_difference": 0.0,
+  "original_ground_truth_queries_and_old_coarse_predictions_match": true,
+  "coordinates_finite_and_bounded": true,
+  "refinement_scores_never_below_coarse_tolerance": 2e-05,
+  "all_scene_averages_match": true,
+  "scope": "Saved predictions rescored. Does not rerun inference or certify a tracking gain from similarity improvement."
+}

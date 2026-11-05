@@ -16,6 +16,8 @@
 [対応照合を使う読み出し](CORRELATION_READOUT_PILOT.md)も実装した。移動点のPCKは小幅改善したが、不可視点を検出できずAJは単純基準を下回った。
 [時間間隔と遮蔽例の重み付けの比較](CORRELATION_HORIZON_DIAGNOSTIC.md)でもAJは改善せず、
 見逃し減少と誤検出増加を分けて記録した。この変更は主実験へ採用しない。
+[パッチ間の特徴補間による位置探索](CONTINUOUS_MATCHING_DIAGNOSTIC.md)では、
+同じ第4層特徴のPCK4が10.07%から37.00%へ改善した。ただし大変位と遮蔽が残り、エンコーダや記憶の改善とは区別する。
 [公開内容と再実行の範囲](PUBLICATION.md)も参照。学習重み・元動画・環境はGitへ含めない。
 
 [実動画での速度・メモリ測定と最終比較の条件](ENCODER_COST_PROTOCOL.md)も記録している。

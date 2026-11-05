@@ -1,0 +1,77 @@
+{
+  "config": {
+    "seed": 17,
+    "tasks": {
+      "identity": 256,
+      "motion": 1024
+    },
+    "heads": [
+      "absolute",
+      "offset"
+    ],
+    "checkpoints": [
+      0,
+      256,
+      1024
+    ],
+    "batch": 1,
+    "clip_frames": 4,
+    "queries": 32,
+    "evaluation_queries": 128,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "backbone": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "depth": 12,
+    "feature_transform": "Pretrained final post-layernorm, FP32; then frozen",
+    "head_initialization": "Same seed and parameters; zero both coordinate output rows for both heads",
+    "scope": "Diagnostic point-head training only. No Mamba, encoder updates, or distillation. Identity repeats the first selected image; motion uses cached original frames at stride 4.",
+    "limits": "24 training / 8 previously inspected validation scenes, one seed, fixed short budgets. PCK uses known visibility only, not AJ. Concurrent GPU learning excludes latency comparisons."
+  },
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "sources": {
+    "/home/sadasue/mywam/exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "point_readout.py": "ee7c3be5b2388b18c442a96df96f386df4e2ee42663662fb7fc70570c294f91d",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

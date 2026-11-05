@@ -1,0 +1,19 @@
+{
+  "scope": "Post-result matching controls; not a temporal encoder or independent test",
+  "methods": [
+    "depth4_cosine",
+    "depth12_cosine",
+    "depth12_postnorm_cosine",
+    "depth12_postnorm_inputnorm_cosine",
+    "depth12_learned_metric"
+  ],
+  "readout_plan_sha256": "411d7659f340e7015c4bcccc9bf45de7e8349ff10e823f4b7348ac832654d204",
+  "readout_result_sha256": "26ca82bf9a4ce544a8b08396ff5e4965fb66a1baf964edb498a7352fa079cad1",
+  "metric_checkpoint_sha256": "6fd0fe80ba36e9caeedfc05d517597fd5b747d19b9e0f4376537945c8cefc15f",
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_correspondence_motion.py": "276041e4de25158fa0b3b04ecca8320341c225c869dd7ba04d53e1df68dbc576",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "exploration/train_correspondence.py": "5f5108b78adfe8f35439a14fb9e30d41deb27cc0b2358d3702b233e2cfc63890",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f"
+  }
+}

@@ -1,0 +1,5495 @@
+{
+  "plan_sha256": "411d7659f340e7015c4bcccc9bf45de7e8349ff10e823f4b7348ac832654d204",
+  "post_layernorm_sha256": "4d421aba39e5a07c46221c98c3d1fb12b5e9a9f31d64cc7c044bd9b8c3007e85",
+  "results": {
+    "identity_absolute": {
+      "scores": {
+        "0": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 103.0297622680664,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0078125
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 97.36756896972656,
+              "pck_4": 0.0078125,
+              "pck_8": 0.015625,
+              "pck_16": 0.0234375
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 89.39835357666016,
+              "pck_4": 0.0078125,
+              "pck_8": 0.0234375,
+              "pck_16": 0.03125
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 98.3410873413086,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 81.58098602294922,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0078125
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 83.9227066040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.015625
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 100.51388549804688,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 98.02995300292969,
+              "pck_4": 0.0,
+              "pck_8": 0.0078125,
+              "pck_16": 0.0078125
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 94.02303791046143,
+              "pck_4": 0.001953125,
+              "pck_8": 0.005859375,
+              "pck_16": 0.01171875
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ]
+        },
+        "256": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 27.88707733154297,
+              "pck_4": 0.0234375,
+              "pck_8": 0.0625,
+              "pck_16": 0.265625
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 20.95258331298828,
+              "pck_4": 0.015625,
+              "pck_8": 0.07710597664117813,
+              "pck_16": 0.3203125
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 22.92429542541504,
+              "pck_4": 0.046875,
+              "pck_8": 0.140625,
+              "pck_16": 0.359375
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 28.696697235107422,
+              "pck_4": 0.0,
+              "pck_8": 0.015625,
+              "pck_16": 0.203125
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 21.06745719909668,
+              "pck_4": 0.0078125,
+              "pck_8": 0.0546875,
+              "pck_16": 0.31351903080940247
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 28.68419075012207,
+              "pck_4": 0.0390625,
+              "pck_8": 0.1015625,
+              "pck_16": 0.25
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 31.570985794067383,
+              "pck_4": 0.0,
+              "pck_8": 0.0390625,
+              "pck_16": 0.1953125
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 25.389501571655273,
+              "pck_4": 0.0234375,
+              "pck_8": 0.0625,
+              "pck_16": 0.2578125
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 25.89659857749939,
+              "pck_4": 0.01953125,
+              "pck_8": 0.06920855958014727,
+              "pck_16": 0.2706351913511753
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ]
+        }
+      },
+      "initial_parameters_sha256": "e23307aef29ea8730519a982f4510f3745e4a1366dc527b5c7e869d6c9e7ffd2",
+      "checkpoint_sha256": "ad9cb4fbfdc612389a3fa9720c5c852f5ac7e115ac870e803ba48ad285617deb",
+      "parameters": 14932995
+    },
+    "identity_offset": {
+      "scores": {
+        "0": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ]
+        },
+        "256": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2944,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 23552,
+              "mean_error": 0.0,
+              "pck_4": 1.0,
+              "pck_8": 1.0,
+              "pck_16": 1.0
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 0,
+              "points": 0,
+              "mean_error": null,
+              "pck_4": null,
+              "pck_8": null,
+              "pck_16": null
+            }
+          ]
+        }
+      },
+      "initial_parameters_sha256": "e23307aef29ea8730519a982f4510f3745e4a1366dc527b5c7e869d6c9e7ffd2",
+      "checkpoint_sha256": "66cc312e01abe7444a15c1d5e2aeef7059d43070e4978b2abd0ea7509780af4d",
+      "parameters": 14932995
+    },
+    "motion_absolute": {
+      "scores": {
+        "0": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 104.53016662597656,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.006109201814979315
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 76.26010131835938,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 76.57964324951172,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 95.6760025024414,
+              "pck_4": 0.0004434589936863631,
+              "pck_8": 0.00842572096735239,
+              "pck_16": 0.012860310263931751
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 95.67162322998047,
+              "pck_4": 0.0004549590521492064,
+              "pck_8": 0.008644222281873226,
+              "pck_16": 0.012738853693008423
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 95.3065414428711,
+              "pck_4": 0.0005125576863065362,
+              "pck_8": 0.006663249805569649,
+              "pck_16": 0.011276268400251865
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 75.17023468017578,
+              "pck_4": 0.003085059579461813,
+              "pck_8": 0.011899515055119991,
+              "pck_16": 0.02820625901222229
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 75.26374816894531,
+              "pck_4": 0.0031111110001802444,
+              "pck_8": 0.012000000104308128,
+              "pck_16": 0.0284444447606802
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 71.92548370361328,
+              "pck_4": 0.003640145529061556,
+              "pck_8": 0.014040561392903328,
+              "pck_16": 0.03120124712586403
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 97.99614715576172,
+              "pck_4": 0.0,
+              "pck_8": 0.00035816620220430195,
+              "pck_16": 0.0010744985193014145
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 89.89766693115234,
+              "pck_4": 0.0,
+              "pck_8": 0.0010245901066809893,
+              "pck_16": 0.0030737705528736115
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 88.66651916503906,
+              "pck_4": 0.0,
+              "pck_8": 0.0021739129442721605,
+              "pck_16": 0.006521739065647125
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 96.1480941772461,
+              "pck_4": 0.0,
+              "pck_8": 0.0005293806316331029,
+              "pck_16": 0.009528851136565208
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 96.8868408203125,
+              "pck_4": 0.0,
+              "pck_8": 0.000554631173145026,
+              "pck_16": 0.007764836307615042
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 101.91734313964844,
+              "pck_4": 0.0,
+              "pck_8": 0.0010000000474974513,
+              "pck_16": 0.0020000000949949026
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 85.48824310302734,
+              "pck_4": 0.00036153290420770645,
+              "pck_8": 0.0018076645210385323,
+              "pck_16": 0.01735357940196991
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 61.705257415771484,
+              "pck_4": 0.0025510203558951616,
+              "pck_8": 0.012755102477967739,
+              "pck_16": 0.03826530650258064
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 58.09074020385742,
+              "pck_4": 0.0038910505827516317,
+              "pck_8": 0.019455252215266228,
+              "pck_16": 0.05836575850844383
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 90.23220825195312,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.002763385185971856
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 91.63072967529297,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.003051106119528413
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 91.18425750732422,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.006149115972220898
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 88.98231506347656,
+              "pck_4": 0.0024429967161267996,
+              "pck_8": 0.013029315508902073,
+              "pck_16": 0.023615635931491852
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 90.14160919189453,
+              "pck_4": 0.0030565462075173855,
+              "pck_8": 0.0066225165501236916,
+              "pck_16": 0.01986755058169365
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 62.00737762451172,
+              "pck_4": 0.006637168116867542,
+              "pck_8": 0.014380531385540962,
+              "pck_16": 0.04314159229397774
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 91.77792644500732,
+              "pck_4": 0.0007916310241853353,
+              "pck_8": 0.004506220360781299,
+              "pck_16": 0.0126889651583042
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 84.68219709396362,
+              "pck_4": 0.0011467045769677497,
+              "pck_8": 0.00520013283676235,
+              "pck_16": 0.014150733564747497
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 80.70973825454712,
+              "pck_4": 0.0018351152393734083,
+              "pck_8": 0.007214188473881222,
+              "pck_16": 0.01983196518267505
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        },
+        "256": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 30.71408462524414,
+              "pck_4": 0.009927453473210335,
+              "pck_8": 0.07789232581853867,
+              "pck_16": 0.23405879735946655
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 34.42402267456055,
+              "pck_4": 0.0029069767333567142,
+              "pck_8": 0.07267441600561142,
+              "pck_16": 0.3372093141078949
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 42.37118148803711,
+              "pck_4": 0.004444444552063942,
+              "pck_8": 0.031111111864447594,
+              "pck_16": 0.15555556118488312
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 81.94060516357422,
+              "pck_4": 0.005764966830611229,
+              "pck_8": 0.032372504472732544,
+              "pck_16": 0.08470066636800766
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 83.7726058959961,
+              "pck_4": 0.0031847134232521057,
+              "pck_8": 0.023202911019325256,
+              "pck_16": 0.06642401963472366
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 91.34996795654297,
+              "pck_4": 0.0005125576863065362,
+              "pck_8": 0.011276268400251865,
+              "pck_16": 0.03075345978140831
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 50.098541259765625,
+              "pck_4": 0.0039665051735937595,
+              "pck_8": 0.029528426006436348,
+              "pck_16": 0.10356985777616501
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 50.41922378540039,
+              "pck_4": 0.004000000189989805,
+              "pck_8": 0.02755555510520935,
+              "pck_16": 0.09733333438634872
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 55.2588005065918,
+              "pck_4": 0.002600104082375765,
+              "pck_8": 0.014040561392903328,
+              "pck_16": 0.04680187255144119
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 36.80276107788086,
+              "pck_4": 0.01898280717432499,
+              "pck_8": 0.05587392672896385,
+              "pck_16": 0.16224928200244904
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 53.32622528076172,
+              "pck_4": 0.0010245901066809893,
+              "pck_8": 0.009221311658620834,
+              "pck_16": 0.06352458894252777
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 77.00163269042969,
+              "pck_4": 0.0,
+              "pck_8": 0.008695651777088642,
+              "pck_16": 0.01304347813129425
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 34.42106628417969,
+              "pck_4": 0.013763896189630032,
+              "pck_8": 0.03546850010752678,
+              "pck_16": 0.17151932418346405
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 34.798301696777344,
+              "pck_4": 0.013865779154002666,
+              "pck_8": 0.036605656147003174,
+              "pck_16": 0.17193566262722015
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 43.439517974853516,
+              "pck_4": 0.012000000104308128,
+              "pck_8": 0.03200000151991844,
+              "pck_16": 0.13099999725818634
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 27.152027130126953,
+              "pck_4": 0.04699927568435669,
+              "pck_8": 0.13702097535133362,
+              "pck_16": 0.3698481619358063
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 51.64505386352539,
+              "pck_4": 0.01785714365541935,
+              "pck_8": 0.07908163219690323,
+              "pck_16": 0.2780612111091614
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 70.35841369628906,
+              "pck_4": 0.0,
+              "pck_8": 0.011673151515424252,
+              "pck_16": 0.15175096690654755
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 31.34808921813965,
+              "pck_4": 0.012089810334146023,
+              "pck_8": 0.04801381751894951,
+              "pck_16": 0.19827288389205933
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 31.607091903686523,
+              "pck_4": 0.012585812248289585,
+              "pck_8": 0.05110602453351021,
+              "pck_16": 0.20099161565303802
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.21923828125,
+              "pck_4": 0.012298231944441795,
+              "pck_8": 0.05995388329029083,
+              "pck_16": 0.21675634384155273
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 50.027076721191406,
+              "pck_4": 0.010179152712225914,
+              "pck_8": 0.05089576542377472,
+              "pck_16": 0.1685667783021927
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 56.452003479003906,
+              "pck_4": 0.00916963815689087,
+              "pck_8": 0.044829342514276505,
+              "pck_16": 0.15486499667167664
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 90.96092224121094,
+              "pck_4": 0.0022123893722891808,
+              "pck_8": 0.007743362803012133,
+              "pck_16": 0.0199115052819252
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 42.81303143501282,
+              "pck_4": 0.015209233446512371,
+              "pck_8": 0.058383280178532004,
+              "pck_16": 0.18659821897745132
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 49.55556607246399,
+              "pck_4": 0.00807433170848526,
+              "pck_8": 0.0430346061475575,
+              "pck_16": 0.1712930928915739
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 63.119959354400635,
+              "pck_4": 0.004258465967723168,
+              "pck_8": 0.022061749070417136,
+              "pck_16": 0.09569664811715484
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        },
+        "1024": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 16.027996063232422,
+              "pck_4": 0.08667430281639099,
+              "pck_8": 0.2726231515407562,
+              "pck_16": 0.7079038023948669
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 41.03074645996094,
+              "pck_4": 0.014534884132444859,
+              "pck_8": 0.037790697067976,
+              "pck_16": 0.2732558250427246
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 56.13086700439453,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.031111111864447594
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 86.79036712646484,
+              "pck_4": 0.007538802456110716,
+              "pck_8": 0.02705099806189537,
+              "pck_16": 0.0949002206325531
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 88.70352935791016,
+              "pck_4": 0.007734303828328848,
+              "pck_8": 0.027297543361783028,
+              "pck_16": 0.07552320510149002
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 97.94652557373047,
+              "pck_4": 0.002050230745226145,
+              "pck_8": 0.006150691770017147,
+              "pck_16": 0.0210148636251688
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 49.18587112426758,
+              "pck_4": 0.008814455941319466,
+              "pck_8": 0.040105774998664856,
+              "pck_16": 0.150286465883255
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.479461669921875,
+              "pck_4": 0.008888889104127884,
+              "pck_8": 0.03999999910593033,
+              "pck_16": 0.14666666090488434
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 55.32906723022461,
+              "pck_4": 0.0015600624028593302,
+              "pck_8": 0.014040561392903328,
+              "pck_16": 0.07176286727190018
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 22.93132781982422,
+              "pck_4": 0.05050143226981163,
+              "pck_8": 0.19555874168872833,
+              "pck_16": 0.5025071501731873
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 39.30175018310547,
+              "pck_4": 0.026639344170689583,
+              "pck_8": 0.1147540956735611,
+              "pck_16": 0.34938523173332214
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 66.58326721191406,
+              "pck_4": 0.0260869562625885,
+              "pck_8": 0.0673913061618805,
+              "pck_16": 0.07608695328235626
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 29.274686813354492,
+              "pck_4": 0.03599788248538971,
+              "pck_8": 0.16463737189769745,
+              "pck_16": 0.4261513948440552
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 30.223039627075195,
+              "pck_4": 0.03161397576332092,
+              "pck_8": 0.15252357721328735,
+              "pck_16": 0.4048807621002197
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.37497329711914,
+              "pck_4": 0.004999999888241291,
+              "pck_8": 0.023000000044703484,
+              "pck_16": 0.09700000286102295
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 20.1633358001709,
+              "pck_4": 0.08170643448829651,
+              "pck_8": 0.19848155975341797,
+              "pck_16": 0.5723065733909607
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 50.679080963134766,
+              "pck_4": 0.0535714291036129,
+              "pck_8": 0.13265305757522583,
+              "pck_16": 0.40051019191741943
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.87101745605469,
+              "pck_4": 0.06225680932402611,
+              "pck_8": 0.1284046620130539,
+              "pck_16": 0.21789883077144623
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 25.869661331176758,
+              "pck_4": 0.03177892789244652,
+              "pck_8": 0.11606217920780182,
+              "pck_16": 0.38480138778686523
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 27.21015167236328,
+              "pck_4": 0.03279938921332359,
+              "pck_8": 0.11022120714187622,
+              "pck_16": 0.345919132232666
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 39.226646423339844,
+              "pck_4": 0.007686395198106766,
+              "pck_8": 0.02229054644703865,
+              "pck_16": 0.09838585555553436
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 44.4286994934082,
+              "pck_4": 0.0732899010181427,
+              "pck_8": 0.20358306169509888,
+              "pck_16": 0.4446254074573517
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 51.928672790527344,
+              "pck_4": 0.07896077632904053,
+              "pck_8": 0.20937341451644897,
+              "pck_16": 0.4192562401294708
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 99.62387084960938,
+              "pck_4": 0.0,
+              "pck_8": 0.0044247787445783615,
+              "pck_16": 0.017699114978313446
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 36.83399319648743,
+              "pck_4": 0.04703776742098853,
+              "pck_8": 0.1522628548555076,
+              "pck_16": 0.4104353003203869
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 47.31955409049988,
+              "pck_4": 0.03184287395561114,
+              "pck_8": 0.1030766989570111,
+              "pck_16": 0.30192465614527464
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 66.26077938079834,
+              "pck_4": 0.013080056727631018,
+              "pck_8": 0.03321281832177192,
+              "pck_16": 0.07886995002627373
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        }
+      },
+      "initial_parameters_sha256": "e23307aef29ea8730519a982f4510f3745e4a1366dc527b5c7e869d6c9e7ffd2",
+      "checkpoint_sha256": "7aaa85e9fc55ef36934115624dd0805dccc3e30f38d6f3a8bec9b110cc4fcb26",
+      "parameters": 14932995
+    },
+    "motion_offset": {
+      "scores": {
+        "0": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        },
+        "256": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 8.972616195678711,
+              "pck_4": 0.44635358452796936,
+              "pck_8": 0.8984345197677612,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.364051818847656,
+              "pck_4": 0.11337209492921829,
+              "pck_8": 0.22674418985843658,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.684871673583984,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 83.69017791748047,
+              "pck_4": 0.02128603123128414,
+              "pck_8": 0.0660753846168518,
+              "pck_16": 0.12106429785490036
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 85.74458312988281,
+              "pck_4": 0.014558689668774605,
+              "pck_8": 0.04185623303055763,
+              "pck_16": 0.09827115386724472
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 95.3215560913086,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0030753458850085735
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 47.76350402832031,
+              "pck_4": 0.028646981343626976,
+              "pck_8": 0.07315998524427414,
+              "pck_16": 0.16306743025779724
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 48.13338088989258,
+              "pck_4": 0.025333333760499954,
+              "pck_8": 0.06533333659172058,
+              "pck_16": 0.15600000321865082
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 54.76370620727539,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.030681226402521133
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 14.310493469238281,
+              "pck_4": 0.26253581047058105,
+              "pck_8": 0.7618194818496704,
+              "pck_16": 0.8413323760032654
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 33.199851989746094,
+              "pck_4": 0.07069671899080276,
+              "pck_8": 0.3186475336551666,
+              "pck_16": 0.5461065769195557
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 61.201332092285156,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0673913061618805
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 28.322723388671875,
+              "pck_4": 0.08311276137828827,
+              "pck_8": 0.23345685005187988,
+              "pck_16": 0.45632609724998474
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 29.49668312072754,
+              "pck_4": 0.05768164247274399,
+              "pck_8": 0.1968940645456314,
+              "pck_16": 0.430393785238266
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.814796447753906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.04500000178813934
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 10.520817756652832,
+              "pck_4": 0.1597975343465805,
+              "pck_8": 0.8897324800491333,
+              "pck_16": 0.9139551520347595
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 46.6634407043457,
+              "pck_4": 0.07653061300516129,
+              "pck_8": 0.22193877398967743,
+              "pck_16": 0.3928571343421936
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 67.43590545654297,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.08949416130781174
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.891666412353516,
+              "pck_4": 0.11986183375120163,
+              "pck_8": 0.3170984387397766,
+              "pck_16": 0.5550950169563293
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.55348014831543,
+              "pck_4": 0.07894736528396606,
+              "pck_8": 0.2459954172372818,
+              "pck_16": 0.5087719559669495
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.702667236328125,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0676402747631073
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 40.28722381591797,
+              "pck_4": 0.1551302969455719,
+              "pck_8": 0.40675896406173706,
+              "pck_16": 0.6241856813430786
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 49.3463134765625,
+              "pck_4": 0.09730005264282227,
+              "pck_8": 0.2577687203884125,
+              "pck_16": 0.5298013091087341
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 97.63319396972656,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.011061946861445904
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 31.719902873039246,
+              "pck_4": 0.15959060424938798,
+              "pck_8": 0.45581701304763556,
+              "pck_16": 0.573639421723783
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.68772315979004,
+              "pck_4": 0.06680256384424865,
+              "pck_8": 0.19689728366211057,
+              "pck_16": 0.3760165171697736
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.94475364685059,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.03929303289623931
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        },
+        "1024": {
+          "rows": [
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 7.233778476715088,
+              "pck_4": 0.7896143794059753,
+              "pck_8": 0.9007254838943481,
+              "pck_16": 0.9133256673812866
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.07358169555664,
+              "pck_4": 0.10174418240785599,
+              "pck_8": 0.24418604373931885,
+              "pck_16": 0.3401162922382355
+            },
+            {
+              "scene": "0136",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.40424728393555,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2619,
+              "mean_error": 5.663198947906494,
+              "pck_4": 0.8827796578407288,
+              "pck_8": 0.8999618291854858,
+              "pck_16": 0.9140893220901489
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 344,
+              "mean_error": 43.03037643432617,
+              "pck_4": 0.10755813866853714,
+              "pck_8": 0.2383720874786377,
+              "pck_16": 0.34593021869659424
+            },
+            {
+              "scene": "0136",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 225,
+              "mean_error": 62.438411712646484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.50996398925781,
+              "pck_4": 0.036807093769311905,
+              "pck_8": 0.07095343619585037,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.60677337646484,
+              "pck_4": 0.011828935705125332,
+              "pck_8": 0.04686078429222107,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 94.15406799316406,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.002050230745226145
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2255,
+              "mean_error": 82.1491928100586,
+              "pck_4": 0.04434589669108391,
+              "pck_8": 0.07671840488910675,
+              "pck_16": 0.13481153547763824
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2198,
+              "mean_error": 84.2519302368164,
+              "pck_4": 0.019563239067792892,
+              "pck_8": 0.052775248885154724,
+              "pck_16": 0.11237488687038422
+            },
+            {
+              "scene": "0140",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1951,
+              "mean_error": 93.81698608398438,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 49.00117111206055,
+              "pck_4": 0.021595416590571404,
+              "pck_8": 0.06346408277750015,
+              "pck_16": 0.15072719752788544
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.39842987060547,
+              "pck_4": 0.013777777552604675,
+              "pck_8": 0.0555555559694767,
+              "pck_16": 0.14355555176734924
+            },
+            {
+              "scene": "0154",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.17904281616211,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0015600624028593302
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2269,
+              "mean_error": 48.86936569213867,
+              "pck_4": 0.026884090155363083,
+              "pck_8": 0.06831203401088715,
+              "pck_16": 0.15249007940292358
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2250,
+              "mean_error": 49.27191162109375,
+              "pck_4": 0.018666666001081467,
+              "pck_8": 0.06044444441795349,
+              "pck_16": 0.14533333480358124
+            },
+            {
+              "scene": "0154",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1923,
+              "mean_error": 56.06564712524414,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.601414680480957,
+              "pck_4": 0.7123925685882568,
+              "pck_8": 0.7686246633529663,
+              "pck_16": 0.8391833901405334
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.617660522460938,
+              "pck_4": 0.22336065769195557,
+              "pck_8": 0.33913934230804443,
+              "pck_16": 0.5399590134620667
+            },
+            {
+              "scene": "0162",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.148521423339844,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.032608695328235626
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2792,
+              "mean_error": 11.290868759155273,
+              "pck_4": 0.7267192006111145,
+              "pck_8": 0.7675501704216003,
+              "pck_16": 0.8352435827255249
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 976,
+              "mean_error": 31.783485412597656,
+              "pck_4": 0.21823769807815552,
+              "pck_8": 0.33504098653793335,
+              "pck_16": 0.5286885499954224
+            },
+            {
+              "scene": "0162",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 460,
+              "mean_error": 60.15945816040039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.544811248779297,
+              "pck_4": 0.11011116951704025,
+              "pck_8": 0.245632603764534,
+              "pck_16": 0.47167813777923584
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.789783477783203,
+              "pck_4": 0.06766500324010849,
+              "pck_8": 0.20965057611465454,
+              "pck_16": 0.44647809863090515
+            },
+            {
+              "scene": "0238",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.081233978271484,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.013000000268220901
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 1889,
+              "mean_error": 27.73188591003418,
+              "pck_4": 0.10799364745616913,
+              "pck_8": 0.24351508915424347,
+              "pck_16": 0.4706193804740906
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1803,
+              "mean_error": 28.994003295898438,
+              "pck_4": 0.06544648110866547,
+              "pck_8": 0.20743206143379211,
+              "pck_16": 0.44536882638931274
+            },
+            {
+              "scene": "0238",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1000,
+              "mean_error": 45.389503479003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 7.613598346710205,
+              "pck_4": 0.8705711960792542,
+              "pck_8": 0.8839479684829712,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.65892028808594,
+              "pck_4": 0.08673469722270966,
+              "pck_8": 0.18112245202064514,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 70.2244644165039,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0038910505827516317
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2766,
+              "mean_error": 6.9664764404296875,
+              "pck_4": 0.8702096939086914,
+              "pck_8": 0.8846710324287415,
+              "pck_16": 0.9070860743522644
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 392,
+              "mean_error": 48.40513229370117,
+              "pck_4": 0.08418367058038712,
+              "pck_8": 0.18622449040412903,
+              "pck_16": 0.3443877696990967
+            },
+            {
+              "scene": "0248",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 257,
+              "mean_error": 69.92155456542969,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.777929306030273,
+              "pck_4": 0.16718479990959167,
+              "pck_8": 0.32400691509246826,
+              "pck_16": 0.542314350605011
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.660205841064453,
+              "pck_4": 0.08466818928718567,
+              "pck_8": 0.25362318754196167,
+              "pck_16": 0.49466055631637573
+            },
+            {
+              "scene": "0250",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 35.050514221191406,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.015372790396213531
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2895,
+              "mean_error": 19.469179153442383,
+              "pck_4": 0.1886010318994522,
+              "pck_8": 0.33436959981918335,
+              "pck_16": 0.5506044626235962
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 2622,
+              "mean_error": 21.379209518432617,
+              "pck_4": 0.10411899536848068,
+              "pck_8": 0.2650648355484009,
+              "pck_16": 0.5038138628005981
+            },
+            {
+              "scene": "0250",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 1301,
+              "mean_error": 34.830909729003906,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 39.017547607421875,
+              "pck_4": 0.2630293071269989,
+              "pck_8": 0.42874592542648315,
+              "pck_16": 0.6205211877822876
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.4189453125,
+              "pck_4": 0.08099847286939621,
+              "pck_8": 0.2852776348590851,
+              "pck_16": 0.5252165198326111
+            },
+            {
+              "scene": "0263",
+              "method": "model",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.6495361328125,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0011061946861445904
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "all_visible",
+              "points": 2456,
+              "mean_error": 38.606014251708984,
+              "pck_4": 0.2809446156024933,
+              "pck_8": 0.4438110888004303,
+              "pck_16": 0.6319218277931213
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "points": 1963,
+              "mean_error": 48.07550048828125,
+              "pck_4": 0.10035659372806549,
+              "pck_8": 0.3041263520717621,
+              "pck_16": 0.5394803881645203
+            },
+            {
+              "scene": "0263",
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "points": 904,
+              "mean_error": 95.36504364013672,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ],
+          "summary": [
+            {
+              "method": "model",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.537526845932007,
+              "pck_4": 0.37141324137337506,
+              "pck_8": 0.4607626348733902,
+              "pck_16": 0.5724559426307678
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.528037548065186,
+              "pck_4": 0.0838472394971177,
+              "pck_8": 0.20192694710567594,
+              "pck_16": 0.36834358610212803
+            },
+            {
+              "method": "model",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.86145353317261,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.00869862805120647
+            },
+            {
+              "method": "static_query",
+              "stratum": "all_visible",
+              "scenes": 8,
+              "points": 19941,
+              "mean_error": 30.093272745609283,
+              "pck_4": 0.39105972927063704,
+              "pck_8": 0.46486365608870983,
+              "pck_16": 0.5746082831174135
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt2",
+              "scenes": 8,
+              "points": 12548,
+              "mean_error": 44.39894366264343,
+              "pck_4": 0.08976643532514572,
+              "pck_8": 0.20618506334722042,
+              "pck_16": 0.37067222967743874
+            },
+            {
+              "method": "static_query",
+              "stratum": "moving_gt16",
+              "scenes": 8,
+              "points": 8021,
+              "mean_error": 64.7484393119812,
+              "pck_4": 0.0,
+              "pck_8": 0.0,
+              "pck_16": 0.0
+            }
+          ]
+        }
+      },
+      "initial_parameters_sha256": "e23307aef29ea8730519a982f4510f3745e4a1366dc527b5c7e869d6c9e7ffd2",
+      "checkpoint_sha256": "1c51a29ec3c6fdaac56f0e4706c75fca2fd20170bb543ef13d0a2970a350e921",
+      "parameters": 14932995
+    }
+  },
+  "elapsed_seconds": 119.98439514392521
+}

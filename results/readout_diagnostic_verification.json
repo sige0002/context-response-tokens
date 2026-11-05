@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "matching_rows_recomputed": 120,
+  "matching_scenes": 8,
+  "max_pck_difference": 2.8358536741102114e-08,
+  "max_mean_error_difference": 7.62939453125e-06,
+  "all_four_heads_have_identical_initial_parameters": true,
+  "source_checks": 10,
+  "initial_offset_matches_previous_static_query_baseline": true,
+  "scope": "Independent NumPy rescore of saved matching predictions and provenance; does not rerun learned heads"
+}

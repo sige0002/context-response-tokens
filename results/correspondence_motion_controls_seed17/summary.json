@@ -1,0 +1,1367 @@
+{
+  "plan_sha256": "b660f41b04400a6bcdbf4ec2c25e153f027d699b20bd9d3af22a8d5d16e7d3ba",
+  "predictions_sha256": {
+    "0136": "6bf1b56d63282621fc0e38e8def72d3ad5216bb1e54919176e8f7c0ed4f32654",
+    "0140": "882ec0c98e5d7e6975f4ea40b78323697551930108db14b00ba17410531b7471",
+    "0154": "f9f1dac26a4b414bba76528f3b2892a1308fdc05600d453297f3ed7df68bd167",
+    "0162": "96334178db68556bbdeb8f4c78e6ef0d0d9ba02e6d1ecdc83f90202bfc7dbc29",
+    "0238": "acfb4f251bfc76317d730c1fd888f6162401f68123f9516113fa4fe7ae92498b",
+    "0248": "f49330f8cddc1b26131d834f74f8c53440201abed205c9e8163c48fdde600d34",
+    "0250": "8bff067ee9d22879ea73027f6b9203107992972d747abaced8d51b90a4091822",
+    "0263": "575d055014c13095886a451bf62f757b3187584c5c6adf0568d5bc58aa242b26"
+  },
+  "rows": [
+    {
+      "scene": "0136",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2619,
+      "mean_error": 11.763957977294922,
+      "pck_4": 0.13669338822364807,
+      "pck_8": 0.5223367810249329,
+      "pck_16": 0.9152348041534424
+    },
+    {
+      "scene": "0136",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 344,
+      "mean_error": 36.04782485961914,
+      "pck_4": 0.049418605864048004,
+      "pck_8": 0.23255814611911774,
+      "pck_16": 0.5087209343910217
+    },
+    {
+      "scene": "0136",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 225,
+      "mean_error": 49.71790313720703,
+      "pck_4": 0.035555556416511536,
+      "pck_8": 0.1644444465637207,
+      "pck_16": 0.30666667222976685
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2619,
+      "mean_error": 29.609416961669922,
+      "pck_4": 0.10767468810081482,
+      "pck_8": 0.3654066324234009,
+      "pck_16": 0.6708667278289795
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 344,
+      "mean_error": 41.06374740600586,
+      "pck_4": 0.029069768264889717,
+      "pck_8": 0.1366279125213623,
+      "pck_16": 0.3604651093482971
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 225,
+      "mean_error": 46.14261245727539,
+      "pck_4": 0.02222222276031971,
+      "pck_8": 0.08888889104127884,
+      "pck_16": 0.2266666740179062
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2619,
+      "mean_error": 27.52416229248047,
+      "pck_4": 0.10882016271352768,
+      "pck_8": 0.3829706013202667,
+      "pck_16": 0.6750668287277222
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 344,
+      "mean_error": 43.697147369384766,
+      "pck_4": 0.02616279013454914,
+      "pck_8": 0.13081395626068115,
+      "pck_16": 0.3401162922382355
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 225,
+      "mean_error": 51.840736389160156,
+      "pck_4": 0.02666666731238365,
+      "pck_8": 0.09333333373069763,
+      "pck_16": 0.19111111760139465
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2619,
+      "mean_error": 27.52416229248047,
+      "pck_4": 0.10882016271352768,
+      "pck_8": 0.3829706013202667,
+      "pck_16": 0.6750668287277222
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 344,
+      "mean_error": 43.697147369384766,
+      "pck_4": 0.02616279013454914,
+      "pck_8": 0.13081395626068115,
+      "pck_16": 0.3401162922382355
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 225,
+      "mean_error": 51.840736389160156,
+      "pck_4": 0.02666666731238365,
+      "pck_8": 0.09333333373069763,
+      "pck_16": 0.19111111760139465
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2619,
+      "mean_error": 18.450944900512695,
+      "pck_4": 0.10882016271352768,
+      "pck_8": 0.4012981951236725,
+      "pck_16": 0.7636502385139465
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 344,
+      "mean_error": 38.87516784667969,
+      "pck_4": 0.03488372266292572,
+      "pck_8": 0.12209302186965942,
+      "pck_16": 0.3633720874786377
+    },
+    {
+      "scene": "0136",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 225,
+      "mean_error": 50.484703063964844,
+      "pck_4": 0.02666666731238365,
+      "pck_8": 0.08444444090127945,
+      "pck_16": 0.20000000298023224
+    },
+    {
+      "scene": "0140",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2255,
+      "mean_error": 72.60945892333984,
+      "pck_4": 0.04745011031627655,
+      "pck_8": 0.145454540848732,
+      "pck_16": 0.3050997853279114
+    },
+    {
+      "scene": "0140",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 2198,
+      "mean_error": 74.27165222167969,
+      "pck_4": 0.04322110861539841,
+      "pck_8": 0.13239309191703796,
+      "pck_16": 0.28798907995224
+    },
+    {
+      "scene": "0140",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 1951,
+      "mean_error": 82.1454849243164,
+      "pck_4": 0.02921578660607338,
+      "pck_8": 0.09636083990335464,
+      "pck_16": 0.22245003283023834
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2255,
+      "mean_error": 79.92084503173828,
+      "pck_4": 0.02394678443670273,
+      "pck_8": 0.07361418753862381,
+      "pck_16": 0.17339245975017548
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 2198,
+      "mean_error": 81.37915802001953,
+      "pck_4": 0.023202911019325256,
+      "pck_8": 0.07006369531154633,
+      "pck_16": 0.16515013575553894
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 1951,
+      "mean_error": 85.3587417602539,
+      "pck_4": 0.018964633345603943,
+      "pck_8": 0.05996924638748169,
+      "pck_16": 0.14556637406349182
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2255,
+      "mean_error": 77.43844604492188,
+      "pck_4": 0.023503325879573822,
+      "pck_8": 0.0731707289814949,
+      "pck_16": 0.17694012820720673
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2198,
+      "mean_error": 78.87998962402344,
+      "pck_4": 0.022747952491044998,
+      "pck_8": 0.06915377825498581,
+      "pck_16": 0.16742493212223053
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1951,
+      "mean_error": 83.42327117919922,
+      "pck_4": 0.018452076241374016,
+      "pck_8": 0.05791901424527168,
+      "pck_16": 0.14300358295440674
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2255,
+      "mean_error": 77.43844604492188,
+      "pck_4": 0.023503325879573822,
+      "pck_8": 0.0731707289814949,
+      "pck_16": 0.17694012820720673
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2198,
+      "mean_error": 78.87998962402344,
+      "pck_4": 0.022747952491044998,
+      "pck_8": 0.06915377825498581,
+      "pck_16": 0.16742493212223053
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1951,
+      "mean_error": 83.42327117919922,
+      "pck_4": 0.018452076241374016,
+      "pck_8": 0.05791901424527168,
+      "pck_16": 0.14300358295440674
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2255,
+      "mean_error": 74.581787109375,
+      "pck_4": 0.02261640876531601,
+      "pck_8": 0.0731707289814949,
+      "pck_16": 0.1893569827079773
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 2198,
+      "mean_error": 76.16371154785156,
+      "pck_4": 0.020473157986998558,
+      "pck_8": 0.06414922326803207,
+      "pck_16": 0.1765241175889969
+    },
+    {
+      "scene": "0140",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 1951,
+      "mean_error": 83.37786865234375,
+      "pck_4": 0.011788826435804367,
+      "pck_8": 0.04356740042567253,
+      "pck_16": 0.13172732293605804
+    },
+    {
+      "scene": "0154",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2269,
+      "mean_error": 39.515377044677734,
+      "pck_4": 0.03746143728494644,
+      "pck_8": 0.12516526877880096,
+      "pck_16": 0.3177611231803894
+    },
+    {
+      "scene": "0154",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 2250,
+      "mean_error": 39.782413482666016,
+      "pck_4": 0.035999998450279236,
+      "pck_8": 0.12177778035402298,
+      "pck_16": 0.31244444847106934
+    },
+    {
+      "scene": "0154",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 1923,
+      "mean_error": 43.500553131103516,
+      "pck_4": 0.023400936275720596,
+      "pck_8": 0.08060322701931,
+      "pck_16": 0.24596983194351196
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2269,
+      "mean_error": 65.55309295654297,
+      "pck_4": 0.014103129506111145,
+      "pck_8": 0.05464962497353554,
+      "pck_16": 0.1859850138425827
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 2250,
+      "mean_error": 65.70409393310547,
+      "pck_4": 0.0142222223803401,
+      "pck_8": 0.053777776658535004,
+      "pck_16": 0.18400000035762787
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 1923,
+      "mean_error": 62.8946418762207,
+      "pck_4": 0.014040561392903328,
+      "pck_8": 0.04940197616815567,
+      "pck_16": 0.1846073865890503
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2269,
+      "mean_error": 61.92348098754883,
+      "pck_4": 0.016306743025779724,
+      "pck_8": 0.06170118972659111,
+      "pck_16": 0.20096959173679352
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2250,
+      "mean_error": 62.2469596862793,
+      "pck_4": 0.01644444465637207,
+      "pck_8": 0.05999999865889549,
+      "pck_16": 0.19777777791023254
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1923,
+      "mean_error": 60.81600570678711,
+      "pck_4": 0.01612064428627491,
+      "pck_8": 0.057722307741642,
+      "pck_16": 0.1944877803325653
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2269,
+      "mean_error": 61.91923904418945,
+      "pck_4": 0.016306743025779724,
+      "pck_8": 0.061260465532541275,
+      "pck_16": 0.20096959173679352
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2250,
+      "mean_error": 62.2426872253418,
+      "pck_4": 0.01644444465637207,
+      "pck_8": 0.05955555662512779,
+      "pck_16": 0.19777777791023254
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1923,
+      "mean_error": 60.81100845336914,
+      "pck_4": 0.01612064428627491,
+      "pck_8": 0.0572022870182991,
+      "pck_16": 0.1944877803325653
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2269,
+      "mean_error": 51.5732421875,
+      "pck_4": 0.012780960649251938,
+      "pck_8": 0.04936095327138901,
+      "pck_16": 0.172322615981102
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 2250,
+      "mean_error": 51.84482955932617,
+      "pck_4": 0.012888888828456402,
+      "pck_8": 0.04844444617629051,
+      "pck_16": 0.1688888818025589
+    },
+    {
+      "scene": "0154",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 1923,
+      "mean_error": 56.764129638671875,
+      "pck_4": 0.007800311781466007,
+      "pck_8": 0.02860114350914955,
+      "pck_16": 0.125325009226799
+    },
+    {
+      "scene": "0162",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2792,
+      "mean_error": 15.733946800231934,
+      "pck_4": 0.13861031830310822,
+      "pck_8": 0.4613180458545685,
+      "pck_16": 0.8266475796699524
+    },
+    {
+      "scene": "0162",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 976,
+      "mean_error": 30.547348022460938,
+      "pck_4": 0.10450819879770279,
+      "pck_8": 0.23155738413333893,
+      "pck_16": 0.5625
+    },
+    {
+      "scene": "0162",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 460,
+      "mean_error": 51.76630401611328,
+      "pck_4": 0.019565217196941376,
+      "pck_8": 0.06956521421670914,
+      "pck_16": 0.33478260040283203
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2792,
+      "mean_error": 23.628971099853516,
+      "pck_4": 0.11461318284273148,
+      "pck_8": 0.35422635078430176,
+      "pck_16": 0.6314470171928406
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 976,
+      "mean_error": 33.273780822753906,
+      "pck_4": 0.06045081838965416,
+      "pck_8": 0.17110656201839447,
+      "pck_16": 0.3514344394207001
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 460,
+      "mean_error": 42.4755973815918,
+      "pck_4": 0.030434781685471535,
+      "pck_8": 0.08478260785341263,
+      "pck_16": 0.20652173459529877
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2792,
+      "mean_error": 20.59065818786621,
+      "pck_4": 0.11747851222753525,
+      "pck_8": 0.3732091784477234,
+      "pck_16": 0.6615329384803772
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 976,
+      "mean_error": 28.490575790405273,
+      "pck_4": 0.06762295216321945,
+      "pck_8": 0.19877049326896667,
+      "pck_16": 0.40471312403678894
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 460,
+      "mean_error": 36.965030670166016,
+      "pck_4": 0.03695652261376381,
+      "pck_8": 0.10652174055576324,
+      "pck_16": 0.25652173161506653
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2792,
+      "mean_error": 20.656639099121094,
+      "pck_4": 0.11747851222753525,
+      "pck_8": 0.3732091784477234,
+      "pck_16": 0.6611747741699219
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 976,
+      "mean_error": 28.572362899780273,
+      "pck_4": 0.06762295216321945,
+      "pck_8": 0.19877049326896667,
+      "pck_16": 0.40471312403678894
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 460,
+      "mean_error": 37.1385612487793,
+      "pck_4": 0.03695652261376381,
+      "pck_8": 0.10652174055576324,
+      "pck_16": 0.25652173161506653
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2792,
+      "mean_error": 18.9843692779541,
+      "pck_4": 0.125,
+      "pck_8": 0.3932664692401886,
+      "pck_16": 0.6916189193725586
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 976,
+      "mean_error": 32.817222595214844,
+      "pck_4": 0.0799180343747139,
+      "pck_8": 0.21721310913562775,
+      "pck_16": 0.4477458894252777
+    },
+    {
+      "scene": "0162",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 460,
+      "mean_error": 55.330833435058594,
+      "pck_4": 0.015217390842735767,
+      "pck_8": 0.04782608523964882,
+      "pck_16": 0.156521737575531
+    },
+    {
+      "scene": "0238",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 1889,
+      "mean_error": 25.72085189819336,
+      "pck_4": 0.07728957384824753,
+      "pck_8": 0.25357332825660706,
+      "pck_16": 0.5674960017204285
+    },
+    {
+      "scene": "0238",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 1803,
+      "mean_error": 26.565258026123047,
+      "pck_4": 0.07487520575523376,
+      "pck_8": 0.24348308145999908,
+      "pck_16": 0.5474209785461426
+    },
+    {
+      "scene": "0238",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 1000,
+      "mean_error": 38.373348236083984,
+      "pck_4": 0.04800000041723251,
+      "pck_8": 0.1550000011920929,
+      "pck_16": 0.36399999260902405
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 1889,
+      "mean_error": 58.735877990722656,
+      "pck_4": 0.02064584381878376,
+      "pck_8": 0.08946532756090164,
+      "pck_16": 0.24669137597084045
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 1803,
+      "mean_error": 60.345115661621094,
+      "pck_4": 0.019412091001868248,
+      "pck_8": 0.08319467306137085,
+      "pck_16": 0.23183582723140717
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 1000,
+      "mean_error": 74.28074645996094,
+      "pck_4": 0.006000000052154064,
+      "pck_8": 0.04600000008940697,
+      "pck_16": 0.1589999943971634
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 1889,
+      "mean_error": 48.649681091308594,
+      "pck_4": 0.027527792379260063,
+      "pck_8": 0.10640550404787064,
+      "pck_16": 0.2816304862499237
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 1803,
+      "mean_error": 49.83807373046875,
+      "pck_4": 0.026622295379638672,
+      "pck_8": 0.09927897900342941,
+      "pck_16": 0.2667776048183441
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1000,
+      "mean_error": 60.57793045043945,
+      "pck_4": 0.014000000432133675,
+      "pck_8": 0.05900000035762787,
+      "pck_16": 0.17299999296665192
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 1889,
+      "mean_error": 48.649681091308594,
+      "pck_4": 0.027527792379260063,
+      "pck_8": 0.10640550404787064,
+      "pck_16": 0.2816304862499237
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 1803,
+      "mean_error": 49.83807373046875,
+      "pck_4": 0.026622295379638672,
+      "pck_8": 0.09927897900342941,
+      "pck_16": 0.2667776048183441
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1000,
+      "mean_error": 60.57793045043945,
+      "pck_4": 0.014000000432133675,
+      "pck_8": 0.05900000035762787,
+      "pck_16": 0.17299999296665192
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 1889,
+      "mean_error": 32.78453826904297,
+      "pck_4": 0.033880360424518585,
+      "pck_8": 0.1349920630455017,
+      "pck_16": 0.36103758215904236
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 1803,
+      "mean_error": 33.640071868896484,
+      "pck_4": 0.03272324055433273,
+      "pck_8": 0.1286744326353073,
+      "pck_16": 0.3427620530128479
+    },
+    {
+      "scene": "0238",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 1000,
+      "mean_error": 45.983516693115234,
+      "pck_4": 0.014999999664723873,
+      "pck_8": 0.050999999046325684,
+      "pck_16": 0.19599999487400055
+    },
+    {
+      "scene": "0248",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2766,
+      "mean_error": 10.156686782836914,
+      "pck_4": 0.16594360768795013,
+      "pck_8": 0.5231381058692932,
+      "pck_16": 0.9258857369422913
+    },
+    {
+      "scene": "0248",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 392,
+      "mean_error": 24.970489501953125,
+      "pck_4": 0.09183673560619354,
+      "pck_8": 0.23724490404129028,
+      "pck_16": 0.6020408272743225
+    },
+    {
+      "scene": "0248",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 257,
+      "mean_error": 32.53261184692383,
+      "pck_4": 0.038910504430532455,
+      "pck_8": 0.14785991609096527,
+      "pck_16": 0.45525291562080383
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2766,
+      "mean_error": 21.47258758544922,
+      "pck_4": 0.13015183806419373,
+      "pck_8": 0.39696311950683594,
+      "pck_16": 0.7530730366706848
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 392,
+      "mean_error": 29.00871467590332,
+      "pck_4": 0.06632652878761292,
+      "pck_8": 0.1785714328289032,
+      "pck_16": 0.4234693944454193
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 257,
+      "mean_error": 31.41373062133789,
+      "pck_4": 0.02723735384643078,
+      "pck_8": 0.09727626293897629,
+      "pck_16": 0.3463034927845001
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2766,
+      "mean_error": 19.546600341796875,
+      "pck_4": 0.1334056407213211,
+      "pck_8": 0.42371654510498047,
+      "pck_16": 0.7650036215782166
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 392,
+      "mean_error": 27.8216609954834,
+      "pck_4": 0.06887754797935486,
+      "pck_8": 0.19897958636283875,
+      "pck_16": 0.44387754797935486
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 257,
+      "mean_error": 31.58285140991211,
+      "pck_4": 0.023346303030848503,
+      "pck_8": 0.10894941538572311,
+      "pck_16": 0.3501945436000824
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2766,
+      "mean_error": 19.546600341796875,
+      "pck_4": 0.1334056407213211,
+      "pck_8": 0.42371654510498047,
+      "pck_16": 0.7650036215782166
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 392,
+      "mean_error": 27.8216609954834,
+      "pck_4": 0.06887754797935486,
+      "pck_8": 0.19897958636283875,
+      "pck_16": 0.44387754797935486
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 257,
+      "mean_error": 31.58285140991211,
+      "pck_4": 0.023346303030848503,
+      "pck_8": 0.10894941538572311,
+      "pck_16": 0.3501945436000824
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2766,
+      "mean_error": 14.291566848754883,
+      "pck_4": 0.1424439698457718,
+      "pck_8": 0.4461315870285034,
+      "pck_16": 0.825018048286438
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 392,
+      "mean_error": 35.07997512817383,
+      "pck_4": 0.09948979318141937,
+      "pck_8": 0.25,
+      "pck_16": 0.5331632494926453
+    },
+    {
+      "scene": "0248",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 257,
+      "mean_error": 48.706573486328125,
+      "pck_4": 0.03501945361495018,
+      "pck_8": 0.10505836457014084,
+      "pck_16": 0.3463034927845001
+    },
+    {
+      "scene": "0250",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2895,
+      "mean_error": 16.381134033203125,
+      "pck_4": 0.10362694412469864,
+      "pck_8": 0.3492228090763092,
+      "pck_16": 0.7246977686882019
+    },
+    {
+      "scene": "0250",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 2622,
+      "mean_error": 17.00063705444336,
+      "pck_4": 0.09458428621292114,
+      "pck_8": 0.3299008309841156,
+      "pck_16": 0.7070938348770142
+    },
+    {
+      "scene": "0250",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 1301,
+      "mean_error": 22.18755340576172,
+      "pck_4": 0.06687163561582565,
+      "pck_8": 0.2444273680448532,
+      "pck_16": 0.5764796137809753
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2895,
+      "mean_error": 47.22183609008789,
+      "pck_4": 0.054922278970479965,
+      "pck_8": 0.18238341808319092,
+      "pck_16": 0.41450777649879456
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 2622,
+      "mean_error": 48.943504333496094,
+      "pck_4": 0.046529367566108704,
+      "pck_8": 0.16361555457115173,
+      "pck_16": 0.3909229636192322
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 1301,
+      "mean_error": 53.1610107421875,
+      "pck_4": 0.0345887765288353,
+      "pck_8": 0.13066871464252472,
+      "pck_16": 0.31591084599494934
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2895,
+      "mean_error": 44.307621002197266,
+      "pck_4": 0.053886011242866516,
+      "pck_8": 0.18756476044654846,
+      "pck_16": 0.4193437099456787
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2622,
+      "mean_error": 45.82944869995117,
+      "pck_4": 0.045385200530290604,
+      "pck_8": 0.16628527641296387,
+      "pck_16": 0.39397406578063965
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1301,
+      "mean_error": 50.62417221069336,
+      "pck_4": 0.027671022340655327,
+      "pck_8": 0.1252882331609726,
+      "pck_16": 0.3220599591732025
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2895,
+      "mean_error": 44.307621002197266,
+      "pck_4": 0.053886011242866516,
+      "pck_8": 0.18756476044654846,
+      "pck_16": 0.4193437099456787
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 2622,
+      "mean_error": 45.82944869995117,
+      "pck_4": 0.045385200530290604,
+      "pck_8": 0.16628527641296387,
+      "pck_16": 0.39397406578063965
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 1301,
+      "mean_error": 50.62417221069336,
+      "pck_4": 0.027671022340655327,
+      "pck_8": 0.1252882331609726,
+      "pck_16": 0.3220599591732025
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2895,
+      "mean_error": 25.84835433959961,
+      "pck_4": 0.06044904887676239,
+      "pck_8": 0.2089810073375702,
+      "pck_16": 0.48877373337745667
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 2622,
+      "mean_error": 26.778207778930664,
+      "pck_4": 0.051868803799152374,
+      "pck_8": 0.18878719210624695,
+      "pck_16": 0.46186116337776184
+    },
+    {
+      "scene": "0250",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 1301,
+      "mean_error": 32.95022964477539,
+      "pck_4": 0.03766333684325218,
+      "pck_8": 0.13604919612407684,
+      "pck_16": 0.33743274211883545
+    },
+    {
+      "scene": "0263",
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "points": 2456,
+      "mean_error": 37.37873458862305,
+      "pck_4": 0.09812703728675842,
+      "pck_8": 0.29438111186027527,
+      "pck_16": 0.5610749125480652
+    },
+    {
+      "scene": "0263",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "points": 1963,
+      "mean_error": 43.343448638916016,
+      "pck_4": 0.07233826071023941,
+      "pck_8": 0.2297503799200058,
+      "pck_16": 0.4798777401447296
+    },
+    {
+      "scene": "0263",
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "points": 904,
+      "mean_error": 76.6650161743164,
+      "pck_4": 0.006637168116867542,
+      "pck_8": 0.044247787445783615,
+      "pck_16": 0.11725663393735886
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "points": 2456,
+      "mean_error": 57.84186553955078,
+      "pck_4": 0.056596092879772186,
+      "pck_8": 0.1726384311914444,
+      "pck_16": 0.3135179281234741
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "points": 1963,
+      "mean_error": 61.632423400878906,
+      "pck_4": 0.035150278359651566,
+      "pck_8": 0.12226184457540512,
+      "pck_16": 0.25827813148498535
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "points": 904,
+      "mean_error": 62.152137756347656,
+      "pck_4": 0.014380531385540962,
+      "pck_8": 0.049778759479522705,
+      "pck_16": 0.10619468986988068
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2456,
+      "mean_error": 53.48321533203125,
+      "pck_4": 0.05944625288248062,
+      "pck_8": 0.18403908610343933,
+      "pck_16": 0.3497557044029236
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 1963,
+      "mean_error": 57.61184310913086,
+      "pck_4": 0.03820682689547539,
+      "pck_8": 0.12990321218967438,
+      "pck_16": 0.2868058979511261
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 904,
+      "mean_error": 62.134090423583984,
+      "pck_4": 0.015486725606024265,
+      "pck_8": 0.05199114978313446,
+      "pck_16": 0.11615043878555298
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "points": 2456,
+      "mean_error": 53.466651916503906,
+      "pck_4": 0.05944625288248062,
+      "pck_8": 0.18444626033306122,
+      "pck_16": 0.3501628637313843
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "points": 1963,
+      "mean_error": 57.59111404418945,
+      "pck_4": 0.03820682689547539,
+      "pck_8": 0.13041263818740845,
+      "pck_16": 0.28731533885002136
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "points": 904,
+      "mean_error": 62.134090423583984,
+      "pck_4": 0.015486725606024265,
+      "pck_8": 0.05199114978313446,
+      "pck_16": 0.11615043878555298
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "points": 2456,
+      "mean_error": 39.999359130859375,
+      "pck_4": 0.07532573491334915,
+      "pck_8": 0.2194625437259674,
+      "pck_16": 0.4299674332141876
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "points": 1963,
+      "mean_error": 46.57432174682617,
+      "pck_4": 0.05196128413081169,
+      "pck_8": 0.16199694573879242,
+      "pck_16": 0.345389723777771
+    },
+    {
+      "scene": "0263",
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "points": 904,
+      "mean_error": 77.66427612304688,
+      "pck_4": 0.008849557489156723,
+      "pck_8": 0.024336284026503563,
+      "pck_16": 0.07632743567228317
+    }
+  ],
+  "summary": [
+    {
+      "method": "depth4_cosine",
+      "stratum": "all_visible",
+      "scenes": 8,
+      "points": 19941,
+      "mean_error": 28.65751850605011,
+      "pck_4": 0.10065030213445425,
+      "pck_8": 0.3343237489461899,
+      "pck_16": 0.6429872140288353
+    },
+    {
+      "method": "depth4_cosine",
+      "stratum": "moving_gt2",
+      "scenes": 8,
+      "points": 12548,
+      "mean_error": 36.566133975982666,
+      "pck_4": 0.07084780000150204,
+      "pck_8": 0.21983319986611605,
+      "pck_16": 0.5010109804570675
+    },
+    {
+      "method": "depth4_cosine",
+      "stratum": "moving_gt16",
+      "scenes": 8,
+      "points": 8021,
+      "mean_error": 49.61109685897827,
+      "pck_4": 0.03351960063446313,
+      "pck_8": 0.12531360005959868,
+      "pck_16": 0.3278572866693139
+    },
+    {
+      "method": "depth12_cosine",
+      "stratum": "all_visible",
+      "scenes": 8,
+      "points": 19941,
+      "mean_error": 47.998061656951904,
+      "pck_4": 0.06533172982744873,
+      "pck_8": 0.21116838650777936,
+      "pck_16": 0.4236851669847965
+    },
+    {
+      "method": "depth12_cosine",
+      "stratum": "moving_gt2",
+      "scenes": 8,
+      "points": 12548,
+      "mean_error": 52.66881728172302,
+      "pck_4": 0.03679549822118133,
+      "pck_8": 0.12240243144333363,
+      "pck_16": 0.295694500207901
+    },
+    {
+      "method": "depth12_cosine",
+      "stratum": "moving_gt16",
+      "scenes": 8,
+      "points": 8021,
+      "mean_error": 57.23490238189697,
+      "pck_4": 0.020983607624657452,
+      "pck_8": 0.07584580732509494,
+      "pck_16": 0.21134639903903008
+    },
+    {
+      "method": "depth12_postnorm_cosine",
+      "stratum": "all_visible",
+      "scenes": 8,
+      "points": 19941,
+      "mean_error": 44.18298316001892,
+      "pck_4": 0.0675468051340431,
+      "pck_8": 0.22409719927236438,
+      "pck_16": 0.44128037616610527
+    },
+    {
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt2",
+      "scenes": 8,
+      "points": 12548,
+      "mean_error": 49.30196237564087,
+      "pck_4": 0.03900875127874315,
+      "pck_8": 0.13164816005155444,
+      "pck_16": 0.312683405354619
+    },
+    {
+      "method": "depth12_postnorm_cosine",
+      "stratum": "moving_gt16",
+      "scenes": 8,
+      "points": 8021,
+      "mean_error": 54.745511054992676,
+      "pck_4": 0.02233749523293227,
+      "pck_8": 0.08259064937010407,
+      "pck_16": 0.21831614337861538
+    },
+    {
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "all_visible",
+      "scenes": 8,
+      "points": 19941,
+      "mean_error": 44.18863010406494,
+      "pck_4": 0.0675468051340431,
+      "pck_8": 0.22409300552681088,
+      "pck_16": 0.44128650054335594
+    },
+    {
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt2",
+      "scenes": 8,
+      "points": 12548,
+      "mean_error": 49.30906057357788,
+      "pck_4": 0.03900875127874315,
+      "pck_8": 0.13165628304705024,
+      "pck_16": 0.31274708546698093
+    },
+    {
+      "method": "depth12_postnorm_inputnorm_cosine",
+      "stratum": "moving_gt16",
+      "scenes": 8,
+      "points": 8021,
+      "mean_error": 54.76657772064209,
+      "pck_4": 0.02233749523293227,
+      "pck_8": 0.08252564677968621,
+      "pck_16": 0.21831614337861538
+    },
+    {
+      "method": "depth12_learned_metric",
+      "stratum": "all_visible",
+      "scenes": 8,
+      "points": 19941,
+      "mean_error": 34.56427025794983,
+      "pck_4": 0.07266458077356219,
+      "pck_8": 0.24083294346928596,
+      "pck_16": 0.49021819420158863
+    },
+    {
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt2",
+      "scenes": 8,
+      "points": 12548,
+      "mean_error": 42.72168850898743,
+      "pck_4": 0.048025865689851344,
+      "pck_8": 0.14766979636624455,
+      "pck_16": 0.35496339574456215
+    },
+    {
+      "method": "depth12_learned_metric",
+      "stratum": "moving_gt16",
+      "scenes": 8,
+      "points": 8021,
+      "mean_error": 56.407766342163086,
+      "pck_4": 0.019750692998059094,
+      "pck_8": 0.06511036423034966,
+      "pck_16": 0.19620471727102995
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "original_native": {
+    "max_abs": 0.4927396774291992,
+    "rms": 0.005399840883910656,
+    "preset_allclose": false,
+    "logit_max_abs": 0.03125,
+    "clip_prediction": 125,
+    "stream_prediction": 125
+  },
+  "zero_conditioner": {
+    "max_abs": 0.4927396774291992,
+    "rms": 0.005399840883910656,
+    "preset_allclose": false,
+    "logit_max_abs": 0.03125,
+    "clip_prediction": 125,
+    "stream_prediction": 125
+  },
+  "losses": [
+    1.2056446075439453,
+    0.4458281397819519,
+    0.08337400108575821
+  ],
+  "trained_conditioner": {
+    "max_abs": 0.20629405975341797,
+    "rms": 0.005442800000309944,
+    "preset_allclose": false,
+    "logit_max_abs": 0.03125,
+    "clip_prediction": 125,
+    "stream_prediction": 125
+  },
+  "same_trained_base_conditioner_disabled": {
+    "max_abs": 0.2966127395629883,
+    "rms": 0.005487463437020779,
+    "preset_allclose": false,
+    "logit_max_abs": 0.03125,
+    "clip_prediction": 125,
+    "stream_prediction": 125
+  },
+  "isolated": {
+    "3": {
+      "projection_max_abs": 0.0,
+      "native_recurrence_max_abs": 0.5
+    },
+    "7": {
+      "projection_max_abs": 0.0,
+      "native_recurrence_max_abs": 1.0
+    },
+    "11": {
+      "projection_max_abs": 0.0,
+      "native_recurrence_max_abs": 2.0
+    }
+  }
+}

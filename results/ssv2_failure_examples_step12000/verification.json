@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "summary_sha256": "192b02166697f536ac5cd259b42cad47a93f3ee72f44760d0c4aa0237c6256db",
+  "audit_prediction_arrays_match": true,
+  "net_gain_reconciles": true,
+  "examples": 6,
+  "scope": "Both compact-JSON analysis hashes and standard-JSON audit hashes verified against the same prediction lists. Original-label audits, net improvement and selected example indices reconciled; video bytes checked during extraction."
+}

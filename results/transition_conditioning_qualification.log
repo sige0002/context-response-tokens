@@ -1,0 +1,17 @@
+/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/utils/determinism.py:73: UserWarning: Deterministic mode: set TRITON_CACHE_AUTOTUNING=1 for cached autotuning.
+  warnings.warn(msg)
+/home/sadasue/mywam/exploration/train_transition_conditioning.py:159: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  learned = {k:float(p.branch[-1].weight.abs().sum()) for k,p in model.encoder.projections.items()}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/sadasue/mywam/exploration/train_transition_conditioning.py", line 272, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/sadasue/mywam/exploration/train_transition_conditioning.py", line 268, in main
+    elif args.qualify: qualify(output)
+                       ^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/exploration/train_transition_conditioning.py", line 174, in qualify
+    raise ValueError(f'Chunk equivalence exceeds preset numerical tolerance: {stream_error}')
+ValueError: Chunk equivalence exceeds preset numerical tolerance: 0.20629405975341797

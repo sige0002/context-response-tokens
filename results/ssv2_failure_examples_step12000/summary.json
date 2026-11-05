@@ -1,0 +1,455 @@
+{
+  "steps": [
+    9000,
+    10000,
+    11000,
+    12000
+  ],
+  "samples": 24777,
+  "latest_correct": 13460,
+  "latest_wrong": 11317,
+  "gained": 1879,
+  "lost": 1637,
+  "net_gain": 242,
+  "persistently_wrong": 8042,
+  "confusions": [
+    {
+      "rank": 1,
+      "label": 122,
+      "prediction": 22,
+      "correct_name": "Rolling something on a flat surface",
+      "predicted_name": "Letting something roll along a flat surface",
+      "count": 68,
+      "class_support": 203,
+      "stable_wrong_count": 26
+    },
+    {
+      "rank": 2,
+      "label": 22,
+      "prediction": 122,
+      "correct_name": "Letting something roll along a flat surface",
+      "predicted_name": "Rolling something on a flat surface",
+      "count": 61,
+      "class_support": 172,
+      "stable_wrong_count": 21
+    },
+    {
+      "rank": 3,
+      "label": 154,
+      "prediction": 151,
+      "correct_name": "Throwing something in the air and letting it fall",
+      "predicted_name": "Throwing something",
+      "count": 60,
+      "class_support": 127,
+      "stable_wrong_count": 2
+    },
+    {
+      "rank": 4,
+      "label": 45,
+      "prediction": 27,
+      "correct_name": "Moving something up",
+      "predicted_name": "Lifting something up completely without letting it drop down",
+      "count": 59,
+      "class_support": 359,
+      "stable_wrong_count": 15
+    },
+    {
+      "rank": 5,
+      "label": 150,
+      "prediction": 149,
+      "correct_name": "Tearing something just a little bit",
+      "predicted_name": "Tearing something into two pieces",
+      "count": 59,
+      "class_support": 368,
+      "stable_wrong_count": 16
+    },
+    {
+      "rank": 6,
+      "label": 43,
+      "prediction": 109,
+      "correct_name": "Moving something down",
+      "predicted_name": "Putting something on a surface",
+      "count": 55,
+      "class_support": 311,
+      "stable_wrong_count": 39
+    },
+    {
+      "rank": 7,
+      "label": 48,
+      "prediction": 144,
+      "correct_name": "Piling something up",
+      "predicted_name": "Stacking number of something",
+      "count": 54,
+      "class_support": 161,
+      "stable_wrong_count": 2
+    },
+    {
+      "rank": 8,
+      "label": 145,
+      "prediction": 106,
+      "correct_name": "Stuffing something into something",
+      "predicted_name": "Putting something into something",
+      "count": 53,
+      "class_support": 329,
+      "stable_wrong_count": 25
+    },
+    {
+      "rank": 9,
+      "label": 155,
+      "prediction": 151,
+      "correct_name": "Throwing something onto a surface",
+      "predicted_name": "Throwing something",
+      "count": 44,
+      "class_support": 82,
+      "stable_wrong_count": 3
+    },
+    {
+      "rank": 10,
+      "label": 55,
+      "prediction": 56,
+      "correct_name": "Poking something so it slightly moves",
+      "predicted_name": "Poking something so lightly that it doesn't or almost doesn't move",
+      "count": 44,
+      "class_support": 150,
+      "stable_wrong_count": 9
+    },
+    {
+      "rank": 11,
+      "label": 135,
+      "prediction": 12,
+      "correct_name": "Something falling like a rock",
+      "predicted_name": "Dropping something onto something",
+      "count": 43,
+      "class_support": 326,
+      "stable_wrong_count": 5
+    },
+    {
+      "rank": 12,
+      "label": 134,
+      "prediction": 151,
+      "correct_name": "Something falling like a feather or paper",
+      "predicted_name": "Throwing something",
+      "count": 43,
+      "class_support": 368,
+      "stable_wrong_count": 1
+    },
+    {
+      "rank": 13,
+      "label": 34,
+      "prediction": 99,
+      "correct_name": "Moving something across a surface until it falls down",
+      "predicted_name": "Pushing something so that it falls off the table",
+      "count": 41,
+      "class_support": 83,
+      "stable_wrong_count": 31
+    },
+    {
+      "rank": 14,
+      "label": 69,
+      "prediction": 56,
+      "correct_name": "Pretending to poke something",
+      "predicted_name": "Poking something so lightly that it doesn't or almost doesn't move",
+      "count": 40,
+      "class_support": 100,
+      "stable_wrong_count": 11
+    },
+    {
+      "rank": 15,
+      "label": 150,
+      "prediction": 65,
+      "correct_name": "Tearing something just a little bit",
+      "predicted_name": "Pretending to be tearing something that is not tearable",
+      "count": 40,
+      "class_support": 368,
+      "stable_wrong_count": 7
+    },
+    {
+      "rank": 16,
+      "label": 100,
+      "prediction": 55,
+      "correct_name": "Pushing something so that it slightly moves",
+      "predicted_name": "Poking something so it slightly moves",
+      "count": 40,
+      "class_support": 265,
+      "stable_wrong_count": 9
+    },
+    {
+      "rank": 17,
+      "label": 128,
+      "prediction": 125,
+      "correct_name": "Showing something to the camera",
+      "predicted_name": "Showing something behind something",
+      "count": 40,
+      "class_support": 261,
+      "stable_wrong_count": 13
+    },
+    {
+      "rank": 18,
+      "label": 135,
+      "prediction": 151,
+      "correct_name": "Something falling like a rock",
+      "predicted_name": "Throwing something",
+      "count": 39,
+      "class_support": 326,
+      "stable_wrong_count": 5
+    },
+    {
+      "rank": 19,
+      "label": 86,
+      "prediction": 93,
+      "correct_name": "Pulling something from left to right",
+      "predicted_name": "Pushing something from left to right",
+      "count": 39,
+      "class_support": 170,
+      "stable_wrong_count": 34
+    },
+    {
+      "rank": 20,
+      "label": 95,
+      "prediction": 99,
+      "correct_name": "Pushing something off of something",
+      "predicted_name": "Pushing something so that it falls off the table",
+      "count": 37,
+      "class_support": 72,
+      "stable_wrong_count": 29
+    }
+  ],
+  "examples": [
+    {
+      "index": 15161,
+      "id": "7449",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/7449.webm",
+      "video_sha256": "d82616e4ff46d0629d166cbf14eb12b0693e8884f62af4d5d56454dfcca7dcf0",
+      "correct_name": "Rolling something on a flat surface",
+      "predicted_name": "Letting something roll along a flat surface",
+      "annotation": "rolling a glue stick on a flat surface",
+      "predictions": {
+        "9000": 22,
+        "10000": 22,
+        "11000": 22,
+        "12000": 22
+      },
+      "indices": [
+        2,
+        7,
+        12,
+        17,
+        22,
+        27,
+        32,
+        35
+      ],
+      "timestamps": [
+        0.167,
+        0.583,
+        1.0,
+        1.417,
+        1.833,
+        2.25,
+        2.667,
+        2.917
+      ],
+      "decoded_frames": 36,
+      "last_frame_time": 2.917
+    },
+    {
+      "index": 2055,
+      "id": "9555",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/9555.webm",
+      "video_sha256": "59530d68125d8a96aaea634bc994bcd685b124125903ade2f551575e28c051ad",
+      "correct_name": "Letting something roll along a flat surface",
+      "predicted_name": "Rolling something on a flat surface",
+      "annotation": "letting a ball roll along a flat surface",
+      "predictions": {
+        "9000": 122,
+        "10000": 122,
+        "11000": 122,
+        "12000": 122
+      },
+      "indices": [
+        3,
+        10,
+        18,
+        25,
+        33,
+        40,
+        48,
+        53
+      ],
+      "timestamps": [
+        0.25,
+        0.833,
+        1.5,
+        2.083,
+        2.75,
+        3.333,
+        4.0,
+        4.417
+      ],
+      "decoded_frames": 54,
+      "last_frame_time": 4.417
+    },
+    {
+      "index": 16334,
+      "id": "3988",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/3988.webm",
+      "video_sha256": "df9bf5d39071b1a49fa54622245c40bee5367c02a8b348de904ebd3372617c5d",
+      "correct_name": "Throwing something in the air and letting it fall",
+      "predicted_name": "Throwing something",
+      "annotation": "throwing onion in the air and letting it fall",
+      "predictions": {
+        "9000": 151,
+        "10000": 151,
+        "11000": 151,
+        "12000": 151
+      },
+      "indices": [
+        3,
+        11,
+        20,
+        28,
+        37,
+        45,
+        54,
+        59
+      ],
+      "timestamps": [
+        0.25,
+        0.917,
+        1.667,
+        2.333,
+        3.083,
+        3.75,
+        4.5,
+        4.917
+      ],
+      "decoded_frames": 60,
+      "last_frame_time": 4.917
+    },
+    {
+      "index": 3443,
+      "id": "10569",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/10569.webm",
+      "video_sha256": "ad920f191eceaf252baddd0dad278b380a3bce808afcf022077af732b9ea4bea",
+      "correct_name": "Moving something up",
+      "predicted_name": "Lifting something up completely without letting it drop down",
+      "annotation": "moving cable up",
+      "predictions": {
+        "9000": 27,
+        "10000": 27,
+        "11000": 27,
+        "12000": 27
+      },
+      "indices": [
+        1,
+        5,
+        10,
+        14,
+        19,
+        23,
+        28,
+        31
+      ],
+      "timestamps": [
+        0.083,
+        0.417,
+        0.833,
+        1.167,
+        1.583,
+        1.917,
+        2.333,
+        2.583
+      ],
+      "decoded_frames": 32,
+      "last_frame_time": 2.583
+    },
+    {
+      "index": 3211,
+      "id": "5335",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/5335.webm",
+      "video_sha256": "d5f008110c40c3a3a243c1b5b1a5b8b0306e3c3478819e1d4dbad86151b11c0c",
+      "correct_name": "Tearing something just a little bit",
+      "predicted_name": "Tearing something into two pieces",
+      "annotation": "tearing paper just a little bit",
+      "predictions": {
+        "9000": 149,
+        "10000": 149,
+        "11000": 149,
+        "12000": 149
+      },
+      "indices": [
+        3,
+        11,
+        20,
+        28,
+        37,
+        45,
+        54,
+        59
+      ],
+      "timestamps": [
+        0.25,
+        0.917,
+        1.667,
+        2.333,
+        3.083,
+        3.75,
+        4.5,
+        4.917
+      ],
+      "decoded_frames": 60,
+      "last_frame_time": 4.917
+    },
+    {
+      "index": 3334,
+      "id": "3208",
+      "video": "/home/sadasue/mywam/data/ssv2/videos_trainval/videos/3208.webm",
+      "video_sha256": "79dede070c0b703ec65456a992769bdc1cb258ff5fc1e15a3a9fb08d187b036f",
+      "correct_name": "Moving something down",
+      "predicted_name": "Putting something on a surface",
+      "annotation": "moving cable down",
+      "predictions": {
+        "9000": 109,
+        "10000": 109,
+        "11000": 109,
+        "12000": 109
+      },
+      "indices": [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        28
+      ],
+      "timestamps": [
+        0.083,
+        0.417,
+        0.75,
+        1.083,
+        1.417,
+        1.75,
+        2.083,
+        2.333
+      ],
+      "decoded_frames": 29,
+      "last_frame_time": 2.333
+    }
+  ],
+  "sources": {
+    "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac",
+    "data/ssv2/labels/labels.json": "d98d8b657a5d418d7c05dbf630dedd34763025b3d764ceef19bbfd1dc654f54f",
+    "data/ssv2/labels/validation.json": "fbdd69ac72b40b9e3ed3aaf484e1575777152565caed693b0ced2d4959fd3958",
+    "/home/sadasue/mywam/exploration/analyze_video_failures.py": "bc8b9f0a003e0fedfe8fce407c5449640a9f7d11d27c71691f9969cd135c4647"
+  },
+  "prediction_sha256": {
+    "9000": "530d9bddc1f9d98560a8946fc0579213b76cdeed18146fde18a47068bd252c0b",
+    "10000": "f7eb097e76ee7ac71bc798286eb3f84deb1dd989db19b83ab7934031b34e6851",
+    "11000": "a3b8ec3112029791808c51b863a4b7e4b1e1674cf0fb80d9cdd20aa440cfa966",
+    "12000": "90757b0330b85937a75d88635e75672ef4db3ef29a6d7f85a547b9e108ed59f3"
+  },
+  "selection": "First six final confusion pairs by count; smallest ID with the identical wrong prediction at all four checkpoints.",
+  "scope": "Original-label recount and example visualization, not a causal diagnosis or hidden-test evaluation."
+}

@@ -1,0 +1,12 @@
+[workspace]
+name = "temporal-encoder-paper"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["linux-aarch64"]
+
+[dependencies]
+tectonic = "*"
+
+[tasks]
+prepare = "mkdir -p build"
+pdf = { cmd = "tectonic main.tex --outdir build --keep-logs", depends-on = ["prepare"] }

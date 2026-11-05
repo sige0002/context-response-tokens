@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step7000.json": "f4373fa5989cac9e3e6a7a1ac868f9f44b3f44ec6f8ff191a446bfb413983c1f",
+    "results/video_history_intervention_seed17/summary.json": "0c9e2ed783540dcc3af19eead8c3fd2d9e5f4664dc6403abfd2dfad8a08cff33",
+    "results/video_history_intervention_seed17/verification.json": "69bf9cd3ed4cbfc8ed17d91b5e04d70c71d9cf3ddebd822ff934a9738fe43eb3",
+    "results/video_history_intervention_seed17/plan.json": "22da435809162af46a9371f164a6e297a55c6abc0bca4730005d18efdaf13018",
+    "results/temporal_priority_seed42_rgbfix/plan.json": "2cc915986c3024e1f96370934c8157a93628fd6830b5cf797b4ab70cd122dd41"
+  },
+  "generator_sha256": "53e8b63aa364aab731ca3860255450515be8b8f474ea3e5e612fc8cafd31408b",
+  "generated": {
+    "training.tex": "7e2a5b16dcf1b0f3ce769d6bb671efc2f9cd321d2c4bc50370ac7bdf347b60a6",
+    "history.tex": "30660fefcd39fe274fc67cc6420409c960da5bf37ca5e42d6aa22190bf02f4a8",
+    "comparison_pending.tex": "f77c8eb929de9dbbf53b38aa582ae5de9a63e8fbf059a797263f5cdedb083d7c"
+  },
+  "final_comparison_status": "not populated; final trained comparisons are required",
+  "history_scope": "4000 updates, balanced 348-clip previously inspected validation subset",
+  "learning_curve_scope": "interim clip validation on all 24777 clips; one seed",
+  "submission_ready": false
+}

@@ -1,0 +1,227 @@
+\RequirePackage[T1]{fontenc}
+\documentclass[letterpaper,10pt,conference]{ieeeconf}
+\overrideIEEEmargins
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\title{Temporal State-Space Adapters in Frozen Image Encoders}
+\author{Working draft: authors and affiliations to be supplied}
+\begin{document}
+\maketitle
+\begin{abstract}
+We investigate whether interleaving recurrent temporal updates with a frozen
+image encoder improves the accuracy--cost trade-off of streaming visual
+recognition. The implementation combines SigLIP 2 spatial processing with
+per-coordinate Mamba-3 adapters and exposes only current-frame tokens to a
+common task readout. The study is designed to compare image-only, temporal
+attention, late recurrent processing, and published GatedMambaMix cores.
+This working draft reports an intermediate learning curve and a completed
+history intervention diagnostic. Matched final-checkpoint comparisons,
+multiple-seed results, and long-range recognition evidence remain pending;
+the present results do not establish architectural superiority.
+\end{abstract}
+
+\section{Research Question and Scope}
+Robotic perception benefits from distinguishing observations with similar
+current appearances but different histories. Our target is a visual encoder
+that uses those histories without expanding the downstream token sequence.
+We do not modify a robot policy or infer manipulation success from video
+classification. The primary question is whether recurrent updates within a
+strong spatial encoder offer a useful recognition--cost trade-off compared
+with temporal attention under matched data and training conditions.
+
+The current implementation is a research baseline. Using Mamba-3, inserting
+time processing between spatial layers, and returning current-frame tokens
+are not individually novel contributions. A publishable performance claim
+requires completed comparisons, a mechanism explaining the improvement,
+and a robotics-relevant recognition evaluation. Those requirements are
+not replaced by implementation correctness or the diagnostic below.
+
+\section{Related Work}
+SigLIP 2 provides pretrained visual representations with strong semantic
+and dense-task capabilities~\cite{siglip2}. We reuse its spatial weights.
+Mamba-3 develops state-space recurrences for sequence modeling~\cite{mamba3};
+its language-model results do not imply a visual-recognition advantage.
+
+MEM uses temporal attention at regular ViT depths and forwards current
+tokens to a VLA, while handling longer semantic history with a separate
+language memory~\cite{mem}. TRecViT alternates recurrent temporal mixing,
+spatial attention, and channel processing~\cite{trecvit}. SDQES inserts
+streaming temporal adapters into image backbones~\cite{sdqes}. These works
+preclude a broad novelty claim for recurrent image-to-video adaptation.
+
+Frozen Image + GMMix evaluates temporal cores on frozen image features,
+including multi-depth features~\cite{gmmix}. We include both final-layer
+and multi-depth variants of its public core. Replacing its backbone with
+SigLIP 2 is a controlled adaptation, not a reproduction of the paper's
+reported DINO results. Our temporal-attention control similarly does not
+reproduce MEM's shared-parameter attention or its robot training.
+
+\section{Encoder and Learning}
+Let $I_t$ be the current image and $X_t^\ell\in\mathbb{R}^{N\times D}$
+the features after spatial block $\ell$. For SigLIP 2-B/16 at $224^2$
+resolution, $N=196$ and $D=768$. We insert adapters after blocks 4, 8,
+and 12. At patch coordinate $n$, each adapter computes
+\begin{align}
+ u_{t,n}^\ell &= W_\downarrow^\ell
+       \operatorname{LN}^\ell(X_{t,n}^\ell)+b_\downarrow^\ell,\\
+ (v_{t,n}^\ell,s_{t,n}^\ell) &=
+       \mathcal{M}_\theta^\ell(u_{t,n}^\ell,s_{t-1,n}^\ell),\\
+ \widetilde X_{t,n}^\ell &= X_{t,n}^\ell+
+       g^\ell\odot(W_\uparrow^\ell v_{t,n}^\ell+b_\uparrow^\ell).
+\end{align}
+Here $u$ has width 256. $\mathcal M$ is the upstream Mamba-3 SISO core
+with state dimension 64, expansion 2, and head dimension 64. The channel
+gate $g$ starts at zero. Each layer has independent learned parameters.
+At initialization the residual update is zero; this is not a guarantee
+that the pretrained spatial behavior remains unchanged after training.
+
+Temporal recurrence is independent at each image coordinate; subsequent
+SigLIP spatial attention mixes coordinates. There is no explicit object
+tracking or motion-aligned memory addressing. The native recurrent cache
+includes accumulated angles, the SSM matrix, and previous key/value
+states. All four are carried between observations and reset between
+episodes. Cameras are separate batch elements in the current interface.
+
+After final layer normalization, the encoder emits
+$Z_t\in\mathbb{R}^{196\times768}$. A common attentive readout predicts
+the action label from $Z_T$ only. All past observations pass through the
+spatial and temporal computation; they are not separately passed to the
+readout. The image-only baseline processes the same final image.
+
+We freeze SigLIP weights and train the adapters and readout with label
+cross-entropy, without distillation. Gradients still pass through later
+frozen spatial blocks to earlier adapters. Freezing parameters therefore
+does not remove all backbone backward computation. Clip training starts
+from empty memory. Inference supports a persistent native cache.
+
+\subsection{Capacity and Cost}
+At fixed resolution, architecture, and batch size, recurrent state capacity
+does not depend on history length. This property concerns inference state,
+not training activation memory or information retention. The measured
+native cache for this architecture at batch one is 79,027,200 bytes.
+Our three-layer width-256 BF16 attention control stores
+\begin{equation}
+ M_{\mathrm{KV}}(T)=3\cdot196\cdot2\cdot256\cdot2\cdot T
+                  =602{,}112T\ \mathrm{bytes}.
+\end{equation}
+Consequently its cache is smaller for short sequences; recurrent cache
+capacity becomes smaller at 132 observations. This arithmetic is not a
+crossover claim for total GPU memory or latency. Spatial encoder weights,
+compute, and the 196 output tokens are retained by both methods.
+
+\section{Experimental Protocol}
+\subsection{Matched Recognition Comparisons}
+The fixed protocol uses 168,913 training and 24,777 validation SSv2 videos
+with 174 classes. Eight sparse observations are sampled over each clip,
+including the same last observation; they are not eight consecutive frames.
+Training uses shared spatial crops, no horizontal flips, AdamW with
+learning rate $10^{-4}$ and weight decay $10^{-4}$, 1,000 warmup updates,
+and 20,000 total updates. Microbatch four with accumulation eight gives
+effective batch 32. Spatial computation is FP32 with TF32 disabled;
+temporal computation uses BF16. Comparisons share the backbone revision,
+data, readout family, and final-update selection rule.
+
+The six-way seed-42 grid consists of image-only SigLIP 2, interleaved
+temporal attention, interleaved Mamba-3, late Mamba-3, and two GMMix
+feature configurations. Interleaved and late Mamba use identical temporal
+parameter counts. Other architectures are not parameter matched, so
+accuracy must be assessed with measured cost and capacity. Major contrasts
+are scheduled to be repeated with seeds 43 and 44. Three seeds provide limited uncertainty
+information. Validation has been inspected during development and is not
+an untouched test set.
+
+The primary metric is full-history streaming top-1. The planned analysis reports paired
+prediction differences, conditional source-video bootstrap intervals,
+and training-seed variation separately. GMMix uses the documented
+PyTorch convolution fallback on this machine; kernel differences limit
+hardware-general speed conclusions.
+
+\begin{table}[t]
+\centering\small
+\caption{Planned final-checkpoint comparison. Dashes indicate results
+not yet supplied by completed matched runs, not zero accuracy.}
+\input{generated/comparison_pending.tex}
+\end{table}
+
+\subsection{Streaming Costs and Long-Range Recognition}
+Cost measurement uses the same fixed real RGB sequences of 52, 245, and
+1,337 observations, batch one, one warmup traversal, and three measured
+traversals. GPU latency, preprocessing/transfer-inclusive latency, state
+capacity, and peak allocated memory are distinct metrics. Timing runs
+exclude concurrent GPU jobs. File decoding is outside the timed path.
+These long sequences measure computational scaling, not long-term memory
+accuracy. Recognition claims additionally require evidence-dependent
+queries with a known evidence-to-query distance and valid target labels.
+That evaluation is not yet completed.
+
+\section{Completed Intermediate Evidence}
+\begin{table}[t]
+\centering\small
+\caption{Intermediate clip validation, one seed and all 24,777 videos.
+These checkpoints are not the final comparison checkpoints.}
+\input{generated/training.tex}
+\end{table}
+The learning curve is regenerated from a saved audit of official labels,
+data splits, source hashes, and validation prediction counts. It is not
+an independent rerun of every GPU forward. A corrected RGB conversion is
+used throughout; results before that correction are excluded.
+
+\subsection{Fixed-Current-Image History Interventions}
+We use one archived 4,000-update checkpoint and two validation videos per
+class sampled with seed 17. The resulting 348-video set was inspected in
+earlier diagnostics. We keep weights, classifier, and the last image fixed,
+and alter only history. Current-only inference uses a fresh state; the
+repeated-current condition uses eight identical current observations;
+history reversal reverses only the first seven observations.
+
+\begin{table}[t]
+\centering\small
+\caption{History intervention at 4,000 updates on the same 348 videos.
+Scores retain original clip labels even under altered histories.}
+\input{generated/history.tex}
+\end{table}
+The original-history condition answers more labels correctly than either
+current-only condition. Repeating the current observation does not recover
+the original-history performance. This supports history use by the fitted
+model. It does not compare independently trained architectures. Reversing
+history can change the action's meaning, so the original-label difference
+is not an accuracy measure for relabelled reversed videos.
+
+Original clip logits exactly reproduce the prior saved diagnostic.
+Clip and streaming logits differ by at most 0.0625, with no predicted-class
+disagreements on these 348 examples. All 1,740 condition/example predictions
+were recounted against the original labels. No conclusion about longer
+sequences follows from this short-clip agreement.
+
+\section{Outstanding Evidence and Decision Criteria}
+Final six-way accuracy/cost results and the three-seed comparisons must be
+completed before making a performance claim. The main contrast is
+interleaved Mamba versus temporal attention; interleaved versus late Mamba
+isolates placement. A positive result must not be explained solely by
+additional parameters, different kernels, data, or a changed readout.
+
+Robotics relevance requires a history-dependent perception application
+with controlled current observations or evidence timing. Fine point
+correspondence is not the main success criterion. Previous geometric
+pilots are auxiliary diagnostics and are not evidence of robot success.
+No action policy or physical robot evaluation has been performed in this
+study. If recognition and cost comparisons do not show a reproducible
+advantage, the architectural hypothesis must be revised or rejected.
+
+\begin{thebibliography}{9}
+\bibitem{siglip2} M. Tschannen et al., ``SigLIP 2: Multilingual
+Vision-Language Encoders with Improved Semantic Understanding,
+Localization, and Dense Features,'' arXiv:2502.14786, 2025.
+\bibitem{mamba3} A. Lahoti et al., ``Mamba-3: Improved Sequence Modeling
+using State Space Principles,'' arXiv:2603.15569, 2026.
+\bibitem{mem} M. Torne et al., ``MEM: Multi-Scale Embodied Memory for
+Vision Language Action Models,'' arXiv:2603.03596, 2026.
+\bibitem{trecvit} V. P\u{a}tr\u{a}ucean et al., ``TRecViT: A Recurrent
+Video Transformer,'' arXiv:2412.14294, 2024, revised 2026.
+\bibitem{sdqes} C. Eyzaguirre et al., ``Streaming Detection of Queried
+Event Start,'' arXiv:2412.03567, 2024.
+\bibitem{gmmix} S. Orlova, N. Cavagnero, and G. Dubbelman,
+``Towards Data-Efficient Video Pre-training with Frozen Image Foundation
+Models,'' arXiv:2605.19137, 2026.
+\end{thebibliography}
+\end{document}

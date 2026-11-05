@@ -1,0 +1,12 @@
+Pixi task (prepare): mkdir -p build
+
+Pixi task (pdf): tectonic main.tex --outdir build --keep-logs
+note: Running TeX ...
+warning: main.tex:226: Underfull \hbox (badness 2351) in paragraph at lines 223--226
+note: Rerunning TeX because "main.aux" changed ...
+warning: main.tex:226: Underfull \hbox (badness 2351) in paragraph at lines 223--226
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `build/main.log` (8.7216796875 KiB)
+note: Writing `build/main.pdf` (46.30078125 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)

@@ -1,0 +1,8 @@
+{
+  "pixi_version": "0.84.1",
+  "pixi_archive_sha256": "0595613aedd95f84f90a55ba4b51fc1e4b86afb4eaa3e34ca3f3454d8f22c2e6",
+  "pixi_binary_sha256": "45f1d18c9aed7defc4b864b83561dd421dfe460c428e81f446f0e7dd9e3ff09a",
+  "template_url": "https://ras.papercept.net/conferences/support/files/ieeeconf.zip",
+  "template_archive_sha256": "11d1051d5fe3dafd1e25bc7a8b66265cbe65dc135e26440cc6661baeeeb90c76",
+  "ieeeconf_cls_sha256": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2"
+}

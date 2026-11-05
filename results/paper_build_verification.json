@@ -1,0 +1,63 @@
+{
+  "scope": "Working manuscript build and rendered table checks; not research completion or IROS 2027 format certification",
+  "commands": [
+    "uv run --locked python paper/build_tables.py",
+    "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q paper/test_tables.py",
+    "paper/.tools/pixi run --manifest-path paper/pixi.toml --locked pdf"
+  ],
+  "checks": {
+    "letter_3_pages": true,
+    "no_overfull_boxes": true,
+    "no_undefined_fonts_or_references": true,
+    "all_fonts_embedded": true,
+    "no_bitmap_fonts": true,
+    "latest_count_and_score_in_pdf": true,
+    "history_scores_in_pdf": true,
+    "pending_results_explicit": true,
+    "official_class_unchanged": true
+  },
+  "table_tests": {
+    "passed": 3,
+    "log_sha256": "bf22e88f0e3a0e89eddb09d252b1661a48c9dfc4bd5aa177b5efca41f2700a18"
+  },
+  "visual_inspection": {
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "render_scale_pixels": 1400,
+    "result": "Equations, all three tables, and bibliography readable; no overlaps or clipped text observed"
+  },
+  "remaining_tex_warnings": [
+    "Underfull \\hbox (badness 2351) in paragraph at lines 223--226"
+  ],
+  "pdf": {
+    "path": "paper/build/main.pdf",
+    "sha256": "c014032d18d893444b79d4fc81733db13d6fcd5ed98b7d7d1c2fb1f95225768c",
+    "pages": 3,
+    "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nIHAIZV+NimbusRomNo9L-Regu            Type 1C           Custom           yes yes yes      4  0\nBZIVMZ+NimbusRomNo9L-MediItal        Type 1C           Custom           yes yes yes      5  0\nIXFAWU+NimbusRomNo9L-Medi            Type 1C           Custom           yes yes yes      6  0\nTQTHRL+CMMI10                        Type 1C           Builtin          yes yes yes      7  0\nYEUUOC+CMMI7                         Type 1C           Builtin          yes yes yes      8  0\nAKHCZK+CMSY10                        Type 1C           Builtin          yes yes yes      9  0\nVDVGTR+MSBM10                        Type 1C           Builtin          yes yes yes     10  0\nCAFSZL+CMSY7                         Type 1C           Builtin          yes yes yes     11  0\nDDIEWW+CMR10                         Type 1C           Builtin          yes yes yes     12  0\nFKPJSN+CMR7                          Type 1C           Builtin          yes yes yes     13  0\nPVTTLK+CMEX10                        Type 1C           Builtin          yes yes no      14  0\nJAGKKY+NimbusRomNo9L-ReguItal        Type 1C           Custom           yes yes yes     15  0\n",
+    "info": "Creator:         tectonic\nProducer:        xdvipdfmx (0.1)\nCreationDate:    Thu Nov  5 13:04:29 2026 JST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       47412 bytes\nOptimized:       no\nPDF version:     1.5\n"
+  },
+  "source_sha256": {
+    "paper/main.tex": "390bad15a1fa8a0e734b82f8326452bde4ce1961649ac5c08c873bf151bb467e",
+    "paper/ieeeconf.cls": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2",
+    "paper/pixi.toml": "3b0d40b75d8920229465aa04b262514aad7f2c6a87d110e8b35e547a044a8b71",
+    "paper/pixi.lock": "ffb3b39c9daf7c1b9114dfa89ad810ccabfb374c521f28ad77edcd1165f0e740",
+    "paper/build_tables.py": "53e8b63aa364aab731ca3860255450515be8b8f474ea3e5e612fc8cafd31408b",
+    "paper/bootstrap_pixi.py": "ecaeb6cddc23a4bdb945b5cc6a279e160fce5d687d307da730f7d6d73c6a0281",
+    "paper/build_tools.json": "22e27e7bf34a8e1ebf9bf962340c4d8ab4274a3d1bf567c112d377acdbca709c",
+    "paper/generated/training.tex": "7e2a5b16dcf1b0f3ce769d6bb671efc2f9cd321d2c4bc50370ac7bdf347b60a6",
+    "paper/generated/history.tex": "30660fefcd39fe274fc67cc6420409c960da5bf37ca5e42d6aa22190bf02f4a8",
+    "paper/generated/comparison_pending.tex": "f77c8eb929de9dbbf53b38aa582ae5de9a63e8fbf059a797263f5cdedb083d7c",
+    "paper/generated/evidence.json": "c45ce7b18f8939776e76e1c1a87b9530cda37c3b91c156fb164f077a7fc3e88e"
+  },
+  "build_log_sha256": "8430a7148f488e633923da875789d1af89d06777839f1632fe34afe3fbb4e4d2",
+  "limitations": [
+    "Final six-model comparisons and multiple seeds pending",
+    "Long-range recognition not measured",
+    "Author affiliations unset",
+    "2027-specific submission rules not verified",
+    "Build timestamp and local cache may affect binary PDF reproducibility"
+  ]
+}

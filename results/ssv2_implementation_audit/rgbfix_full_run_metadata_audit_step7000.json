@@ -1,0 +1,101 @@
+{
+  "scope": "Metadata/source verification and prediction recount; not an independent forward evaluation or a proof of no implementation bugs",
+  "run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+  "sources_match": {
+    "train_video.py": true,
+    "video_data.py": true,
+    "temporal_readout.py": true,
+    "temporal_siglip.py": true,
+    "train_temporal.py": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "splits": {
+    "train": {
+      "samples": 168913,
+      "classes": 174,
+      "min_per_class": 91,
+      "max_per_class": 3284,
+      "official_labels_match": true,
+      "file_sizes_match": true,
+      "manifest_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "annotation_sha256": "b24e46090960a49d732a0d3633fd939030b4eb717e16728871a3180b8704192b"
+    },
+    "val": {
+      "samples": 24777,
+      "classes": 174,
+      "min_per_class": 15,
+      "max_per_class": 530,
+      "official_labels_match": true,
+      "file_sizes_match": true,
+      "manifest_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac",
+      "annotation_sha256": "fbdd69ac72b40b9e3ed3aaf484e1575777152565caed693b0ced2d4959fd3958"
+    }
+  },
+  "cross_split_overlap": {
+    "id": 0,
+    "group": 0,
+    "sha256": 0
+  },
+  "validation": [
+    {
+      "step": 1000,
+      "correct": 3990,
+      "samples": 24777,
+      "accuracy": 0.16103644509020462,
+      "reported_loss": 3.70439994687842,
+      "predictions_sha256": "d8b793ae394e1c6693cd5d90471d8d79a7f3a4879953c47c4addbaadbdc055ce"
+    },
+    {
+      "step": 2000,
+      "correct": 7203,
+      "samples": 24777,
+      "accuracy": 0.29071316139968517,
+      "reported_loss": 2.883294346943391,
+      "predictions_sha256": "fca11fa233911fc3e4e647b7fb5481b8295e27d7c9879600418333fdc4a63c59"
+    },
+    {
+      "step": 3000,
+      "correct": 8568,
+      "samples": 24777,
+      "accuracy": 0.3458045768252815,
+      "reported_loss": 2.6046213240216822,
+      "predictions_sha256": "4702cf672a7f89c13515af5ae060a3f4cb1b6c905b0d1e62640f71d3003b95c7"
+    },
+    {
+      "step": 4000,
+      "correct": 9710,
+      "samples": 24777,
+      "accuracy": 0.39189570973079874,
+      "reported_loss": 2.408592288364121,
+      "predictions_sha256": "cb5792e70ea8aa98352f86315b914c0ed8c498c62daabe682e5914f86764380f"
+    },
+    {
+      "step": 5000,
+      "correct": 10879,
+      "samples": 24777,
+      "accuracy": 0.4390765629414376,
+      "reported_loss": 2.211099959932469,
+      "predictions_sha256": "84297bab8b73eb770a82f585331248e7b75b6bce75e4d12271e3d88e602e9e53"
+    },
+    {
+      "step": 6000,
+      "correct": 11448,
+      "samples": 24777,
+      "accuracy": 0.4620414093715946,
+      "reported_loss": 2.1049503825038687,
+      "predictions_sha256": "50d85fc11ad84abe6f6e5cfdb7778acfe4ebddf257320ae2facfe7eb8651901b"
+    },
+    {
+      "step": 7000,
+      "correct": 11875,
+      "samples": 24777,
+      "accuracy": 0.4792751341970376,
+      "reported_loss": 1.9927279464432897,
+      "predictions_sha256": "58104c6cfc20642649d4a0fea6e0c12eacde5cf5b628b2cb61546fd8dd76c2d9"
+    }
+  ],
+  "video_hash_scope": "Hashes recorded during extraction; no content reread in this audit",
+  "config_sha256": "41301ebec26f806af523adc9ffaa0e4385eeadf9885170ca98399ace01c01c3c",
+  "audit_source_sha256": "944e3ed5223edd398714672c3310ffb82688b5b6e486e062be7055d25279fc10"
+}

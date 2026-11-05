@@ -1,0 +1,108 @@
+"""Generate draft tables from public audited artifacts; no model execution."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCES = {
+    'training': 'results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step7000.json',
+    'history': 'results/video_history_intervention_seed17/summary.json',
+    'history_verification': 'results/video_history_intervention_seed17/verification.json',
+    'history_plan': 'results/video_history_intervention_seed17/plan.json',
+    'comparison_plan': 'results/temporal_priority_seed42_rgbfix/plan.json',
+}
+LABELS = {
+    'none_interleaved': 'Image only',
+    'attention_interleaved': 'Interleaved temporal attention',
+    'mamba_interleaved': 'Interleaved Mamba-3',
+    'mamba_late': 'Late Mamba-3',
+    'gmmix_after_encoder': 'Final-layer GMMix',
+    'gmmix_multidepth_after_encoder': 'Multi-depth GMMix',
+}
+HISTORY = {
+    'full_clip': 'Original history, clip',
+    'full_stream': 'Original history, stream',
+    'current_only': 'Current image only',
+    'repeat_current': 'Current image repeated',
+    'reverse_history': 'Past observations reversed',
+}
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def collect(root):
+    paths = {name: root / path for name, path in SOURCES.items()}
+    data = {name: json.loads(path.read_text()) for name, path in paths.items()}
+    training = data['training']
+    if not all(training['sources_match'].values()) or any(training['cross_split_overlap'].values()):
+        raise ValueError('Training provenance audit did not pass')
+    curve = training['validation']
+    if [r['step'] for r in curve] != list(range(1000, 7001, 1000)):
+        raise ValueError('This draft explicitly uses the audited 7000-step snapshot')
+    for row in curve:
+        if row['samples'] != 24777 or abs(row['correct']/row['samples']-row['accuracy']) > 1e-12:
+            raise ValueError('Wrong validation population or count')
+    history = data['history']; verified = data['history_verification']; plan = data['history_plan']
+    if not verified['passed'] or verified['summary_sha256'] != sha(paths['history']):
+        raise ValueError('History summary lacks its matching recount')
+    if history['plan_sha256'] != sha(paths['history_plan']) or plan['checkpoint_info']['step'] != 4000:
+        raise ValueError('History checkpoint or protocol changed')
+    if set(history['scores']) != set(HISTORY) or len(plan['subset']) != 348:
+        raise ValueError('Incomplete history comparison')
+    for name, row in history['scores'].items():
+        records = row['predictions']
+        count = sum(r['target'] == r['prediction'] for r in records)
+        if len(records) != 348 or count != row['correct'] or count != verified['counts'][name]['correct']:
+            raise ValueError('History counts do not match saved predictions')
+        if abs(row['original_label_top1'] - count/348) > 1e-12:
+            raise ValueError('History accuracy does not match its prediction count')
+        if len({r['id'] for r in records}) != 348:
+            raise ValueError('Duplicated history examples')
+    comparisons = data['comparison_plan']
+    rows = comparisons['encoders'] + [comparisons['multidepth']]
+    if len(rows) != 6 or {r['name'] for r in rows} != set(LABELS):
+        raise ValueError('Wrong comparison grid')
+    if any(r['config']['steps'] != 20000 or r['config']['frames'] != 8 for r in rows):
+        raise ValueError('Comparison budget changed')
+    return data, {str(path.relative_to(root)): sha(path) for path in paths.values()}
+
+
+def tabular(columns, header, rows):
+    return '\\begin{tabular}{'+columns+'}\n\\hline\n'+header+' \\\\\n\\hline\n'+\
+        '\n'.join(' & '.join(map(str, row))+' \\\\' for row in rows)+'\n\\hline\n\\end{tabular}\n'
+
+
+def build(root, output):
+    data, hashes = collect(root)
+    output.mkdir(parents=True, exist_ok=True)
+    training = tabular('rrr', 'Updates & Correct / 24,777 & Top-1 (\\%)',
+        [(f"{r['step']:,}", f"{r['correct']:,}", f"{100*r['accuracy']:.2f}") for r in data['training']['validation']])
+    history = tabular('lrr', 'History intervention & Correct / 348 & Top-1 (\\%)',
+        [(label, data['history']['scores'][key]['correct'],
+          f"{100*data['history']['scores'][key]['original_label_top1']:.2f}") for key, label in HISTORY.items()])
+    comparisons = tabular('lc', 'Final comparison, 20,000 updates & Streaming top-1',
+        [(label, '--') for label in LABELS.values()])
+    # Deliberately no fallback from interim to final cells.
+    generated = {'training.tex': training, 'history.tex': history, 'comparison_pending.tex': comparisons}
+    for name, contents in generated.items():
+        (output/name).write_text(contents)
+    evidence = dict(sources=hashes, generator_sha256=sha(Path(__file__)),
+        generated={name: sha(output/name) for name in generated},
+        final_comparison_status='not populated; final trained comparisons are required',
+        history_scope='4000 updates, balanced 348-clip previously inspected validation subset',
+        learning_curve_scope='interim clip validation on all 24777 clips; one seed',
+        submission_ready=False)
+    (output/'evidence.json').write_text(json.dumps(evidence, indent=2)+'\n')
+    return evidence
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', default=str(ROOT/'paper/generated'))
+    args = parser.parse_args()
+    result = build(ROOT, Path(args.output))
+    print(json.dumps(result, indent=2))

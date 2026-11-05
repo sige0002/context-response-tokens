@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "predictions_recounted": 1740,
+  "summary_sha256": "524f9cc338ef3886dbda220f21f14d2bc5dd07af2bf806c8897bd61a8c8da94b",
+  "scope": "CPU artifact checks, original-label recount through verified density controls; no independent GPU replay."
+}

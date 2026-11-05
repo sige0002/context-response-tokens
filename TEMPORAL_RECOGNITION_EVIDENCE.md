@@ -265,6 +265,55 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.temporal_density \
   --output results/new_temporal_density --verify
 ```
 
+### 観測の細分化に合わせた積分刻みの補正
+
+上の精度低下に対し、[別の診断実装](exploration/temporal_interval.py)で、同じ11,000更新の重みと
+同じ348動画を使って状態更新の刻みを補正した。主学習のソース・設定・重みは変更していない。
+元の観測間に画像を追加する倍率を`f`とし、最初の観測の係数は1、その後は`1/f`とする。
+15観測では`f=2`、29観測では`f=4`となり、元の各観測位置で累積する係数は8観測と一致する。
+これは元の観測間隔を単位とする補正であり、実時間の秒を入力する方式ではない。
+
+公式Mamba-3の係数生成とGPU演算をそのまま使い、演算への引数`DT`と`ADT`に同じ係数を掛ける。
+`DT`は書き込みの台形積分係数と角度の積算にも使われるので、忘却だけを弱くする操作とは異なる。
+入力依存の係数や途中画像も変わるため、観測頻度への不変性を保証するものではない。
+倍率は入力の取得計画から固定し、認識精度を見て選ぶ探索は行っていない。
+
+| 条件 | 補正なし | 補正あり | 補正ありの正解数 / 348 |
+| --- | ---: | ---: | ---: |
+| 元の8観測 | 46.84% | 46.84% | 163 |
+| 新しい途中画像・15観測 | 47.41% | 46.84% | 163 |
+| 直前の元画像を保持・15観測 | 46.26% | 47.13% | 164 |
+| 新しい途中画像・29観測 | 43.10% | 44.83% | 156 |
+| 直前の元画像を保持・29観測 | 38.79% | 43.97% | 153 |
+
+29観測の保持対照では、補正により+5.17 pp（対応付き探索的95%区間[2.59, 8.05]）となった。
+新しい途中画像では+1.72 ppだが、区間は[−0.86, 4.31] ppであり、明確な改善とは扱わない。
+補正後の新しい29観測も、元の8観測より7本少ない正解だった。
+**積分刻みの補正だけで、追加画像を元の8観測以上の認識精度へ結び付けることはできなかった。**
+忘却を唯一の原因とする結論、SOTAへの改善、再学習後の上限、未知データへの汎化は示していない。
+この集合は以前に結果を見た診断用の集合であり、区間は多重比較未補正である。
+
+[実行前の計画](results/temporal_interval_step11000_v1/plan.json)、
+[全条件の結果](results/temporal_interval_step11000_v1/summary.json)、
+[元ラベルからの再計数](results/temporal_interval_step11000_v1/verification.json)を保存した。
+[公式演算との照合](results/temporal_interval_step11000_v1/qualification.json)では、
+補正係数1の出力と4種類の状態が、3層すべてで完全一致した。
+8観測の全348 logitも以前の実行と完全一致し、先頭・末尾の再推論と重み不変の検査を通過した。
+[CPU検査4件](results/temporal_interval_tests.log)は、元の観測時点での刻みの一致、
+減衰と積分の同時補正、入力の不変、例外時の計測解除、状態照合を確認した。
+全1,740予測の再計数も一致した。主学習とGPUを共有したため速度評価には使わない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_temporal_interval.py
+uv run --locked python -m exploration.temporal_interval \
+  --density-result results/temporal_density_step11000_v1/evaluation_v2 \
+  --output results/new_temporal_interval
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.temporal_interval \
+  --output results/new_temporal_interval --verify
+```
+
+元の密度比較のlogit・入力記録と固定checkpointが必要であり、これらの大きなローカル成果物はGitに含めない。
+
 ## 関連研究から分かる評価の範囲
 
 | 一次資料 | 実際に測るもの | 今回への含意 |

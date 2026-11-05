@@ -148,3 +148,34 @@ uv run --locked python -m exploration.check_resettable_window_attention run \
 ```
 
 再実行時は初版の保存済みfixtureと先行実験を用意し、必要に応じて`prepare`の`--fixture`と`--after-run`で対応する出力先を指定する。
+
+## 同じ遅延保持課題への接続
+
+[特徴取得用コード](exploration/cache_windowed_delayed_action.py)を追加し、
+[W=8・32・128、seed=42・43・44の9条件](results/windowed_delayed_action_plan_v1.json)を準備した。
+元の比較計画にある最終Attention checkpointのパスと学習設定を照合し、20,000更新の重みだけを使う。
+元のデータ計画と同じ696本の学習用証拠・348本の検証用証拠、共通の後続画像、遅延0・1・8・32・128観測を用いる。
+`stream_features`とCPUのridge読み出しは、既存のMamba・全履歴Attention比較と同じコードを呼ぶ。
+エンコーダは再学習せず、現在トークンの平均特徴だけを読み出しへ渡す。
+各窓長・各条件について、学習集合だけで読み出しを学習し、正則化を検証スコアで選び直さない。
+
+[CPU検査4件](results/windowed_delayed_action_cpu_tests.log)では、小型SigLIPと合成画像から
+元の読み出し形式へ特徴を渡し、クラス非依存の後続画像の対照が正確にchanceになること、
+検証特徴を変更しても学習した読み出しが変わらないこと、別のcheckpointや学習設定を拒否することを確認した。
+未完了・失敗・比較行が欠けたGPU数値検査も拒否する。
+[現時点の起動確認](results/windowed_delayed_action_preparation.json)はGPU検査未完了で停止し、出力やGPUジョブを作成しなかった。
+
+実データの特徴取得・読み出し学習・方式間集計は未実施で、実行キューにもまだ登録していない。
+数値検査の通過後、各条件について次の形式で実行する。`<final-attention-checkpoint>`には
+元の比較計画に記載された同じseedの最終checkpointを指定する。
+
+```sh
+uv run --locked python -m exploration.cache_windowed_delayed_action \
+  --checkpoint "<final-attention-checkpoint>" --window 128 \
+  --output results/new_window128_cache
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.delayed_action_probe \
+  --cache results/new_window128_cache --output results/new_window128_probe
+```
+
+この対照は人工的に遅延を入れた課題の評価であり、自然動画の長期記憶やSOTAを直接測るものではない。
+最大128観測の遅延ではW=128の3層モデルの最大到達範囲を超えない点も維持する。

@@ -1,0 +1,30 @@
+{
+  "scope": "CPU extractor/probe compatibility and actual refusal without GPU qualification; no real-data features or recognition scores",
+  "tests_passed": 4,
+  "tests_log_sha256": "e51231c405d46c6ce5d07348a58193bbc81ace8dafbd4449423d2d975bae73c7",
+  "source_sha256": {
+    "exploration/cache_windowed_delayed_action.py": "a113e69f158d579dd9ce283108e8c03c35c72025c236e3b61ad7de455e152680",
+    "exploration/test_windowed_delayed_action.py": "079ab9492ec000933ea6517d71facce6a0928655aed2a41b4f0d79560a8bff03"
+  },
+  "preflight_command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.cache_windowed_delayed_action",
+    "--checkpoint",
+    "results/ssv2_full_comparisons_seed42_rgbfix/attention_interleaved_seed42/last.pt",
+    "--window",
+    "128",
+    "--output",
+    "results/windowed_delayed_action_preflight_output"
+  ],
+  "expected_refusal": "Completed real-RGB GPU qualification is required",
+  "preflight_exit_code": 1,
+  "output_created": false,
+  "real_data_features_extracted": false,
+  "queued_for_gpu": false,
+  "experiment_plan_sha256": "ffe182b668c7518782aeadad67bf30f4038c8f4d20a8a4ce1b178a3552c7c94e",
+  "planned_comparisons": 9
+}

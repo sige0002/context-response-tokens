@@ -1,0 +1,1783 @@
+{
+  "scope": "Descriptive paired analysis of reused validation predictions; no new inference, causal diagnosis, or model selection.",
+  "steps": [
+    9000,
+    10000,
+    11000,
+    12000,
+    13000,
+    14000,
+    15000,
+    16000,
+    17000
+  ],
+  "samples": 24777,
+  "curve": [
+    {
+      "step": 9000,
+      "correct": 12551,
+      "accuracy": 0.5065585018363805,
+      "macro_accuracy": 0.4235365976082822
+    },
+    {
+      "step": 10000,
+      "correct": 12999,
+      "accuracy": 0.5246397868991404,
+      "macro_accuracy": 0.4415019164224602
+    },
+    {
+      "step": 11000,
+      "correct": 13218,
+      "accuracy": 0.5334786293740162,
+      "macro_accuracy": 0.4563477584484648
+    },
+    {
+      "step": 12000,
+      "correct": 13460,
+      "accuracy": 0.5432457521088105,
+      "macro_accuracy": 0.4639797474902551
+    },
+    {
+      "step": 13000,
+      "correct": 13727,
+      "accuracy": 0.554021875126125,
+      "macro_accuracy": 0.4832378195479328
+    },
+    {
+      "step": 14000,
+      "correct": 13930,
+      "accuracy": 0.5622149574201881,
+      "macro_accuracy": 0.4815505708565236
+    },
+    {
+      "step": 15000,
+      "correct": 14087,
+      "accuracy": 0.5685514791944142,
+      "macro_accuracy": 0.4919018119903702
+    },
+    {
+      "step": 16000,
+      "correct": 14319,
+      "accuracy": 0.5779150018162005,
+      "macro_accuracy": 0.502781722374692
+    },
+    {
+      "step": 17000,
+      "correct": 14252,
+      "accuracy": 0.5752108810590467,
+      "macro_accuracy": 0.5005199612725038
+    }
+  ],
+  "latest_pair": {
+    "before": 16000,
+    "after": 17000,
+    "gained": 723,
+    "lost": 790,
+    "net_gain": -67,
+    "accuracy_gain_pp": -0.2704120757153812
+  },
+  "persistent_errors": {
+    "all_steps_wrong": 7124,
+    "reference_steps": [
+      9000,
+      10000,
+      11000,
+      12000
+    ],
+    "reference_all_wrong": 8042,
+    "reference_errors_now_correct": 367
+  },
+  "top_confusions": [
+    {
+      "label": 122,
+      "prediction": 22,
+      "correct_name": "Rolling something on a flat surface",
+      "predicted_name": "Letting something roll along a flat surface",
+      "count": 94,
+      "class_support": 203,
+      "same_error_at_every_step": 24
+    },
+    {
+      "label": 43,
+      "prediction": 109,
+      "correct_name": "Moving something down",
+      "predicted_name": "Putting something on a surface",
+      "count": 65,
+      "class_support": 311,
+      "same_error_at_every_step": 37
+    },
+    {
+      "label": 48,
+      "prediction": 144,
+      "correct_name": "Piling something up",
+      "predicted_name": "Stacking number of something",
+      "count": 59,
+      "class_support": 161,
+      "same_error_at_every_step": 2
+    },
+    {
+      "label": 109,
+      "prediction": 119,
+      "correct_name": "Putting something on a surface",
+      "predicted_name": "Putting something upright on the table",
+      "count": 59,
+      "class_support": 300,
+      "same_error_at_every_step": 11
+    },
+    {
+      "label": 158,
+      "prediction": 57,
+      "correct_name": "Tipping something over",
+      "predicted_name": "Poking something so that it falls over",
+      "count": 54,
+      "class_support": 218,
+      "same_error_at_every_step": 12
+    },
+    {
+      "label": 45,
+      "prediction": 27,
+      "correct_name": "Moving something up",
+      "predicted_name": "Lifting something up completely without letting it drop down",
+      "count": 50,
+      "class_support": 359,
+      "same_error_at_every_step": 15
+    },
+    {
+      "label": 145,
+      "prediction": 106,
+      "correct_name": "Stuffing something into something",
+      "predicted_name": "Putting something into something",
+      "count": 50,
+      "class_support": 329,
+      "same_error_at_every_step": 24
+    },
+    {
+      "label": 12,
+      "prediction": 135,
+      "correct_name": "Dropping something onto something",
+      "predicted_name": "Something falling like a rock",
+      "count": 49,
+      "class_support": 234,
+      "same_error_at_every_step": 24
+    },
+    {
+      "label": 139,
+      "prediction": 97,
+      "correct_name": "Spinning something so it continues spinning",
+      "predicted_name": "Pushing something so it spins",
+      "count": 47,
+      "class_support": 209,
+      "same_error_at_every_step": 0
+    },
+    {
+      "label": 150,
+      "prediction": 149,
+      "correct_name": "Tearing something just a little bit",
+      "predicted_name": "Tearing something into two pieces",
+      "count": 46,
+      "class_support": 368,
+      "same_error_at_every_step": 14
+    },
+    {
+      "label": 34,
+      "prediction": 99,
+      "correct_name": "Moving something across a surface until it falls down",
+      "predicted_name": "Pushing something so that it falls off the table",
+      "count": 43,
+      "class_support": 83,
+      "same_error_at_every_step": 23
+    },
+    {
+      "label": 81,
+      "prediction": 68,
+      "correct_name": "Pretending to take something from somewhere",
+      "predicted_name": "Pretending to pick something up",
+      "count": 39,
+      "class_support": 125,
+      "same_error_at_every_step": 14
+    },
+    {
+      "label": 128,
+      "prediction": 127,
+      "correct_name": "Showing something to the camera",
+      "predicted_name": "Showing something on top of something",
+      "count": 39,
+      "class_support": 261,
+      "same_error_at_every_step": 6
+    },
+    {
+      "label": 22,
+      "prediction": 122,
+      "correct_name": "Letting something roll along a flat surface",
+      "predicted_name": "Rolling something on a flat surface",
+      "count": 36,
+      "class_support": 172,
+      "same_error_at_every_step": 10
+    },
+    {
+      "label": 55,
+      "prediction": 100,
+      "correct_name": "Poking something so it slightly moves",
+      "predicted_name": "Pushing something so that it slightly moves",
+      "count": 36,
+      "class_support": 150,
+      "same_error_at_every_step": 4
+    },
+    {
+      "label": 128,
+      "prediction": 125,
+      "correct_name": "Showing something to the camera",
+      "predicted_name": "Showing something behind something",
+      "count": 36,
+      "class_support": 261,
+      "same_error_at_every_step": 11
+    },
+    {
+      "label": 86,
+      "prediction": 93,
+      "correct_name": "Pulling something from left to right",
+      "predicted_name": "Pushing something from left to right",
+      "count": 35,
+      "class_support": 170,
+      "same_error_at_every_step": 22
+    },
+    {
+      "label": 95,
+      "prediction": 99,
+      "correct_name": "Pushing something off of something",
+      "predicted_name": "Pushing something so that it falls off the table",
+      "count": 35,
+      "class_support": 72,
+      "same_error_at_every_step": 23
+    },
+    {
+      "label": 143,
+      "prediction": 80,
+      "correct_name": "Squeezing something",
+      "predicted_name": "Pretending to squeeze something",
+      "count": 35,
+      "class_support": 308,
+      "same_error_at_every_step": 1
+    },
+    {
+      "label": 47,
+      "prediction": 27,
+      "correct_name": "Picking something up",
+      "predicted_name": "Lifting something up completely without letting it drop down",
+      "count": 34,
+      "class_support": 199,
+      "same_error_at_every_step": 8
+    }
+  ],
+  "class_metrics": [
+    {
+      "label": 0,
+      "name": "Approaching something with your camera",
+      "samples": 116,
+      "previous_correct": 91,
+      "latest_correct": 84,
+      "net_gain": -7
+    },
+    {
+      "label": 1,
+      "name": "Attaching something to something",
+      "samples": 152,
+      "previous_correct": 68,
+      "latest_correct": 67,
+      "net_gain": -1
+    },
+    {
+      "label": 2,
+      "name": "Bending something so that it deforms",
+      "samples": 153,
+      "previous_correct": 61,
+      "latest_correct": 58,
+      "net_gain": -3
+    },
+    {
+      "label": 3,
+      "name": "Bending something until it breaks",
+      "samples": 103,
+      "previous_correct": 49,
+      "latest_correct": 57,
+      "net_gain": 8
+    },
+    {
+      "label": 4,
+      "name": "Burying something in something",
+      "samples": 39,
+      "previous_correct": 21,
+      "latest_correct": 20,
+      "net_gain": -1
+    },
+    {
+      "label": 5,
+      "name": "Closing something",
+      "samples": 228,
+      "previous_correct": 146,
+      "latest_correct": 142,
+      "net_gain": -4
+    },
+    {
+      "label": 6,
+      "name": "Covering something with something",
+      "samples": 417,
+      "previous_correct": 348,
+      "latest_correct": 333,
+      "net_gain": -15
+    },
+    {
+      "label": 7,
+      "name": "Digging something out of something",
+      "samples": 33,
+      "previous_correct": 16,
+      "latest_correct": 19,
+      "net_gain": 3
+    },
+    {
+      "label": 8,
+      "name": "Dropping something behind something",
+      "samples": 127,
+      "previous_correct": 66,
+      "latest_correct": 72,
+      "net_gain": 6
+    },
+    {
+      "label": 9,
+      "name": "Dropping something in front of something",
+      "samples": 151,
+      "previous_correct": 81,
+      "latest_correct": 94,
+      "net_gain": 13
+    },
+    {
+      "label": 10,
+      "name": "Dropping something into something",
+      "samples": 178,
+      "previous_correct": 101,
+      "latest_correct": 114,
+      "net_gain": 13
+    },
+    {
+      "label": 11,
+      "name": "Dropping something next to something",
+      "samples": 137,
+      "previous_correct": 90,
+      "latest_correct": 80,
+      "net_gain": -10
+    },
+    {
+      "label": 12,
+      "name": "Dropping something onto something",
+      "samples": 234,
+      "previous_correct": 71,
+      "latest_correct": 65,
+      "net_gain": -6
+    },
+    {
+      "label": 13,
+      "name": "Failing to put something into something because something does not fit",
+      "samples": 40,
+      "previous_correct": 9,
+      "latest_correct": 10,
+      "net_gain": 1
+    },
+    {
+      "label": 14,
+      "name": "Folding something",
+      "samples": 285,
+      "previous_correct": 228,
+      "latest_correct": 228,
+      "net_gain": 0
+    },
+    {
+      "label": 15,
+      "name": "Hitting something with something",
+      "samples": 235,
+      "previous_correct": 100,
+      "latest_correct": 100,
+      "net_gain": 0
+    },
+    {
+      "label": 16,
+      "name": "Holding something",
+      "samples": 197,
+      "previous_correct": 80,
+      "latest_correct": 88,
+      "net_gain": 8
+    },
+    {
+      "label": 17,
+      "name": "Holding something behind something",
+      "samples": 152,
+      "previous_correct": 73,
+      "latest_correct": 61,
+      "net_gain": -12
+    },
+    {
+      "label": 18,
+      "name": "Holding something in front of something",
+      "samples": 239,
+      "previous_correct": 131,
+      "latest_correct": 107,
+      "net_gain": -24
+    },
+    {
+      "label": 19,
+      "name": "Holding something next to something",
+      "samples": 211,
+      "previous_correct": 134,
+      "latest_correct": 137,
+      "net_gain": 3
+    },
+    {
+      "label": 20,
+      "name": "Holding something over something",
+      "samples": 254,
+      "previous_correct": 129,
+      "latest_correct": 140,
+      "net_gain": 11
+    },
+    {
+      "label": 21,
+      "name": "Laying something on the table on its side, not upright",
+      "samples": 114,
+      "previous_correct": 75,
+      "latest_correct": 69,
+      "net_gain": -6
+    },
+    {
+      "label": 22,
+      "name": "Letting something roll along a flat surface",
+      "samples": 172,
+      "previous_correct": 67,
+      "latest_correct": 83,
+      "net_gain": 16
+    },
+    {
+      "label": 23,
+      "name": "Letting something roll down a slanted surface",
+      "samples": 94,
+      "previous_correct": 45,
+      "latest_correct": 54,
+      "net_gain": 9
+    },
+    {
+      "label": 24,
+      "name": "Letting something roll up a slanted surface, so it rolls back down",
+      "samples": 44,
+      "previous_correct": 23,
+      "latest_correct": 18,
+      "net_gain": -5
+    },
+    {
+      "label": 25,
+      "name": "Lifting a surface with something on it but not enough for it to slide down",
+      "samples": 19,
+      "previous_correct": 9,
+      "latest_correct": 4,
+      "net_gain": -5
+    },
+    {
+      "label": 26,
+      "name": "Lifting a surface with something on it until it starts sliding down",
+      "samples": 40,
+      "previous_correct": 8,
+      "latest_correct": 10,
+      "net_gain": 2
+    },
+    {
+      "label": 27,
+      "name": "Lifting something up completely without letting it drop down",
+      "samples": 101,
+      "previous_correct": 53,
+      "latest_correct": 49,
+      "net_gain": -4
+    },
+    {
+      "label": 28,
+      "name": "Lifting something up completely, then letting it drop down",
+      "samples": 110,
+      "previous_correct": 68,
+      "latest_correct": 67,
+      "net_gain": -1
+    },
+    {
+      "label": 29,
+      "name": "Lifting something with something on it",
+      "samples": 261,
+      "previous_correct": 201,
+      "latest_correct": 192,
+      "net_gain": -9
+    },
+    {
+      "label": 30,
+      "name": "Lifting up one end of something without letting it drop down",
+      "samples": 74,
+      "previous_correct": 56,
+      "latest_correct": 54,
+      "net_gain": -2
+    },
+    {
+      "label": 31,
+      "name": "Lifting up one end of something, then letting it drop down",
+      "samples": 111,
+      "previous_correct": 80,
+      "latest_correct": 79,
+      "net_gain": -1
+    },
+    {
+      "label": 32,
+      "name": "Moving away from something with your camera",
+      "samples": 88,
+      "previous_correct": 61,
+      "latest_correct": 57,
+      "net_gain": -4
+    },
+    {
+      "label": 33,
+      "name": "Moving part of something",
+      "samples": 103,
+      "previous_correct": 8,
+      "latest_correct": 7,
+      "net_gain": -1
+    },
+    {
+      "label": 34,
+      "name": "Moving something across a surface until it falls down",
+      "samples": 83,
+      "previous_correct": 12,
+      "latest_correct": 15,
+      "net_gain": 3
+    },
+    {
+      "label": 35,
+      "name": "Moving something across a surface without it falling down",
+      "samples": 64,
+      "previous_correct": 8,
+      "latest_correct": 10,
+      "net_gain": 2
+    },
+    {
+      "label": 36,
+      "name": "Moving something and something away from each other",
+      "samples": 217,
+      "previous_correct": 175,
+      "latest_correct": 173,
+      "net_gain": -2
+    },
+    {
+      "label": 37,
+      "name": "Moving something and something closer to each other",
+      "samples": 263,
+      "previous_correct": 204,
+      "latest_correct": 194,
+      "net_gain": -10
+    },
+    {
+      "label": 38,
+      "name": "Moving something and something so they collide with each other",
+      "samples": 54,
+      "previous_correct": 4,
+      "latest_correct": 6,
+      "net_gain": 2
+    },
+    {
+      "label": 39,
+      "name": "Moving something and something so they pass each other",
+      "samples": 34,
+      "previous_correct": 14,
+      "latest_correct": 17,
+      "net_gain": 3
+    },
+    {
+      "label": 40,
+      "name": "Moving something away from something",
+      "samples": 183,
+      "previous_correct": 135,
+      "latest_correct": 135,
+      "net_gain": 0
+    },
+    {
+      "label": 41,
+      "name": "Moving something away from the camera",
+      "samples": 56,
+      "previous_correct": 30,
+      "latest_correct": 31,
+      "net_gain": 1
+    },
+    {
+      "label": 42,
+      "name": "Moving something closer to something",
+      "samples": 213,
+      "previous_correct": 134,
+      "latest_correct": 133,
+      "net_gain": -1
+    },
+    {
+      "label": 43,
+      "name": "Moving something down",
+      "samples": 311,
+      "previous_correct": 177,
+      "latest_correct": 176,
+      "net_gain": -1
+    },
+    {
+      "label": 44,
+      "name": "Moving something towards the camera",
+      "samples": 74,
+      "previous_correct": 48,
+      "latest_correct": 45,
+      "net_gain": -3
+    },
+    {
+      "label": 45,
+      "name": "Moving something up",
+      "samples": 359,
+      "previous_correct": 175,
+      "latest_correct": 192,
+      "net_gain": 17
+    },
+    {
+      "label": 46,
+      "name": "Opening something",
+      "samples": 332,
+      "previous_correct": 168,
+      "latest_correct": 168,
+      "net_gain": 0
+    },
+    {
+      "label": 47,
+      "name": "Picking something up",
+      "samples": 199,
+      "previous_correct": 73,
+      "latest_correct": 70,
+      "net_gain": -3
+    },
+    {
+      "label": 48,
+      "name": "Piling something up",
+      "samples": 161,
+      "previous_correct": 90,
+      "latest_correct": 70,
+      "net_gain": -20
+    },
+    {
+      "label": 49,
+      "name": "Plugging something into something",
+      "samples": 465,
+      "previous_correct": 411,
+      "latest_correct": 397,
+      "net_gain": -14
+    },
+    {
+      "label": 50,
+      "name": "Plugging something into something but pulling it right out as you remove your hand",
+      "samples": 237,
+      "previous_correct": 165,
+      "latest_correct": 175,
+      "net_gain": 10
+    },
+    {
+      "label": 51,
+      "name": "Poking a hole into some substance",
+      "samples": 15,
+      "previous_correct": 3,
+      "latest_correct": 3,
+      "net_gain": 0
+    },
+    {
+      "label": 52,
+      "name": "Poking a hole into something soft",
+      "samples": 32,
+      "previous_correct": 14,
+      "latest_correct": 15,
+      "net_gain": 1
+    },
+    {
+      "label": 53,
+      "name": "Poking a stack of something so the stack collapses",
+      "samples": 35,
+      "previous_correct": 22,
+      "latest_correct": 19,
+      "net_gain": -3
+    },
+    {
+      "label": 54,
+      "name": "Poking a stack of something without the stack collapsing",
+      "samples": 24,
+      "previous_correct": 12,
+      "latest_correct": 15,
+      "net_gain": 3
+    },
+    {
+      "label": 55,
+      "name": "Poking something so it slightly moves",
+      "samples": 150,
+      "previous_correct": 63,
+      "latest_correct": 42,
+      "net_gain": -21
+    },
+    {
+      "label": 56,
+      "name": "Poking something so lightly that it doesn't or almost doesn't move",
+      "samples": 146,
+      "previous_correct": 55,
+      "latest_correct": 42,
+      "net_gain": -13
+    },
+    {
+      "label": 57,
+      "name": "Poking something so that it falls over",
+      "samples": 106,
+      "previous_correct": 63,
+      "latest_correct": 63,
+      "net_gain": 0
+    },
+    {
+      "label": 58,
+      "name": "Poking something so that it spins around",
+      "samples": 17,
+      "previous_correct": 1,
+      "latest_correct": 0,
+      "net_gain": -1
+    },
+    {
+      "label": 59,
+      "name": "Pouring something into something",
+      "samples": 278,
+      "previous_correct": 212,
+      "latest_correct": 207,
+      "net_gain": -5
+    },
+    {
+      "label": 60,
+      "name": "Pouring something into something until it overflows",
+      "samples": 50,
+      "previous_correct": 32,
+      "latest_correct": 31,
+      "net_gain": -1
+    },
+    {
+      "label": 61,
+      "name": "Pouring something onto something",
+      "samples": 51,
+      "previous_correct": 11,
+      "latest_correct": 13,
+      "net_gain": 2
+    },
+    {
+      "label": 62,
+      "name": "Pouring something out of something",
+      "samples": 79,
+      "previous_correct": 53,
+      "latest_correct": 48,
+      "net_gain": -5
+    },
+    {
+      "label": 63,
+      "name": "Pretending or failing to wipe something off of something",
+      "samples": 107,
+      "previous_correct": 32,
+      "latest_correct": 34,
+      "net_gain": 2
+    },
+    {
+      "label": 64,
+      "name": "Pretending or trying and failing to twist something",
+      "samples": 37,
+      "previous_correct": 6,
+      "latest_correct": 6,
+      "net_gain": 0
+    },
+    {
+      "label": 65,
+      "name": "Pretending to be tearing something that is not tearable",
+      "samples": 212,
+      "previous_correct": 113,
+      "latest_correct": 126,
+      "net_gain": 13
+    },
+    {
+      "label": 66,
+      "name": "Pretending to close something without actually closing it",
+      "samples": 106,
+      "previous_correct": 46,
+      "latest_correct": 41,
+      "net_gain": -5
+    },
+    {
+      "label": 67,
+      "name": "Pretending to open something without actually opening it",
+      "samples": 201,
+      "previous_correct": 99,
+      "latest_correct": 112,
+      "net_gain": 13
+    },
+    {
+      "label": 68,
+      "name": "Pretending to pick something up",
+      "samples": 228,
+      "previous_correct": 154,
+      "latest_correct": 148,
+      "net_gain": -6
+    },
+    {
+      "label": 69,
+      "name": "Pretending to poke something",
+      "samples": 100,
+      "previous_correct": 16,
+      "latest_correct": 31,
+      "net_gain": 15
+    },
+    {
+      "label": 70,
+      "name": "Pretending to pour something out of something, but something is empty",
+      "samples": 56,
+      "previous_correct": 27,
+      "latest_correct": 31,
+      "net_gain": 4
+    },
+    {
+      "label": 71,
+      "name": "Pretending to put something behind something",
+      "samples": 23,
+      "previous_correct": 7,
+      "latest_correct": 7,
+      "net_gain": 0
+    },
+    {
+      "label": 72,
+      "name": "Pretending to put something into something",
+      "samples": 68,
+      "previous_correct": 33,
+      "latest_correct": 25,
+      "net_gain": -8
+    },
+    {
+      "label": 73,
+      "name": "Pretending to put something next to something",
+      "samples": 39,
+      "previous_correct": 24,
+      "latest_correct": 24,
+      "net_gain": 0
+    },
+    {
+      "label": 74,
+      "name": "Pretending to put something on a surface",
+      "samples": 106,
+      "previous_correct": 72,
+      "latest_correct": 72,
+      "net_gain": 0
+    },
+    {
+      "label": 75,
+      "name": "Pretending to put something onto something",
+      "samples": 38,
+      "previous_correct": 10,
+      "latest_correct": 13,
+      "net_gain": 3
+    },
+    {
+      "label": 76,
+      "name": "Pretending to put something underneath something",
+      "samples": 18,
+      "previous_correct": 3,
+      "latest_correct": 2,
+      "net_gain": -1
+    },
+    {
+      "label": 77,
+      "name": "Pretending to scoop something up with something",
+      "samples": 26,
+      "previous_correct": 6,
+      "latest_correct": 7,
+      "net_gain": 1
+    },
+    {
+      "label": 78,
+      "name": "Pretending to spread air onto something",
+      "samples": 27,
+      "previous_correct": 9,
+      "latest_correct": 6,
+      "net_gain": -3
+    },
+    {
+      "label": 79,
+      "name": "Pretending to sprinkle air onto something",
+      "samples": 58,
+      "previous_correct": 37,
+      "latest_correct": 40,
+      "net_gain": 3
+    },
+    {
+      "label": 80,
+      "name": "Pretending to squeeze something",
+      "samples": 64,
+      "previous_correct": 13,
+      "latest_correct": 20,
+      "net_gain": 7
+    },
+    {
+      "label": 81,
+      "name": "Pretending to take something from somewhere",
+      "samples": 125,
+      "previous_correct": 21,
+      "latest_correct": 17,
+      "net_gain": -4
+    },
+    {
+      "label": 82,
+      "name": "Pretending to take something out of something",
+      "samples": 47,
+      "previous_correct": 17,
+      "latest_correct": 18,
+      "net_gain": 1
+    },
+    {
+      "label": 83,
+      "name": "Pretending to throw something",
+      "samples": 47,
+      "previous_correct": 24,
+      "latest_correct": 23,
+      "net_gain": -1
+    },
+    {
+      "label": 84,
+      "name": "Pretending to turn something upside down",
+      "samples": 75,
+      "previous_correct": 39,
+      "latest_correct": 39,
+      "net_gain": 0
+    },
+    {
+      "label": 85,
+      "name": "Pulling something from behind of something",
+      "samples": 63,
+      "previous_correct": 31,
+      "latest_correct": 29,
+      "net_gain": -2
+    },
+    {
+      "label": 86,
+      "name": "Pulling something from left to right",
+      "samples": 170,
+      "previous_correct": 112,
+      "latest_correct": 113,
+      "net_gain": 1
+    },
+    {
+      "label": 87,
+      "name": "Pulling something from right to left",
+      "samples": 125,
+      "previous_correct": 103,
+      "latest_correct": 102,
+      "net_gain": -1
+    },
+    {
+      "label": 88,
+      "name": "Pulling something onto something",
+      "samples": 24,
+      "previous_correct": 4,
+      "latest_correct": 4,
+      "net_gain": 0
+    },
+    {
+      "label": 89,
+      "name": "Pulling something out of something",
+      "samples": 83,
+      "previous_correct": 6,
+      "latest_correct": 8,
+      "net_gain": 2
+    },
+    {
+      "label": 90,
+      "name": "Pulling two ends of something but nothing happens",
+      "samples": 69,
+      "previous_correct": 31,
+      "latest_correct": 34,
+      "net_gain": 3
+    },
+    {
+      "label": 91,
+      "name": "Pulling two ends of something so that it gets stretched",
+      "samples": 60,
+      "previous_correct": 33,
+      "latest_correct": 23,
+      "net_gain": -10
+    },
+    {
+      "label": 92,
+      "name": "Pulling two ends of something so that it separates into two pieces",
+      "samples": 57,
+      "previous_correct": 13,
+      "latest_correct": 19,
+      "net_gain": 6
+    },
+    {
+      "label": 93,
+      "name": "Pushing something from left to right",
+      "samples": 250,
+      "previous_correct": 186,
+      "latest_correct": 183,
+      "net_gain": -3
+    },
+    {
+      "label": 94,
+      "name": "Pushing something from right to left",
+      "samples": 236,
+      "previous_correct": 187,
+      "latest_correct": 188,
+      "net_gain": 1
+    },
+    {
+      "label": 95,
+      "name": "Pushing something off of something",
+      "samples": 72,
+      "previous_correct": 14,
+      "latest_correct": 18,
+      "net_gain": 4
+    },
+    {
+      "label": 96,
+      "name": "Pushing something onto something",
+      "samples": 34,
+      "previous_correct": 5,
+      "latest_correct": 5,
+      "net_gain": 0
+    },
+    {
+      "label": 97,
+      "name": "Pushing something so it spins",
+      "samples": 121,
+      "previous_correct": 22,
+      "latest_correct": 31,
+      "net_gain": 9
+    },
+    {
+      "label": 98,
+      "name": "Pushing something so that it almost falls off but doesn't",
+      "samples": 196,
+      "previous_correct": 120,
+      "latest_correct": 114,
+      "net_gain": -6
+    },
+    {
+      "label": 99,
+      "name": "Pushing something so that it falls off the table",
+      "samples": 273,
+      "previous_correct": 226,
+      "latest_correct": 213,
+      "net_gain": -13
+    },
+    {
+      "label": 100,
+      "name": "Pushing something so that it slightly moves",
+      "samples": 265,
+      "previous_correct": 128,
+      "latest_correct": 142,
+      "net_gain": 14
+    },
+    {
+      "label": 101,
+      "name": "Pushing something with something",
+      "samples": 182,
+      "previous_correct": 116,
+      "latest_correct": 123,
+      "net_gain": 7
+    },
+    {
+      "label": 102,
+      "name": "Putting number of something onto something",
+      "samples": 116,
+      "previous_correct": 54,
+      "latest_correct": 55,
+      "net_gain": 1
+    },
+    {
+      "label": 103,
+      "name": "Putting something and something on the table",
+      "samples": 112,
+      "previous_correct": 91,
+      "latest_correct": 88,
+      "net_gain": -3
+    },
+    {
+      "label": 104,
+      "name": "Putting something behind something",
+      "samples": 127,
+      "previous_correct": 87,
+      "latest_correct": 90,
+      "net_gain": 3
+    },
+    {
+      "label": 105,
+      "name": "Putting something in front of something",
+      "samples": 135,
+      "previous_correct": 91,
+      "latest_correct": 93,
+      "net_gain": 2
+    },
+    {
+      "label": 106,
+      "name": "Putting something into something",
+      "samples": 292,
+      "previous_correct": 177,
+      "latest_correct": 171,
+      "net_gain": -6
+    },
+    {
+      "label": 107,
+      "name": "Putting something next to something",
+      "samples": 203,
+      "previous_correct": 164,
+      "latest_correct": 155,
+      "net_gain": -9
+    },
+    {
+      "label": 108,
+      "name": "Putting something on a flat surface without letting it roll",
+      "samples": 74,
+      "previous_correct": 25,
+      "latest_correct": 33,
+      "net_gain": 8
+    },
+    {
+      "label": 109,
+      "name": "Putting something on a surface",
+      "samples": 300,
+      "previous_correct": 160,
+      "latest_correct": 156,
+      "net_gain": -4
+    },
+    {
+      "label": 110,
+      "name": "Putting something on the edge of something so it is not supported and falls down",
+      "samples": 71,
+      "previous_correct": 31,
+      "latest_correct": 35,
+      "net_gain": 4
+    },
+    {
+      "label": 111,
+      "name": "Putting something onto a slanted surface but it doesn't glide down",
+      "samples": 18,
+      "previous_correct": 2,
+      "latest_correct": 1,
+      "net_gain": -1
+    },
+    {
+      "label": 112,
+      "name": "Putting something onto something",
+      "samples": 139,
+      "previous_correct": 76,
+      "latest_correct": 75,
+      "net_gain": -1
+    },
+    {
+      "label": 113,
+      "name": "Putting something onto something else that cannot support it so it falls down",
+      "samples": 36,
+      "previous_correct": 14,
+      "latest_correct": 11,
+      "net_gain": -3
+    },
+    {
+      "label": 114,
+      "name": "Putting something similar to other things that are already on the table",
+      "samples": 288,
+      "previous_correct": 220,
+      "latest_correct": 218,
+      "net_gain": -2
+    },
+    {
+      "label": 115,
+      "name": "Putting something that can't roll onto a slanted surface, so it slides down",
+      "samples": 46,
+      "previous_correct": 19,
+      "latest_correct": 20,
+      "net_gain": 1
+    },
+    {
+      "label": 116,
+      "name": "Putting something that can't roll onto a slanted surface, so it stays where it is",
+      "samples": 54,
+      "previous_correct": 31,
+      "latest_correct": 32,
+      "net_gain": 1
+    },
+    {
+      "label": 117,
+      "name": "Putting something that cannot actually stand upright upright on the table, so it falls on its side",
+      "samples": 126,
+      "previous_correct": 78,
+      "latest_correct": 77,
+      "net_gain": -1
+    },
+    {
+      "label": 118,
+      "name": "Putting something underneath something",
+      "samples": 59,
+      "previous_correct": 25,
+      "latest_correct": 24,
+      "net_gain": -1
+    },
+    {
+      "label": 119,
+      "name": "Putting something upright on the table",
+      "samples": 101,
+      "previous_correct": 62,
+      "latest_correct": 69,
+      "net_gain": 7
+    },
+    {
+      "label": 120,
+      "name": "Putting something, something and something on the table",
+      "samples": 127,
+      "previous_correct": 105,
+      "latest_correct": 110,
+      "net_gain": 5
+    },
+    {
+      "label": 121,
+      "name": "Removing something, revealing something behind",
+      "samples": 88,
+      "previous_correct": 65,
+      "latest_correct": 58,
+      "net_gain": -7
+    },
+    {
+      "label": 122,
+      "name": "Rolling something on a flat surface",
+      "samples": 203,
+      "previous_correct": 54,
+      "latest_correct": 35,
+      "net_gain": -19
+    },
+    {
+      "label": 123,
+      "name": "Scooping something up with something",
+      "samples": 65,
+      "previous_correct": 38,
+      "latest_correct": 32,
+      "net_gain": -6
+    },
+    {
+      "label": 124,
+      "name": "Showing a photo of something to the camera",
+      "samples": 52,
+      "previous_correct": 41,
+      "latest_correct": 40,
+      "net_gain": -1
+    },
+    {
+      "label": 125,
+      "name": "Showing something behind something",
+      "samples": 218,
+      "previous_correct": 158,
+      "latest_correct": 155,
+      "net_gain": -3
+    },
+    {
+      "label": 126,
+      "name": "Showing something next to something",
+      "samples": 103,
+      "previous_correct": 64,
+      "latest_correct": 64,
+      "net_gain": 0
+    },
+    {
+      "label": 127,
+      "name": "Showing something on top of something",
+      "samples": 115,
+      "previous_correct": 74,
+      "latest_correct": 71,
+      "net_gain": -3
+    },
+    {
+      "label": 128,
+      "name": "Showing something to the camera",
+      "samples": 261,
+      "previous_correct": 54,
+      "latest_correct": 51,
+      "net_gain": -3
+    },
+    {
+      "label": 129,
+      "name": "Showing that something is empty",
+      "samples": 272,
+      "previous_correct": 179,
+      "latest_correct": 181,
+      "net_gain": 2
+    },
+    {
+      "label": 130,
+      "name": "Showing that something is inside something",
+      "samples": 140,
+      "previous_correct": 58,
+      "latest_correct": 60,
+      "net_gain": 2
+    },
+    {
+      "label": 131,
+      "name": "Something being deflected from something",
+      "samples": 73,
+      "previous_correct": 17,
+      "latest_correct": 16,
+      "net_gain": -1
+    },
+    {
+      "label": 132,
+      "name": "Something colliding with something and both are being deflected",
+      "samples": 87,
+      "previous_correct": 37,
+      "latest_correct": 42,
+      "net_gain": 5
+    },
+    {
+      "label": 133,
+      "name": "Something colliding with something and both come to a halt",
+      "samples": 57,
+      "previous_correct": 7,
+      "latest_correct": 7,
+      "net_gain": 0
+    },
+    {
+      "label": 134,
+      "name": "Something falling like a feather or paper",
+      "samples": 368,
+      "previous_correct": 275,
+      "latest_correct": 268,
+      "net_gain": -7
+    },
+    {
+      "label": 135,
+      "name": "Something falling like a rock",
+      "samples": 326,
+      "previous_correct": 167,
+      "latest_correct": 192,
+      "net_gain": 25
+    },
+    {
+      "label": 136,
+      "name": "Spilling something behind something",
+      "samples": 17,
+      "previous_correct": 1,
+      "latest_correct": 1,
+      "net_gain": 0
+    },
+    {
+      "label": 137,
+      "name": "Spilling something next to something",
+      "samples": 60,
+      "previous_correct": 36,
+      "latest_correct": 28,
+      "net_gain": -8
+    },
+    {
+      "label": 138,
+      "name": "Spilling something onto something",
+      "samples": 109,
+      "previous_correct": 31,
+      "latest_correct": 31,
+      "net_gain": 0
+    },
+    {
+      "label": 139,
+      "name": "Spinning something so it continues spinning",
+      "samples": 209,
+      "previous_correct": 145,
+      "latest_correct": 105,
+      "net_gain": -40
+    },
+    {
+      "label": 140,
+      "name": "Spinning something that quickly stops spinning",
+      "samples": 258,
+      "previous_correct": 165,
+      "latest_correct": 162,
+      "net_gain": -3
+    },
+    {
+      "label": 141,
+      "name": "Spreading something onto something",
+      "samples": 64,
+      "previous_correct": 31,
+      "latest_correct": 33,
+      "net_gain": 2
+    },
+    {
+      "label": 142,
+      "name": "Sprinkling something onto something",
+      "samples": 64,
+      "previous_correct": 33,
+      "latest_correct": 30,
+      "net_gain": -3
+    },
+    {
+      "label": 143,
+      "name": "Squeezing something",
+      "samples": 308,
+      "previous_correct": 191,
+      "latest_correct": 181,
+      "net_gain": -10
+    },
+    {
+      "label": 144,
+      "name": "Stacking number of something",
+      "samples": 157,
+      "previous_correct": 70,
+      "latest_correct": 88,
+      "net_gain": 18
+    },
+    {
+      "label": 145,
+      "name": "Stuffing something into something",
+      "samples": 329,
+      "previous_correct": 162,
+      "latest_correct": 149,
+      "net_gain": -13
+    },
+    {
+      "label": 146,
+      "name": "Taking one of many similar things on the table",
+      "samples": 360,
+      "previous_correct": 278,
+      "latest_correct": 292,
+      "net_gain": 14
+    },
+    {
+      "label": 147,
+      "name": "Taking something from somewhere",
+      "samples": 128,
+      "previous_correct": 15,
+      "latest_correct": 20,
+      "net_gain": 5
+    },
+    {
+      "label": 148,
+      "name": "Taking something out of something",
+      "samples": 239,
+      "previous_correct": 139,
+      "latest_correct": 141,
+      "net_gain": 2
+    },
+    {
+      "label": 149,
+      "name": "Tearing something into two pieces",
+      "samples": 530,
+      "previous_correct": 466,
+      "latest_correct": 465,
+      "net_gain": -1
+    },
+    {
+      "label": 150,
+      "name": "Tearing something just a little bit",
+      "samples": 368,
+      "previous_correct": 283,
+      "latest_correct": 273,
+      "net_gain": -10
+    },
+    {
+      "label": 151,
+      "name": "Throwing something",
+      "samples": 184,
+      "previous_correct": 97,
+      "latest_correct": 87,
+      "net_gain": -10
+    },
+    {
+      "label": 152,
+      "name": "Throwing something against something",
+      "samples": 98,
+      "previous_correct": 25,
+      "latest_correct": 37,
+      "net_gain": 12
+    },
+    {
+      "label": 153,
+      "name": "Throwing something in the air and catching it",
+      "samples": 109,
+      "previous_correct": 75,
+      "latest_correct": 77,
+      "net_gain": 2
+    },
+    {
+      "label": 154,
+      "name": "Throwing something in the air and letting it fall",
+      "samples": 127,
+      "previous_correct": 49,
+      "latest_correct": 44,
+      "net_gain": -5
+    },
+    {
+      "label": 155,
+      "name": "Throwing something onto a surface",
+      "samples": 82,
+      "previous_correct": 14,
+      "latest_correct": 9,
+      "net_gain": -5
+    },
+    {
+      "label": 156,
+      "name": "Tilting something with something on it slightly so it doesn't fall down",
+      "samples": 130,
+      "previous_correct": 59,
+      "latest_correct": 73,
+      "net_gain": 14
+    },
+    {
+      "label": 157,
+      "name": "Tilting something with something on it until it falls off",
+      "samples": 184,
+      "previous_correct": 120,
+      "latest_correct": 116,
+      "net_gain": -4
+    },
+    {
+      "label": 158,
+      "name": "Tipping something over",
+      "samples": 218,
+      "previous_correct": 88,
+      "latest_correct": 91,
+      "net_gain": 3
+    },
+    {
+      "label": 159,
+      "name": "Tipping something with something in it over, so something in it falls out",
+      "samples": 55,
+      "previous_correct": 24,
+      "latest_correct": 18,
+      "net_gain": -6
+    },
+    {
+      "label": 160,
+      "name": "Touching (without moving) part of something",
+      "samples": 109,
+      "previous_correct": 22,
+      "latest_correct": 24,
+      "net_gain": 2
+    },
+    {
+      "label": 161,
+      "name": "Trying but failing to attach something to something because it doesn't stick",
+      "samples": 76,
+      "previous_correct": 20,
+      "latest_correct": 23,
+      "net_gain": 3
+    },
+    {
+      "label": 162,
+      "name": "Trying to bend something unbendable so nothing happens",
+      "samples": 107,
+      "previous_correct": 46,
+      "latest_correct": 50,
+      "net_gain": 4
+    },
+    {
+      "label": 163,
+      "name": "Trying to pour something into something, but missing so it spills next to it",
+      "samples": 40,
+      "previous_correct": 6,
+      "latest_correct": 8,
+      "net_gain": 2
+    },
+    {
+      "label": 164,
+      "name": "Turning something upside down",
+      "samples": 391,
+      "previous_correct": 320,
+      "latest_correct": 324,
+      "net_gain": 4
+    },
+    {
+      "label": 165,
+      "name": "Turning the camera downwards while filming something",
+      "samples": 62,
+      "previous_correct": 42,
+      "latest_correct": 41,
+      "net_gain": -1
+    },
+    {
+      "label": 166,
+      "name": "Turning the camera left while filming something",
+      "samples": 140,
+      "previous_correct": 104,
+      "latest_correct": 100,
+      "net_gain": -4
+    },
+    {
+      "label": 167,
+      "name": "Turning the camera right while filming something",
+      "samples": 162,
+      "previous_correct": 98,
+      "latest_correct": 113,
+      "net_gain": 15
+    },
+    {
+      "label": 168,
+      "name": "Turning the camera upwards while filming something",
+      "samples": 120,
+      "previous_correct": 79,
+      "latest_correct": 74,
+      "net_gain": -5
+    },
+    {
+      "label": 169,
+      "name": "Twisting (wringing) something wet until water comes out",
+      "samples": 75,
+      "previous_correct": 58,
+      "latest_correct": 57,
+      "net_gain": -1
+    },
+    {
+      "label": 170,
+      "name": "Twisting something",
+      "samples": 204,
+      "previous_correct": 71,
+      "latest_correct": 85,
+      "net_gain": 14
+    },
+    {
+      "label": 171,
+      "name": "Uncovering something",
+      "samples": 312,
+      "previous_correct": 251,
+      "latest_correct": 255,
+      "net_gain": 4
+    },
+    {
+      "label": 172,
+      "name": "Unfolding something",
+      "samples": 215,
+      "previous_correct": 152,
+      "latest_correct": 154,
+      "net_gain": 2
+    },
+    {
+      "label": 173,
+      "name": "Wiping something off of something",
+      "samples": 137,
+      "previous_correct": 97,
+      "latest_correct": 93,
+      "net_gain": -4
+    }
+  ],
+  "previously_reviewed_examples": [
+    {
+      "id": "7449",
+      "label": 122,
+      "predictions": {
+        "9000": 22,
+        "10000": 22,
+        "11000": 22,
+        "12000": 22,
+        "13000": 22,
+        "14000": 22,
+        "15000": 22,
+        "16000": 22,
+        "17000": 22
+      }
+    },
+    {
+      "id": "9555",
+      "label": 22,
+      "predictions": {
+        "9000": 122,
+        "10000": 122,
+        "11000": 122,
+        "12000": 122,
+        "13000": 122,
+        "14000": 122,
+        "15000": 122,
+        "16000": 122,
+        "17000": 122
+      }
+    },
+    {
+      "id": "3988",
+      "label": 154,
+      "predictions": {
+        "9000": 151,
+        "10000": 151,
+        "11000": 151,
+        "12000": 151,
+        "13000": 151,
+        "14000": 151,
+        "15000": 151,
+        "16000": 151,
+        "17000": 151
+      }
+    },
+    {
+      "id": "10569",
+      "label": 45,
+      "predictions": {
+        "9000": 27,
+        "10000": 27,
+        "11000": 27,
+        "12000": 27,
+        "13000": 27,
+        "14000": 27,
+        "15000": 27,
+        "16000": 27,
+        "17000": 27
+      }
+    },
+    {
+      "id": "5335",
+      "label": 150,
+      "predictions": {
+        "9000": 149,
+        "10000": 149,
+        "11000": 149,
+        "12000": 149,
+        "13000": 149,
+        "14000": 149,
+        "15000": 149,
+        "16000": 149,
+        "17000": 149
+      }
+    },
+    {
+      "id": "3208",
+      "label": 43,
+      "predictions": {
+        "9000": 109,
+        "10000": 109,
+        "11000": 109,
+        "12000": 109,
+        "13000": 109,
+        "14000": 109,
+        "15000": 109,
+        "16000": 109,
+        "17000": 109
+      }
+    }
+  ],
+  "prediction_sha256": {
+    "9000": "b0da3baeaadc758c202ba8578953ff5646f87d27ae2df944062d750081b355ae",
+    "10000": "36b3ff8dd2ed96786a6a057b043ad21d3ceb2097309c706d9605ff86ee9fc2ec",
+    "11000": "990ef0e47ee15f923d85e82f126a7ace8f129e59e2b634fff1d960fd9276ac2a",
+    "12000": "593e9f721c7b2fa61e8dfc226b1755f7db71c1638f97b75512dc97a83aeb836e",
+    "13000": "72a7b2163f590993caee71a2282cd25ca14839f13e26d3c5f63c7c4568d57605",
+    "14000": "3f8769aae26a12c97823770720b8aa60d9c159868afa397dcc0fcc4c9cd438c1",
+    "15000": "54227de21627751fa242f226d4228de245081c7363eb0372a84a44fc657f56d7",
+    "16000": "f4ec9ef57c2a07432699b52da81e81c007dfddf78b16681c4ac30a4501281117",
+    "17000": "e049149a4bf7f1720d402efd0ef5af0c6a566e2b787dd79c5346ab609f67b45f"
+  },
+  "source_sha256": {
+    "/home/sadasue/mywam/exploration/analyze_error_progression.py": "0bb2b7a631eddf9665ab2c13a7d3cc6a90c471e0e4a6bc9df6e19afcf2831def",
+    "results/ssv2_full_mamba_interleaved_seed42_rgbfix/config.json": "41301ebec26f806af523adc9ffaa0e4385eeadf9885170ca98399ace01c01c3c",
+    "results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step17000.json": "83c380bf14afd513c3e5b7f6081727bedb781a68c4a99e5c8a8bdef9a17d1b99",
+    "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac",
+    "data/ssv2/labels/labels.json": "d98d8b657a5d418d7c05dbf630dedd34763025b3d764ceef19bbfd1dc654f54f",
+    "data/ssv2/labels/validation.json": "fbdd69ac72b40b9e3ed3aaf484e1575777152565caed693b0ced2d4959fd3958"
+  },
+  "limitations": [
+    "Repeated validation use; not an unseen test set.",
+    "Training duration changes; this is not an architecture comparison.",
+    "Confusions and class accuracy cannot identify the cause of an error.",
+    "Source and prediction hashes are checked; original videos and model inference are not rerun."
+  ]
+}

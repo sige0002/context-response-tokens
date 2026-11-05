@@ -1,0 +1,31 @@
+{
+  "scope": "Live queue binding, source guards and CPU aggregation tests; no GPU qualification or recognition result",
+  "pid": 1086691,
+  "start_ticks": 103161601,
+  "status": "waiting_for_mimo_pilot",
+  "dependency": {
+    "pid": 1053764,
+    "start_ticks": 102882616,
+    "scheduler": "/home/sadasue/mywam/results/mimo_after_comparisons_v1",
+    "pilot": "/home/sadasue/mywam/results/mimo_pilot_step11000_v2"
+  },
+  "pidfd_binding_verified": true,
+  "earlier_processes_and_pinned_plans_unchanged": true,
+  "expected_dependency_refusal": "Preceding scheduler did not release the pilot",
+  "queue_plan_sha256": "a47df8307f3d231cca38733c92ceea84d8413eebf0adf7b314381d5c010c86d6",
+  "cpu_tests_passed": 13,
+  "cpu_tests_log_sha256": "2942be55efca0d37a7ca07932014c2519c55e92e61983506b3105bc831fe29a5",
+  "scheduled_windows": [
+    8,
+    32,
+    128
+  ],
+  "scheduled_seeds": [
+    42,
+    43,
+    44
+  ],
+  "numerical_qualification_completed": false,
+  "feature_caches_completed": 0,
+  "recognition_comparisons_completed": 0
+}

@@ -89,7 +89,8 @@ BF16では最大絶対差0.125・相対L2差0.005とした。数理的な誤差�
 追加検査ではW=128を含む145観測で参照側も独立した行列積・softmax実装と照合し、
 主学習が未完了の場合と、完了ログがあっても対応する学習プロセスが生きている場合の起動拒否を確認した。
 [実際の主学習中の拒否確認](results/windowed_attention_preflight_refusal.json)でも、GPU検査結果は生成されず、準備済みの入力は変わらなかった。
-[準備記録](results/windowed_attention_qualification_preparation.json)を保存した。GPU検査はまだ未実施で、待機キューにも登録していない。
+[準備記録](results/windowed_attention_qualification_preparation.json)を保存した。初版の計画自体は未実行・未登録で、
+後述のリセットを扱う版を、既存実験列の後に検査する。
 
 再生成はリポジトリのルートで実行する。出力先は新しいディレクトリを使う。
 
@@ -135,8 +136,8 @@ W=8・32・128、FP32・BF16で比較する。特徴の比較数は計1,584件�
 
 主学習の完了に加え、既存の比較列の後に予約したMIMO試験の正常完了と、GPUが空いていることを要求する。
 [現在の学習中に起動を拒否する検査](results/resettable_window_attention_preflight.json)も通過し、GPU結果は作成されなかった。
-GPU実行はまだ予約・実施していない。数値検査の通過後に、最終Attention重みで遅延保持の特徴を取得し、
-同じデータ・容量・正則化の読み出しを学習して比較する作業が残る。
+GPU実行は後述の比較キューへ予約したが、まだ実施していない。数値検査の通過後に、最終Attention重みで遅延保持の特徴を取得し、
+同じデータ・容量・正則化の読み出しを学習して比較する。
 
 ```sh
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q \
@@ -165,7 +166,7 @@ uv run --locked python -m exploration.check_resettable_window_attention run \
 未完了・失敗・比較行が欠けたGPU数値検査も拒否する。
 [現時点の起動確認](results/windowed_delayed_action_preparation.json)はGPU検査未完了で停止し、出力やGPUジョブを作成しなかった。
 
-実データの特徴取得・読み出し学習・方式間集計は未実施で、実行キューにもまだ登録していない。
+実データの特徴取得・読み出し学習・方式間集計は未実施で、下記のキューで先行実験の完了を待機している。
 数値検査の通過後、各条件について次の形式で実行する。`<final-attention-checkpoint>`には
 元の比較計画に記載された同じseedの最終checkpointを指定する。
 
@@ -179,3 +180,38 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.delayed_action_pro
 
 この対照は人工的に遅延を入れた課題の評価であり、自然動画の長期記憶やSOTAを直接測るものではない。
 最大128観測の遅延ではW=128の3層モデルの最大到達範囲を超えない点も維持する。
+
+## 予約した実行順と比較結果の再計数
+
+[比較キュー](exploration/run_windowed_delayed_action.py)を追加し、
+[固定した実行計画](results/windowed_delayed_action_queue_v1/plan.json)で待機を開始した。
+MIMOの待機プロセスをPIDファイルディスクリプタで束縛する。MIMO側が実行プログラムへ切り替わっても同じプロセスを追跡し、
+終了後にMIMOと元の遅延保持比較の正常完了を確認してから、次の順で進める。
+
+1. リセットを扱う固定窓Attentionの実画像GPU数値検査。
+2. 固定した3窓長×3 seedの特徴取得とCPU読み出し学習。
+3. 元のMamba・全履歴Attentionの6条件と、新しい9条件の保存結果を再検証して比較。
+
+[集計コード](exploration/aggregate_windowed_delayed_action.py)は、動画の入力ハッシュ、証拠IDとラベル順序、
+Attentionの同一checkpoint、同じデータ計画を照合する。
+元のCPU処理で読み出しを再学習した結果に加え、保存した読み出し重みからも予測を再現する。
+窓長・遅延・seedごとに、Mambaと固定窓Attentionの差、全履歴Attentionと固定窓Attentionの差を別々に示す。
+対応する動画の正誤の増減、3 seedの平均差と標本標準偏差を保存する。統計的な有意差やSOTAの判定とは呼ばない。
+
+[CPU検査13件](results/windowed_delayed_queue_cpu_tests.log)では、集計の符号と百分率、seed/窓長の欠落・重複、
+入力や重みの取り違え、保存読み出しの不一致、先行処理の失敗を検査した。
+模擬プロセスで、待機をキャンセルしても先行プロセスを停止しないことも確認した。
+[実際の待機接続](results/windowed_delayed_action_queue_v1/launch_verification.json)では、
+先行プロセスへのPIDファイルディスクリプタの接続、未完了時の拒否、主学習と既存キューの維持を確認した。
+これらは実行管理と集計処理の検査であり、認識性能の結果ではない。
+
+キューを再作成する場合は、先に実験計画とMIMO待機処理を用意し、未使用の出力先を指定する。
+`<mimo-scheduler-pid>`は`run_mimo_after_comparisons`の実プロセスを確認して置き換える。
+
+```sh
+uv run --locked python -m exploration.run_windowed_delayed_action \
+  --after-pid "<mimo-scheduler-pid>" --output results/new_windowed_queue
+```
+
+同じ実験計画のキューを重複起動できないようロックする。途中まで作成された結果は自動で上書きせず、原因を確認する。
+このキューには費用測定を含めておらず、固定窓Attentionとの速度・総メモリ比較は別途必要である。

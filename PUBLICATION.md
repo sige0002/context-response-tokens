@@ -32,13 +32,15 @@ CPU検査・数値検査の小さな記録である。元動画、学習済み�
 - [保存長を制限したAttentionの対照](WINDOWED_ATTENTION_CONTROL.md)も実装。
   窓長8・32・128で古いK/Vを破棄し、同じAttention重みと絶対時刻の位置符号を使う。
   [CPU検査14件と実画像fixtureの準備](results/windowed_attention_qualification_preparation.json)を完了した。
-  GPU検査は既存のGPU実験列が完了し、GPUが空いてから行う予定で、まだ実行・キュー登録していない。認識・費用の比較も未実施。
+  初版は準備のみ。履歴リセットを扱う版のGPU検査と認識比較を、既存のGPU実験列の完了後へ予約した。認識・費用の結果は未取得。
   3時間層を通じた入力範囲は最大`1 + 3(W - 1)`観測であり、窓長そのものとは区別する。
   遅延保持の対照用に、履歴消去後も絶対時刻を維持できる別実装を追加した。
   [CPU検査22件とGPU実行前の拒否確認](results/resettable_window_attention_preflight.json)を完了した。
   同じ実画像fixtureでのGPU比較は準備段階で、学習済み重みによる認識評価はまだ実施していない。
   同じ遅延保持課題への[特徴取得と読み出しの接続](results/windowed_delayed_action_preparation.json)も実装した。
   CPU検査4件と9条件の計画を準備した段階で、実データの特徴取得・認識スコア・費用の測定は未実施。
+  [待機接続と集計処理](results/windowed_delayed_action_queue_v1/launch_verification.json)を追加し、CPU検査13件を通過した。
+  MIMO試験の終了後にGPU数値検査、3窓長×3 seedの特徴取得・読み出し、元の6条件との再計数を実行する。まだ性能比較は完了していない。
 - [時間認識の履歴介入](TEMPORAL_RECOGNITION_EVIDENCE.md)を公開。
   同じ4,000更新モデル・348動画で、通常履歴30.17%、現在画像だけ7.47%、現在画像の反復7.76%、過去逆順26.72%。
   一括logitの以前の保存値との完全一致、逐次との予測クラス一致、全1,740予測の元ラベルからの再計数を確認した。

@@ -1,0 +1,24 @@
+{
+  "experiment": "/home/sadasue/mywam/results/windowed_delayed_action_plan_v1.json",
+  "scheduler": "/home/sadasue/mywam/results/mimo_after_comparisons_v1",
+  "pilot": "/home/sadasue/mywam/results/mimo_pilot_step11000_v2",
+  "qualification": "results/resettable_window_attention_qualification_v1",
+  "pins": {
+    "exploration/cache_windowed_delayed_action.py": "a113e69f158d579dd9ce283108e8c03c35c72025c236e3b61ad7de455e152680",
+    "exploration/test_windowed_delayed_action.py": "079ab9492ec000933ea6517d71facce6a0928655aed2a41b4f0d79560a8bff03",
+    "exploration/resettable_window_attention.py": "b43697bace8ea37bf8f153d7a74cd4bc7065f0080c611e2256d48228b59f401e",
+    "exploration/cache_delayed_action.py": "e70b8b8189fecc5d6195601c0a530e5688722a52a1c4f3569941b20ab7f611b3",
+    "exploration/delayed_action_probe.py": "6c49d0212473bb164065c4d86b29635d06c8c675ca0ccdbf6986f2e20305b50a",
+    "exploration/delayed_action_data.py": "7fffdbf73308c1a9664c57db47a79b4590295c9c7f340e2de758814789122859",
+    "exploration/run_delayed_action.py": "e0d90863703b53f3151e04238f90ae5a117a2c4005b869c88eaae99506cfdbb1",
+    "exploration/check_resettable_window_attention.py": "85c151940f51f71776fbaf2853e61d6722c15af66dc2898dab031061c71eea63",
+    "/home/sadasue/mywam/results/windowed_delayed_action_plan_v1.json": "ffe182b668c7518782aeadad67bf30f4038c8f4d20a8a4ce1b178a3552c7c94e",
+    "/home/sadasue/mywam/results/mimo_after_comparisons_v1/plan.json": "c9ff6126b18939932f87d096510ba9cb56cc8873609c453813de9ba6e77a9473",
+    "results/delayed_action_memory_v1/comparison_v2/plan.json": "521e58729f6adf56795f1602578c77b5ea3944b1fdbb05b637c0020fe9697367",
+    "results/resettable_window_attention_qualification_v1/plan.json": "d6b9a71d0f311a64a38ea1df9c6b5730f7c8616ee999c161509a87dcc419e308",
+    "/home/sadasue/mywam/exploration/run_windowed_delayed_action.py": "ddd87a920baaa8c760385d7bdc39e3ae160015f52c913e5c58f3a96dfddb89a9",
+    "/home/sadasue/mywam/exploration/aggregate_windowed_delayed_action.py": "d1211e0011d3e74ec2c2009808064cce00234373e40e99f9e00787a2aa089c05",
+    "/home/sadasue/mywam/exploration/test_windowed_delayed_queue.py": "551ce3483c5f744c9bb8916a0127748dc53efe8f3de6fbaf7e57a4d0c918f2aa"
+  },
+  "scope": "Run fixed GPU qualification, all nine prepared caches/probes, then paired CPU recount; no encoder training"
+}

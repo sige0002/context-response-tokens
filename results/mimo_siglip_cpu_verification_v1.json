@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-11-05T10:16:02.209204+00:00",
+  "passed": true,
+  "tests": 5,
+  "command": "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_mimo_siglip.py",
+  "log": "results/mimo_siglip_cpu_tests_v1.log",
+  "log_sha256": "61a19578955fa6e35247c342ced2e6fca07f1b019d27dd4533132c8cf14848d3",
+  "source_sha256": {
+    "exploration/mimo_siglip.py": "d59c8041625351eae31dce0b3e54bbe6fe03478c2df493dad3ac0b2f269c9f5b",
+    "exploration/test_mimo_siglip.py": "76f913b35fab283c26c22cb127c8fb8b11bcad3cf8f5a3200843efbc2d7d71de",
+    "exploration/mimo_fp64_reference.py": "d77e32fa68d366b8c9d645c234653668784703af174ff3bd3c6df017c32f54a4",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+    "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+    "vendor/mamba/mamba_ssm/modules/mamba3.py": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c"
+  },
+  "checks": [
+    "Independent CPU FP64 SISO/MIMO complete recurrences: three random seeds, two sequences each, lengths 1/7/17, nonuniform B/C norms and biases, atol=rtol=1e-10.",
+    "CPU autograd: extra input/output rank gains have nonzero gradients; extra B/C projection gradients become nonzero after updating those gains.",
+    "Tiny random SigLIP model: exact all-weight save/load, frozen backbone, model/state ownership and eval-mode guards."
+  ],
+  "native_visual_forward_tested": false,
+  "trained_checkpoint_tested": false,
+  "recognition_accuracy_tested": false,
+  "latency_tested": false,
+  "full_visual_model_qualified": false,
+  "scope": "CPU mathematical initialization and serialization qualification only; no native image inference. Main training and queued source files unchanged."
+}

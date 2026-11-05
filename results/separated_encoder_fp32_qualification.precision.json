@@ -1,0 +1,22 @@
+{
+  "observation_inputs": {
+    "max_abs": 5.304813385009766e-06,
+    "rmse": 4.429511477610504e-07,
+    "fraction_outside_tolerance": 0.0
+  },
+  "context_inputs": {
+    "max_abs": 0.26206398010253906,
+    "rmse": 0.0036291691940277815,
+    "fraction_outside_tolerance": 0.001992984674870968
+  },
+  "original_output": {
+    "max_abs": 0.07242894172668457,
+    "rmse": 0.0013152543688192964,
+    "fraction_outside_tolerance": 0.00028566113905981183
+  },
+  "fp32_projection": {
+    "max_abs": 0.07242941856384277,
+    "rmse": 0.0013152540195733309,
+    "fraction_outside_tolerance": 0.00028566113905981183
+  }
+}

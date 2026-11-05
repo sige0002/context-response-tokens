@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "source_checkpoint": {
+    "step": 4000,
+    "epoch": 0,
+    "cursor": 128000,
+    "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/videos_trainval/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 4,
+      "accumulation": 8,
+      "steps": 20000,
+      "warmup": 1000,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 1000,
+      "save_every": 500,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "reproducibility": {
+        "deterministic_algorithms": true,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_allow_tf32": false,
+        "matmul_allow_tf32": false,
+        "cublas_workspace_config": ":4096:8"
+      },
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+        "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "val_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac"
+    }
+  },
+  "scene": "0136",
+  "frames": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_separated_encoder.py": "5ee246b52518021a27f2c382ceba784aff14441845aff27d0afda51b3bf4adb2",
+    "exploration/separated_encoder.py": "8d0a045d55ec4811b607b54df244b76b7411c754d1b9b1672e525c2970dc8fe2",
+    "exploration/separated_loss.py": "207390d83972f2e25da3e0e6346a4b362ac8e2853c38a1ad7e4f70f204b889fc",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+  },
+  "shape": [
+    1,
+    4,
+    196,
+    768
+  ],
+  "output_partition": [
+    384,
+    384
+  ],
+  "precision": "bfloat16",
+  "execution": "framewise",
+  "stream_max_error": 0.0,
+  "chunk_max_error": 0.0,
+  "tolerance": {
+    "atol": 0.015,
+    "rtol": 0.02
+  },
+  "observation_full_reset_max_error": 0.0,
+  "context_history_effect_max": 5.376733779907227,
+  "state_bytes": [
+    79027200,
+    79027200,
+    79027200,
+    79027200
+  ],
+  "loss": 1.8308401107788086,
+  "mamba_gradient_norms": {
+    "3": 0.7158139944076538,
+    "7": 0.7814322710037231,
+    "11": 0.35126906633377075
+  },
+  "grad_enabled_forward_max_error": 0.0,
+  "first_frame_gradient_from_last_context": 0.012197593227028847,
+  "projection_updated": true,
+  "frozen_backbone_unchanged": true,
+  "trainable_parameters": 3096240,
+  "projection_parameters": 594432,
+  "scope": "Implementation qualification and one gradient update on rendered RGB. No recognition improvement or latency claim."
+}

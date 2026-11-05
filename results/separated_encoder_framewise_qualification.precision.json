@@ -1,0 +1,8 @@
+{
+  "execution": "framewise",
+  "original_output": {
+    "max_abs": 0.0,
+    "rmse": 0.0,
+    "fraction_outside_tolerance": 0.0
+  }
+}

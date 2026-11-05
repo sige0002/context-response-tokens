@@ -128,6 +128,53 @@ Backwardの選択肢数は2〜5個で、ランダム選択の期待値も一律2
 視覚エンコーダを比較する際は読み出し・教師・学習量を揃え、評価用QAを学習へ混ぜない。
 この監査によって新しいQA学習や大容量の動画取得を自動的に追加せず、既存の時間Attention比較を継続する。
 
+## 遅延を対応付けられるRIVERの評価準備
+
+[RIVER原論文のRetro-Memory](https://arxiv.org/html/2603.03985v1#S3.SS2)は、同じ過去の出来事への質問を異なる時刻で尋ねる。
+公式リポジトリからリンクされた[公開注釈の固定版](https://huggingface.co/datasets/nanamma/RIVER/blob/0338ea79419e375b5760c11a1f9a3e4194af6add/annotations/Retro-Memory.json)を取得し、
+[GitHub版](https://github.com/OpenGVLab/RIVER/blob/8aab82325d0986824f8504e86669fa52025593d2/annotations/Retro-Memory.json)とGit blob hashが一致することを確認した。
+画像を別動画へ継ぎ足す遅延診断とは異なり、元動画の時間軸上で評価する候補である。
+動画そのものはまだ取得・検査していない。
+
+[監査・採点実装](exploration/river_memory.py)、[集計](results/river_memory_audit/summary.json)、
+[実注釈からの再計数](results/river_memory_audit/verification.json)を保存した。
+1,488レコードは独立した1,488問ではなく、**91動画の372問を4時刻で繰り返したもの**だった。
+質問文・選択肢・正解・証拠区間は4条件で一致し、質問時刻だけが変わる。
+識別子には`question_id`と`question_type`の両方が必要で、前者だけで保存すると4条件が上書きされる。
+行単位のランダム分割も同じ問題を学習・評価へ混ぜるため禁止する。
+
+2問の証拠区間が逆転していた（`moALQl818ZY@1`: [515, 495]、`YlQugR7KSKg@6`: [3800, 215]）。
+元注釈を推測で修正せず、この2問の4条件すべてを除いた**370問×4時刻=1,480レコード**を準備した。
+公式全件のスコアとは区別する。別の3レコードでは質問時刻が動画長を1e-12秒未満だけ超えており、
+数値表現の差として1e-6秒の許容差で記録する。元時刻は変更していない。
+これは未来フレームの入力を認める許容差ではなく、実際のデコードはPTSが質問時刻以下のフレームに限定する必要がある。
+
+| 条件 | 同じ質問の数 | 証拠区間の終了から質問までの中央値 |
+| --- | ---: | ---: |
+| short | 370 | 22.94秒 |
+| medium | 370 | 45.70秒 |
+| long | 370 | 600.21秒 |
+| very_long | 370 | 2,343.13秒 |
+
+各時刻の363問が4択、7問が5択であり、一様ランダム選択の期待値は24.905%となる。
+常にAを選ぶ参照値は各時刻89/370=24.054%。これはモデルの認識精度ではない。
+初回の監査では全問4択と仮定して停止したが、実注釈に従って修正し、全件を再実行した。
+[CPUテスト](exploration/test_river_memory.py)の5件では、4時刻の対応、欠損・重複・複数回答の拒否、
+逆転区間の扱い、数値境界、5択の採点を検査した。
+採点は選択肢番号の厳密一致のみとし、正解文字を含む自由文や複数候補は受け付けない。
+
+**採否：** 証拠距離を伴う長期認識の追加候補としてRIVERを残す。
+ただし時間経過とともに現在画像・途中の出来事も変わるので、精度変化を忘却だけの効果とは断定しない。
+元動画の証拠を再び見せていないか、現在画像だけでも答えられないかは実画像での検証が必要である。
+出典はLVBench・LongVideoBench・Vript-RRであり、ロボット作業の成功率を測るデータではない。
+Hugging Faceのカードに`train`とあっても、論文で評価に使用した問題を読み出し学習へ流用しない。
+エンコーダに質問を事前提示せず、質問時点の特徴と質問から答える共通読み出しを別データで学習する必要がある。
+この接続と学習は未実装で、現在の174分類器によるQA評価や新たな学習キューは追加していない。
+
+併せて確認した[S-EMBER公式スキーマ](https://github.com/facebookresearch/S-EMBER/blob/main/data/README.md)も証拠区間・質問時刻を持つ。
+ただし[配布元](https://huggingface.co/datasets/facebook/S-EMBER)の固定版`897886cc967b2d0e6e45f1200605f5d3b0ffbb23`はアクセス制限があり、
+現在の認証では注釈取得がHTTP 403で拒否された。内容を監査したデータとして扱わず、採用は保留する。
+
 ## 長期記憶の主張に必要な追加条件
 
 長い動画で固定容量の状態を更新できることは、遠い過去を覚えられることと異なる。
@@ -169,3 +216,18 @@ uv run --locked python -m exploration.audit_ovo_memory \
   --annotations results/long_memory_benchmark_audit/raw/ovo_bench_new.json \
   --output results/new_ovo_annotation_audit.json
 ```
+
+RIVERの注釈を取得・監査する場合は次を実行する。ダウンロード対象は注釈JSONだけである。
+`RIVER_ANNOTATIONS`はダウンロードされた実ファイルのパスとなる。
+
+```sh
+RIVER_ANNOTATIONS=$(uv run --locked python -c 'from huggingface_hub import hf_hub_download; print(hf_hub_download("nanamma/RIVER", "annotations/Retro-Memory.json", repo_type="dataset", revision="0338ea79419e375b5760c11a1f9a3e4194af6add"))')
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_river_memory.py
+uv run --locked python -m exploration.river_memory audit \
+  --annotations "$RIVER_ANNOTATIONS" --output results/new_river_audit.json
+```
+
+予測ファイルには`annotation_sha256`と`predictions`配列が必要である。
+各予測は`question_id`・`question_type`・ゼロ始まりの整数`choice_index`を持ち、除外済み2問以外の全1,480件を含める。
+`python -m exploration.river_memory score`へ同じ`--annotations`、予測JSONへの`--predictions`、新規の`--output`を渡す。
+この採点だけでは入力の因果性・モデルの由来・学習データの分離を確認できず、それらは実行時に別途検証する。

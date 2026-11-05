@@ -1,0 +1,276 @@
+{
+  "records": 1488,
+  "unique_questions": 372,
+  "unique_videos": 91,
+  "source_records": {
+    "LVBench": 1448,
+    "LongVideoBench": 28,
+    "Vript-RR": 12
+  },
+  "eligible_records": 1480,
+  "eligible_questions": 370,
+  "eligible_videos": 91,
+  "excluded_question_ids": [
+    "YlQugR7KSKg@6",
+    "moALQl818ZY@1"
+  ],
+  "temporal_issues": [
+    {
+      "question_id": "moALQl818ZY@1",
+      "question_type": "Retro-Memory@short",
+      "time_reference": [
+        515,
+        495
+      ],
+      "question_time": 516.95,
+      "duration_sec": 5077.34,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "YlQugR7KSKg@6",
+      "question_type": "Retro-Memory@short",
+      "time_reference": [
+        3800,
+        215
+      ],
+      "question_time": 238.64,
+      "duration_sec": 3996.85,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "moALQl818ZY@1",
+      "question_type": "Retro-Memory@medium",
+      "time_reference": [
+        515,
+        495
+      ],
+      "question_time": 542.13,
+      "duration_sec": 5077.34,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "YlQugR7KSKg@6",
+      "question_type": "Retro-Memory@medium",
+      "time_reference": [
+        3800,
+        215
+      ],
+      "question_time": 260.08,
+      "duration_sec": 3996.85,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "moALQl818ZY@1",
+      "question_type": "Retro-Memory@long",
+      "time_reference": [
+        515,
+        495
+      ],
+      "question_time": 1006.3,
+      "duration_sec": 5077.34,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "YlQugR7KSKg@6",
+      "question_type": "Retro-Memory@long",
+      "time_reference": [
+        3800,
+        215
+      ],
+      "question_time": 722.47,
+      "duration_sec": 3996.85,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "moALQl818ZY@1",
+      "question_type": "Retro-Memory@very_long",
+      "time_reference": [
+        515,
+        495
+      ],
+      "question_time": 2923.06,
+      "duration_sec": 5077.34,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    },
+    {
+      "question_id": "YlQugR7KSKg@6",
+      "question_type": "Retro-Memory@very_long",
+      "time_reference": [
+        3800,
+        215
+      ],
+      "question_time": 2392.54,
+      "duration_sec": 3996.85,
+      "reasons": [
+        "evidence_start_after_end"
+      ]
+    }
+  ],
+  "sub_microsecond_duration_excess": [
+    {
+      "question_id": "RbpKkvlHYTw@2",
+      "question_type": "Retro-Memory@very_long",
+      "excess_seconds": 9.094947017729282e-13
+    },
+    {
+      "question_id": "rp4NKWb7dXk@1",
+      "question_type": "Retro-Memory@very_long",
+      "excess_seconds": 2.2737367544323206e-13
+    },
+    {
+      "question_id": "Aiem1w_TvaA@2",
+      "question_type": "Retro-Memory@very_long",
+      "excess_seconds": 9.094947017729282e-13
+    }
+  ],
+  "time_tolerance_seconds": 1e-06,
+  "delays": {
+    "short": {
+      "evaluations": 370,
+      "evidence_end_to_query_seconds": {
+        "n": 370,
+        "minimum": 15.039999999999992,
+        "median": 22.935000000000016,
+        "mean": 22.788656756756755,
+        "maximum": 30.0
+      },
+      "query_seconds": {
+        "n": 370,
+        "minimum": 19.94,
+        "median": 532.635,
+        "mean": 1020.7365135135135,
+        "maximum": 5592.96
+      },
+      "answer_counts": {
+        "A": 89,
+        "B": 97,
+        "C": 98,
+        "D": 86
+      },
+      "option_counts": {
+        "4": 363,
+        "5": 7
+      },
+      "always_A_accuracy": 0.24054054054054055,
+      "uniform_random_expected_accuracy": 0.24905405405405406
+    },
+    "medium": {
+      "evaluations": 370,
+      "evidence_end_to_query_seconds": {
+        "n": 370,
+        "minimum": 30.039999999999964,
+        "median": 45.70000000000002,
+        "mean": 45.41362972972973,
+        "maximum": 59.829999999999984
+      },
+      "query_seconds": {
+        "n": 370,
+        "minimum": 32.73,
+        "median": 565.115,
+        "mean": 1043.3614864864865,
+        "maximum": 5621.2
+      },
+      "answer_counts": {
+        "A": 89,
+        "B": 97,
+        "C": 98,
+        "D": 86
+      },
+      "option_counts": {
+        "4": 363,
+        "5": 7
+      },
+      "always_A_accuracy": 0.24054054054054055,
+      "uniform_random_expected_accuracy": 0.24905405405405406
+    },
+    "long": {
+      "evaluations": 370,
+      "evidence_end_to_query_seconds": {
+        "n": 370,
+        "minimum": 301.56,
+        "median": 600.205,
+        "mean": 602.3875756756756,
+        "maximum": 898.7399999999999
+      },
+      "query_seconds": {
+        "n": 370,
+        "minimum": 333.17,
+        "median": 1197.155,
+        "mean": 1600.3354324324325,
+        "maximum": 5884.84
+      },
+      "answer_counts": {
+        "A": 89,
+        "B": 97,
+        "C": 98,
+        "D": 86
+      },
+      "option_counts": {
+        "4": 363,
+        "5": 7
+      },
+      "always_A_accuracy": 0.24054054054054055,
+      "uniform_random_expected_accuracy": 0.24905405405405406
+    },
+    "very_long": {
+      "evaluations": 370,
+      "evidence_end_to_query_seconds": {
+        "n": 370,
+        "minimum": 1806.0,
+        "median": 2343.125,
+        "mean": 2456.8033594594594,
+        "maximum": 3579.66
+      },
+      "query_seconds": {
+        "n": 370,
+        "minimum": 1837.5,
+        "median": 3161.2650000000003,
+        "mean": 3454.751216216216,
+        "maximum": 7770.46
+      },
+      "answer_counts": {
+        "A": 89,
+        "B": 97,
+        "C": 98,
+        "D": 86
+      },
+      "option_counts": {
+        "4": 363,
+        "5": 7
+      },
+      "always_A_accuracy": 0.24054054054054055,
+      "uniform_random_expected_accuracy": 0.24905405405405406
+    }
+  },
+  "annotation_sha256": "34079d42b2ea51fb47b2c5b88cab5ba6ec724983d5f6b28eb3dcf735509170b1",
+  "upstream_git_blob": "c09120f319e13a1d0777eaf81740e6129cb2f39a",
+  "upstream_git_commit": "8aab82325d0986824f8504e86669fa52025593d2",
+  "huggingface_revision": "0338ea79419e375b5760c11a1f9a3e4194af6add",
+  "source_url": "https://huggingface.co/datasets/nanamma/RIVER/blob/0338ea79419e375b5760c11a1f9a3e4194af6add/annotations/Retro-Memory.json",
+  "interpretation": "Paired MCQ candidate with annotated evidence-to-query gaps; not a model result.",
+  "limits": [
+    "Derived eligible subset; not the unmodified official benchmark score.",
+    "Do not split by row: each question repeats four times, and videos contain multiple questions.",
+    "The dataset card train label is not permission to train on this published evaluation set.",
+    "Actual video duration, evidence sufficiency, repeats and current-frame shortcuts are unchecked.",
+    "Intervening content and current images change across delays; this is not a pure forgetting experiment.",
+    "Sourced from LVBench, LongVideoBench and Vript-RR; not a robotics task-success evaluation.",
+    "No common language readout has been trained or evaluated for this encoder.",
+    "Scores require separate verification of causal sampling, model identity and training provenance."
+  ],
+  "source_sha256": "47e3df4be938d87b93a2ca7c60af38bace7c70697439b63083ac8258ffd8c953"
+}

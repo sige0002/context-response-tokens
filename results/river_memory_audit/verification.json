@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "annotation_sha256": "34079d42b2ea51fb47b2c5b88cab5ba6ec724983d5f6b28eb3dcf735509170b1",
+  "summary_sha256": "1e39f48ca9eaa2e335f8eb00c68e6f47d4993563c1ddbcdce26faa0f81be32c5",
+  "source_sha256": "47e3df4be938d87b93a2ca7c60af38bace7c70697439b63083ac8258ffd8c953",
+  "eligible_records": 1480,
+  "eligible_questions": 370,
+  "excluded_question_ids": [
+    "YlQugR7KSKg@6",
+    "moALQl818ZY@1"
+  ],
+  "constant_A_correct_per_delay": 89,
+  "constant_A_total_per_delay": 370,
+  "scoring_cli_returncode": 0,
+  "model_executed": false,
+  "video_downloaded": false,
+  "notes": [
+    "First audit rejected five-option records; corrected to honor per-question option count, then reran unit tests and full audit.",
+    "Temporal boundary tolerance only covers sub-microsecond numeric representation; no source timestamps modified."
+  ]
+}

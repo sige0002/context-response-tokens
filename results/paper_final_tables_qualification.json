@@ -1,0 +1,40 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--project",
+    "baselines/gmmix",
+    "--locked",
+    "python",
+    "-m",
+    "paper.final_tables",
+    "collect",
+    "--output",
+    "results/paper_final_tables_rejected_live"
+  ],
+  "returncode": 1,
+  "reason": "ValueError: priority queue is incomplete; no final tables may be generated",
+  "output_created": false,
+  "live_queue_status": "waiting_for_video_comparisons",
+  "collector_sha256": "e46859869b2db30497c252941c18e0352ab9d9eaf3bdd5483b6c4f290a4c57b0",
+  "test_source_sha256": "c38465f0c4a7f76d9618e1110e0beba6f678b21c0c5a38c55d115c71eb5b9004",
+  "unit_tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q paper/test_tables.py paper/test_final_tables.py",
+    "passed": 21
+  },
+  "dependency_import": {
+    "environment": "baselines/gmmix",
+    "cuda_initialized": false
+  },
+  "layout": {
+    "synthetic_only": true,
+    "pages": 2,
+    "tables": 10,
+    "all_pages_visually_inspected": true,
+    "pdf_sha256": "69a4b8b0fbae315b9be690d663ad5b78bc6ed8d3f1aef3add68b81a5f7f1851c",
+    "log_sha256": "759e9b73beaa4a2c5958e311b955f24319bccca4d2cdcd192623da396f1b9a5f",
+    "overfull_boxes_after_fix": false,
+    "initial_issue": "Cost-table columns exceeded column width by 2.79\u20134.31pt; removed outer tabular spacing and rebuilt."
+  },
+  "scope": "Live unfinished-state refusal plus synthetic reporting tests. No completed final checkpoint export or model performance claim."
+}

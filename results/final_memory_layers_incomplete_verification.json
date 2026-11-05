@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.run_final_memory_layers",
+    "--output",
+    "results/final_memory_layers_incomplete_test"
+  ],
+  "returncode": 1,
+  "status": {
+    "status": "failed",
+    "completed": [],
+    "error": "ValueError: Existing training/measurement queues did not complete"
+  },
+  "inference_started": false
+}

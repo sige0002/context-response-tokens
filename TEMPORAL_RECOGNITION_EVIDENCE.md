@@ -116,6 +116,32 @@
 これは記憶の使われ方の診断であり、省メモリ化や速度改善の結果ではない。
 最終checkpointでも同じ傾向が続くか、状態保持を減らして再学習したモデルが精度を保てるかは未検証である。
 
+### 最終モデルとAttentionでの再検証
+
+[最終比較計画](results/final_memory_layers_v1/plan.json)を固定し、
+[評価・集計](exploration/final_memory_layers.py)と[実行キュー](exploration/run_final_memory_layers.py)を追加した。
+中間層Mamba・時間Attentionの各seed 42・43・44、計6モデルで、通常履歴・3層の個別状態消去・全状態消去の5条件をすべて実行する。
+各モデルは元の20,000更新を完了したcheckpointに限定する。
+この比較では基準値も含めて同じbatch 1の逐次処理で新しく計算し、4,000更新時点の予測は流用しない。
+通常の全件評価とbatch sizeが異なる可能性があるため、その予測不一致数も別に記録する。
+
+Attentionの全状態消去でも、最後の画像には元の絶対観測番号7を使う。
+先頭・末尾の動画で、通常の逐次処理との一致と、同じ絶対位置で現在画像だけを処理した結果との一致を検査する。
+Mambaも同じ手順を使う。全予測を元manifestへ照合し、5条件×348動画×6モデルを集計する。
+
+集計ではモデルごとの通常履歴からの変化と、その変化のMamba–Attention差を分ける。
+**状態を消しても精度が落ちにくいことは、認識精度が高いことや記憶が優れていることを直接意味しない。**
+各条件の正解数・精度も併記し、変化量だけで方式の優劣を決めない。
+3 seedの差の平均と標本標準偏差は、4,000更新診断のbootstrap区間とは別の量である。
+
+CPU検査は既存の状態消去検査を含めて6件通過した。
+[実プロセスでの待機・停止検査](results/final_memory_layers_cancel_verification.json)では、既存6プロセスが同じ個体のまま生存した。
+[未完了学習の拒否](results/final_memory_layers_incomplete_verification.json)も確認した。
+[本キューの起動記録](results/final_memory_layers_activation.json)の通り、既存の学習・保持診断・KVバッファ費用測定が終わるまで待機する。
+起動記録作成時の最初のPID検査は、uvの主スレッドの子だけを探して失敗したが、
+全スレッドの子と実行コマンドを照合して、既に稼働していたワーカーを確認した。キューは再起動していない。
+**最終6モデルの推論と比較結果はまだ未取得である。** 新しいモデルの学習は追加していない。
+
 この診断は、学習済みモデルが各深さの状態へどれだけ依存するかを測る。
 他層経由の履歴は残るので、ある層を消して精度が保たれても、その層単独に記憶能力がないとは結論しない。
 層間の効果も単純には足し合わせられない。再学習した軽量モデルの性能、長期保持、Attentionへの優位性は別に検証する。
@@ -283,6 +309,17 @@ uv run --locked python -m exploration.evaluate_memory_layers \
   --output results/new_memory_layer_intervention --resume
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.evaluate_memory_layers \
   --output results/new_memory_layer_intervention --verify
+```
+
+最終6モデルの状態消去計画は次で作成できる。既存の本キューが待機中なので、同じ環境で二重に起動しない。
+`--plan-only`を外す実行は、先行する主学習・KVバッファ費用比較の完了を要求する。
+実プロセスを待つ場合は`--after-pid`へ、その出力先に対応するKVバッファ費用キューのPython PIDを指定する。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q \
+  exploration/test_memory_layer_intervention.py exploration/test_final_memory_layers.py
+uv run --locked python -m exploration.run_final_memory_layers \
+  --output results/new_final_memory_layers --plan-only
 ```
 
 RIVERの注釈を取得・監査する場合は次を実行する。ダウンロード対象は注釈JSONだけである。

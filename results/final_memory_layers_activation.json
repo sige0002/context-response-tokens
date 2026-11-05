@@ -1,0 +1,22 @@
+{
+  "wrapper_pid": 734867,
+  "python_pid": 734870,
+  "command": [
+    "/home/sadasue/mywam/.venv/bin/python3",
+    "-m",
+    "exploration.run_final_memory_layers",
+    "--output",
+    "/home/sadasue/mywam/results/final_memory_layers_v1",
+    "--after-pid",
+    "692152"
+  ],
+  "status": {
+    "status": "waiting_for_buffered_cost",
+    "completed": [],
+    "dependency_pid": 692152
+  },
+  "plan_sha256": "823be810b5dc6c9915497436d58a984826070859e592c91cc2656dc958c383ed",
+  "python_process_starttime": "100283467",
+  "scope": "Waiting after buffered cost comparison. No new model training and no immediate GPU experiment.",
+  "activation_note": "The initial receipt helper inspected only the uv main-thread child list and failed its PID assertion. The queue was already live. Verified its actual worker through all uv thread child lists and the exact command line; no restart occurred."
+}

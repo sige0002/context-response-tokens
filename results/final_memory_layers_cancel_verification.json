@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.run_final_memory_layers",
+    "--output",
+    "results/final_memory_layers_cancel_test",
+    "--after-pid",
+    "692152"
+  ],
+  "returncode": 1,
+  "status": {
+    "status": "stopped",
+    "completed": [],
+    "dependency_pid": 692152,
+    "error": "InterruptedError: Final memory diagnostic cancelled; predecessors unchanged"
+  },
+  "protected_process_identities_before": {
+    "1307038": "97247271",
+    "1310800": "97249146",
+    "1310938": "97249989",
+    "630734": "99452396",
+    "677738": "99848207",
+    "692152": "99968826"
+  },
+  "protected_process_identities_after": {
+    "1307038": "97247271",
+    "1310800": "97249146",
+    "1310938": "97249989",
+    "630734": "99452396",
+    "677738": "99848207",
+    "692152": "99968826"
+  },
+  "scope": "Actual waiting/cancellation only; no model inference started"
+}

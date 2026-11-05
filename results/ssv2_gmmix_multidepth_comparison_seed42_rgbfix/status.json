@@ -1,0 +1,6 @@
+{
+  "status": "stopped",
+  "operations": [],
+  "dependency_pid": 1328059,
+  "error": "InterruptedError: Cancelled while waiting; dependency not signalled"
+}

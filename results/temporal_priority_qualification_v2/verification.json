@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "source_sha256": "c6ab377db8673c26bb38119478c751f64d23aa5cba462e689c75fbb2cf0cda5a",
+  "plan_sha256": "9bb20abecba40f0d1755fe89fab5d809c329ce5dad700e40f81bfc4ff2763e5b",
+  "cancellation_status": "stopped",
+  "operations_started": 0,
+  "dependency_identities_unchanged": {
+    "1310938": {
+      "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_gmmix_comparison.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --integration results/gmmix_training_integration_rgbfix_fp32 --output results/ssv2_gmmix_comparison_seed42_rgbfix --after-video-pid 1310800 ",
+      "start_ticks": "97249989"
+    },
+    "1307038": {
+      "command": "/home/sadasue/mywam/.venv/bin/python3 train_video.py --output results/ssv2_full_mamba_interleaved_seed42_rgbfix ",
+      "start_ticks": "97247271"
+    }
+  },
+  "order": [
+    "five_video_summary",
+    "five_encoder_costs",
+    "multidepth_video",
+    "multidepth_costs",
+    "six_video_summary",
+    "eight_video_replications",
+    "three_seed_summary"
+  ],
+  "replication_runs": 8,
+  "scope": "Actual pidfd wait and cancellation; existing reference trainer and GMMix queue remained live with unchanged identities. Training/cost stages are not executed by this check."
+}

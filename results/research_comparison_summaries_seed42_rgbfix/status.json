@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "started": 1793826475.9162045,
+  "results": {},
+  "dependency_pids": {
+    "video": 1310938,
+    "points": 1311522
+  },
+  "error": "InterruptedError: Summary queue cancelled; training dependencies were not signalled"
+}

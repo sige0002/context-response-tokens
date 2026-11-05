@@ -1,10 +1,11 @@
 {
-  "status": "waiting_for_dependencies",
+  "status": "stopped",
   "operations": [],
   "results": {},
   "dependency_pids": {
     "video": 1310800,
     "data": 1097327,
     "gmmix": 1310938
-  }
+  },
+  "error": "InterruptedError: Cancelled while waiting; dependency jobs were not signalled"
 }

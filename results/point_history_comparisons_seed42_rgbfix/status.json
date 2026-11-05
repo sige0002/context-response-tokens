@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "dependency_pid": 1317579,
+  "operations": [],
+  "results": {},
+  "error": "InterruptedError: History queue cancelled; dependencies unchanged"
+}

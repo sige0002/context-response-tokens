@@ -1,0 +1,32 @@
+{
+  "status": "active_wait_verified",
+  "plan_sha256": "2cc915986c3024e1f96370934c8157a93628fd6830b5cf797b4ab70cd122dd41",
+  "pid": 630734,
+  "process": {
+    "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_temporal_priority.py --output results/temporal_priority_seed42_rgbfix --resume --after-gmmix-pid 1310938 ",
+    "start_ticks": "99452396"
+  },
+  "queue_state": {
+    "status": "waiting_for_video_comparisons",
+    "operations": [],
+    "completed_videos": {},
+    "measurements": [],
+    "dependency_pid": 1310938
+  },
+  "protected_live_processes": {
+    "1307038": {
+      "command": "/home/sadasue/mywam/.venv/bin/python3 train_video.py --output results/ssv2_full_mamba_interleaved_seed42_rgbfix ",
+      "start_ticks": "97247271"
+    },
+    "1310800": {
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_video_comparisons.py --reference results/ssv2_full_mamba_interleaved_seed42_rgbfix --after-pid 1307038 --output results/ssv2_full_comparisons_seed42_rgbfix ",
+      "start_ticks": "97249146"
+    },
+    "1310938": {
+      "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_gmmix_comparison.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --integration results/gmmix_training_integration_rgbfix_fp32 --output results/ssv2_gmmix_comparison_seed42_rgbfix --after-video-pid 1310800 ",
+      "start_ticks": "97249989"
+    }
+  },
+  "time": 1793848727.0445356,
+  "scope": "Actual process identity and pinned-source verification; no final recognition or cost result yet"
+}

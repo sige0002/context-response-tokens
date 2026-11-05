@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "operations": [],
+  "results": {},
+  "dependency_pid": 1399789,
+  "error": "InterruptedError: Cancelled while waiting; predecessor was not signalled"
+}

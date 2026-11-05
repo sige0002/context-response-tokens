@@ -1,0 +1,6 @@
+{
+  "status": "stopped",
+  "started": 1793832538.93599,
+  "dependency_pid": 1442294,
+  "error": "InterruptedError: Summary cancelled while waiting; dependencies unchanged"
+}

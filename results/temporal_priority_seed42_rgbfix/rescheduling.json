@@ -1,0 +1,132 @@
+{
+  "reason": "User clarified temporal recognition and attention/cost comparison as the primary objective. Replace point-dependent scheduling before any affected job starts.",
+  "replacement_plan_sha256": "2cc915986c3024e1f96370934c8157a93628fd6830b5cf797b4ab70cd122dd41",
+  "cancelled_waiting_queues": [
+    {
+      "pid": 1454854,
+      "script": "run_replication.py",
+      "output": "/home/sadasue/mywam/results/seed_replications_rgbfix",
+      "before": "waiting_for_seed42_gpu_pipeline",
+      "identity": {
+        "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_replication.py --diagnostics results/multidepth_diagnostics_seed42_rgbfix_v2 --seed42-summary results/six_model_research_summary_seed42_rgbfix --output results/seed_replications_rgbfix --after-diagnostics-pid 1442294 --resume ",
+        "start_ticks": "97954552"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1442788,
+      "script": "run_six_model_summary.py",
+      "output": "/home/sadasue/mywam/results/six_model_research_summary_seed42_rgbfix",
+      "before": "waiting_for_final_diagnostics",
+      "identity": {
+        "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_six_model_summary.py --diagnostics results/multidepth_diagnostics_seed42_rgbfix_v2 --output results/six_model_research_summary_seed42_rgbfix --after-diagnostics-pid 1442294 --resume-wait ",
+        "start_ticks": "97865466"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1442294,
+      "script": "run_multidepth_diagnostics.py",
+      "output": "/home/sadasue/mywam/results/multidepth_diagnostics_seed42_rgbfix_v2",
+      "before": "waiting_for_multidepth_points",
+      "identity": {
+        "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_multidepth_diagnostics.py --point-comparisons results/multidepth_point_comparisons_seed42_rgbfix --cost-comparisons results/encoder_costs_seed42_rgbfix_v2 --output results/multidepth_diagnostics_seed42_rgbfix_v2 --after-point-pid 1428396 --resume ",
+        "start_ticks": "97862747"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1428396,
+      "script": "run_multidepth_points.py",
+      "output": "/home/sadasue/mywam/results/multidepth_point_comparisons_seed42_rgbfix",
+      "before": "waiting_for_multidepth_video",
+      "identity": {
+        "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_multidepth_points.py --video-comparison results/ssv2_gmmix_multidepth_comparison_seed42_rgbfix --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --output results/multidepth_point_comparisons_seed42_rgbfix --after-video-pid 1399789 --resume ",
+        "start_ticks": "97785064"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1399789,
+      "script": "run_multidepth_comparison.py",
+      "output": "/home/sadasue/mywam/results/ssv2_gmmix_multidepth_comparison_seed42_rgbfix",
+      "before": "waiting_for_existing_gpu_pipeline",
+      "identity": {
+        "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_multidepth_comparison.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --history-comparisons results/point_history_comparisons_seed42_rgbfix --integration results/gmmix_multidepth_qualification --output results/ssv2_gmmix_multidepth_comparison_seed42_rgbfix --after-history-pid 1328059 --resume ",
+        "start_ticks": "97700242"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1328059,
+      "script": "run_point_history_comparisons.py",
+      "output": "/home/sadasue/mywam/results/point_history_comparisons_seed42_rgbfix",
+      "before": "waiting_for_cost_gpu_queue",
+      "identity": {
+        "command": "/home/sadasue/mywam/.venv/bin/python3 run_point_history_comparisons.py --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --cost-comparisons results/encoder_costs_seed42_rgbfix_v2 --after-cost-pid 1317579 --output results/point_history_comparisons_seed42_rgbfix ",
+        "start_ticks": "97383996"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1317579,
+      "script": "run_encoder_costs.py",
+      "output": "/home/sadasue/mywam/results/encoder_costs_seed42_rgbfix_v2",
+      "before": "waiting_for_point_gpu_queue",
+      "identity": {
+        "command": "/home/sadasue/mywam/.venv/bin/python3 run_encoder_costs.py --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --after-point-pid 1311522 --output results/encoder_costs_seed42_rgbfix_v2 ",
+        "start_ticks": "97300525"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1311758,
+      "script": "run_research_summaries.py",
+      "output": "/home/sadasue/mywam/results/research_comparison_summaries_seed42_rgbfix",
+      "before": "waiting_for_video",
+      "identity": {
+        "command": "/home/sadasue/mywam/.venv/bin/python3 run_research_summaries.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --gmmix-comparison results/ssv2_gmmix_comparison_seed42_rgbfix --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix --after-gmmix-pid 1310938 --after-point-pid 1311522 --output results/research_comparison_summaries_seed42_rgbfix ",
+        "start_ticks": "97256565"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    },
+    {
+      "pid": 1311522,
+      "script": "run_point_comparisons.py",
+      "output": "/home/sadasue/mywam/results/point_comparisons_with_gmmix_seed42_rgbfix",
+      "before": "waiting_for_dependencies",
+      "identity": {
+        "command": "/home/sadasue/mywam/.venv/bin/python3 run_point_comparisons.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --gmmix-comparison results/ssv2_gmmix_comparison_seed42_rgbfix --output results/point_comparisons_with_gmmix_seed42_rgbfix --after-video-pid 1310800 --after-data-pid 1097327 --after-gmmix-pid 1310938 ",
+        "start_ticks": "97254893"
+      },
+      "after": "stopped",
+      "operations_started": 0
+    }
+  ],
+  "protected_live_processes": {
+    "1307038": {
+      "command": "/home/sadasue/mywam/.venv/bin/python3 train_video.py --output results/ssv2_full_mamba_interleaved_seed42_rgbfix ",
+      "start_ticks": "97247271"
+    },
+    "1310800": {
+      "command": "/home/sadasue/mywam/.venv/bin/python3 run_video_comparisons.py --reference results/ssv2_full_mamba_interleaved_seed42_rgbfix --after-pid 1307038 --output results/ssv2_full_comparisons_seed42_rgbfix ",
+      "start_ticks": "97249146"
+    },
+    "1310938": {
+      "command": "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3 run_gmmix_comparison.py --video-comparisons results/ssv2_full_comparisons_seed42_rgbfix --integration results/gmmix_training_integration_rgbfix_fp32 --output results/ssv2_gmmix_comparison_seed42_rgbfix --after-video-pid 1310800 ",
+      "start_ticks": "97249989"
+    }
+  },
+  "artifacts_deleted": false,
+  "training_signalled": false,
+  "time": 1793848426.1350641,
+  "preflight": "The first attempt failed before any signal: os.pidfd_open unavailable. This attempt uses the existing libc pidfd binding and libc pidfd_send_signal."
+}

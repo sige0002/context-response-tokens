@@ -1,0 +1,9 @@
+{
+  "status": "stopped",
+  "operations": [],
+  "video_results": {},
+  "point_results": {},
+  "history_results": {},
+  "dependency_pid": 1442294,
+  "error": "InterruptedError: Replication cancelled while waiting; dependencies unchanged"
+}

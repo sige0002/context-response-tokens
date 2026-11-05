@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "operations": [],
+  "measurements": {},
+  "dependency_pid": 1428396,
+  "error": "InterruptedError: Cancelled while waiting; dependency unchanged"
+}

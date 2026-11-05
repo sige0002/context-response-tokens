@@ -1,0 +1,7 @@
+{
+  "status": "stopped",
+  "dependency_pid": 1311522,
+  "operations": [],
+  "measurements": [],
+  "error": "InterruptedError: Cost queue cancelled; dependencies unchanged"
+}

@@ -7,6 +7,8 @@
 ### SigLIP 2＋時間Mamba-3（履歴エンコーダ）
 
 [研究仮説・比較条件・途中結果・未完了事項](RESEARCH_PROTOCOL.md)を別文書にまとめている。
+主目的は時間認識・履歴利用・時間Attentionに対する性能と費用である。
+[実行順を修正した計画](TEMPORAL_PRIORITY.md)では、点追跡を待たずに動画比較・費用測定・追加seedを進める。
 全方式の性能比較は未完了であり、動作検査の通過を性能優位性の証拠にはしない。
 [アーキテクチャ探索](ARCHITECTURE_SEARCH.md)では、既存研究との差分候補・演算試作・棄却実験を記録する。
 [正解対応による記憶移送の診断](ORACLE_TRANSPORT_DIAGNOSTIC.md)では、直交移送と座標更新が改善しなかった結果を公開している。
@@ -26,10 +28,9 @@
 層を外した際の位置対応と動画分類を比較する。各構成を学習し直した方式比較とは区別する。
 [観測特徴と時間文脈を分ける候補](SEPARATED_ENCODER_PILOT.md)を実装し、
 最終層だけの出力・分離出力・画像だけの分離出力の3条件で、Mambaと射影を対応点ラベルから学習する。
-出力は196×768のままで、性能改善はまだ未確定である。
-最終層だけを使う対照の1,024更新は完了し、元RGBからの特徴再現と保存予測の再採点が一致した。
-対照のPCK4は履歴あり18.65%、毎観測状態消去28.29%。分離方式の全比較は未完了である。
-別の32検証シーンも評価前に固定し、入力と注釈を検査した。新しいシーンでの認識結果はまだない。
+出力は196×768のまま。3条件を各1,024更新し、分離MambaのPCK4は33.73%、画像のみの分離構成は36.08%だった。
+全保存予測の再採点は一致したが、記憶の有効性や主研究の性能優位は示せなかった。この探索は補助診断として終了する。
+別の32検証シーンは準備したが、時間認識を主目的へ戻したため追加評価は実行しない。
 4,000更新の元モデルで一括・逐次の数値差が確認されたため、この候補の学習と推論は同じ1フレーム更新へ揃える。
 元の主学習の実行方式は変更していない。
 [公開内容と再実行の範囲](PUBLICATION.md)も参照。学習重み・元動画・環境はGitへ含めない。
@@ -40,7 +41,7 @@
 [6方式の統合集計](RESEARCH_PROTOCOL.md#6方式を結ぶ最終集計)は、動画分類・点追跡・費用・履歴介入を、
 同じcheckpointとデータに結び付けて比較する。全件実験が完了するまで最終比較表は生成しない。
 [主要4方式の3 seed反復](RESEARCH_PROTOCOL.md#4方式を3-seedで反復する)も計画・実行コードを固定した。
-追加seed 43・44の動画学習とpoint probeは既存実験列の終了後に実行する。結果はまだ出ていない。
+追加seed 43・44の動画学習は新しい時間認識の列で実行する。point probeの待機キューは停止した。結果はまだ出ていない。
 
 **入力不具合の訂正：** 元動画の既定RGB変換で、奇数幅の右端が不定になることが分かった。
 共有する変換を修正し、実動画64本で反復・ワーカー間一致を確認した。
@@ -50,8 +51,8 @@
 修正後は[新しい全データ学習](results/ssv2_full_mamba_interleaved_seed42_rgbfix/config.json)を開始した。
 空間演算のTF32を無効化し、学習・評価の再現性設定を比較方式間で揃えた。時間層は引き続きBF16を使用する。
 修正後の全24,777本の正解率は、1,000更新16.10%、2,000更新29.07%、3,000更新34.58%、
-4,000更新39.19%、5,000更新43.91%（10,879本正解）だった。
-[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step5000.json)でも一致した。
+4,000更新39.19%、5,000更新43.91%、6,000更新46.20%（11,448本正解）だった。
+[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step6000.json)でも一致した。
 予定20,000更新の途中値であり、同条件の対照モデルとの比較は未完了である。
 
 [temporal_siglip.py](temporal_siglip.py)は、事前学習済み
@@ -639,8 +640,8 @@ uv run --locked python run_point_comparisons.py --video-comparisons results/ssv2
 CUDA_VISIBLE_DEVICES='' uv run --locked pytest -q test_gmmix_experiments.py test_point_experiments.py test_point_training.py test_point_readout.py test_point_evaluation.py test_kubric_data.py test_tapvid_metrics.py
 ```
 
-現在の[実行計画](results/point_comparisons_with_gmmix_seed42_rgbfix/plan.json)は5 probe＋4 adaptの9実験である。
-[状態記録](results/point_comparisons_with_gmmix_seed42_rgbfix/status.json)に加え、実プロセスの生存も確認している。
+保存済みの[実行計画](results/point_comparisons_with_gmmix_seed42_rgbfix/plan.json)は5 probe＋4 adaptの9実験である。
+研究目的の確認後、この待機キューは未開始のまま停止した。[時間認識を優先する列](TEMPORAL_PRIORITY.md)で動画・費用比較を先行する。
 以前の7実験のキューは、点追跡学習を1つも始める前に停止し、この計画へ置き換えた。
 さらにデータ準備の修正に合わせ、未開始の9実験を新しいソースハッシュと準備プロセスへ結び直した。
 GPUジョブは同時に1つだけ実行する。中断時は子の学習へ停止を通知し、キューを再開すると

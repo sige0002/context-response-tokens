@@ -22,6 +22,16 @@ def check_score(logits, targets, reported):
         raise ValueError('Original-label recount differs')
 
 
+def check_matched_inputs(results):
+    """Equal initial predictions do not prove that the input images match."""
+    for field in ('initial_model_sha256','training_input_metadata_sha256','training_pixels_sha256','trainable_parameters'):
+        if len({r[field] for r in results.values()})!=1: raise ValueError(f'Arms not matched: {field}')
+    for field in ('input_metadata_sha256','input_pixels_sha256'):
+        observed={r[mode][field] for r in results.values()
+            for mode in ('initial','final','initial_stream','final_stream')}
+        if len(observed)!=1: raise ValueError(f'Evaluation inputs differ across arms: {field}')
+
+
 def verify_arm(output,arm,plan,targets):
     folder=output/'training'/arm
     summary=read(folder/'summary.json')
@@ -70,8 +80,7 @@ def verify(output,arm=None):
         aggregate=read(output/'summary.json')
         if aggregate['plan_sha256']!=file_hash(output/'plan.json') or aggregate['arms']!=results:
             raise ValueError('Aggregate provenance differs')
-        for field in ('initial_model_sha256','training_input_metadata_sha256','training_pixels_sha256','trainable_parameters'):
-            if len({r[field] for r in results.values()})!=1: raise ValueError(f'Arms not matched: {field}')
+        check_matched_inputs(results)
         for mode in ('initial','initial_stream'):
             if not np.array_equal(values['appearance'][mode],values['difference'][mode]):
                 raise ValueError('Initial predictions differ across arms')

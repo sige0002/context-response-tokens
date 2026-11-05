@@ -1,0 +1,77 @@
+{
+  "config": {
+    "seed": 17,
+    "arms": [
+      "local_only",
+      "metric_and_local"
+    ],
+    "steps": 1024,
+    "checkpoints": [
+      0,
+      256,
+      1024
+    ],
+    "batch": 1,
+    "clip_frames": 4,
+    "queries": 32,
+    "evaluation_queries": 128,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "model": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "precision": "CPU FP32",
+    "depth": 12,
+    "feature_transform": "Frozen pretrained final post-layernorm",
+    "supervision": "Visible target cell CE + within-cell smooth L1 + 0.1 visibility BCE; no teacher-feature loss",
+    "scope": "Readout only, frozen images; no Mamba. 24 train and 8 already-inspected validation rendered scenes. Original frames have stride 4.",
+    "limits": "Not a novel encoder, SOTA result, real-video benchmark, or cost-matched comparison with the 15M readout. Earlier readout training used BF16; this diagnostic uses CPU FP32."
+  },
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "sources": {
+    "/home/sadasue/mywam/exploration/train_correlation_readout.py": "3c073f1fc946ddd51b64d75d4bcc2a3758edbad9ea1b4bf2de310f5017e77dc3",
+    "exploration/correlation_readout.py": "7fea8b96f6442a2fe86b59a6d7d17f78f5fa3bc96329f91d7740be8027c6d57c",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

@@ -1,0 +1,16 @@
+{"arm": "local_only", "step": 128, "loss": 1.9203603267669678, "coarse": 1.673884391784668, "offset": 0.22748979926109314, "visibility": 0.18986107409000397, "elapsed_seconds": 4.300090330070816}
+{"arm": "local_only", "step": 256, "loss": 2.8083558082580566, "coarse": 2.5695126056671143, "offset": 0.2098565697669983, "visibility": 0.28986743092536926, "elapsed_seconds": 6.600808351067826}
+{"arm": "local_only", "step": 384, "loss": 2.658674716949463, "coarse": 2.4196856021881104, "offset": 0.21061116456985474, "visibility": 0.2837807834148407, "elapsed_seconds": 10.912585293059237}
+{"arm": "local_only", "step": 512, "loss": 3.6332831382751465, "coarse": 3.371819019317627, "offset": 0.22080573439598083, "visibility": 0.4065839946269989, "elapsed_seconds": 13.264565243036486}
+{"arm": "local_only", "step": 640, "loss": 4.941373348236084, "coarse": 4.703775882720947, "offset": 0.1979808807373047, "visibility": 0.396163672208786, "elapsed_seconds": 15.614711594069377}
+{"arm": "local_only", "step": 768, "loss": 3.4421725273132324, "coarse": 3.191244125366211, "offset": 0.20051221549510956, "visibility": 0.5041632056236267, "elapsed_seconds": 17.936644805013202}
+{"arm": "local_only", "step": 896, "loss": 3.0420844554901123, "coarse": 2.8205113410949707, "offset": 0.18763715028762817, "visibility": 0.33936071395874023, "elapsed_seconds": 20.317261349060573}
+{"arm": "local_only", "step": 1024, "loss": 2.9267852306365967, "coarse": 2.7092721462249756, "offset": 0.19178546965122223, "visibility": 0.2572757303714752, "elapsed_seconds": 22.65363790106494}
+{"arm": "metric_and_local", "step": 128, "loss": 1.863616704940796, "coarse": 1.6171315908432007, "offset": 0.22755543887615204, "visibility": 0.18929708003997803, "elapsed_seconds": 30.548790715052746}
+{"arm": "metric_and_local", "step": 256, "loss": 2.672565460205078, "coarse": 2.4340882301330566, "offset": 0.2096216082572937, "visibility": 0.2885550856590271, "elapsed_seconds": 34.38683561608195}
+{"arm": "metric_and_local", "step": 384, "loss": 2.3361141681671143, "coarse": 2.097048044204712, "offset": 0.2105870097875595, "visibility": 0.28479015827178955, "elapsed_seconds": 40.346193753997795}
+{"arm": "metric_and_local", "step": 512, "loss": 3.061453342437744, "coarse": 2.7983129024505615, "offset": 0.22096595168113708, "visibility": 0.4217459261417389, "elapsed_seconds": 44.37458875309676}
+{"arm": "metric_and_local", "step": 640, "loss": 3.9445512294769287, "coarse": 3.706967353820801, "offset": 0.19846734404563904, "visibility": 0.3911673128604889, "elapsed_seconds": 48.33857104706112}
+{"arm": "metric_and_local", "step": 768, "loss": 2.909698009490967, "coarse": 2.6553189754486084, "offset": 0.20089398324489594, "visibility": 0.5348511338233948, "elapsed_seconds": 52.39296148903668}
+{"arm": "metric_and_local", "step": 896, "loss": 2.7362592220306396, "coarse": 2.5113866329193115, "offset": 0.18799611926078796, "visibility": 0.36876407265663147, "elapsed_seconds": 56.42362017510459}
+{"arm": "metric_and_local", "step": 1024, "loss": 2.4743146896362305, "coarse": 2.2566723823547363, "offset": 0.1925954818725586, "visibility": 0.2504675090312958, "elapsed_seconds": 60.313730018096976}

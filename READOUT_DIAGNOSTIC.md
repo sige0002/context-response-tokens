@@ -100,6 +100,9 @@ NumPyで120行の結果を再計算し、PCK差は最大2.84e-8、平均誤差�
 次は、既知の初期座標を保持するだけの回避策ではなく、対応の類似度分布を直接位置へ結び付ける読み出しを
 同じ凍結特徴で検証する。これは評価器の改善であり、エンコーダの独自性とは分ける。
 
+[追加の照合読み出し実験](CORRELATION_READOUT_PILOT.md)では移動点のPCK16が小幅に改善したが、
+不可視点をすべて可視と予測し、AJは初期位置を維持する基準を下回った。採用判断は保留する。
+
 ```sh
 # リポジトリのルート。先の対応特徴キャッシュが必要。
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_readout_diagnostic.py

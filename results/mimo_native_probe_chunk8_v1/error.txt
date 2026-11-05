@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/home/sadasue/mywam/exploration/check_mimo_native.py", line 77, in run
+    out,*_=model.step(frame,*cache)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/modules/mamba3.py", line 408, in step
+    mamba3_step_fn(
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/cute/mamba3/mamba3_step_fn.py", line 694, in mamba3_step_fn
+    mamba3_step_fn.compile_cache[compile_key] = cute.compile(
+                                                ^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/compiler.py", line 1565, in __call__
+    return self._compile(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/compiler.py", line 1735, in _compile
+    return func._dsl_object._func(func, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/dsl.py", line 2764, in _func
+    return self._func_impl(funcBody, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/dsl.py", line 2814, in _func_impl
+    result = self.generate_mlir(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/dsl.py", line 2346, in generate_mlir
+    jit_function = self.compile_and_cache(
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/cutlass_dsl/cutlass.py", line 1158, in compile_and_cache
+    return super().compile_and_cache(  # type: ignore[return-value]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/dsl.py", line 2139, in compile_and_cache
+    return get_compiler_backend(self).compile(ctx)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/compile_backend.py", line 90, in compile
+    fn = self._build_compiled_function(ctx, compile_gpu_arch, cache_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/compile_backend.py", line 267, in _build_compiled_function
+    return dsl._build_jit_function(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/base_dsl/dsl.py", line 2067, in _build_jit_function
+    fn = func_type(
+         ^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/cutlass_dsl/cutlass.py", line 1144, in _make_compiled_func
+    return TVMFFIJitCompiledFunctionWithKwargs(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/nvidia_cutlass_dsl/dsl_packages/cutlass/cutlass_dsl/tvm_ffi_provider.py", line 1058, in __init__
+    self._kwargs_wrapper = kwargs_wrapper.make_kwargs_wrapper(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_kwargs_wrapper() got an unexpected keyword argument 'map_dataclass_to_tuple'

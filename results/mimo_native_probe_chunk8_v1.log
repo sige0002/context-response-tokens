@@ -1,0 +1,9 @@
+2026-11-05 18:35:21  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:35:29  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_fwd_kernel`
+{"stage": "forward", "completed": true}
+2026-11-05 18:35:30  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_bwd_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:35:42  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_bwd_fwd_kernel`
+2026-11-05 18:35:44  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_bwd_bwd_kernel` with `out_idx=[]`
+2026-11-05 18:36:15  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_bwd_bwd_kernel`
+{"stage": "backward", "completed": true}
+{"stages": {"forward": {"completed": true, "output_shape": [2, 8, 256], "loss": 0.41546642780303955}, "backward": {"completed": true, "parameters_with_grad": 11}, "native_step": {"completed": false, "error_type": "TypeError", "error": "make_kwargs_wrapper() got an unexpected keyword argument 'map_dataclass_to_tuple'"}}, "full_visual_model_qualified": false}

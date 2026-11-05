@@ -1,0 +1,35 @@
+/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/utils/determinism.py:73: UserWarning: Deterministic mode: set TRITON_CACHE_AUTOTUNING=1 for cached autotuning.
+  warnings.warn(msg)
+{"arm": "appearance", "step": 32, "loss": 1.1360812509956304, "lr": 3e-05, "elapsed_seconds": 123.78497691103257}
+{"arm": "appearance", "step": 64, "loss": 1.1297502059023827, "lr": 2.9692059573962574e-05, "elapsed_seconds": 204.80775688099675}
+{"arm": "appearance", "step": 96, "loss": 1.1656801279750653, "lr": 2.8741847528455377e-05, "elapsed_seconds": 286.1483758200193}
+{"arm": "appearance", "step": 128, "loss": 1.0615400553506333, "lr": 2.7190744088413296e-05, "elapsed_seconds": 367.5293653300032}
+{"arm": "appearance", "step": 160, "loss": 1.1440250412561, "lr": 2.5106822222602422e-05, "elapsed_seconds": 449.0342333810404}
+{"arm": "appearance", "step": 192, "loss": 1.1966867575829383, "lr": 2.258153859627166e-05, "elapsed_seconds": 530.3653540089726}
+{"arm": "appearance", "step": 224, "loss": 1.1802729313549207, "lr": 1.9725719830639826e-05, "elapsed_seconds": 611.705375295016}
+{"arm": "appearance", "step": 256, "loss": 1.0336879027308896, "lr": 1.6664698676970257e-05, "elapsed_seconds": 693.5366032880265}
+{"arm": "appearance", "step": 288, "loss": 1.1256714023766108, "lr": 1.3532813562995711e-05, "elapsed_seconds": 774.7917337079998}
+{"arm": "appearance", "step": 320, "loss": 1.093168699706439, "lr": 1.0467512909007751e-05, "elapsed_seconds": 859.8441213590559}
+{"arm": "appearance", "step": 352, "loss": 1.1299760585534386, "lr": 7.603322956320091e-06, "elapsed_seconds": 941.2142216169741}
+{"arm": "appearance", "step": 384, "loss": 1.1642131885164417, "lr": 5.065943840820639e-06, "elapsed_seconds": 1022.9426765349926}
+{"arm": "appearance", "step": 416, "loss": 1.0338410128024407, "lr": 2.966733016060305e-06, "elapsed_seconds": 1104.9111748549622}
+{"arm": "appearance", "step": 448, "loss": 0.9988078928654431, "lr": 1.3978181307944152e-06, "elapsed_seconds": 1186.4400752360234}
+{"arm": "appearance", "step": 480, "loss": 1.032024079700932, "lr": 4.280538411498815e-07, "elapsed_seconds": 1267.5678188949823}
+{"arm": "appearance", "step": 512, "loss": 0.9265519723994657, "lr": 1e-07, "elapsed_seconds": 1348.9769791410072}
+{"arm": "difference", "step": 32, "loss": 1.1361382076574955, "lr": 3e-05, "elapsed_seconds": 91.64277169702109}
+{"arm": "difference", "step": 64, "loss": 1.1288419964839704, "lr": 2.9692059573962574e-05, "elapsed_seconds": 173.15697495802306}
+{"arm": "difference", "step": 96, "loss": 1.1649476124730427, "lr": 2.8741847528455377e-05, "elapsed_seconds": 248.45805864594877}
+{"arm": "difference", "step": 128, "loss": 1.0611340960167581, "lr": 2.7190744088413296e-05, "elapsed_seconds": 328.26594738604035}
+{"arm": "difference", "step": 160, "loss": 1.1445070264162496, "lr": 2.5106822222602422e-05, "elapsed_seconds": 407.8220852999948}
+{"arm": "difference", "step": 192, "loss": 1.1958338516997173, "lr": 2.258153859627166e-05, "elapsed_seconds": 487.9661267469637}
+{"arm": "difference", "step": 224, "loss": 1.1800196222866361, "lr": 1.9725719830639826e-05, "elapsed_seconds": 568.0424594490323}
+{"arm": "difference", "step": 256, "loss": 1.0338089781143935, "lr": 1.6664698676970257e-05, "elapsed_seconds": 648.6546297000023}
+{"arm": "difference", "step": 288, "loss": 1.1255709122633561, "lr": 1.3532813562995711e-05, "elapsed_seconds": 728.8507973540109}
+{"arm": "difference", "step": 320, "loss": 1.0927325941156596, "lr": 1.0467512909007751e-05, "elapsed_seconds": 808.5913693129551}
+{"arm": "difference", "step": 352, "loss": 1.1300417315214872, "lr": 7.603322956320091e-06, "elapsed_seconds": 888.1370882299962}
+{"arm": "difference", "step": 384, "loss": 1.164320223411778, "lr": 5.065943840820639e-06, "elapsed_seconds": 968.0331858909922}
+{"arm": "difference", "step": 416, "loss": 1.0335727062483784, "lr": 2.966733016060305e-06, "elapsed_seconds": 1047.8745053160237}
+{"arm": "difference", "step": 448, "loss": 0.9978921017827815, "lr": 1.3978181307944152e-06, "elapsed_seconds": 1127.8839512290433}
+{"arm": "difference", "step": 480, "loss": 1.0312443479779176, "lr": 4.280538411498815e-07, "elapsed_seconds": 1209.029403737979}
+{"arm": "difference", "step": 512, "loss": 0.9261991019739071, "lr": 1e-07, "elapsed_seconds": 1289.5706009350251}
+{"correct": 327, "total": 696, "accuracy": 0.4698275862068966, "delta_pp": -0.28735632183908044, "gained": 0, "lost": 2, "changed": 4, "bootstrap_95_pp": [-0.5747126436781609, 0.0]}

@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "modules": [
+    {
+      "module": "modules.mamba3",
+      "installed": "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/modules/mamba3.py",
+      "source": "vendor/mamba/mamba_ssm/modules/mamba3.py",
+      "sha256": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c",
+      "match": true
+    },
+    {
+      "module": "ops.tilelang.mamba3.mamba3_mimo",
+      "installed": "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py",
+      "source": "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py",
+      "sha256": "ac691200e3d22ac9820931d83cc2843213ebcc4db156e44a45b2db90c3a0766a",
+      "match": true
+    },
+    {
+      "module": "ops.tilelang.mamba3.mamba3_mimo_fwd",
+      "installed": "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_fwd.py",
+      "source": "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_fwd.py",
+      "sha256": "1db4bc1e2f55be807c59954a82c3a9066913a13e43368c92a767f47c819d2047",
+      "match": true
+    },
+    {
+      "module": "ops.tilelang.mamba3.mamba3_mimo_bwd",
+      "installed": "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_bwd.py",
+      "source": "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_bwd.py",
+      "sha256": "f35e610f6c5c6fdf8dc72dae51df26b95605deb38625f13ae6d8cad9c32c229f",
+      "match": true
+    },
+    {
+      "module": "ops.cute.mamba3.mamba3_step_fn",
+      "installed": "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/cute/mamba3/mamba3_step_fn.py",
+      "source": "vendor/mamba/mamba_ssm/ops/cute/mamba3/mamba3_step_fn.py",
+      "sha256": "5c82f3936308cfc90bb3bcdfd410c60fc80dfc3afe72c4338831341398cd7ca4",
+      "match": true
+    }
+  ],
+  "scope": "Imported module byte hashes equal the vendored files; no kernel correctness claim."
+}

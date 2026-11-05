@@ -1,0 +1,8 @@
+2026-11-05 18:33:16  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:33:24  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_fwd_kernel`
+{"stage": "forward", "completed": true}
+2026-11-05 18:33:26  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_bwd_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:33:38  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_bwd_fwd_kernel`
+2026-11-05 18:33:40  [TileLang:tilelang.jit.kernel:INFO]: TileLang begins to compile kernel `mamba_mimo_bwd_bwd_kernel` with `out_idx=[]`
+2026-11-05 18:34:12  [TileLang:tilelang.jit.kernel:INFO]: TileLang completes to compile kernel `mamba_mimo_bwd_bwd_kernel`
+{"stages": {"forward": {"completed": true, "output_shape": [2, 8, 256], "loss": 0.41546642780303955}, "backward": {"completed": false, "error_type": "InternalError", "error": "Failed to set the allowed dynamic shared memory size to 101408"}}, "full_visual_model_qualified": false}

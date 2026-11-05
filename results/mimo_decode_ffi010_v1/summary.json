@@ -1,0 +1,18 @@
+{
+  "fixture": "results/mimo_native_fixture_v1/fixture.pt",
+  "fixture_sha256": "bd7be568071bd04fed3f8cdd72b85cd56354db5f3476ab8211821d80d34c3f88",
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "nvidia-cutlass-dsl": "4.8.1",
+    "apache-tvm-ffi": "0.1.10"
+  },
+  "source_sha256": "bce6f9ebe4d7f35bd7b018c2ffcff346d78b44dd877d43bb1f42c4da5b6ac1e4",
+  "full_visual_model_qualified": false,
+  "scope": "Probe native single-step MIMO in an isolated uv dependency overlay.\n\nUses exact weights, inputs and native clip outputs saved by check_mimo_native.\nNo recognition or independent mathematical-reference claim.\n",
+  "completed": true,
+  "max_abs": 0.015625,
+  "relative_l2": 0.005074252840131521,
+  "allocated_cache_bytes": 273408,
+  "streamed_sha256": "1ac811e026257566522d91b934b1a40c4f20875cc88cfac15373e0524e7d0176"
+}

@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/sadasue/mywam/exploration/check_mimo_native.py", line 61, in run
+    loss.backward();torch.cuda.synchronize()
+    ^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 623, in backward
+    torch.autograd.backward(
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 395, in backward
+    _engine_run_backward(
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 1072, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/autograd/function.py", line 366, in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py", line 184, in backward
+    dD, dZ, dOut_Norm_Weight) = mamba_mimo_bwd_combined(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_bwd.py", line 1513, in mamba_mimo_bwd_combined
+    bwd_bwd_kernel(
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/kernel.py", line 207, in __call__
+    return self.torch_function(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/adapter/tvm_ffi.py", line 244, in func
+    executable(*tensor_list)
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/runtime/executable.py", line 42, in __call__
+    return self.jit().main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/tvm_ffi/cython/function.pxi", line 929, in tvm_ffi.core.Function.__call__
+  File "<unknown>", line 0, in tvm::runtime::detail::LogFatal::Entry::Finalize()
+tvm.error.InternalError: Failed to set the allowed dynamic shared memory size to 101408

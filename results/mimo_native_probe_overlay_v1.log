@@ -1,0 +1,7 @@
+2026-11-05 18:42:25  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `mamba_mimo_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:42:29  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `mamba_mimo_fwd_kernel`
+{"stage": "forward", "completed": true}
+2026-11-05 18:42:30  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `mamba_mimo_bwd_fwd_kernel` with `out_idx=[]`
+2026-11-05 18:42:35  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `mamba_mimo_bwd_fwd_kernel`
+2026-11-05 18:42:36  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `mamba_mimo_bwd_bwd_kernel` with `out_idx=[]`
+{"stages": {"forward": {"completed": true, "output_shape": [2, 8, 256], "loss": 0.41546642780303955}, "backward": {"completed": false, "error_type": "InternalError", "error": "Check failed: (analyzer->CanProveEqual(projected_index, simplified_index)) is false: ReduceOp cannot lower a layout where a source index depends on a thread-owned reduce segment: src_index=rv % 16 // 8 * 4 + i % 4 // 2 * 2 + rv % 2, projected_src_index=(rv % 8 // 2 * 14 + rv) % 16 // 8 * 4 + i % 4 // 2 * 2 + rv % 2, reduce_var=rv, projected_reduce_var=rv - rv // 16 % 4 * 16 - rv // 64 % 4 * 64 - rv // 2 % 4 * 2"}}, "full_visual_model_qualified": false}

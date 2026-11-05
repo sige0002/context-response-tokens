@@ -1,0 +1,34 @@
+Installed 2 packages in 6ms
+{"ffi": "0.1.12", "ffi_path": "/home/sadasue/.cache/uv/archive-v0/Wp8JBrUrQqRcLDWAreslW/lib/python3.12/site-packages/tvm_ffi/__init__.py", "signature": "(target_func: 'Callable', arg_names: 'list[str]', arg_defaults: 'tuple' = (), kwonly_names: 'list[str] | None' = None, kwonly_defaults: 'dict[str, Any] | None' = None, prototype: 'Callable | None' = None, map_dataclass_to_tuple: 'list[str] | None' = None) -> 'Callable'"}
+[WARNING] Field "span" in type "ir.TupleType" duplicates an ancestor field in "ir.Type". Child types should not re-register inherited fields.
+[WARNING] Field "span" in type "ir.FuncType" duplicates an ancestor field in "ir.Type". Child types should not re-register inherited fields.
+[WARNING] Field "span" in type "ir.TensorMapType" duplicates an ancestor field in "ir.Type". Child types should not re-register inherited fields.
+[WARNING] Field "binding_blocks" in type "script.ir_builder.relax.FunctionFrame" duplicates an ancestor field in "script.ir_builder.relax.SeqExprFrame". Child types should not re-register inherited fields.
+[WARNING] Field "output" in type "script.ir_builder.relax.FunctionFrame" duplicates an ancestor field in "script.ir_builder.relax.SeqExprFrame". Child types should not re-register inherited fields.
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/__init__.py", line 6, in <module>
+    from mamba_ssm.modules.mamba3 import Mamba3
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/modules/mamba3.py", line 13, in <module>
+    from mamba_ssm.ops.tilelang.mamba3.mamba3_mimo import mamba3_mimo as mamba3_mimo_combined
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py", line 19, in <module>
+    from mamba_ssm.ops.tilelang.mamba3.mamba3_mimo_fwd import mamba_mimo_forward
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_fwd.py", line 10, in <module>
+    import tilelang
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/__init__.py", line 133, in <module>
+    import tvm
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/__init__.py", line 40, in <module>
+    from .ir import IRModule
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/ir/__init__.py", line 21, in <module>
+    from .attrs import Attrs, DictAttrs, make_node
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/ir/attrs.py", line 76, in <module>
+    @tvm_ffi.register_object("ir.DictAttrs")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/.cache/uv/archive-v0/Wp8JBrUrQqRcLDWAreslW/lib/python3.12/site-packages/tvm_ffi/registry.py", line 95, in _decorator_with_name
+    return _register(cls, type_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/.cache/uv/archive-v0/Wp8JBrUrQqRcLDWAreslW/lib/python3.12/site-packages/tvm_ffi/registry.py", line 86, in _register
+    _add_class_attrs(type_cls=cls, type_info=info)
+  File "/home/sadasue/.cache/uv/archive-v0/Wp8JBrUrQqRcLDWAreslW/lib/python3.12/site-packages/tvm_ffi/registry.py", line 403, in _add_class_attrs
+    setattr(type_cls, name, field.as_property(type_cls))
+AttributeError: attribute '__dict__' of 'type' objects is not writable

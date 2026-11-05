@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "/home/sadasue/mywam/exploration/check_mimo_native.py", line 58, in run
+    full=model(sample)
+         ^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/modules/mamba3.py", line 210, in forward
+    y = mamba3_mimo_combined(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py", line 341, in mamba3_mimo
+    return _Mamba3Function.apply(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py", line 102, in forward
+    Out, Final_SSM_State, Final_K = mamba_mimo_forward(
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_fwd.py", line 497, in mamba_mimo_forward
+    kernel = mamba_mimo_fwd(B,
+             ^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/__init__.py", line 440, in __call__
+    kernel = self.compile(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/__init__.py", line 375, in compile
+    kernel_result = compile(
+                    ^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/__init__.py", line 98, in compile
+    return cached(
+           ^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/cache/__init__.py", line 74, in cached
+    return _dispatch_map[execution_backend].cached(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/cache/kernel_cache.py", line 264, in cached
+    kernel = JITKernel(
+             ^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/kernel.py", line 137, in __init__
+    adapter = self._compile_and_create_adapter(func, out_idx)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/jit/kernel.py", line 241, in _compile_and_create_adapter
+    artifact = tilelang.lower(
+               ^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/engine/lower.py", line 246, in lower
+    PreLowerSemanticCheck(mod)
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/engine/phase.py", line 132, in PreLowerSemanticCheck
+    tilelang.analysis.NestedLoopChecker()(mod)
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/ir/transform.py", line 167, in __call__
+    return _ffi_transform_api.RunPass(self, mod)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/tvm_ffi/cython/function.pxi", line 929, in tvm_ffi.core.Function.__call__
+  File "<unknown>", line 0, in tvm::transform::Pass::operator()(tvm::IRModule) const
+  File "<unknown>", line 0, in tvm::transform::Pass::operator()(tvm::IRModule, tvm::transform::PassContext const&) const
+  File "<unknown>", line 0, in tvm::tir::transform::PrimFuncPassNode::operator()(tvm::IRModule, tvm::transform::PassContext const&) const
+  File "python/tvm_ffi/cython/function.pxi", line 1083, in tvm_ffi.core.tvm_ffi_callback
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/analysis/nested_loop_checker.py", line 116, in pass_fn
+    _NestedLoopCheckVisitor().visit_stmt(func.body)
+    
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/runtime/support.py", line 159, in __init__
+    self._inst = cls(*args, **kwargs)
+    
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/tilelang/3rdparty/tvm/python/tvm/runtime/support.py", line 197, in __setattr__
+    super(TVMDerivedObject, self).__setattr__(name, value)
+    
+AttributeError: '_NestedLoopCheckVisitor' object has no attribute '_inst'

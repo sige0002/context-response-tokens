@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "nvidia-cutlass-dsl": "4.8.1",
+    "apache-tvm-ffi": "0.1.9"
+  },
+  "uv_lock_sha256": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+  "main_audit_sha256": "1e14681105f527cdeff2026c5a58b9373732f20207a96c6c0bd73efa01e81ef9",
+  "scope": "Root dependency versions and lock file unchanged after the isolated uv overlay probes; the 13000-update main audit verifies pinned source/config files."
+}

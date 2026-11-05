@@ -1,0 +1,38 @@
+{
+  "fixture_sha256": "bd7be568071bd04fed3f8cdd72b85cd56354db5f3476ab8211821d80d34c3f88",
+  "decode_summary_sha256": "ca826ce9508d8a86a703f2c26d3f7b102fa556c4e96a89eef19166041b8addfc",
+  "source_sha256": "d77e32fa68d366b8c9d645c234653668784703af174ff3bd3c6df017c32f54a4",
+  "clip_vs_fp64": {
+    "max_abs": 0.02098880100053213,
+    "relative_l2": 0.006267476895879874
+  },
+  "stream_vs_fp64": {
+    "max_abs": 0.016605412540756426,
+    "relative_l2": 0.005326987827757993
+  },
+  "final_states": {
+    "angle": {
+      "max_abs": 0.004877154466508438,
+      "relative_l2": 0.003974056206583447
+    },
+    "ssm": {
+      "max_abs": 0.003319401650834053,
+      "relative_l2": 0.003740990369888935
+    },
+    "previous_key": {
+      "max_abs": 0.017078254735626075,
+      "relative_l2": 0.0030497773709719216
+    },
+    "previous_value": {
+      "max_abs": 0.006060704571599906,
+      "relative_l2": 0.002870461561007516
+    }
+  },
+  "input_shape": [
+    2,
+    8,
+    256
+  ],
+  "full_visual_model_qualified": false,
+  "scope": "Two random sequences of eight observations. CPU/FP64 full-block recurrence compared to native BF16 clip and streaming paths; no gradient-reference, accuracy, or timing claim."
+}

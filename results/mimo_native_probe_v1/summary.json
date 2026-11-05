@@ -1,0 +1,113 @@
+{
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_mimo_native.py": "6f8bb91eb2d0c2cde38696fd09e19d363131d8b0636340316e01a214e6ebfea6",
+    "vendor/mamba/mamba_ssm/modules/mamba3.py": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c",
+    "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo.py": "ac691200e3d22ac9820931d83cc2843213ebcc4db156e44a45b2db90c3a0766a",
+    "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_fwd.py": "1db4bc1e2f55be807c59954a82c3a9066913a13e43368c92a767f47c819d2047",
+    "vendor/mamba/mamba_ssm/ops/cute/mamba3/mamba3_step_fn.py": "5c82f3936308cfc90bb3bcdfd410c60fc80dfc3afe72c4338831341398cd7ca4",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "nvidia-cutlass-dsl": "4.8.1",
+    "apache-tvm-ffi": "0.1.9"
+  },
+  "gpu": "NVIDIA GB10",
+  "capability": [
+    12,
+    1
+  ],
+  "input_shape": [
+    2,
+    8,
+    256
+  ],
+  "seed": 701,
+  "full_visual_model_qualified": false,
+  "scope": "Check native Mamba-3 MIMO execution without changing the vision experiment.\n\nRandom inputs and weights: this is an execution probe, not a recognition,\nspeed, independent-reference, or full visual-encoder qualification.\n",
+  "stages": {
+    "forward": {
+      "completed": true,
+      "output_shape": [
+        2,
+        8,
+        256
+      ],
+      "loss": 0.41546642780303955
+    },
+    "backward": {
+      "completed": false,
+      "error_type": "InternalError",
+      "error": "Failed to set the allowed dynamic shared memory size to 101408"
+    }
+  },
+  "siso": {
+    "parameters": 437392,
+    "allocated_cache_bytes_one_patch": 133632,
+    "cache_shapes": [
+      [
+        1,
+        8,
+        16
+      ],
+      [
+        1,
+        8,
+        64,
+        64
+      ],
+      [
+        1,
+        1,
+        8,
+        64
+      ],
+      [
+        1,
+        8,
+        64
+      ]
+    ],
+    "cache_dtypes": [
+      "torch.float32",
+      "torch.float32",
+      "torch.bfloat16",
+      "torch.bfloat16"
+    ]
+  },
+  "mimo": {
+    "parameters": 544912,
+    "allocated_cache_bytes_one_patch": 136704,
+    "cache_shapes": [
+      [
+        1,
+        8,
+        16
+      ],
+      [
+        1,
+        8,
+        64,
+        64
+      ],
+      [
+        1,
+        4,
+        8,
+        64
+      ],
+      [
+        1,
+        8,
+        64
+      ]
+    ],
+    "cache_dtypes": [
+      "torch.float32",
+      "torch.float32",
+      "torch.bfloat16",
+      "torch.bfloat16"
+    ]
+  }
+}

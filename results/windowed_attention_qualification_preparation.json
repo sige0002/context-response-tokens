@@ -1,0 +1,23 @@
+{
+  "scope": "CPU preparation and run-guard verification for pending GPU qualification",
+  "cpu_tests_passed": 14,
+  "tests_command": "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_windowed_attention.py exploration/test_windowed_qualification.py",
+  "source_sha256": {
+    "exploration/check_windowed_attention.py": "e3c029a0df8d23743c08aa35f90ff7477696fa7f870596eefe93afffbe832870",
+    "exploration/test_windowed_qualification.py": "a9e9dbf0546bcb133d49c2cdf2366f79e339f68f15a6cedfd060391d3d88f696",
+    "exploration/test_windowed_attention.py": "1cb4c0a2e4ec0d8172372e8a4d8968d975484dfbd76520faec3d9121888ae785"
+  },
+  "tests_log_sha256": "e26ca1fb2b4a780e85516313de06363bebc11adfc1db2e398257e565a2a91fc9",
+  "plan_sha256": "e7b22a8779cf3e7f51377de7f0b1e15b17b65b2d8dbf92a2239a5a225ef99996",
+  "frames": 136,
+  "source_videos": 17,
+  "fixture_sha256": {
+    "encoder.pt": "7adb5653b670316252a8dd370e0374d8fd2b8dac2915466fe7628bfb0b5a4fdd",
+    "pixels.pt": "fab7914ad9ff9d051253d446e91b976edc5852221d70713b6feef390015f4fad"
+  },
+  "preflight_refusal_sha256": "d6f7792c5214b65aadfdb75e9b84c7f8536babd10680d5366993fa5c241afc1b",
+  "gpu_qualified": false,
+  "queued_for_gpu": false,
+  "recognition_evaluated": false,
+  "cost_measured": false
+}

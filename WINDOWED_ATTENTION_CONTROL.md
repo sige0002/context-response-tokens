@@ -70,3 +70,35 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_win
 主学習と既存の予約キューは維持する。次はGPU数値検査を主学習の完了後に行い、
 その結果を確認してから同じ最終Attention重みで窓長8・32・128の認識と費用を比較する。
 固定窓を含む結果がない段階で、Attention全般に対する長履歴の優位性を主張しない。
+
+## 実画像GPU検査の準備
+
+[検査用コード](exploration/check_windowed_attention.py)を追加し、
+[計画](results/windowed_attention_qualification_v1/plan.json)をCPU上で保存した。
+既存のバッファ対照と同じSSv2の17動画・136観測を使う。事前学習済みSigLIP2と未学習の時間Attentionを使い、
+時間経路が出力へ影響するよう残差ゲートを0.1に固定する。入力画像と重みはローカルのfixtureへ保存し、hashで固定する。
+この検査は分類器を評価せず、認識精度の実験とは区別する。
+
+参照側は時刻順のK/Vを切り詰め、変更していない元のAttentionへ1観測ずつ渡す。
+窓長8・32・128をFP32とBF16の両方で比較し、各フレームの特徴差、状態量、バッファのアドレス維持を記録する。
+全特徴に対する事前の警戒値は、FP32では最大絶対差0.001・相対L2差1e-5、
+BF16では最大絶対差0.125・相対L2差0.005とした。数理的な誤差保証や精度維持の保証ではない。
+超過した場合は結果を保存して失敗とし、その結果に合わせて値を広げて通過扱いにはしない。
+
+元のCPU検査と合わせて[14件が通過した](results/windowed_attention_qualification_cpu_tests.log)。
+追加検査ではW=128を含む145観測で参照側も独立した行列積・softmax実装と照合し、
+主学習が未完了の場合と、完了ログがあっても対応する学習プロセスが生きている場合の起動拒否を確認した。
+[実際の主学習中の拒否確認](results/windowed_attention_preflight_refusal.json)でも、GPU検査結果は生成されず、準備済みの入力は変わらなかった。
+[準備記録](results/windowed_attention_qualification_preparation.json)を保存した。GPU検査はまだ未実施で、待機キューにも登録していない。
+
+再生成はリポジトリのルートで実行する。出力先は新しいディレクトリを使う。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.check_windowed_attention prepare \
+  --output results/new_windowed_qualification
+uv run --locked python -m exploration.check_windowed_attention run \
+  --output results/new_windowed_qualification
+```
+
+後半は主学習の20,000更新完了とプロセス終了を要求する。進行中の主学習を停止する処理はない。
+この検査で時間を測らず、正式な費用測定には別途GPUの占有を確認した条件が必要である。

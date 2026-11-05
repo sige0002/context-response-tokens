@@ -1,0 +1,21 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.check_windowed_attention",
+    "run",
+    "--output",
+    "results/windowed_attention_qualification_v1"
+  ],
+  "expected_refusal": true,
+  "returncode": 1,
+  "reason": "Main training has not completed its 20000-update budget",
+  "plan_sha256": "e7b22a8779cf3e7f51377de7f0b1e15b17b65b2d8dbf92a2239a5a225ef99996",
+  "input_artifacts_unchanged": true,
+  "gpu_run_started": false,
+  "rows_or_summary_created": false,
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/sadasue/mywam/exploration/check_windowed_attention.py\", line 217, in <module>\n    run(args.output)\n  File \"/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/sadasue/mywam/exploration/check_windowed_attention.py\", line 135, in run\n    require_main_complete(plan[\"main_run\"])\n  File \"/home/sadasue/mywam/exploration/check_windowed_attention.py\", line 69, in require_main_complete\n    raise RuntimeError(\"Main training has not completed its 20000-update budget\")\nRuntimeError: Main training has not completed its 20000-update budget\n"
+}

@@ -1,0 +1,167 @@
+{
+  "scope": "Recover a cancelled waiter before any GPU measurement; existing plan/source/dependencies unchanged",
+  "previous_status": {
+    "status": "stopped",
+    "completed": [],
+    "operations": [],
+    "dependency": {
+      "pid": 1086691,
+      "start_ticks": 103161601
+    },
+    "error": "InterruptedError: Cancelled while waiting; predecessor untouched"
+  },
+  "previous_status_sha256": "b598b693f1caa8c9ea643077b2b806f2d71abb2da9dec53d40758c59ca969c6f",
+  "plan_sha256": "3a41b928b9629c5a32959add60117dceff715a4e6b9c4ff9ffd90ca4955caf6b",
+  "previous_process_absent": true,
+  "measurement_outputs_absent": true,
+  "predecessor_pid": 1086691,
+  "predecessor_start_ticks": 103161601,
+  "cause": "Cancellation signal observed by original waiter; sender not established",
+  "recovered_at_unix": 1793888068.4560237,
+  "unit": "mywam-windowed-cost-resume-v1.service",
+  "launcher": "systemd user service, independent of tool observation session",
+  "recovery_program": "import fcntl,json\nfrom pathlib import Path\nfrom exploration.run_windowed_cost import execute,verify_plan\nout=Path(\"results/windowed_attention_cost_queue_v1\")\nplan=json.loads((out/\"plan.json\").read_text())\nspecification=Path(plan[\"specification\"])\nwith specification.with_suffix(\".queue.lock\").open(\"a\") as lock:\n    fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)\n    state=json.loads((out/\"status.json\").read_text())\n    assert state[\"status\"]==\"stopped\" and state[\"operations\"]==[] and state[\"completed\"]==[]\n    verify_plan(plan)\n    execute(plan,out,1086691)\n",
+  "systemd_run_output": "Running as unit: mywam-windowed-cost-resume-v1.service; invocation ID: 0e1b9034aa2344f38bbf2af61a64ab83",
+  "launch_returncode": 0,
+  "verified": true,
+  "systemd": {
+    "MainPID": "1116978",
+    "ExecMainStatus": "0",
+    "ControlGroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/mywam-windowed-cost-resume-v1.service",
+    "ActiveState": "active",
+    "SubState": "running"
+  },
+  "service_processes": [
+    1116978,
+    1116981
+  ],
+  "waiter_pid": 1116981,
+  "waiter_start_ticks": 103416033,
+  "pidfd_info": {
+    "21": "pos:\t0\nflags:\t02000002\nmnt_id:\t5\nino:\t17857500\nPid:\t1086691\nNSpid:\t1086691\n"
+  },
+  "waiting_status": "waiting_for_windowed_recognition",
+  "gpu_compute_pids": [
+    1307038
+  ],
+  "cuda_visible_devices_unset": true,
+  "protected_processes_unchanged": {
+    "1307038": {
+      "start_ticks": 97247271,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "train_video.py",
+        "--output",
+        "results/ssv2_full_mamba_interleaved_seed42_rgbfix"
+      ]
+    },
+    "1310800": {
+      "start_ticks": 97249146,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "run_video_comparisons.py",
+        "--reference",
+        "results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+        "--after-pid",
+        "1307038",
+        "--output",
+        "results/ssv2_full_comparisons_seed42_rgbfix"
+      ]
+    },
+    "1310938": {
+      "start_ticks": 97249989,
+      "cmdline": [
+        "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3",
+        "run_gmmix_comparison.py",
+        "--video-comparisons",
+        "results/ssv2_full_comparisons_seed42_rgbfix",
+        "--integration",
+        "results/gmmix_training_integration_rgbfix_fp32",
+        "--output",
+        "results/ssv2_gmmix_comparison_seed42_rgbfix",
+        "--after-video-pid",
+        "1310800"
+      ]
+    },
+    "630734": {
+      "start_ticks": 99452396,
+      "cmdline": [
+        "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3",
+        "run_temporal_priority.py",
+        "--output",
+        "results/temporal_priority_seed42_rgbfix",
+        "--resume",
+        "--after-gmmix-pid",
+        "1310938"
+      ]
+    },
+    "677738": {
+      "start_ticks": 99848207,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_delayed_action",
+        "--output",
+        "/home/sadasue/mywam/results/delayed_action_memory_v1/comparison_v2",
+        "--resume",
+        "--after-pid",
+        "630734"
+      ]
+    },
+    "692152": {
+      "start_ticks": 99968826,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_buffered_cost",
+        "--output",
+        "/home/sadasue/mywam/results/buffered_attention_cost_control",
+        "--resume",
+        "--after-pid",
+        "677738"
+      ]
+    },
+    "734870": {
+      "start_ticks": 100283467,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_final_memory_layers",
+        "--output",
+        "/home/sadasue/mywam/results/final_memory_layers_v1",
+        "--after-pid",
+        "692152"
+      ]
+    },
+    "1053764": {
+      "start_ticks": 102882616,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_mimo_after_comparisons",
+        "--pilot",
+        "results/mimo_pilot_step11000_v2",
+        "--dependency",
+        "results/final_memory_layers_v1",
+        "--after-pid",
+        "734870",
+        "--output",
+        "results/mimo_after_comparisons_v1"
+      ]
+    },
+    "1086691": {
+      "start_ticks": 103161601,
+      "cmdline": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_windowed_delayed_action",
+        "--after-pid",
+        "1053764",
+        "--output",
+        "results/windowed_delayed_action_queue_v1"
+      ]
+    }
+  },
+  "protected_sources_unchanged": true,
+  "verification_note": "Initial inspection incorrectly assumed uv child belonged to its main thread; corrected to enumerate service cgroup processes and verified exact Python command plus pidfd."
+}

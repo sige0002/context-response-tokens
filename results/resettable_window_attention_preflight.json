@@ -1,0 +1,13 @@
+{
+  "scope": "CPU preparation and refusal during the active main run; no GPU evaluation",
+  "returncode": 1,
+  "expected_refusal": "Main training has not completed its 20000-update budget",
+  "result_files_created": false,
+  "pinned_inputs_unchanged": true,
+  "plan_sha256": "d6b9a71d0f311a64a38ea1df9c6b5730f7c8616ee999c161509a87dcc419e308",
+  "cpu_tests_passed": 22,
+  "tests_log_sha256": "5d47138aadf0cc03c3165cdbccf07a7cfa9752d52110026a10f16bd70251f394",
+  "expected_feature_comparisons": 1584,
+  "gpu_qualified": false,
+  "queued_for_gpu": false
+}

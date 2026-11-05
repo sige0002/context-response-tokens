@@ -104,3 +104,47 @@ uv run --locked python -m exploration.check_windowed_attention run \
 この起動ガードが確認するのは主学習だけなので、実行時には既存の比較列も完了し、GPUが空いていることを別に確認する。
 比較キューは各処理の開始時に他のGPUプロセスがあれば停止するため、主学習が終わっただけでこの検査を同時起動しない。
 この検査で時間を測らず、正式な費用測定には別途GPUの占有を確認した条件が必要である。
+
+## 履歴を消して絶対時刻を維持する対照
+
+遅延保持テストの`suffix_only`は、最初の8観測の状態を消してから、観測番号8で後続画像を読み始める。
+上記の初版は空のキャッシュを時刻0からだけ開始できるため、この対照へそのまま接続すると拒否される。
+絶対時刻を0へ戻すと位置符号の条件まで変わるため、
+[リセットを扱う別実装](exploration/resettable_window_attention.py)を追加した。初版とその固定済み計画は維持する。
+
+新しいキャッシュには、次の絶対時刻tとリセット時刻t0を保存する。
+書き込み位置は`(t - t0) % W`、読み出す有効な個数は`min(t - t0 + 1, W)`とし、位置符号にはtを使う。
+これにより、時刻が進んでいても未使用スロットを読むことなく、履歴だけを消せる。
+この版は`encoder.step`による1観測ずつの推論専用で、一括clipや複数観測をまとめたchunkは受け付けない。
+パラメータは元のAttentionと共有する。BF16の3層・196位置の状態量は`602,112 × W + 48 bytes`で、
+48 bytesは各層のCPU上の2つのint64値である。初版の24 bytesとは区別する。
+入力の最大到達範囲`1 + 3(W - 1)`は変わらない。
+
+[CPU検査22件](results/resettable_window_attention_qualification_cpu_tests.log)が通過した。
+時刻0・8・137から開始し、W=1・3・8・32・128で145観測を処理した結果を、独立した時刻順の行列積・softmax計算とFP64で照合した。
+時刻0では初版の1観測処理と完全一致し、確保容量・アドレスの維持、未使用スロットのNaN非混入も確認した。
+小型の未学習SigLIPと合成画像では、既存の`stream_features`を変更せずに履歴消去の対照まで実行できた。
+異なる証拠画像から状態を消した後の出力は一致し、窓の到達範囲を超えると証拠画像の差は消えた。
+これは実画像の認識改善や、学習済み最終モデルによる比較ではない。
+
+[実画像GPU検査のコード](exploration/check_resettable_window_attention.py)と
+[計画](results/resettable_window_attention_qualification_v1/plan.json)も準備した。
+初版と同じ保存済み重み・136観測を再利用し、時刻0からの136観測と、時刻8からの128観測を、
+W=8・32・128、FP32・BF16で比較する。特徴の比較数は計1,584件で、数値の警戒値は初版から変更しない。
+参照側は元のAttentionへ時刻順のK/Vを渡し、過去分をW−1個へ切り詰める。
+
+主学習の完了に加え、既存の比較列の後に予約したMIMO試験の正常完了と、GPUが空いていることを要求する。
+[現在の学習中に起動を拒否する検査](results/resettable_window_attention_preflight.json)も通過し、GPU結果は作成されなかった。
+GPU実行はまだ予約・実施していない。数値検査の通過後に、最終Attention重みで遅延保持の特徴を取得し、
+同じデータ・容量・正則化の読み出しを学習して比較する作業が残る。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q \
+  exploration/test_resettable_window_attention.py exploration/test_resettable_window_qualification.py
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.check_resettable_window_attention prepare \
+  --output results/new_resettable_window_check
+uv run --locked python -m exploration.check_resettable_window_attention run \
+  --output results/new_resettable_window_check
+```
+
+再実行時は初版の保存済みfixtureと先行実験を用意し、必要に応じて`prepare`の`--fixture`と`--after-run`で対応する出力先を指定する。

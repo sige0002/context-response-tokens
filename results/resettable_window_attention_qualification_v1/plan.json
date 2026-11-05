@@ -1,0 +1,650 @@
+{
+  "fixture": "results/windowed_attention_qualification_v1",
+  "fixture_plan": {
+    "model": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "frames": 136,
+    "windows": [
+      8,
+      32,
+      128
+    ],
+    "main_run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+    "model_state_sha256": "c4030cc582977794652a8fd9bf415ad780940d63d3cdf845d67604cbe599dda0",
+    "encoder_sha256": "7adb5653b670316252a8dd370e0374d8fd2b8dac2915466fe7628bfb0b5a4fdd",
+    "pixels_file_sha256": "fab7914ad9ff9d051253d446e91b976edc5852221d70713b6feef390015f4fad",
+    "pixels_tensor_sha256": "c326e00a2f12e613e3ece2ffdb413bd22a4f07581db6bb7d4c17ac1bafbb9c01",
+    "data_plan_sha256": "8b1692e868541fd164b587bd6bb002221e08dbd202b5296f3bf07c74929076dd",
+    "inputs": [
+      {
+        "id": "119422",
+        "indices": [
+          2,
+          9,
+          16,
+          23,
+          30,
+          37,
+          44,
+          48
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.75,
+          1.333,
+          1.917,
+          2.5,
+          3.083,
+          3.667,
+          4.0
+        ],
+        "decoded_frames": 49,
+        "epoch": 0,
+        "source_sha256": "af23eecb76d18d521e79b6a99ccd4561d869cd8941574f9edac82edf38195875",
+        "pixels_sha256": "81fd56fecc866eed81497d10e115e3311c181285ba508536a225c840d4c9c213"
+      },
+      {
+        "id": "67333",
+        "indices": [
+          3,
+          11,
+          20,
+          28,
+          37,
+          45,
+          54,
+          59
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.917,
+          1.667,
+          2.333,
+          3.083,
+          3.75,
+          4.5,
+          4.917
+        ],
+        "decoded_frames": 60,
+        "epoch": 0,
+        "source_sha256": "ab67cf600947ef40e1043369bc1031e38869a4ae03fde21ba54e0012d4e98a61",
+        "pixels_sha256": "621bdf83eee74decd325e548fcb2c1374b8082781a3c66bb79d32e7a3ed4b450"
+      },
+      {
+        "id": "100820",
+        "indices": [
+          2,
+          8,
+          14,
+          21,
+          27,
+          33,
+          40,
+          44
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.667,
+          1.167,
+          1.75,
+          2.25,
+          2.75,
+          3.333,
+          3.667
+        ],
+        "decoded_frames": 45,
+        "epoch": 0,
+        "source_sha256": "9af59fa68aadb5b0a0f02b005eff929c2398574fd6d2abb693b52c0f13d2d96f",
+        "pixels_sha256": "8491ae93388391ba99a0701f20970c4c1ebd65d810c636d08bb53a4165013be0"
+      },
+      {
+        "id": "7694",
+        "indices": [
+          3,
+          10,
+          17,
+          24,
+          32,
+          39,
+          46,
+          51
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.833,
+          1.417,
+          2.0,
+          2.667,
+          3.25,
+          3.833,
+          4.25
+        ],
+        "decoded_frames": 52,
+        "epoch": 0,
+        "source_sha256": "3df0c0ac65a5b6f35ff89d97013314be6b9623cc5f7471388ce5a806f5209a53",
+        "pixels_sha256": "9fb684db00cddda283d525ebc673d6a8e3f94e83f141cb569be3cbf8fc5da57e"
+      },
+      {
+        "id": "180327",
+        "indices": [
+          1,
+          5,
+          9,
+          14,
+          18,
+          22,
+          27,
+          30
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.083,
+          0.417,
+          0.75,
+          1.167,
+          1.5,
+          1.833,
+          2.25,
+          2.5
+        ],
+        "decoded_frames": 31,
+        "epoch": 0,
+        "source_sha256": "53036fe4dc31b09cafc331b6347bd6c074137e26ae35210729dd0c74201ddc4a",
+        "pixels_sha256": "94a80d4bcfb49c3bebe468b9335125a35687d2dcea98b142b7afa862cda83989"
+      },
+      {
+        "id": "44978",
+        "indices": [
+          2,
+          8,
+          15,
+          21,
+          28,
+          34,
+          41,
+          45
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.667,
+          1.25,
+          1.75,
+          2.333,
+          2.833,
+          3.417,
+          3.75
+        ],
+        "decoded_frames": 46,
+        "epoch": 0,
+        "source_sha256": "8977810f3d61986b9fb27ef0ac7fd94e314a5356a5ae37c53acca61dcd59021b",
+        "pixels_sha256": "5e9da8023b2e0b4ca41d81efad1c383cf895def8e5f0668feb187e034b2d35c5"
+      },
+      {
+        "id": "10535",
+        "indices": [
+          3,
+          10,
+          18,
+          26,
+          34,
+          42,
+          50,
+          55
+        ],
+        "crop": [
+          0,
+          0,
+          360,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.833,
+          1.5,
+          2.167,
+          2.833,
+          3.5,
+          4.167,
+          4.583
+        ],
+        "decoded_frames": 56,
+        "epoch": 0,
+        "source_sha256": "adf9fb87e305b29c88174bb5bcca0e1ba2513b7a566118c836510abfe8248eb3",
+        "pixels_sha256": "c3ae7b6b6c82c764242675c3a42209aa1e3654ca5b492567c527a3e3040f362c"
+      },
+      {
+        "id": "184917",
+        "indices": [
+          3,
+          11,
+          20,
+          28,
+          37,
+          45,
+          54,
+          59
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.917,
+          1.667,
+          2.333,
+          3.083,
+          3.75,
+          4.5,
+          4.917
+        ],
+        "decoded_frames": 60,
+        "epoch": 0,
+        "source_sha256": "400174d348b0998313e4650b12417b3858f762db56d471a03e2ea3b0ac00b82c",
+        "pixels_sha256": "a81fd3f8ecee721744bb77b0d1b33f2c9f4cd000bf850b0ed0c9eea0bbae8c54"
+      },
+      {
+        "id": "112179",
+        "indices": [
+          4,
+          13,
+          22,
+          31,
+          41,
+          50,
+          59,
+          65
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.333,
+          1.083,
+          1.833,
+          2.583,
+          3.417,
+          4.167,
+          4.917,
+          5.417
+        ],
+        "decoded_frames": 66,
+        "epoch": 0,
+        "source_sha256": "70bfeff48a1501889496e9f91b2804cdd4ddb6678cbd1eb5fe55f93d26f77a8f",
+        "pixels_sha256": "49d677798793611316d9e870bb306d46060493d99322f0311519b8f8471a356f"
+      },
+      {
+        "id": "30936",
+        "indices": [
+          0,
+          2,
+          4,
+          7,
+          9,
+          11,
+          14,
+          16
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.0,
+          0.167,
+          0.333,
+          0.583,
+          0.75,
+          0.917,
+          1.167,
+          1.333
+        ],
+        "decoded_frames": 17,
+        "epoch": 0,
+        "source_sha256": "b76229feccb304f3c4f50e80f36993c672d12d10b46985f3fee60d5824a07f1c",
+        "pixels_sha256": "459bd5539c6ad80b5e328b4f166ce810062f90e01d33da038615398e4db99894"
+      },
+      {
+        "id": "158967",
+        "indices": [
+          3,
+          10,
+          18,
+          26,
+          33,
+          41,
+          49,
+          54
+        ],
+        "crop": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.833,
+          1.5,
+          2.167,
+          2.75,
+          3.417,
+          4.083,
+          4.5
+        ],
+        "decoded_frames": 55,
+        "epoch": 0,
+        "source_sha256": "4c4055c6673fbf0e10239bd8aa6388ba9b88a304d6ea2ce84a37b8789630a0c3",
+        "pixels_sha256": "c1d6c523f50cedc513beeca34989e0a07160d178ea5e060ee6c2e2efe3b06dd7"
+      },
+      {
+        "id": "37195",
+        "indices": [
+          2,
+          7,
+          13,
+          19,
+          25,
+          31,
+          37,
+          41
+        ],
+        "crop": [
+          0,
+          0,
+          360,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.583,
+          1.083,
+          1.583,
+          2.083,
+          2.583,
+          3.083,
+          3.417
+        ],
+        "decoded_frames": 42,
+        "epoch": 0,
+        "source_sha256": "fb14edc6c0f22344a9491b1b6bf9388a420ee6a65bef326b88b9a75ecc092884",
+        "pixels_sha256": "e7d5e89f17df93403f04404d5cfe639ad535da4afb52d8cf23e445132a8a945e"
+      },
+      {
+        "id": "110371",
+        "indices": [
+          3,
+          10,
+          18,
+          25,
+          33,
+          40,
+          48,
+          53
+        ],
+        "crop": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "timestamps": [
+          0.25,
+          0.833,
+          1.5,
+          2.083,
+          2.75,
+          3.333,
+          4.0,
+          4.417
+        ],
+        "decoded_frames": 54,
+        "epoch": 0,
+        "source_sha256": "e6125961fa6ac40783fb08128f386d69e1b21a5b575c9cd1a96bbc2361929dde",
+        "pixels_sha256": "10a819e4b4bde201eca29b640febfcc56bfa568814332f635503532019eec184"
+      },
+      {
+        "id": "62225",
+        "indices": [
+          1,
+          6,
+          11,
+          15,
+          20,
+          25,
+          30,
+          33
+        ],
+        "crop": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "timestamps": [
+          0.083,
+          0.5,
+          0.917,
+          1.25,
+          1.667,
+          2.083,
+          2.5,
+          2.75
+        ],
+        "decoded_frames": 34,
+        "epoch": 0,
+        "source_sha256": "dc62b001c71dd119072db60d3e25e0eea66e4dc934e16b28509ea03ba4c87070",
+        "pixels_sha256": "8899dc37aae8c44679138c3d230046b5ca8a7242899028e13830b4ba62567eb4"
+      },
+      {
+        "id": "195038",
+        "indices": [
+          2,
+          9,
+          15,
+          22,
+          28,
+          35,
+          42,
+          46
+        ],
+        "crop": [
+          0,
+          0,
+          320,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.75,
+          1.25,
+          1.833,
+          2.333,
+          2.917,
+          3.5,
+          3.833
+        ],
+        "decoded_frames": 47,
+        "epoch": 0,
+        "source_sha256": "64db0a637115b908eefb86bfa4840471ca89ea216510deed7342883a9cc448f6",
+        "pixels_sha256": "52af169979c69c8331a60d0adeb82a03c3c1c042385fbdd3e6cbdbf1b04f9667"
+      },
+      {
+        "id": "70876",
+        "indices": [
+          2,
+          8,
+          14,
+          20,
+          26,
+          32,
+          39,
+          43
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.667,
+          1.167,
+          1.667,
+          2.167,
+          2.667,
+          3.25,
+          3.583
+        ],
+        "decoded_frames": 44,
+        "epoch": 0,
+        "source_sha256": "ef5ca50a636a916f01694717b7b5f92945b09134cc3d653a4dcfc5945b29fcf5",
+        "pixels_sha256": "32b12eaeabb4727f354eaf21b76882c44ca8a308284a755dbd679ee0ca9544d2"
+      },
+      {
+        "id": "155973",
+        "indices": [
+          2,
+          8,
+          14,
+          21,
+          27,
+          33,
+          40,
+          44
+        ],
+        "crop": [
+          0,
+          0,
+          427,
+          240
+        ],
+        "timestamps": [
+          0.167,
+          0.667,
+          1.167,
+          1.75,
+          2.25,
+          2.75,
+          3.333,
+          3.667
+        ],
+        "decoded_frames": 45,
+        "epoch": 0,
+        "source_sha256": "387f26f0f446f9bf17c99bda509d161d5d5a53a9cd303adff715a1f5d1853054",
+        "pixels_sha256": "a5a9f2e82161c0e302e8e9ee0e884e1bd3649f3b28104f0b1ddc0994c178a3c3"
+      }
+    ],
+    "sources": {
+      "exploration/check_windowed_attention.py": "e3c029a0df8d23743c08aa35f90ff7477696fa7f870596eefe93afffbe832870",
+      "exploration/windowed_attention.py": "857b80d3ee1a1d19b57bd2021b29e1896106a210481d19fc0df052403c0d1f77",
+      "exploration/buffered_attention.py": "8034eff2382604323194616da2ca54a032c2130cdc5045fdd2aaf65f3927c520",
+      "exploration/evaluate_video_history.py": "40b0ca3e913ac4ebf78c5be0d83558856b01d8e885c318412eb5396354e5e14a",
+      "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+      "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+      "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+      "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+      "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+    },
+    "tolerances": {
+      "fp32": {
+        "max_abs": 0.001,
+        "relative_l2": 1e-05
+      },
+      "bf16": {
+        "max_abs": 0.125,
+        "relative_l2": 0.005
+      }
+    },
+    "initialization": "Pretrained SigLIP2; seed71 random attention; residual gates 0.1",
+    "scope": "Real-input numerical qualification with untrained temporal layers; not recognition or timing",
+    "tolerance_scope": "Predeclared engineering alarms on full features; not mathematical error bounds or accuracy guarantees"
+  },
+  "after_run": "results/mimo_pilot_step11000_v2",
+  "pinned_files": {
+    "exploration/check_windowed_attention.py": "e3c029a0df8d23743c08aa35f90ff7477696fa7f870596eefe93afffbe832870",
+    "exploration/windowed_attention.py": "857b80d3ee1a1d19b57bd2021b29e1896106a210481d19fc0df052403c0d1f77",
+    "exploration/buffered_attention.py": "8034eff2382604323194616da2ca54a032c2130cdc5045fdd2aaf65f3927c520",
+    "exploration/evaluate_video_history.py": "40b0ca3e913ac4ebf78c5be0d83558856b01d8e885c318412eb5396354e5e14a",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+    "results/windowed_attention_qualification_v1/encoder.pt": "7adb5653b670316252a8dd370e0374d8fd2b8dac2915466fe7628bfb0b5a4fdd",
+    "results/windowed_attention_qualification_v1/pixels.pt": "fab7914ad9ff9d051253d446e91b976edc5852221d70713b6feef390015f4fad",
+    "results/windowed_attention_qualification_v1/plan.json": "e7b22a8779cf3e7f51377de7f0b1e15b17b65b2d8dbf92a2239a5a225ef99996",
+    "results/mimo_pilot_step11000_v2/plan.json": "7d56612f798b67e20c894f9d8de312f3ca907ef7a8fab784b1d8614e9789e4cc",
+    "exploration/resettable_window_attention.py": "b43697bace8ea37bf8f153d7a74cd4bc7065f0080c611e2256d48228b59f401e",
+    "exploration/check_resettable_window_attention.py": "85c151940f51f71776fbaf2853e61d6722c15af66dc2898dab031061c71eea63",
+    "exploration/test_resettable_window_attention.py": "a2df85d49d8eae904c8a53a73dd98c8c32e82b28604124b3e8ff2b74776064d0",
+    "exploration/test_resettable_window_qualification.py": "9239b3dbff73e8b2cfc51b03f219c79dbf8d528b1ccf2450ac56d41289ea1ca6",
+    "exploration/run_mimo_after_comparisons.py": "982f5d47bd6083181478ad61195f7cd308739d9d741cbb0b7d156ba37ea58252",
+    "exploration/cache_delayed_action.py": "e70b8b8189fecc5d6195601c0a530e5688722a52a1c4f3569941b20ab7f611b3"
+  },
+  "origins": [
+    0,
+    8
+  ],
+  "windows": [
+    8,
+    32,
+    128
+  ],
+  "tolerances": {
+    "fp32": {
+      "max_abs": 0.001,
+      "relative_l2": 1e-05
+    },
+    "bf16": {
+      "max_abs": 0.125,
+      "relative_l2": 0.005
+    }
+  },
+  "expected_rows": 1584,
+  "scope": "Real RGB, random temporal layers, absolute-time-preserving reset; no recognition or timing",
+  "limitation": "This covers 136 observations and an origin-eight reset; not arbitrary-length GPU verification"
+}

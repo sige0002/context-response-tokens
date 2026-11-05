@@ -111,12 +111,23 @@ class MimoEncoder(nn.Module):
 
     @torch.no_grad()
     def encode_chunk(self,video,state=None):
+        """Stream new observations with a fixed one-image execution shape.
+
+        Batching images through SigLIP/down-projections can change rounding
+        before the BF16 recurrence. Use the same execution for every chunk
+        partition; clip training still uses the separate batched forward.
+        """
         if self.training: raise RuntimeError('Call eval before streaming')
+        if video.ndim!=5 or video.shape[1]<1:
+            raise ValueError('Expected nonempty [batch,time,channels,height,width]')
         if state is None: state=MimoState(id(self))
         if not isinstance(state,MimoState) or state.owner!=id(self):
             raise ValueError('State belongs to another encoder; reset the episode')
-        features,state.base_state=self.encoder.encode_chunk(video,state.base_state)
-        return features,state
+        outputs=[]
+        for frame in video.split(1,dim=1):
+            features,state.base_state=self.encoder.encode_chunk(frame,state.base_state)
+            outputs.append(features)
+        return torch.cat(outputs,dim=1),state
 
     @torch.no_grad()
     def step(self,image,state=None):

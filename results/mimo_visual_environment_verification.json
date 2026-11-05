@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "main_training_source_matches": {
+    "train_video.py": true,
+    "video_data.py": true,
+    "temporal_readout.py": true,
+    "temporal_siglip.py": true,
+    "train_temporal.py": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "root_versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "apache-tvm-ffi": "0.1.9",
+    "nvidia-cutlass-dsl": "4.8.1"
+  },
+  "uv_lock_sha256": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+}

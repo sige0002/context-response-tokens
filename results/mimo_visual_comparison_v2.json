@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "clip_summary_sha256": "718f5913c75320608a1858710810aea6c7e9cfc3cd68a9398952f08c9876f75d",
+  "stream_summary_sha256": "3071a49a57c2b43c926182b262dc32d22d10f82724bb84c8c7e810a629425469",
+  "mimo_clip_vs_stream": {
+    "features": {
+      "max_abs": 1.10968017578125,
+      "relative_l2": 0.006306835236540583
+    },
+    "logits": {
+      "max_abs": 0.0625,
+      "relative_l2": 0.0034546042771233373
+    }
+  },
+  "chunk_partition_outputs_exact": true,
+  "scope": "Hash validation and saved-output comparison only; no independent native replay or general accuracy claim."
+}

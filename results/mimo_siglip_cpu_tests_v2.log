@@ -1,0 +1,13 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+exploration/test_mimo_siglip.py::test_migration_preserves_complete_recurrence_with_nonuniform_norms[3-1]
+exploration/test_mimo_siglip.py::test_migration_preserves_complete_recurrence_with_nonuniform_norms[3-1]
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:15: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    from cutlass.utils import LayoutEnum, block_copy
+
+exploration/test_mimo_siglip.py::test_migration_preserves_complete_recurrence_with_nonuniform_norms[3-1]
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:562: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    layout_c: cutlass.utils.LayoutEnum,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+5 passed, 3 warnings in 4.73s

@@ -1,0 +1,50 @@
+{
+  "mode": "stream",
+  "fixture_root": "results/mimo_trained_migration_cpu_v2",
+  "migration_summary_sha256": "fd15959e43aab1caf9ea1b3ac879afde5d7a8f2a965345be6c49ad9f228ed7a4",
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "apache-tvm-ffi": "0.1.10",
+    "nvidia-cutlass-dsl": "4.8.1"
+  },
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_mimo_visual.py": "8481f4348e9b876569a703b6ba3bb8fd35b48fcc6bf74e3e466b0c2af7d164e5",
+    "exploration/mimo_siglip.py": "85836713e8d17497f4d0bed0bebac47fc73e38b31a7d0ba005e273856be061b7",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "gpu": "NVIDIA GB10",
+  "input_shape": [
+    1,
+    8,
+    3,
+    224,
+    224
+  ],
+  "future_test": "Keep first four images, flip the spatial width of last four images",
+  "causality_tolerance": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "stream_chunks": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "alternate_stream_chunks": [
+    3,
+    1,
+    4
+  ],
+  "stream_policy": "Each observation uses one-image backbone/projection execution; require identical outputs and final states across the two chunk partitions.",
+  "numerical_policy": "Report native-vs-FP64 and native clip/stream differences; do not turn measured differences into a post-hoc accuracy guarantee.",
+  "scope": "Native GPU diagnostics for the exported, trained MIMO visual candidate.\n\nOne previously inspected SSv2 video is a numerical fixture, not an accuracy\nbenchmark. Clip/backward use the locked root environment; stream uses the\ndocumented TVM-FFI overlay. No timing comparison while main training runs.\n"
+}

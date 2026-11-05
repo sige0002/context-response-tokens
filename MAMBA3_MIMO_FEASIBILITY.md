@@ -2,8 +2,8 @@
 
 現在の主学習はSISOのまま固定する。MIMOへの置換は、認識精度を改善できるかを調べる次候補であり、
 新しい原理や性能向上を立証したものではない。
-native GPU実装を確認したのは、ランダム重み・2系列×8観測の単体ブロックである。
-別途、学習済み重みと実動画1本でCPU参照式による移行を確認した。MIMOの認識精度比較は未実施。
+native GPU実装は、ランダム重みの単体ブロックに加え、学習済み重みと実動画1本で順伝播・逆伝播・逐次処理を確認した。
+CPU参照式による移行も照合した。MIMOの認識精度比較は未実施。
 
 ## 変わる計算
 
@@ -64,7 +64,7 @@ FFI 0.1.12だけの変更ではTileLang 0.1.8のimportが失敗したため、�
 | 逐次出力 | 0.005327 |
 | 最後のSSM行列 | 0.003741 |
 
-これは2系列の数値診断である。native勾配の独立照合、長系列、実画像、保存・復元前後の視覚出力の確認は残る。
+ここまでの表は2系列の単体ブロックの数値診断である。実動画での追加検査は下記に分けて示す。
 実行中の学習とGPUを共有したため、速度比較にも使わない。
 [importされたMambaソースとvendorの照合](results/mimo_native_provenance.json)も記録した。
 
@@ -90,7 +90,7 @@ SISOとMIMOでは回転する座標の並べ方が異なるため、B/C投影、
 | 保存・復元と状態の分離 | 小型のランダムSigLIPモデルを用い、全重みの保存・復元が完全一致。別モデルの状態、旧SISO状態、学習モードの逐次呼び出しを拒否 |
 
 最後の検査はファイル形式と状態の受け渡しの検査であり、画像の順伝播は行っていない。
-このモジュールのnative逐次経路、画像特徴、認識精度、保存・復元前後の予測の照合は次段階に残る。
+初版のCPUテストとは別に、下記でnative画像経路を検査した。
 主学習・比較待ちのジョブ・ルートuv環境には適用していない。
 
 CPU検査だけを再実行する場合は、リポジトリのルートで次を実行する。
@@ -114,7 +114,7 @@ MIMOモデルを保存・再読込した後も、全重み・CPU参照式の特�
 
 これは**学習済みモデルの数学的な初期動作と保存形式の検査**である。
 GPUカーネルを呼ばず、候補の再学習も行っていない。動画は既知の1本であり、精度・汎化・速度の評価には使わない。
-実運用のnative画像経路と逐次状態の確認、その後の同条件SISOとの認識比較は未完了である。
+native画像経路の1動画での動作確認は下記の通りであり、同条件SISOとの認識精度比較は未完了である。
 
 同じローカルの保存済みチェックポイント・動画がある場合に、未使用の出力先で再実行できる。
 
@@ -122,6 +122,72 @@ GPUカーネルを呼ばず、候補の再学習も行っていない。動画�
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.check_mimo_migration \
   --output results/new_mimo_trained_migration_cpu
 ```
+
+## 学習済み視覚モデルのnative GPU経路
+
+[GPU検査コード](exploration/check_mimo_visual.py)で、同じ動画3988の8観測を入力した。
+一括処理はルート環境、逐次処理はTVM-FFI 0.1.10のuv一時環境を使う。
+最新の[CPU移行検査](results/mimo_trained_migration_cpu_v2/summary.json)が出力した全重みと入力は、初版とファイルハッシュまで同一である。
+逐次処理の修正後も[CPUテスト5件](results/mimo_siglip_cpu_tests_v2.log)は通った。
+
+| 検査 | 実測結果 |
+| --- | --- |
+| 一括順伝播 | 全特徴・分類出力が有限。同じ入力の再実行で完全一致 |
+| 因果性 | 後半4枚を左右反転しても、前半4枚の特徴は完全一致 |
+| 逆伝播 | 学習対象の71パラメータテンソルへ有限な勾配。3層すべての追加書き込み・読み出し係数に非ゼロ勾配 |
+| 逐次推論 | 8枚を1枚ずつ処理でき、エピソードをリセットして再実行した出力・4種類の最終状態も完全一致 |
+| 分割方法の変更 | 修正後は`1×8`と`3/1/4`で、特徴・分類出力・最終状態が完全一致 |
+| 保持する状態 | バッチ1、196パッチ、3層で80,381,952 bytes（約76.66 MiB）。モデル全体のGPU使用量ではない |
+
+[一括・逆伝播の記録](results/mimo_visual_clip_v2/summary.json)、
+[逐次処理の記録](results/mimo_visual_stream_v2/summary.json)、
+[保存出力の照合](results/mimo_visual_comparison_v2.json)を残した。
+勾配の検査ではoptimizerを更新しておらず、重みは変えていない。
+再実行では一部の勾配ノルムに小さな差があったため、native逆伝播のbitwise再現性まで確認済みとはしない。
+有限な勾配があることも、独立した参照式との勾配一致を意味しない。
+
+### 逐次入力の分割による数値差と修正
+
+[初版の逐次経路](results/mimo_visual_stream_v1/summary.json)では、`1×8`と`3/1/4`の分割で特徴の最大絶対差0.934761、相対L2差0.004989が出た。
+[記録した初版コード](results/mimo_visual_stream_v1/mimo_siglip_source.py)と同じ重み・入力で、
+[差の発生箇所を調べるコード](exploration/check_mimo_chunk_numerics.py)も実行した。
+[結果](results/mimo_chunk_origin_reproduced_v1.json)では、最初の時間アダプタへ入る正規化済み特徴にすでに小さな差があり、BF16投影後には差が大きくなった。
+したがって、Mambaの状態更新だけを同じ順に実行しても、入力の数値は揃わない。
+
+候補の`encode_chunk`を、受け取った画像を1枚ずつ同じ空間処理・投影・状態更新へ通す実装に変えた。
+これにより上記の分割比較は出力・状態とも完全一致した。主学習のSISO実装には変更を加えていない。
+この方法では、逐次APIに複数枚を渡しても画像側の処理を時間方向にバッチ化しない。速度上の影響は未測定である。
+
+### 一括と逐次の数値差は別に残る
+
+| 全フレームの画像特徴の比較 | 相対L2差 |
+| --- | ---: |
+| native SISO一括とCPU参照 | 0.005068 |
+| native MIMO一括とCPU参照 | 0.005912 |
+| native MIMO逐次とCPU参照 | 0.005280 |
+| native MIMO一括とnative SISO一括 | 0.005302 |
+| native MIMO一括とnative MIMO逐次 | 0.006307 |
+
+MIMOへ移行した時のnative一括特徴の最大絶対差は0.619733、分類出力では0.015625だった。
+MIMOの一括と逐次の特徴には最大絶対差1.109680があり、分類出力の最大絶対差は0.0625だった。
+CPU参照式での完全一致を、BF16のnative経路の完全一致へ言い換えない。
+この1動画では全経路の予測クラスは同じだったが、分類精度の不変性や改善の証拠にはしない。
+GPUを主学習と共有しているため、速度も比較していない。
+[主学習のソース・ルート環境が変わっていないこと](results/mimo_visual_environment_verification.json)も再確認した。
+
+同じローカルfixtureがある場合は、未使用の出力先で再実行する。
+
+```sh
+uv run --locked python -m exploration.check_mimo_visual \
+  --fixture-root results/mimo_trained_migration_cpu_v2 --mode clip \
+  --output results/new_mimo_visual_clip
+uv run --no-sync --with 'apache-tvm-ffi==0.1.10' python -m exploration.check_mimo_visual \
+  --fixture-root results/mimo_trained_migration_cpu_v2 --mode stream \
+  --output results/new_mimo_visual_stream
+```
+
+今後必要なのは、複数動画・長系列での検査、勾配の独立照合、同条件SISOとの認識精度比較、専有時の実測コストである。
+`full_visual_model_qualified`は引き続き`false`とし、1動画の動作確認をモデル全体の性能評価として扱わない。
 
 ## 再実行
 

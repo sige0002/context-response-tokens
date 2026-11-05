@@ -1,0 +1,44 @@
+{
+  "completed": true,
+  "plan_sha256": "e3d6490c95ae5b303abbf59905ad13674fa8afbfa480bf7af7320cbcd2556fcb",
+  "mode": "stream",
+  "recognition_accuracy_tested": false,
+  "latency_tested": false,
+  "full_visual_model_qualified": false,
+  "stages": {
+    "native_forward": {
+      "completed": true,
+      "replay_exact": true,
+      "state_replay_exact": true,
+      "mimo_vs_fp64": {
+        "features": {
+          "max_abs": 0.5414810180664062,
+          "relative_l2": 0.005280259659675435
+        },
+        "logits": {
+          "max_abs": 0.04142570495605469,
+          "relative_l2": 0.002703217842306027
+        }
+      },
+      "alternate_chunks_vs_single_steps": {
+        "features": {
+          "max_abs": 0.9347610473632812,
+          "relative_l2": 0.0049889937986938755
+        },
+        "logits": {
+          "max_abs": 0.0625,
+          "relative_l2": 0.0030178755741418683
+        }
+      },
+      "state_bytes": 80381952,
+      "alternate_state_bytes": 80381952,
+      "final_offset": 8
+    }
+  },
+  "weights_unchanged": true,
+  "outputs_sha256": "ae15c9f97f96992bcc3b6e1b182ab5daaaec3d4d82d4944a3b1379bd07f3c451",
+  "predictions": {
+    "mimo": 151,
+    "chunks": 151
+  }
+}

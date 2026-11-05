@@ -1,0 +1,403 @@
+{
+  "source_sha256": "459d1af6668e7ef992614a8ffa95ee6814794edc5a07842cfcf7c622d3c70aae",
+  "summary_sha256": "d26cef97ce925a5e6b0dfbe97739a4f1ecb8387fe6613c7555478a61ad0403e6",
+  "tables": [
+    {
+      "mask": "000",
+      "active_depths": [],
+      "video_accuracy_percent": 5.172413793103448,
+      "video_correct": 18,
+      "video_total": 348,
+      "pck4_percent": 22.560057724159698,
+      "pck16_percent": 51.66469176737798,
+      "moving_gt16_pck16_percent": 26.72461482866375,
+      "aj_percent": 16.69017826162112,
+      "state_bytes": 0
+    },
+    {
+      "mask": "001",
+      "active_depths": [
+        12
+      ],
+      "video_accuracy_percent": 11.494252873563218,
+      "video_correct": 40,
+      "video_total": 348,
+      "pck4_percent": 21.995898450411154,
+      "pck16_percent": 51.09512884071559,
+      "moving_gt16_pck16_percent": 25.92733787660472,
+      "aj_percent": 16.307580223945966,
+      "state_bytes": 26342400
+    },
+    {
+      "mask": "010",
+      "active_depths": [
+        8
+      ],
+      "video_accuracy_percent": 10.919540229885058,
+      "video_correct": 38,
+      "video_total": 348,
+      "pck4_percent": 18.905398540839723,
+      "pck16_percent": 49.25138381985385,
+      "moving_gt16_pck16_percent": 26.505282991011665,
+      "aj_percent": 14.133767669879962,
+      "state_bytes": 26342400
+    },
+    {
+      "mask": "011",
+      "active_depths": [
+        8,
+        12
+      ],
+      "video_accuracy_percent": 29.597701149425287,
+      "video_correct": 103,
+      "video_total": 348,
+      "pck4_percent": 18.59067560327451,
+      "pck16_percent": 49.01332407977581,
+      "moving_gt16_pck16_percent": 25.862396582561697,
+      "aj_percent": 13.962604851710708,
+      "state_bytes": 52684800
+    },
+    {
+      "mask": "100",
+      "active_depths": [
+        4
+      ],
+      "video_accuracy_percent": 6.0344827586206895,
+      "video_correct": 21,
+      "video_total": 348,
+      "pck4_percent": 18.620490450862988,
+      "pck16_percent": 46.96397115047167,
+      "moving_gt16_pck16_percent": 24.079859705513794,
+      "aj_percent": 13.565289730916813,
+      "state_bytes": 26342400
+    },
+    {
+      "mask": "101",
+      "active_depths": [
+        4,
+        12
+      ],
+      "video_accuracy_percent": 15.229885057471265,
+      "video_correct": 53,
+      "video_total": 348,
+      "pck4_percent": 17.793613563133476,
+      "pck16_percent": 45.743788604442024,
+      "moving_gt16_pck16_percent": 21.811270448531488,
+      "aj_percent": 13.003232017784578,
+      "state_bytes": 52684800
+    },
+    {
+      "mask": "110",
+      "active_depths": [
+        4,
+        8
+      ],
+      "video_accuracy_percent": 13.505747126436782,
+      "video_correct": 47,
+      "video_total": 348,
+      "pck4_percent": 15.286264013859475,
+      "pck16_percent": 44.47396642707939,
+      "moving_gt16_pck16_percent": 22.55530464611778,
+      "aj_percent": 11.597697847604119,
+      "state_bytes": 52684800
+    },
+    {
+      "mask": "111",
+      "active_depths": [
+        4,
+        8,
+        12
+      ],
+      "video_accuracy_percent": 30.17241379310345,
+      "video_correct": 105,
+      "video_total": 348,
+      "pck4_percent": 14.528050809683593,
+      "pck16_percent": 43.90551070976188,
+      "moving_gt16_pck16_percent": 22.626555415258927,
+      "aj_percent": 11.194809859649432,
+      "state_bytes": 79027200
+    }
+  ],
+  "layer_effects": [
+    {
+      "depth": 4,
+      "metric": "video_accuracy",
+      "enabling_effect_percentage_points": 1.9396551724137931,
+      "bootstrap_95_interval_percentage_points": [
+        0.7183908045977011,
+        3.1609195402298855
+      ],
+      "unit": "video",
+      "units": 348,
+      "pairs": [
+        [
+          "000",
+          "100"
+        ],
+        [
+          "001",
+          "101"
+        ],
+        [
+          "010",
+          "110"
+        ],
+        [
+          "011",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 4,
+      "metric": "pck4",
+      "enabling_effect_percentage_points": -3.9559028702863896,
+      "bootstrap_95_interval_percentage_points": [
+        -7.356964240436673,
+        -1.0253159586282914
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "100"
+        ],
+        [
+          "001",
+          "101"
+        ],
+        [
+          "010",
+          "110"
+        ],
+        [
+          "011",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 4,
+      "metric": "moving_gt16_pck16",
+      "enabling_effect_percentage_points": -3.4866605158549597,
+      "bootstrap_95_interval_percentage_points": [
+        -4.791261831911038,
+        -2.3883421475748334
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "100"
+        ],
+        [
+          "001",
+          "101"
+        ],
+        [
+          "010",
+          "110"
+        ],
+        [
+          "011",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 8,
+      "metric": "video_accuracy",
+      "enabling_effect_percentage_points": 11.566091954022989,
+      "bootstrap_95_interval_percentage_points": [
+        8.69073275862069,
+        14.583333333333334
+      ],
+      "unit": "video",
+      "units": 348,
+      "pairs": [
+        [
+          "000",
+          "010"
+        ],
+        [
+          "001",
+          "011"
+        ],
+        [
+          "100",
+          "110"
+        ],
+        [
+          "101",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 8,
+      "metric": "pck4",
+      "enabling_effect_percentage_points": -3.4149178052275033,
+      "bootstrap_95_interval_percentage_points": [
+        -6.988919689984662,
+        -0.4596113033027627
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "010"
+        ],
+        [
+          "001",
+          "011"
+        ],
+        [
+          "100",
+          "110"
+        ],
+        [
+          "101",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 8,
+      "metric": "moving_gt16_pck16",
+      "enabling_effect_percentage_points": -0.24838580609092104,
+      "bootstrap_95_interval_percentage_points": [
+        -2.0446832399662664,
+        1.2450374001493323
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "010"
+        ],
+        [
+          "001",
+          "011"
+        ],
+        [
+          "100",
+          "110"
+        ],
+        [
+          "101",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 12,
+      "metric": "video_accuracy",
+      "enabling_effect_percentage_points": 12.71551724137931,
+      "bootstrap_95_interval_percentage_points": [
+        9.410919540229886,
+        16.020114942528735
+      ],
+      "unit": "video",
+      "units": 348,
+      "pairs": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010",
+          "011"
+        ],
+        [
+          "100",
+          "101"
+        ],
+        [
+          "110",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 12,
+      "metric": "pck4",
+      "enabling_effect_percentage_points": -0.6159930758047869,
+      "bootstrap_95_interval_percentage_points": [
+        -1.1104315700121907,
+        -0.20445144579098398
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010",
+          "011"
+        ],
+        [
+          "100",
+          "101"
+        ],
+        [
+          "110",
+          "111"
+        ]
+      ]
+    },
+    {
+      "depth": 12,
+      "metric": "moving_gt16_pck16",
+      "enabling_effect_percentage_points": -0.9093754620875383,
+      "bootstrap_95_interval_percentage_points": [
+        -1.6486749636192282,
+        -0.08833548780851337
+      ],
+      "unit": "scene",
+      "units": 8,
+      "pairs": [
+        [
+          "000",
+          "001"
+        ],
+        [
+          "010",
+          "011"
+        ],
+        [
+          "100",
+          "101"
+        ],
+        [
+          "110",
+          "111"
+        ]
+      ]
+    }
+  ],
+  "reference_validation_check": {
+    "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a",
+    "full_validation_accuracy": 0.39189570973079874,
+    "subset_reference_correct": 105,
+    "subset_repeated_correct": 105,
+    "subset_samples": 348,
+    "different_predictions": 1,
+    "differences": [
+      {
+        "id": "103475",
+        "label": 45,
+        "reference": 27,
+        "repeated": 87
+      }
+    ],
+    "scope": "Same pinned checkpoint; stored full-validation predictions use batch4, intervention rerun uses batch1. This subset has a different class mix and sampling error from the full validation."
+  },
+  "interpretation": "Effect of enabling one trained layer averaged over all four settings of the other layers. Same fixed full-model classifier. Descriptive sensitivity, not trained-architecture superiority.",
+  "uncertainty": "2000 paired bootstrap draws, seed17. Video or scene sampling units. Exploratory, unadjusted intervals; repeated validation data."
+}

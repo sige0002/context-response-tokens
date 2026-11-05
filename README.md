@@ -22,6 +22,8 @@
 履歴あり14.53%、状態消去22.67%のPCK4だった。分類学習途中の特徴の診断であり、精密対応の改善は確認できなかった。
 [小さな読み出しを同条件で学習](TEMPORAL_METRIC_PROBE.md)しても、履歴あり17.52%、状態消去24.69%の差が残った。
 全体指標は上がったが大変位点は悪化しており、この読み出しを改善策として採用しない。
+[時間層3箇所の全8通りの介入](TEMPORAL_LAYER_DIAGNOSTIC.md)では、同じ学習済み重みから
+層を外した際の位置対応と動画分類を比較する。各構成を学習し直した方式比較とは区別する。
 [公開内容と再実行の範囲](PUBLICATION.md)も参照。学習重み・元動画・環境はGitへ含めない。
 
 [実動画での速度・メモリ測定と最終比較の条件](ENCODER_COST_PROTOCOL.md)も記録している。
@@ -40,8 +42,8 @@
 修正後は[新しい全データ学習](results/ssv2_full_mamba_interleaved_seed42_rgbfix/config.json)を開始した。
 空間演算のTF32を無効化し、学習・評価の再現性設定を比較方式間で揃えた。時間層は引き続きBF16を使用する。
 修正後の全24,777本の正解率は、1,000更新16.10%、2,000更新29.07%、3,000更新34.58%、
-4,000更新39.19%（9,710本正解）だった。
-[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step4000.json)でも一致した。
+4,000更新39.19%、5,000更新43.91%（10,879本正解）だった。
+[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step5000.json)でも一致した。
 予定20,000更新の途中値であり、同条件の対照モデルとの比較は未完了である。
 
 [temporal_siglip.py](temporal_siglip.py)は、事前学習済み

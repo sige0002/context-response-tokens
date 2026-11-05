@@ -30,7 +30,7 @@ def main():
         selected=select_queries(data,scene,config['evaluation_queries'],config['seed'])
         original[scene]=(data['points'][selected].numpy(),data['visible'][selected].numpy(),selected.numpy())
     counted=files=0; max_pck=max_error=max_aj=0.
-    initial_hashes=set()
+    initial_hashes=set(); fixed_metric_arms=[]; learned_metric_arms=[]
     for arm,result in report['results'].items():
         assert digest(run/(arm+'.pt'))==result['checkpoint_sha256']
         initial_hashes.add(result['initial_parameters_sha256'])
@@ -38,7 +38,10 @@ def main():
         if arm=='local_only':
             assert not torch.count_nonzero(weights['metric.2.weight'])
             assert not torch.count_nonzero(weights['metric.2.bias'])
-        else: assert weights['metric.2.weight'].norm()>0
+            fixed_metric_arms.append(arm)
+        else:
+            assert weights['metric.2.weight'].norm()>0
+            learned_metric_arms.append(arm)
         for step,score in result['scores'].items():
             by_scene={}
             for scene,expected in score['predictions_sha256'].items():
@@ -89,11 +92,25 @@ def main():
                     assert abs(float(np.mean(within))-metrics['average_pts_within_thresh'])<1e-12
                     assert abs(float((gt==pv).mean())-metrics['occlusion_accuracy'])<1e-12
                 counted+=1
+            for summary in score['summary']:
+                rows=[r for r in score['rows'] if r['method']==summary['method']
+                      and r['stratum']==summary['stratum'] and r['points']]
+                assert len(rows)==summary['scenes']
+                assert sum(r['points'] for r in rows)==summary['points']
+                for key in ('mean_error','pck_4','pck_8','pck_16'):
+                    actual=sum(r[key] for r in rows)/len(rows) if rows else None
+                    assert actual==summary[key],(arm,step,key)
+                if summary['full_sequence_metrics'] is not None:
+                    for key,value in summary['full_sequence_metrics'].items():
+                        assert sum(r['full_sequence_metrics'][key] for r in rows)/len(rows)==value
     assert len(initial_hashes)==1
     checks=dict(status='passed',saved_prediction_files=files,recounted_rows=counted,
         max_pck_difference=max_pck,max_mean_error_difference=max_error,max_aj_difference=max_aj,
         all_ground_truth_and_queries_match_original_cache=True,initial_parameters_identical=True,
-        fixed_metric_stayed_unchanged=True,learned_metric_updated=True,
+        fixed_metric_stayed_unchanged=True if fixed_metric_arms else None,
+        learned_metric_updated=True if learned_metric_arms else None,
+        fixed_metric_arms=fixed_metric_arms,learned_metric_arms=learned_metric_arms,
+        all_summaries_match_scene_rows=True,
         scope='All saved predictions and metric curves rescored; no second model inference')
     (run/'verification.json').write_text(json.dumps(checks,indent=2)+'\n')
     print(json.dumps(checks),flush=True)

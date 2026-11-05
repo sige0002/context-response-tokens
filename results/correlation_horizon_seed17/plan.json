@@ -1,0 +1,143 @@
+{
+  "config": {
+    "seed": 17,
+    "arms": [
+      "window_unweighted",
+      "span_unweighted",
+      "window_balanced",
+      "span_balanced"
+    ],
+    "steps": 1024,
+    "checkpoints": [
+      0,
+      256,
+      1024
+    ],
+    "batch": 1,
+    "clip_frames": 4,
+    "queries": 32,
+    "evaluation_queries": 128,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "model": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "precision": "CPU FP32",
+    "depth": 12,
+    "feature_transform": "Frozen pretrained final post-layernorm",
+    "supervision": "Visible target cell CE + within-cell smooth L1 + 0.1 visibility BCE; no teacher-feature loss",
+    "scope": "Factorial readout diagnostic only; no recurrent encoder or teacher model",
+    "limits": "24 training / 8 repeatedly inspected validation rendered scenes; one seed, short budget. Not an independent test or SOTA claim.",
+    "balancing": "Fixed inverse class frequencies counted on the complete planned training schedule; no validation calibration",
+    "spacing": "Same query frame and points. Window uses next 3 cached frames; span samples 3 distinct later frames with independent seed+10000 RNG.",
+    "visibility_threshold": 0.0
+  },
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "reference_run": "/home/sadasue/mywam/results/correlation_readout_seed17",
+  "reference_plan_sha256": "28fd310bd04d6bb0d2637b58bf325881979192a8f8bead2d804f5a2846498780",
+  "reference_result_sha256": "f3209c5ddc6fb5ce7b4d6659390a4b865117f045e96bdbe7f5a2815abd692457",
+  "training_coverage": {
+    "window": {
+      "visible": 91575,
+      "invisible": 6729,
+      "moving_visible_gt16": 10617,
+      "gaps": {
+        "1": 32768,
+        "2": 32768,
+        "3": 32768
+      },
+      "total": 98304,
+      "invisible_fraction": 0.068450927734375,
+      "class_weights": {
+        "visible": 0.5367403767403768,
+        "invisible": 7.304502897904592
+      },
+      "mean_gap_cached_frames": 2.0
+    },
+    "span": {
+      "visible": 83179,
+      "invisible": 15125,
+      "moving_visible_gt16": 26158,
+      "gaps": {
+        "1": 9952,
+        "2": 10560,
+        "3": 10112,
+        "4": 8928,
+        "5": 8096,
+        "6": 7104,
+        "7": 5408,
+        "8": 5216,
+        "9": 4288,
+        "10": 4416,
+        "11": 3936,
+        "12": 4512,
+        "13": 2720,
+        "14": 2208,
+        "15": 2304,
+        "16": 1856,
+        "17": 2144,
+        "18": 1408,
+        "19": 736,
+        "20": 864,
+        "21": 768,
+        "22": 512,
+        "23": 256
+      },
+      "total": 98304,
+      "invisible_fraction": 0.15385945638020834,
+      "class_weights": {
+        "visible": 0.5909183808413181,
+        "invisible": 3.2497190082644627
+      },
+      "mean_gap_cached_frames": 7.0888671875
+    }
+  },
+  "schedule_sha256": "8debe77536570d29f612a2e339e1b81fbb9e4f61e642720ccf9b5af672c33678",
+  "sources": {
+    "/home/sadasue/mywam/exploration/correlation_horizon.py": "933e3408a1ca69d6be90bdeebb9013d7d01c20b56e90ec1b70f3848f8f91a34c",
+    "exploration/correlation_readout.py": "7fea8b96f6442a2fe86b59a6d7d17f78f5fa3bc96329f91d7740be8027c6d57c",
+    "exploration/train_correlation_readout.py": "3c073f1fc946ddd51b64d75d4bcc2a3758edbad9ea1b4bf2de310f5017e77dc3",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

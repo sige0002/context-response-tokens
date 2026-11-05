@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "saved_prediction_files": 96,
+  "recounted_rows": 576,
+  "max_pck_difference": 2.9716928917622454e-08,
+  "max_mean_error_difference": 1.1444091796875e-05,
+  "max_aj_difference": 0.0,
+  "all_ground_truth_and_queries_match_original_cache": true,
+  "initial_parameters_identical": true,
+  "fixed_metric_stayed_unchanged": null,
+  "learned_metric_updated": true,
+  "fixed_metric_arms": [],
+  "learned_metric_arms": [
+    "window_unweighted",
+    "span_unweighted",
+    "window_balanced",
+    "span_balanced"
+  ],
+  "all_summaries_match_scene_rows": true,
+  "scope": "All saved predictions and metric curves rescored; no second model inference"
+}

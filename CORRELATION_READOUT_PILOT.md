@@ -89,6 +89,10 @@ RoboTAPの公式全件スコアではなく、このKubric検証部分集合上�
 この対照はまだ共通評価器へ採用せず、既存の固定学習・比較キューは変更しない。
 IROSの貢献として必要な、視覚エンコーダの精度・記憶・費用の改善は引き続き未立証である。
 
+追記：[4条件の追加診断](CORRELATION_HORIZON_DIAGNOSTIC.md)を実施した。
+時間間隔を広げてもAJは改善せず、遮蔽例の重み付けは見逃しを減らしたが誤検出を増やした。
+通常条件のスコア順位には可視性の情報が残っており、閾値0で全件可視だったことを、情報が全くない証拠とはしない。
+
 ```sh
 # リポジトリのルート。準備済みの対応特徴キャッシュを使用する。
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_correlation_readout.py

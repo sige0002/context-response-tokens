@@ -1,0 +1,65 @@
+{
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_plan_sha256": "aaf6a25b392675acbcfbf0648c3673aa92826d62cabc272cfd1adf6f90a34900",
+  "config": {
+    "seed": 17,
+    "steps": 600,
+    "batch_scenes": 4,
+    "queries": 64,
+    "evaluation_queries": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "hidden": 128,
+    "width": 64,
+    "grid": 14,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "depths": [
+      4,
+      8,
+      12
+    ],
+    "objective": "Bilinear distribution over true target cells; known visible point pairs only. No teacher-feature target.",
+    "evaluation": "Frame-zero query location given; later GT only scores; no GT correspondence as model input. Argmax cell center in normalized 256 coordinates; visibility given for scoring, not predicted.",
+    "limits": "24 training and 8 validation scenes, one seed, 200 updates per depth. Pairwise metric only; no Mamba or memory updates trained. Reappearance covers sampled frames only. Not tracking AJ, SOTA, or full-encoder gain."
+  },
+  "sources": {
+    "/home/sadasue/mywam/exploration/train_correspondence.py": "5f5108b78adfe8f35439a14fb9e30d41deb27cc0b2358d3702b233e2cfc63890",
+    "/home/sadasue/mywam/exploration/appearance_routing.py": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569",
+    "/home/sadasue/mywam/exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f"
+  }
+}

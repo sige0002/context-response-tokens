@@ -1,0 +1,62 @@
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+________ test_routed_mamba_causality_streaming_gradients_and_checkpoint ________
+
+tmp_path = PosixPath('/tmp/pytest-of-sadasue/pytest-120/test_routed_mamba_causality_st0')
+
+    @pytest.mark.skipif(not torch.cuda.is_available(), reason="Official Mamba-3 requires CUDA")
+    def test_routed_mamba_causality_streaming_gradients_and_checkpoint(tmp_path):
+        from exploration.routed_siglip import RoutedSiglip
+        torch.manual_seed(17)
+        config = SiglipVisionConfig(hidden_size=64, intermediate_size=128,
+            num_hidden_layers=2, num_attention_heads=4, image_size=32, patch_size=16)
+        model = RoutedSiglip(SiglipVisionModel(config), every=1, width=32,
+>                            metric_hidden=16, metric_width=8).cuda().eval()
+                                                               ^^^^^^
+
+exploration/test_appearance_routing.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:1098: in cuda
+    return self._apply(lambda t: t.cuda(device))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:933: in _apply
+    module._apply(fn)
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:933: in _apply
+    module._apply(fn)
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:933: in _apply
+    module._apply(fn)
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:933: in _apply
+    module._apply(fn)
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:966: in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+t = Parameter containing:
+tensor([[[[-5.0114e-02,  2.2659e-02, -5.9986e-03,  ..., -5.3809e-02,
+            3.6763e-03,  8....591e-02],
+          [ 2.4202e-02,  5.1869e-02,  1.8959e-02,  ...,  9.6609e-03,
+            9.0873e-03,  4.6588e-03]]]])
+
+>   return self._apply(lambda t: t.cuda(device))
+                                 ^^^^^^^^^^^^^^
+E   torch.AcceleratorError: CUDA error: out of memory
+E   Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+E   The CUDA driver logged these messages, which may provide useful details:
+E   Returning 2 (CUDA_ERROR_OUT_OF_MEMORY) from cuDevicePrimaryCtxRetain
+
+.venv/lib/python3.12/site-packages/torch/nn/modules/module.py:1098: AcceleratorError
+=============================== warnings summary ===============================
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:15: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    from cutlass.utils import LayoutEnum, block_copy
+
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:562: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    layout_c: cutlass.utils.LayoutEnum,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+1 failed, 4 passed, 3 warnings in 5.10s

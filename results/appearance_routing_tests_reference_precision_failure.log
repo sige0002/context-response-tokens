@@ -1,0 +1,39 @@
+....F                                                                    [100%]
+=================================== FAILURES ===================================
+________ test_routed_mamba_causality_streaming_gradients_and_checkpoint ________
+
+tmp_path = PosixPath('/tmp/pytest-of-sadasue/pytest-121/test_routed_mamba_causality_st0')
+
+    @pytest.mark.skipif(not torch.cuda.is_available(), reason="Official Mamba-3 requires CUDA")
+    def test_routed_mamba_causality_streaming_gradients_and_checkpoint(tmp_path):
+        from exploration.routed_siglip import RoutedSiglip
+        torch.manual_seed(17)
+        config = SiglipVisionConfig(hidden_size=64, intermediate_size=128,
+            num_hidden_layers=2, num_attention_heads=4, image_size=32, patch_size=16)
+        model = RoutedSiglip(SiglipVisionModel(config), every=1, width=32,
+                             metric_hidden=16, metric_width=8).cuda().eval()
+        video = torch.randn(1, 4, 3, 32, 32, device="cuda")
+        with torch.autocast("cuda", dtype=torch.bfloat16):
+            expected = model.backbone(video.flatten(0, 1)).last_hidden_state.reshape(1, 4, 4, 64)
+>           torch.testing.assert_close(model(video), expected, atol=0, rtol=0)
+E           AssertionError: Tensor-likes are not equal!
+E           
+E           Mismatched elements: 1024 / 1024 (100.0%)
+E           Greatest absolute difference: 0.021501779556274414 at index (0, 3, 3, 26)
+E           Greatest relative difference: 10.00507926940918 at index (0, 1, 2, 58)
+
+exploration/test_appearance_routing.py:57: AssertionError
+=============================== warnings summary ===============================
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:15: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    from cutlass.utils import LayoutEnum, block_copy
+
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:562: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    layout_c: cutlass.utils.LayoutEnum,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+1 failed, 4 passed, 3 warnings in 8.92s

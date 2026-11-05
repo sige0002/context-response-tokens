@@ -1,0 +1,16 @@
+{"arm": "coordinate", "step": 32, "scene": "0018", "start": 6, "loss": 0.8255830407142639, "elapsed_seconds": 47.04480147105642}
+{"arm": "coordinate", "step": 64, "scene": "0001", "start": 5, "loss": 0.4951097369194031, "elapsed_seconds": 53.17144798801746}
+{"arm": "coordinate", "step": 96, "scene": "0017", "start": 3, "loss": 0.35440370440483093, "elapsed_seconds": 57.55764321400784}
+{"arm": "coordinate", "step": 128, "scene": "0002", "start": 1, "loss": 0.287200391292572, "elapsed_seconds": 62.13318932906259}
+{"arm": "coordinate", "step": 160, "scene": "0015", "start": 8, "loss": 0.21606943011283875, "elapsed_seconds": 66.6977905620588}
+{"arm": "coordinate", "step": 192, "scene": "0013", "start": 19, "loss": 0.35272741317749023, "elapsed_seconds": 72.18366078403778}
+{"arm": "coordinate", "step": 224, "scene": "0009", "start": 19, "loss": 0.3029845356941223, "elapsed_seconds": 77.43923243007157}
+{"arm": "coordinate", "step": 256, "scene": "0003", "start": 3, "loss": 0.2497878521680832, "elapsed_seconds": 82.24493346503004}
+{"arm": "appearance", "step": 32, "scene": "0018", "start": 6, "loss": 0.8256084322929382, "elapsed_seconds": 103.86810063803568}
+{"arm": "appearance", "step": 64, "scene": "0001", "start": 5, "loss": 0.49396786093711853, "elapsed_seconds": 108.26587112003472}
+{"arm": "appearance", "step": 96, "scene": "0017", "start": 3, "loss": 0.34582820534706116, "elapsed_seconds": 112.73788019397762}
+{"arm": "appearance", "step": 128, "scene": "0002", "start": 1, "loss": 0.22924461960792542, "elapsed_seconds": 117.46578567207325}
+{"arm": "appearance", "step": 160, "scene": "0015", "start": 8, "loss": 0.2613372206687927, "elapsed_seconds": 122.87034921406303}
+{"arm": "appearance", "step": 192, "scene": "0013", "start": 19, "loss": 0.3856022357940674, "elapsed_seconds": 127.59236140304711}
+{"arm": "appearance", "step": 224, "scene": "0009", "start": 19, "loss": 0.19499114155769348, "elapsed_seconds": 133.03599982406013}
+{"arm": "appearance", "step": 256, "scene": "0003", "start": 3, "loss": 0.22720086574554443, "elapsed_seconds": 138.10450964805204}

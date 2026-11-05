@@ -1,0 +1,1549 @@
+{
+  "scope": "Deterministic sample of 256 official validation clips; header durations, not all clips",
+  "seed": 17,
+  "samples": 256,
+  "min_seconds": 1.416,
+  "median_seconds": 4.083,
+  "max_seconds": 11.083,
+  "p10_seconds": 2.666,
+  "p90_seconds": 5.583,
+  "elapsed_seconds": 0.25911588000599295,
+  "clips": [
+    {
+      "id": "188722",
+      "seconds": 3.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "143249",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "74814",
+      "seconds": 2.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "139972",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "215517",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "140034",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "51775",
+      "seconds": 2.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "3879",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "98360",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "55735",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26435",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "4247",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "172000",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "211636",
+      "seconds": 2.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "89079",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "43615",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "4946",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "48500",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "71277",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "168331",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "27794",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "53648",
+      "seconds": 5.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "95793",
+      "seconds": 5.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "157721",
+      "seconds": 1.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "85558",
+      "seconds": 1.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "200108",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "47417",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "88187",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "140315",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "10108",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "63424",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "24335",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "192399",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "119550",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "195002",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "13421",
+      "seconds": 2.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "46569",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "46550",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "57009",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "165549",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "158336",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26534",
+      "seconds": 2.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "15990",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "164510",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "20457",
+      "seconds": 2.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "150483",
+      "seconds": 3.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "197908",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "193838",
+      "seconds": 5.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "80221",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "100034",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "67358",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "55519",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "183079",
+      "seconds": 5.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "161316",
+      "seconds": 3.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "148014",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "208683",
+      "seconds": 2.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "197952",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "180734",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "196305",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "142613",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "84464",
+      "seconds": 2.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "27945",
+      "seconds": 6.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "176086",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "117431",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "102948",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "53972",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "103345",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "37237",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "112684",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "195051",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "187940",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "210291",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "46997",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "212841",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "162789",
+      "seconds": 2.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26579",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "65636",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "80258",
+      "seconds": 4.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "56258",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "150230",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "205071",
+      "seconds": 3.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "152168",
+      "seconds": 4.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "113120",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "156929",
+      "seconds": 3.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "12448",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "139346",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "110884",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "20656",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "50279",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "106900",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "31720",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "43158",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "95234",
+      "seconds": 5.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "169724",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "63145",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "135948",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "61276",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "207851",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "167570",
+      "seconds": 5.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "153678",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26293",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "139805",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "8593",
+      "seconds": 4.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "98211",
+      "seconds": 3.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "80272",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "86025",
+      "seconds": 4.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "60672",
+      "seconds": 3.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "88527",
+      "seconds": 4.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "57849",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "20925",
+      "seconds": 2.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "176629",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "19903",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "106497",
+      "seconds": 3.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "31658",
+      "seconds": 3.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "208112",
+      "seconds": 6.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "145492",
+      "seconds": 5.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "179131",
+      "seconds": 3.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "205729",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "62758",
+      "seconds": 5.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "54367",
+      "seconds": 2.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "38565",
+      "seconds": 5.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "132337",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "170820",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "206987",
+      "seconds": 3.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "37054",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "203130",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "80339",
+      "seconds": 4.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "146944",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "100574",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "157769",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "89248",
+      "seconds": 5.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "22852",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "164212",
+      "seconds": 2.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "115580",
+      "seconds": 2.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "93520",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "197066",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "75760",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "152641",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "165992",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "112527",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "148533",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "143703",
+      "seconds": 1.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "197747",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "173384",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "193243",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "124696",
+      "seconds": 3.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "110362",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "14408",
+      "seconds": 5.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "170484",
+      "seconds": 3.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "66519",
+      "seconds": 2.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "162359",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "91945",
+      "seconds": 4.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "206263",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "139405",
+      "seconds": 11.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "155369",
+      "seconds": 3.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "187530",
+      "seconds": 5.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "158901",
+      "seconds": 5.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "137966",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "169062",
+      "seconds": 4.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "141570",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "165871",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "99723",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "137875",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "153581",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "186512",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "124125",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "116350",
+      "seconds": 2.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "164587",
+      "seconds": 1.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "15627",
+      "seconds": 3.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "49808",
+      "seconds": 5.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "97076",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "17337",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "116206",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "215894",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "55424",
+      "seconds": 5.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "201416",
+      "seconds": 5.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "5690",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "168948",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "149552",
+      "seconds": 3.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "25654",
+      "seconds": 4.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "111604",
+      "seconds": 2.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "58339",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "31654",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "180161",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "104745",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "133030",
+      "seconds": 2.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "205685",
+      "seconds": 5.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "140875",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "57188",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "141632",
+      "seconds": 4.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "83202",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "211062",
+      "seconds": 5.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "135024",
+      "seconds": 5.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "81368",
+      "seconds": 3.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "163038",
+      "seconds": 5.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "87227",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "164457",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "69444",
+      "seconds": 2.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "177680",
+      "seconds": 3.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "97822",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "88320",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "62498",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "18893",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "22039",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "68409",
+      "seconds": 5.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "86126",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "2059",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "188511",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "171099",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "182774",
+      "seconds": 6.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "74576",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "46778",
+      "seconds": 3.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "146598",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "126256",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "120745",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "94733",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "157404",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "39980",
+      "seconds": 2.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "185958",
+      "seconds": 3.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "58953",
+      "seconds": 3.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "133190",
+      "seconds": 2.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "211857",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "107874",
+      "seconds": 5.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "162595",
+      "seconds": 3.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "94333",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "158990",
+      "seconds": 5.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "18307",
+      "seconds": 4.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "177251",
+      "seconds": 3.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "67939",
+      "seconds": 2.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "153645",
+      "seconds": 6.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "196675",
+      "seconds": 4.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "178377",
+      "seconds": 4.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26748",
+      "seconds": 4.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "181578",
+      "seconds": 2.5,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "74394",
+      "seconds": 5.666,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "113679",
+      "seconds": 4.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "61094",
+      "seconds": 2.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "182435",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "34480",
+      "seconds": 3.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "152731",
+      "seconds": 4.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "117127",
+      "seconds": 4.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "24984",
+      "seconds": 4.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "26464",
+      "seconds": 5.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "139759",
+      "seconds": 3.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "172201",
+      "seconds": 3.75,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "68882",
+      "seconds": 3.25,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "107944",
+      "seconds": 4.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "29454",
+      "seconds": 6.0,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "169110",
+      "seconds": 5.166,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "161541",
+      "seconds": 5.333,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "156899",
+      "seconds": 2.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "73441",
+      "seconds": 5.083,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "112309",
+      "seconds": 3.916,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "190339",
+      "seconds": 4.416,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "130396",
+      "seconds": 2.583,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    },
+    {
+      "id": "191667",
+      "seconds": 3.833,
+      "source": "container_duration",
+      "average_rate": "12/1"
+    }
+  ]
+}

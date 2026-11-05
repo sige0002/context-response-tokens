@@ -1,0 +1,11 @@
+{"event": "annotation_audit", "videos": 25}
+{"event": "annotation_audit", "videos": 50}
+{"event": "annotation_audit", "videos": 75}
+{"event": "annotation_audit", "videos": 100}
+{"event": "annotation_audit", "videos": 125}
+{"event": "annotation_audit", "videos": 150}
+{"event": "annotation_audit", "videos": 175}
+{"event": "annotation_audit", "videos": 200}
+{"event": "annotation_audit", "videos": 225}
+{"event": "annotation_audit", "videos": 250}
+{"videos": 265, "rgb_clusters": 257, "tracks": 11592, "query_tracks": 11592, "frames": {"count": 265, "min": 52, "median": 249.0, "p90": 286.6, "max": 1337}, "reappearance_gap": {"count": 8554, "min": 1, "median": 27.0, "p90": 114.0, "max": 863}, "query_to_end": {"count": 11592, "min": 1, "median": 225.0, "p90": 273.0, "max": 1336}, "trailing_occlusions": {"count": 3944, "min": 1, "median": 67.0, "p90": 220.0, "max": 1254}, "example_key_sets": [["occluded", "points", "video"]], "gap_at_least": {"1": {"events": 8554, "tracks": 4458, "videos": 260, "rgb_clusters": 252}, "8": {"events": 7107, "tracks": 4153, "videos": 258, "rgb_clusters": 250}, "24": {"events": 4630, "tracks": 3254, "videos": 248, "rgb_clusters": 240}, "64": {"events": 2161, "tracks": 1689, "videos": 197, "rgb_clusters": 189}, "128": {"events": 649, "tracks": 530, "videos": 98, "rgb_clusters": 96}, "256": {"events": 116, "tracks": 99, "videos": 15, "rgb_clusters": 15}, "512": {"events": 22, "tracks": 22, "videos": 7, "rgb_clusters": 7}}}

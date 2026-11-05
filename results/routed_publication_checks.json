@@ -1,0 +1,119 @@
+{
+  "scope": "Source/result provenance and complete annotation-audit identity, not accuracy verification",
+  "source_checks": [
+    {
+      "report": "results/correspondence_cache_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/cache_correspondence.py",
+      "sha256": "254646fc50ee2b671506061bbb520614d5082fd4abecbd41d65be0eb7b906d35"
+    },
+    {
+      "report": "results/correspondence_cache_seed17/plan.json",
+      "source": "/home/sadasue/mywam/kubric_data.py",
+      "sha256": "cd4dc5ca3e8e7917d86ab5c714617d5a64c80b7d0d43a1800d6f42437a3a15fa"
+    },
+    {
+      "report": "results/correspondence_cache_seed17/plan.json",
+      "source": "/home/sadasue/mywam/temporal_siglip.py",
+      "sha256": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+    },
+    {
+      "report": "results/correspondence_cache_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/oracle_transport.py",
+      "sha256": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f"
+    },
+    {
+      "report": "results/correspondence_metric_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/train_correspondence.py",
+      "sha256": "5f5108b78adfe8f35439a14fb9e30d41deb27cc0b2358d3702b233e2cfc63890"
+    },
+    {
+      "report": "results/correspondence_metric_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/appearance_routing.py",
+      "sha256": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569"
+    },
+    {
+      "report": "results/correspondence_metric_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/oracle_transport.py",
+      "sha256": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/train_routed_pilot.py",
+      "sha256": "4c9583ec8cc7ebd92558d061f6ab4e5fce10939fe6697c040fa91a1bc77b4b95"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/routed_siglip.py",
+      "sha256": "9fe78f5a873e68bcfe12806376ef64eb99a807308f32fa8d0a8fed8171ec5af6"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/appearance_routing.py",
+      "sha256": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/temporal_siglip.py",
+      "sha256": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/point_readout.py",
+      "sha256": "ee7c3be5b2388b18c442a96df96f386df4e2ee42663662fb7fc70570c294f91d"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/exploration/oracle_transport.py",
+      "sha256": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/pyproject.toml",
+      "sha256": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90"
+    },
+    {
+      "report": "results/routed_pilot_seed17/plan.json",
+      "source": "/home/sadasue/mywam/uv.lock",
+      "sha256": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+    },
+    {
+      "report": "results/routed_siglip_224_qualification.json",
+      "source": "/home/sadasue/mywam/exploration/check_routed_siglip.py",
+      "sha256": "9de298a1fc5a7e3521aab40a8eb41c496c3e8771dac80f5f38e6ceefbbb6830a"
+    },
+    {
+      "report": "results/routed_siglip_224_qualification.json",
+      "source": "exploration/routed_siglip.py",
+      "sha256": "9fe78f5a873e68bcfe12806376ef64eb99a807308f32fa8d0a8fed8171ec5af6"
+    },
+    {
+      "report": "results/routed_siglip_224_qualification.json",
+      "source": "exploration/appearance_routing.py",
+      "sha256": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569"
+    },
+    {
+      "report": "results/routed_siglip_224_qualification.json",
+      "source": "temporal_siglip.py",
+      "sha256": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+    },
+    {
+      "report": "results/robotap_memory_support.json",
+      "source": "/home/sadasue/mywam/exploration/audit_robotap_memory.py",
+      "sha256": "86527adc5b977ffcd930b2342fd512b29111473aa95b134468d465424acb35aa"
+    },
+    {
+      "report": "results/robotap_memory_support.json",
+      "source": "robotap_data.py",
+      "sha256": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007"
+    },
+    {
+      "report": "results/robotap_memory_support.json",
+      "source": "data/robotap/extraction.json",
+      "sha256": "d464a3f3d9d16853858cdde6b28e4bc9a62f3b00ec17da81412955dcfaea0864"
+    }
+  ],
+  "robotap_matching_videos": 265,
+  "robotap_frames": 72050,
+  "documentation_links": "all exist",
+  "status": "passed"
+}

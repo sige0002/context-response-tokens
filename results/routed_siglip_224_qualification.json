@@ -1,0 +1,65 @@
+{
+  "model": "google/siglip2-base-patch16-224",
+  "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "scene": "0136",
+  "frames": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "shape": [
+    1,
+    4,
+    196,
+    768
+  ],
+  "architecture": {
+    "every": 4,
+    "width": 256,
+    "state_size": 64,
+    "freeze_backbone": true,
+    "placement": "interleaved",
+    "metric_hidden": 128,
+    "metric_width": 64,
+    "routing": "appearance"
+  },
+  "parameters": 95710707,
+  "trainable_parameters": 2826483,
+  "metric_checkpoint_sha256": "6fd0fe80ba36e9caeedfc05d517597fd5b747d19b9e0f4376537945c8cefc15f",
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_routed_siglip.py": "9de298a1fc5a7e3521aab40a8eb41c496c3e8771dac80f5f38e6ceefbbb6830a",
+    "exploration/routed_siglip.py": "9fe78f5a873e68bcfe12806376ef64eb99a807308f32fa8d0a8fed8171ec5af6",
+    "exploration/appearance_routing.py": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb"
+  },
+  "initial_image_path_max_error": 0.0,
+  "causal_prefix_max_error": 0.0,
+  "stream_max_error": 0.015547752380371094,
+  "chunk_max_error": 0.005290985107421875,
+  "state_bytes": [
+    79177728,
+    79177728,
+    79177728,
+    79177728
+  ],
+  "cache_contract": "one immutable FP32 descriptor plus all four official Mamba-3 buffers per adapter",
+  "history_effect_max": 1.4453411102294922,
+  "gradient_norms": {
+    "3": {
+      "metric": 0.0007878690958023071,
+      "mamba": 0.0047252727672457695
+    },
+    "7": {
+      "metric": 0.00022670312318950891,
+      "mamba": 0.0009568207897245884
+    },
+    "11": {
+      "metric": 4.35189540439751e-05,
+      "mamba": 0.00016614457126706839
+    }
+  },
+  "elapsed_seconds": 39.715087365941145,
+  "status": "passed",
+  "limits": "Pretrained SigLIP plus briefly trained correspondence metric; random temporal weights and manually activated residual gains. Checks implementation only, not recognition performance or deployment latency. Main learner running concurrently."
+}

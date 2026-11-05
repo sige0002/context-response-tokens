@@ -1,0 +1,70 @@
+{
+  "config": {
+    "seed": 17,
+    "arms": [
+      "coordinate",
+      "appearance"
+    ],
+    "steps_per_arm": 256,
+    "batch": 1,
+    "clip_frames": 4,
+    "queries": 32,
+    "evaluation_queries": 128,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "train": [
+      "0000",
+      "0001",
+      "0002",
+      "0003",
+      "0004",
+      "0005",
+      "0006",
+      "0007",
+      "0008",
+      "0009",
+      "0010",
+      "0011",
+      "0012",
+      "0013",
+      "0014",
+      "0015",
+      "0017",
+      "0018",
+      "0019",
+      "0021",
+      "0022",
+      "0023",
+      "0024",
+      "0025"
+    ],
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "backbone": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "precision": "FP32 spatial / BF16 temporal and readout",
+    "scope": "Matched short-budget pilot only; interleaved trainable adapters and common full point head. No backbone fine-tuning or distillation. No score-based stopping or winner selection.",
+    "limits": "24 train / 8 validation rendered scenes, one seed, 256 updates each. Four-frame clips versus 24-frame streaming evaluation. Metric validation scenes have already been inspected in exploration. Neither convergence nor SOTA evidence; no AJ or unseen real-video claim."
+  },
+  "metric_run": "/home/sadasue/mywam/results/correspondence_metric_seed17",
+  "metric_final_sha256": "f9cc89ffc45b866455a9d476e9c072f316714920191172b68563a124105fabf8",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "sources": {
+    "/home/sadasue/mywam/exploration/train_routed_pilot.py": "4c9583ec8cc7ebd92558d061f6ab4e5fce10939fe6697c040fa91a1bc77b4b95",
+    "/home/sadasue/mywam/exploration/routed_siglip.py": "9fe78f5a873e68bcfe12806376ef64eb99a807308f32fa8d0a8fed8171ec5af6",
+    "/home/sadasue/mywam/exploration/appearance_routing.py": "9005f999b87974f81648e7c24b56b944b1b4c7ca1672ee443067e99cd6c3c569",
+    "/home/sadasue/mywam/temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "/home/sadasue/mywam/point_readout.py": "ee7c3be5b2388b18c442a96df96f386df4e2ee42663662fb7fc70570c294f91d",
+    "/home/sadasue/mywam/exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "/home/sadasue/mywam/pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "/home/sadasue/mywam/uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

@@ -1,0 +1,13 @@
+.....                                                                    [100%]
+=============================== warnings summary ===============================
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:15: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    from cutlass.utils import LayoutEnum, block_copy
+
+exploration/test_appearance_routing.py::test_routed_mamba_causality_streaming_gradients_and_checkpoint
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:562: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    layout_c: cutlass.utils.LayoutEnum,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+5 passed, 3 warnings in 40.87s

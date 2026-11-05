@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "method": "Direct per-window sums from captured ADT; independent of prefix-sum implementation, not new model inference",
+  "quantile_errors": {
+    "3": {
+      "max_quantile_error": 0.0
+    },
+    "7": {
+      "max_quantile_error": 0.0
+    },
+    "11": {
+      "max_quantile_error": 0.0
+    }
+  },
+  "upstream_commit": "e9594ce1c732d97440f0332fdc43170a2294dbfa",
+  "installed_sources_match_vendor": true,
+  "upstream_source_sha256": {
+    "modules/mamba3.py": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c",
+    "ops/triton/mamba3/mamba3_siso_combined.py": "410ad57555b5841fba7bd76fdafdc3ddf82741176489c3e3493f5c6f3c0c6012",
+    "ops/triton/mamba3/mamba3_siso_fwd.py": "bfcf75d9192e0f90ca543eb33a5b5f2b50d92ad2a60f2d5bfab1dc7081b4da33"
+  },
+  "summary_sha256": "616ef5a93e3adcf5b90fdb5744162c9f95cd459e22f67f2431d4790c3b74dabb",
+  "raw_adt_sha256": "ab15ee70dd135af04b5581970b14ddcdc53e324fa00bd5ee92bfc00814339fe7"
+}

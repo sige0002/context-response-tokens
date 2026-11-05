@@ -1,0 +1,10 @@
+{"frames": 25}
+{"frames": 50}
+{"frames": 75}
+{"frames": 100}
+{"frames": 125}
+{"frames": 150}
+{"frames": 175}
+{"frames": 200}
+{"frames": 225}
+{"passed": true, "summary_sha256": "616ef5a93e3adcf5b90fdb5744162c9f95cd459e22f67f2431d4790c3b74dabb", "adt_sha256": "ab15ee70dd135af04b5581970b14ddcdc53e324fa00bd5ee92bfc00814339fe7", "scope": "CPU recount of captured gate statistics; no independent GPU inference or recognition scoring"}

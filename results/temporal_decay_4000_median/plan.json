@@ -1,0 +1,89 @@
+{
+  "checkpoint": {
+    "step": 4000,
+    "epoch": 0,
+    "cursor": 128000,
+    "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/videos_trainval/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 4,
+      "accumulation": 8,
+      "steps": 20000,
+      "warmup": 1000,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 1000,
+      "save_every": 500,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "reproducibility": {
+        "deterministic_algorithms": true,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_allow_tf32": false,
+        "matmul_allow_tf32": false,
+        "cublas_workspace_config": ":4096:8"
+      },
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+        "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "val_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac"
+    }
+  },
+  "checkpoint_path": "/home/sadasue/mywam/results/temporal_feature_probe_seed17_v1/checkpoint.pt",
+  "video": {
+    "selection": "median",
+    "id": "gear_v2_4-wrist_back_rgb_img-1",
+    "frames": 245,
+    "video_sha256": "5aaa73f9f99c60bc6475520ca4c874a81f7f6ac92f7f457ef7a1044435f428d1",
+    "shard": "robotap_split4.pkl"
+  },
+  "lags": [
+    1,
+    8,
+    32,
+    128,
+    244
+  ],
+  "prior_plan_sha256": "2d720a6f0ad1e70081e29279aea8d23dca3be0b4738751c42e019ec156f50cec",
+  "priority_plan_sha256": "2cc915986c3024e1f96370934c8157a93628fd6830b5cf797b4ab70cd122dd41",
+  "source_sha256": {
+    "exploration/inspect_temporal_decay.py": "7404092cf216d33aaaca689a18dbc72cd376f6b99ed7f4fc6e0f491fb66732f8",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "robotap_data.py": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "upstream_module_sha256": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c",
+  "scope": "One real RGB sequence, one archived checkpoint, conditional SSM-matrix multiplier only",
+  "limitations": [
+    "Not recognition accuracy or information retention",
+    "Inputs and other state components held fixed in the homogeneous propagation interpretation",
+    "Nonlinear effects via other layers, angles, previous K/V and output gates are not included",
+    "Coordinates, heads and overlapping windows are not independent samples",
+    "GPU shared with training; no speed or memory benchmark"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-05",
+  "egostream": {
+    "paper": "https://arxiv.org/html/2605.31557v2",
+    "site": "https://saroo25.github.io/Egostream/",
+    "repository_commit": "8cb0dab06659a56a7de75b88770f31eecec17944",
+    "observed_site_status": "GitHub (coming soon)",
+    "repository_contains": "project website, not benchmark annotations or inference code",
+    "decision": "Protocol fits evidence-to-query retention; cannot execute from currently located public artifacts"
+  },
+  "ovo": {
+    "commit": "c34093f9a072d93f9e1c6b923446dfba71f4528e",
+    "audit_sha256": "6483920df04f1b94a79ab87d9813dd062aa9b9c7df4c0c9133006279f8b47b21",
+    "readme_reported_queries": 3100,
+    "annotation_expanded_queries": 3035,
+    "scorer": "https://github.com/JoeLeelyf/OVO-Bench/blob/c34093f9a072d93f9e1c6b923446dfba71f4528e/utils/OVOBenchScore.py",
+    "scorer_comparison": "ground_truth_letter in response_string",
+    "scorer_average": "mean of task accuracies within category",
+    "decision": "Candidate backward-recognition application; not an evidence-distance retention curve without additional annotation"
+  },
+  "initial_audit_failure": {
+    "assumption": "answer text must exactly equal options[gt]",
+    "observed_exact_mismatches": 420,
+    "resolution": "Record discrepancies; preserve upstream gt scoring; do not treat paraphrases as proven annotation errors"
+  },
+  "scoring_contract_examples": [
+    {
+      "ground_truth": "C",
+      "response": "C",
+      "upstream_substring_accepts": true,
+      "single_choice_contract_accepts": true
+    },
+    {
+      "ground_truth": "C",
+      "response": "A",
+      "upstream_substring_accepts": false,
+      "single_choice_contract_accepts": false
+    },
+    {
+      "ground_truth": "C",
+      "response": "ABCDE",
+      "upstream_substring_accepts": true,
+      "single_choice_contract_accepts": false
+    }
+  ],
+  "scope": "Metadata and source inspection only. No upstream code executed, no videos downloaded, no model QA evaluated.",
+  "required_bridge": "Use a common separately trained language readout for all frozen encoder conditions; SSv2 classifier is not a QA model. Do not train on benchmark evaluation labels."
+}

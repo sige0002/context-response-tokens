@@ -82,6 +82,52 @@ SDQESは追加の言語読み出しとイベント開始の教師を必要とす
 現行SSv2分類器をそのまま適用できるベンチマークではない。
 現段階では採用候補の調査にとどめ、データ取得や別タスクの学習は開始しない。
 
+## 公開注釈まで確認した追加候補
+
+[EgoStream v2](https://arxiv.org/html/2605.31557v2)は、証拠の観測完了から質問までの時間と、
+答えが引き続き有効な期間を区別する。質問は読み取り時だけ渡し、観測中は質問を知らずに記憶を作る。
+この評価原理は今回の目的に合う。ただし2026-11-05に確認した[公式サイト](https://saroo25.github.io/Egostream/)は
+GitHubを公開予定と表示し、[取得できたリポジトリの固定版](https://github.com/saroo25/Egostream/tree/8cb0dab06659a56a7de75b88770f31eecec17944)は
+サイトのソースのみだった。現時点で実行できる評価として採用したとは言わない。
+
+代わりに公開済み[OVO-Benchの注釈](https://github.com/JoeLeelyf/OVO-Bench/blob/c34093f9a072d93f9e1c6b923446dfba71f4528e/data/ovo_bench_new.json)を
+918,443 bytes取得し、Git blob hashを照合して全件を監査した。
+[監査コード](exploration/audit_ovo_memory.py)と[実行結果](results/long_memory_benchmark_audit/ovo_with_baselines.json)を保存した。
+元動画や注釈本文はこのリポジトリへ再配布しない。
+
+| 固定版の内容 | 実際に数えた値 |
+| --- | ---: |
+| 元動画のパス | 644 |
+| 注釈レコード | 1,640 |
+| Forwardの各質問時刻まで展開した評価回数 | 3,035 |
+| Backward Tracing | 631件・275動画 |
+| Real-Time Visual Perception | 837件 |
+| Forward Active Responding | 1,567回 |
+
+[README](https://github.com/JoeLeelyf/OVO-Bench/blob/c34093f9a072d93f9e1c6b923446dfba71f4528e/README.md)の3,100件と
+固定版の展開数は一致しないため、論文・評価では実際に使った版と数を明記する。
+Backwardの専用フィールドには質問時刻はあるが、証拠区間や答えの有効期限はない。
+質問時刻が193秒でも、193秒前の情報を覚えたという意味にはならない。
+現行注釈だけから証拠距離ごとの忘却曲線を作らない。
+
+Backwardの選択肢数は2〜5個で、ランダム選択の期待値も一律25%ではない。
+3タスクを同じ重みで平均すると、一様ランダム選択の期待値は26.84%、
+常に最初の選択肢を選ぶ参照値は34.86%だった。これは注釈からの計算で、モデルの成績ではない。
+公式のBackward平均はタスク平均なので、全質問を一括平均した36.29%とは区別する。
+
+採点にも注意が必要である。[固定版の採点実装](https://github.com/JoeLeelyf/OVO-Bench/blob/c34093f9a072d93f9e1c6b923446dfba71f4528e/utils/OVOBenchScore.py)は
+正解文字が応答文字列に含まれるかを見る。複数候補を列挙した応答を正解に数えないよう、
+接続時には一つの選択肢IDから一文字だけを出力し、厳密な一致も別に集計する必要がある。
+自由記述の`answer`と`options[gt]`が完全一致しない420件も記録した。
+言い換え・句読点の差を含むため、420件の誤ラベルとは扱わず、元の`gt`を変更していない。
+[根拠と最初の監査失敗の記録](results/long_memory_benchmark_audit/evidence.json)を参照。
+
+**採否：** OVOのBackwardは過去に関する認識の応用評価候補に残す。
+証拠距離を制御した長期保持評価としては、現行注釈だけでは採用しない。
+いずれのQA課題も、現在の174分類器では解けず、別データで学習する共通の言語読み出しが必要になる。
+視覚エンコーダを比較する際は読み出し・教師・学習量を揃え、評価用QAを学習へ混ぜない。
+この監査によって新しいQA学習や大容量の動画取得を自動的に追加せず、既存の時間Attention比較を継続する。
+
 ## 長期記憶の主張に必要な追加条件
 
 長い動画で固定容量の状態を更新できることは、遠い過去を覚えられることと異なる。
@@ -110,4 +156,13 @@ uv run --locked python -m exploration.evaluate_video_history \
   --output results/new_video_history_intervention
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.verify_video_history \
   --run results/new_video_history_intervention
+```
+
+OVO注釈の監査は、上記の固定版JSONを提供元から取得してから実行する。
+`--annotations`はそのファイルへのパス。内容のblob hashが違う版は拒否する。
+
+```sh
+uv run --locked python -m exploration.audit_ovo_memory \
+  --annotations results/long_memory_benchmark_audit/raw/ovo_bench_new.json \
+  --output results/new_ovo_annotation_audit.json
 ```

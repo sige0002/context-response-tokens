@@ -1,0 +1,38 @@
+{
+  "scope": "Synthetic reporting and live unfinished-state refusal; no actual control results",
+  "tests_passed": 18,
+  "test_log_sha256": "cdf51e5c680baeb49e2b88f7c365e2d38bc9bd2601753b595585fb2e3097055a",
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "paper.windowed_tables",
+    "collect",
+    "--output",
+    "results/paper_windowed_tables_live_rejected"
+  ],
+  "returncode": 1,
+  "actual_refusal": "ValueError: recognition control is incomplete; no result tables may be generated",
+  "output_created": false,
+  "renderer_sha256": "0a974ad3b83319fce70ebd2bad490c529e1df6b2aa6a6f910e498b86f63fe51e",
+  "test_source_sha256": "02c7ada9c8f49fc54bfb580d67e470a0f0238af70ecff4cc71906f45b057b65a",
+  "fixture_evidence_sha256": "ff1b9d36d56207f1674a14e97941e1647143f9cf6e83052bdb2cd3fab81f4ee8",
+  "layout": {
+    "synthetic_only": true,
+    "tables": 9,
+    "pages": 4,
+    "all_pages_visually_inspected": true,
+    "score_tables_use_two_columns": true,
+    "all_fonts_embedded": true,
+    "embedded_fonts": 2,
+    "tex_sha256": "7d7c9d28faf70d165d4fb485b49cf63f307e9cca1e05524ed1e8ea24a4bb2bb5",
+    "pdf_sha256": "7477426ad79f2f941949055d001fd420f60cc61a71ee21c4681235dff25e2b91",
+    "log_sha256": "44e5417f063807f4bd0a13b601b255dca434bcedfb81b9ff578cd41709ff8322",
+    "build_log_sha256": "2a33270b1cca4963b926fac0b5a76b24b9f6d79000fd2f32389eb3eefb9e75db",
+    "overfull_boxes": false,
+    "manuscript_unchanged": true,
+    "actual_results_rendered": false
+  }
+}

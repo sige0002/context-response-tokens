@@ -108,6 +108,51 @@ uv run --locked python -m paper.final_tables render \
 [確認記録](../results/paper_final_tables_qualification.json)の実データでの検査は、未完了時の拒否までである。
 **完了した全実験からの収集成功経路は、実験完了後に実行・検証する必要がある。**
 
+## 固定窓の保持診断と費用表
+
+[windowed_tables.py](windowed_tables.py)は、固定窓Attentionの対照を別の結果表へ取り込む。
+上記の全24,777動画の主比較とは分け、人工的に後続画像を追加した348動画の診断として表示する。
+Mamba・全履歴Attention・W=8・32・128について、3 seedの正解率と対応する差を保存する。
+`full_memory`、履歴を消す`suffix_only`、証拠特徴をそのまま保存する`saved_evidence`の全条件を含める。
+差はpercentage point、ばらつきは3 seedの標本標準偏差で、有意差や信頼区間とは呼ばない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m paper.windowed_tables collect \
+  --recognition results/windowed_delayed_action_queue_v1 \
+  --cost results/windowed_attention_cost_queue_v1 \
+  --output paper/generated/windowed
+```
+
+両キューが正常に完了している必要がある。元の特徴・読み出し・checkpointと測定記録を用いて、
+既存の検証器で認識の再計数と費用の再集計を行い、保存済み集計との一致を確認する。
+費用はseed=42の同じ最終重み、3実動画・5巡の測定で、以前の3巡の記録を混ぜない。
+GPU推論は再実行しない。実結果の収集成功経路は、先行実験の完了後に確認する必要がある。
+
+| 出力 | 内容 |
+| --- | --- |
+| `windowed_{condition}_scores.tex` | 3条件の各遅延における5方式の診断正解率。幅があるため`table*`に配置する |
+| `windowed_{condition}_differences.tex` | 各窓長との対応差。Mambaとの差と全履歴Attentionとの差を別々に示す |
+| `windowed_cost_{shortest,median,longest}.tex` | 3動画のGPU時間、前処理・転送込み時間、状態容量、PyTorchピーク割当量 |
+| `windowed_seed_differences.csv` | 全126組の条件・遅延・窓長・seedと、個別の正解率・対応差 |
+| `windowed_result_bundle.json`・`evidence.json` | 検証済み集計、参照hash、表のhashと表示範囲 |
+
+費用表の時間ビンは上記の主比較と同じ32〜51、128〜244、256〜1,336である。
+状態量とPyTorchピークはMiB表示とする。最大128観測の遅延はW=128の3層モデルの最大到達範囲382を超えず、
+この表だけで自然動画の長期記憶やロボット成功率を主張しない。
+
+```sh
+uv run --locked python -m paper.windowed_tables render \
+  --bundle paper/generated/windowed/windowed_result_bundle.json \
+  --output paper/generated/windowed_rerender
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q paper/test_windowed_tables.py
+```
+
+`render`はbundleの数値整合性を検査する処理で、元の重み・動画・測定記録の真正性は再検証しない。
+未完了時の出力拒否と、合成記録を使う18件の検査が通過した。
+9表をIEEE書式の4ページへ配置し、全ページの表示とフォント埋め込み、はみ出しがないことを確認した。
+[確認記録](../results/paper_windowed_tables_qualification.json)は表の生成処理と合成データでの表示検査に限る。
+合成PDFや数値は研究原稿へ取り込まず、`main.tex`と従来の結果表は変更していない。
+
 ## 書式の出典
 
 [PaperCeptの公式LaTeX案内](https://ras.papercept.net/conferences/support/tex.php)が配布する

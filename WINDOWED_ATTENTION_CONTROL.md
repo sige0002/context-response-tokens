@@ -215,3 +215,42 @@ uv run --locked python -m exploration.run_windowed_delayed_action \
 
 同じ実験計画のキューを重複起動できないようロックする。途中まで作成された結果は自動で上書きせず、原因を確認する。
 このキューには費用測定を含めておらず、固定窓Attentionとの速度・総メモリ比較は別途必要である。
+
+## 固定窓を含む速度・メモリ測定の準備
+
+[測定コード](exploration/benchmark_windowed_attention.py)と
+[3実動画の計画](results/windowed_cost_plan_v1.json)を追加した。
+既存の費用比較と同じ52・245・1,337フレームのRGB動画を全フレーム処理する。
+Mamba、全履歴のバッファ版Attention、W=8・32・128の固定窓Attentionを比較する。
+MambaとAttentionには、それぞれseed=42の20,000更新時の最終重みを使う。
+4つのAttention方式は同じAttention重みを共有する。
+
+各方式は1回のウォームアップ後に5回測定する。実行順を巡回させ、5方式が各順番に1回ずつ来るようにする。
+既存の3回測定の値をこの比較へ流用せず、5方式を同じ測定セッションで取り直す。
+入力は224、batch=1、出力は現在画像の196×768特徴で、分類器は計時しない。
+測定中にGPUへ置くエンコーダは1個とし、方式間の重み転送・動画デコード・数値照合は計時から除く。
+前処理と入力転送を含むパイプライン時間も、モデル時間と分けて保存する。
+
+計時前には、各動画の全フレームで全履歴の元実装とバッファ版を照合する。
+各固定窓についても、時刻順にK/Vを切り詰める参照と特徴を照合する。
+全履歴対照の最大絶対差の許容値は1e-5、固定窓のBF16警戒値はGPU数値検査と同じ最大絶対差0.125・相対L2差0.005とする。
+超過した結果を保存して停止する。固定窓と全履歴の出力を一致させる検査ではなく、各方式が意図した計算を行うかの検査である。
+確保したK/V容量とCPU時刻情報、PyTorchが追跡するピーク使用量を区別して記録する。
+
+[CPU検査17件](results/windowed_cost_cpu_tests.log)が通過した。
+小型SigLIPによる19観測の参照照合、処理失敗時の元の演算への復帰、行や容量の取り違え、
+比較キューの未完了・結果改変・条件不足の拒否を検査した。
+[実際の起動前確認](results/windowed_cost_preparation.json)でも、主学習のGPU使用を検出して停止し、
+CUDAの初期化や測定出力の作成は起こらなかった。
+GPUが一時的に空いていても先行する認識比較キューが未完了なら開始しない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_windowed_cost.py
+uv run --locked python -m exploration.benchmark_windowed_attention \
+  --selection shortest --output results/new_windowed_cost_shortest
+```
+
+後半の実行には、既存の学習・比較列、GPU数値検査、固定窓の認識比較キューの正常完了が必要である。
+`--selection`には`shortest`、`median`、`longest`を指定し、毎回新しい出力先を使う。
+費用測定の自動起動と結果の独立再計数への接続は未完了で、GPU測定はまだ予約・実行していない。
+現時点では速度や総メモリの優位性を報告できない。認識保持は別途の遅延保持結果と合わせて判断する。

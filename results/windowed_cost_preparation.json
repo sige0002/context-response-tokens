@@ -1,0 +1,38 @@
+{
+  "scope": "CPU numerical/control-flow tests and actual preflight refusal while main training continues; no GPU timing",
+  "cpu_tests": 17,
+  "tests_log_sha256": "0340ecc06f7dcabd6f9766dc0cd5ab68b427b66a83905e973ef37fd50059f81e",
+  "plan_sha256": "6a805a94880f760a016852bd79c2402d8172dc750ab0f09319b5fe0987cf5cf2",
+  "actual_gpu_guard_error": "Another GPU compute process is active: pid=1307038, state=S",
+  "actual_predecessor_guard_error": "The bounded-recognition queue must complete before cost measurements",
+  "output_created": false,
+  "torch_cuda_initialized": false,
+  "protected_sources_unchanged": true,
+  "protected_process": {
+    "pid": 1307038,
+    "start_ticks": 97247271
+  },
+  "source_sha256": {
+    "exploration/benchmark_windowed_attention.py": "d1cac760591bb917302d5025b52f69b2dce2cfaf09ce008591f67e91f77f5842",
+    "exploration/test_windowed_cost.py": "28b0b6db7d454d394224748040f0bdf284a8507ea55e82e050fe808c26baf13e",
+    "exploration/benchmark_buffered_attention.py": "2ac7dcac4263b2aa49ffddf554d4b2cee569351d2f70b3550ae12a4ae6b15f5a",
+    "exploration/buffered_attention.py": "8034eff2382604323194616da2ca54a032c2130cdc5045fdd2aaf65f3927c520",
+    "exploration/resettable_window_attention.py": "b43697bace8ea37bf8f153d7a74cd4bc7065f0080c611e2256d48228b59f401e",
+    "exploration/check_resettable_window_attention.py": "85c151940f51f71776fbaf2853e61d6722c15af66dc2898dab031061c71eea63",
+    "exploration/check_windowed_attention.py": "e3c029a0df8d23743c08aa35f90ff7477696fa7f870596eefe93afffbe832870",
+    "exploration/cache_windowed_delayed_action.py": "a113e69f158d579dd9ce283108e8c03c35c72025c236e3b61ad7de455e152680",
+    "exploration/evaluate_video_history.py": "40b0ca3e913ac4ebf78c5be0d83558856b01d8e885c318412eb5396354e5e14a",
+    "benchmark_real_video.py": "15691f06f6db9fcd96c028632d6c81c773eb88d8b9fab3b49779efad850271ce",
+    "benchmark_streaming.py": "029f0a7bf236f5b37da01ff3efee2e0fbbc57f85b1ac0e89796d7c815dd04e75",
+    "encoder_costs.py": "a06ec37e3f32aba872bed2e2e3cdf6383e33869fba8e794ac69002c3af47aae9",
+    "temporal_priority.py": "e86e2f4b2b28e2dc590bd7c305f437f92c81e7a5959b14edc2d884fd178ae8de",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "robotap_data.py": "ce0ef8e25e90040d80fe1f57ac37f0fb8044a0cd38a82711b288b5c37db04007",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "queued_for_gpu": false,
+  "real_cost_results": false
+}

@@ -60,8 +60,8 @@
 修正後は[新しい全データ学習](results/ssv2_full_mamba_interleaved_seed42_rgbfix/config.json)を開始した。
 空間演算のTF32を無効化し、学習・評価の再現性設定を比較方式間で揃えた。時間層は引き続きBF16を使用する。
 修正後の全24,777本の正解率は、1,000更新16.10%、2,000更新29.07%、3,000更新34.58%、
-4,000更新39.19%、5,000更新43.91%、6,000更新46.20%、7,000更新47.93%、8,000更新50.26%（12,453本正解）だった。
-[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step8000.json)でも一致した。
+4,000更新39.19%、5,000更新43.91%、6,000更新46.20%、7,000更新47.93%、8,000更新50.26%、9,000更新50.66%（12,551本正解）だった。
+[公式ラベルと保存予測の再集計](results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step9000.json)でも一致した。
 予定20,000更新の途中値であり、同条件の対照モデルとの比較は未完了である。
 
 [temporal_siglip.py](temporal_siglip.py)は、事前学習済み

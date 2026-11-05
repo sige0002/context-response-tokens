@@ -1,0 +1,5 @@
+/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/utils/determinism.py:73: UserWarning: Deterministic mode: set TRITON_CACHE_AUTOTUNING=1 for cached autotuning.
+  warnings.warn(msg)
+{"split": "validation", "completed": 1}
+{"split": "validation", "completed": 2}
+{"scope": "qualification_only", "plan_sha256": "26f59de652503cefd5dc8bf760e265bfe2d9a088cda0a0b339bf2addbc8bb417", "features_sha256": "da76da67c007b6b3d0c38ff7f0aea946e5b2103a7b308761ec247369febdd9c1", "inputs_sha256": "b18a355320e354dd6037e39f20706c47b011b26ef6fcd4040bca26077f5cfd75", "weights_unchanged": true, "model_state_sha256": "4f79d10431a76fa7178880928d808a73de492110200e14fe768fc8af65e65234", "current_rgb_independent_of_target": true, "scores": null, "between_prefix_feature_l2_by_delay": [22.976078033447266, 17.103235244750977, 9.610740661621094, 4.990612030029297, 0.7931479811668396], "suffix_replay_exact": true, "qualification_limits": "Two prefixes and one suffix block only; no readout training or recognition score"}

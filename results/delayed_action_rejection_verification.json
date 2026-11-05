@@ -1,0 +1,18 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.delayed_action_probe",
+    "--cache",
+    "results/delayed_action_memory_v1/qualification",
+    "--output",
+    "results/delayed_action_rejected_qualification_probe"
+  ],
+  "returncode": 1,
+  "passed": true,
+  "qualification_refused": true,
+  "no_probe_output_created": true
+}

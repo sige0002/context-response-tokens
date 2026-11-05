@@ -1,0 +1,19 @@
+{
+  "test": "Bound live predecessor, cancelled own queue without affecting training or launching children",
+  "queue_pid": 677711,
+  "returncode": 1,
+  "status_after": {
+    "status": "stopped",
+    "operations": [],
+    "completed": [],
+    "dependency_pid": 630734,
+    "error": "InterruptedError: Cancelled while waiting; predecessor unchanged"
+  },
+  "protected_process_start_ticks": {
+    "630734": "99452396",
+    "1307038": "97247271",
+    "1310800": "97249146",
+    "1310938": "97249989"
+  },
+  "passed": true
+}

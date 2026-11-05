@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/sadasue/mywam/exploration/delayed_action_probe.py", line 98, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/sadasue/mywam/exploration/delayed_action_probe.py", line 83, in main
+    raise ValueError('Only a complete cache can train a probe')
+ValueError: Only a complete cache can train a probe

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "summary_sha256": "7f260f45ea96938719ca0d3460b1be16e683644021c5205ee8b75eaf1807d7d7",
+  "decoded_clips": 18,
+  "decoded_sampled_frames": 144,
+  "current_images_recomputed": true,
+  "original_labels_match": true,
+  "feature_controls_recounted": true,
+  "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a",
+  "source_sha256": "74c174754aa67ea54be5e5c162a5b6bcc39b96a823b3ee478c9014b6850e986d",
+  "scope": "CPU re-decode of all 18 qualification videos and saved-feature checks; no independent GPU rerun or recognition measurement"
+}

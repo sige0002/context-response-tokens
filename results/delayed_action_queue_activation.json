@@ -1,0 +1,25 @@
+{
+  "pid": 677735,
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.run_delayed_action",
+    "--output",
+    "/home/sadasue/mywam/results/delayed_action_memory_v1/comparison_v2",
+    "--resume",
+    "--after-pid",
+    "630734"
+  ],
+  "status": {
+    "status": "waiting_for_priority",
+    "operations": [],
+    "completed": [],
+    "dependency_pid": 630734
+  },
+  "plan_sha256": "521e58729f6adf56795f1602578c77b5ea3944b1fdbb05b637c0020fe9697367",
+  "queue_start_ticks": "99848206",
+  "dependency_start_ticks": "99452396"
+}

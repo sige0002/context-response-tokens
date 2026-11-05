@@ -1,0 +1,16 @@
+{
+  "classes": 174,
+  "positive_delay_current_only_ceiling": 0.005747126436781609,
+  "evidence_clips": {
+    "train": 696,
+    "validation": 348
+  },
+  "suffix_clips": {
+    "train": 64,
+    "validation": 32
+  },
+  "counts_per_positive_delay": {
+    "train": 696,
+    "validation": 348
+  }
+}

@@ -1,0 +1,614 @@
+[
+  {
+    "split": "validation",
+    "video_sha256": "ab67cf600947ef40e1043369bc1031e38869a4ae03fde21ba54e0012d4e98a61",
+    "pixels_sha256": "621bdf83eee74decd325e548fcb2c1374b8082781a3c66bb79d32e7a3ed4b450",
+    "id": "67333",
+    "indices": [
+      3,
+      11,
+      20,
+      28,
+      37,
+      45,
+      54,
+      59
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.917,
+      1.667,
+      2.333,
+      3.083,
+      3.75,
+      4.5,
+      4.917
+    ],
+    "decoded_frames": 60,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "9af59fa68aadb5b0a0f02b005eff929c2398574fd6d2abb693b52c0f13d2d96f",
+    "pixels_sha256": "8491ae93388391ba99a0701f20970c4c1ebd65d810c636d08bb53a4165013be0",
+    "id": "100820",
+    "indices": [
+      2,
+      8,
+      14,
+      21,
+      27,
+      33,
+      40,
+      44
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.667,
+      1.167,
+      1.75,
+      2.25,
+      2.75,
+      3.333,
+      3.667
+    ],
+    "decoded_frames": 45,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "3df0c0ac65a5b6f35ff89d97013314be6b9623cc5f7471388ce5a806f5209a53",
+    "pixels_sha256": "9fb684db00cddda283d525ebc673d6a8e3f94e83f141cb569be3cbf8fc5da57e",
+    "id": "7694",
+    "indices": [
+      3,
+      10,
+      17,
+      24,
+      32,
+      39,
+      46,
+      51
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.833,
+      1.417,
+      2.0,
+      2.667,
+      3.25,
+      3.833,
+      4.25
+    ],
+    "decoded_frames": 52,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "53036fe4dc31b09cafc331b6347bd6c074137e26ae35210729dd0c74201ddc4a",
+    "pixels_sha256": "94a80d4bcfb49c3bebe468b9335125a35687d2dcea98b142b7afa862cda83989",
+    "id": "180327",
+    "indices": [
+      1,
+      5,
+      9,
+      14,
+      18,
+      22,
+      27,
+      30
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.083,
+      0.417,
+      0.75,
+      1.167,
+      1.5,
+      1.833,
+      2.25,
+      2.5
+    ],
+    "decoded_frames": 31,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "8977810f3d61986b9fb27ef0ac7fd94e314a5356a5ae37c53acca61dcd59021b",
+    "pixels_sha256": "5e9da8023b2e0b4ca41d81efad1c383cf895def8e5f0668feb187e034b2d35c5",
+    "id": "44978",
+    "indices": [
+      2,
+      8,
+      15,
+      21,
+      28,
+      34,
+      41,
+      45
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.667,
+      1.25,
+      1.75,
+      2.333,
+      2.833,
+      3.417,
+      3.75
+    ],
+    "decoded_frames": 46,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "adf9fb87e305b29c88174bb5bcca0e1ba2513b7a566118c836510abfe8248eb3",
+    "pixels_sha256": "c3ae7b6b6c82c764242675c3a42209aa1e3654ca5b492567c527a3e3040f362c",
+    "id": "10535",
+    "indices": [
+      3,
+      10,
+      18,
+      26,
+      34,
+      42,
+      50,
+      55
+    ],
+    "crop": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.833,
+      1.5,
+      2.167,
+      2.833,
+      3.5,
+      4.167,
+      4.583
+    ],
+    "decoded_frames": 56,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "400174d348b0998313e4650b12417b3858f762db56d471a03e2ea3b0ac00b82c",
+    "pixels_sha256": "a81fd3f8ecee721744bb77b0d1b33f2c9f4cd000bf850b0ed0c9eea0bbae8c54",
+    "id": "184917",
+    "indices": [
+      3,
+      11,
+      20,
+      28,
+      37,
+      45,
+      54,
+      59
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.917,
+      1.667,
+      2.333,
+      3.083,
+      3.75,
+      4.5,
+      4.917
+    ],
+    "decoded_frames": 60,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "70bfeff48a1501889496e9f91b2804cdd4ddb6678cbd1eb5fe55f93d26f77a8f",
+    "pixels_sha256": "49d677798793611316d9e870bb306d46060493d99322f0311519b8f8471a356f",
+    "id": "112179",
+    "indices": [
+      4,
+      13,
+      22,
+      31,
+      41,
+      50,
+      59,
+      65
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.333,
+      1.083,
+      1.833,
+      2.583,
+      3.417,
+      4.167,
+      4.917,
+      5.417
+    ],
+    "decoded_frames": 66,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "b76229feccb304f3c4f50e80f36993c672d12d10b46985f3fee60d5824a07f1c",
+    "pixels_sha256": "459bd5539c6ad80b5e328b4f166ce810062f90e01d33da038615398e4db99894",
+    "id": "30936",
+    "indices": [
+      0,
+      2,
+      4,
+      7,
+      9,
+      11,
+      14,
+      16
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.0,
+      0.167,
+      0.333,
+      0.583,
+      0.75,
+      0.917,
+      1.167,
+      1.333
+    ],
+    "decoded_frames": 17,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "4c4055c6673fbf0e10239bd8aa6388ba9b88a304d6ea2ce84a37b8789630a0c3",
+    "pixels_sha256": "c1d6c523f50cedc513beeca34989e0a07160d178ea5e060ee6c2e2efe3b06dd7",
+    "id": "158967",
+    "indices": [
+      3,
+      10,
+      18,
+      26,
+      33,
+      41,
+      49,
+      54
+    ],
+    "crop": [
+      0,
+      0,
+      320,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.833,
+      1.5,
+      2.167,
+      2.75,
+      3.417,
+      4.083,
+      4.5
+    ],
+    "decoded_frames": 55,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "fb14edc6c0f22344a9491b1b6bf9388a420ee6a65bef326b88b9a75ecc092884",
+    "pixels_sha256": "e7d5e89f17df93403f04404d5cfe639ad535da4afb52d8cf23e445132a8a945e",
+    "id": "37195",
+    "indices": [
+      2,
+      7,
+      13,
+      19,
+      25,
+      31,
+      37,
+      41
+    ],
+    "crop": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.583,
+      1.083,
+      1.583,
+      2.083,
+      2.583,
+      3.083,
+      3.417
+    ],
+    "decoded_frames": 42,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "e6125961fa6ac40783fb08128f386d69e1b21a5b575c9cd1a96bbc2361929dde",
+    "pixels_sha256": "10a819e4b4bde201eca29b640febfcc56bfa568814332f635503532019eec184",
+    "id": "110371",
+    "indices": [
+      3,
+      10,
+      18,
+      25,
+      33,
+      40,
+      48,
+      53
+    ],
+    "crop": [
+      0,
+      0,
+      320,
+      240
+    ],
+    "timestamps": [
+      0.25,
+      0.833,
+      1.5,
+      2.083,
+      2.75,
+      3.333,
+      4.0,
+      4.417
+    ],
+    "decoded_frames": 54,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "dc62b001c71dd119072db60d3e25e0eea66e4dc934e16b28509ea03ba4c87070",
+    "pixels_sha256": "8899dc37aae8c44679138c3d230046b5ca8a7242899028e13830b4ba62567eb4",
+    "id": "62225",
+    "indices": [
+      1,
+      6,
+      11,
+      15,
+      20,
+      25,
+      30,
+      33
+    ],
+    "crop": [
+      0,
+      0,
+      320,
+      240
+    ],
+    "timestamps": [
+      0.083,
+      0.5,
+      0.917,
+      1.25,
+      1.667,
+      2.083,
+      2.5,
+      2.75
+    ],
+    "decoded_frames": 34,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "64db0a637115b908eefb86bfa4840471ca89ea216510deed7342883a9cc448f6",
+    "pixels_sha256": "52af169979c69c8331a60d0adeb82a03c3c1c042385fbdd3e6cbdbf1b04f9667",
+    "id": "195038",
+    "indices": [
+      2,
+      9,
+      15,
+      22,
+      28,
+      35,
+      42,
+      46
+    ],
+    "crop": [
+      0,
+      0,
+      320,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.75,
+      1.25,
+      1.833,
+      2.333,
+      2.917,
+      3.5,
+      3.833
+    ],
+    "decoded_frames": 47,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "ef5ca50a636a916f01694717b7b5f92945b09134cc3d653a4dcfc5945b29fcf5",
+    "pixels_sha256": "32b12eaeabb4727f354eaf21b76882c44ca8a308284a755dbd679ee0ca9544d2",
+    "id": "70876",
+    "indices": [
+      2,
+      8,
+      14,
+      20,
+      26,
+      32,
+      39,
+      43
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.667,
+      1.167,
+      1.667,
+      2.167,
+      2.667,
+      3.25,
+      3.583
+    ],
+    "decoded_frames": 44,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "387f26f0f446f9bf17c99bda509d161d5d5a53a9cd303adff715a1f5d1853054",
+    "pixels_sha256": "a5a9f2e82161c0e302e8e9ee0e884e1bd3649f3b28104f0b1ddc0994c178a3c3",
+    "id": "155973",
+    "indices": [
+      2,
+      8,
+      14,
+      21,
+      27,
+      33,
+      40,
+      44
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.667,
+      1.167,
+      1.75,
+      2.25,
+      2.75,
+      3.333,
+      3.667
+    ],
+    "decoded_frames": 45,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "af23eecb76d18d521e79b6a99ccd4561d869cd8941574f9edac82edf38195875",
+    "pixels_sha256": "81fd56fecc866eed81497d10e115e3311c181285ba508536a225c840d4c9c213",
+    "id": "119422",
+    "indices": [
+      2,
+      9,
+      16,
+      23,
+      30,
+      37,
+      44,
+      48
+    ],
+    "crop": [
+      0,
+      0,
+      427,
+      240
+    ],
+    "timestamps": [
+      0.167,
+      0.75,
+      1.333,
+      1.917,
+      2.5,
+      3.083,
+      3.667,
+      4.0
+    ],
+    "decoded_frames": 49,
+    "epoch": 0
+  },
+  {
+    "split": "validation",
+    "video_sha256": "f2f920de2dd3189f20d3a254976967831d5015d0b0f8ada8abc88842ee07ce3b",
+    "pixels_sha256": "4309fb2ac1ac2867e15a27ccb4dc022b0be562d4d8b68e43967b9c875278d7f2",
+    "id": "156446",
+    "indices": [
+      4,
+      13,
+      22,
+      31,
+      40,
+      49,
+      58,
+      63
+    ],
+    "crop": [
+      0,
+      0,
+      320,
+      240
+    ],
+    "timestamps": [
+      0.333,
+      1.083,
+      1.833,
+      2.583,
+      3.333,
+      4.083,
+      4.833,
+      5.25
+    ],
+    "decoded_frames": 64,
+    "epoch": 0
+  }
+]

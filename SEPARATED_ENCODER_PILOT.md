@@ -100,7 +100,26 @@ FP32へ切り替えた試行でも完全には解消しなかった。
 
 [比較学習の計画](results/separated_encoder_pilot_seed17_framewise/plan.json)と
 [全条件共通の学習列](results/separated_encoder_pilot_seed17_framewise/schedule.json)を固定して実行を開始した。
-各条件1,024更新で、結果は未確定。主学習とGPUを共用するので、学習の経過時間から推論速度を比較しない。
+各条件1,024更新。主学習とGPUを共用するので、学習の経過時間から推論速度を比較しない。
+
+対照`final_memory`の学習・評価・書き出しは完了した。
+固定した1,024更新での結果は次のとおり。PCKは256画素基準の閾値未満の割合を8シーンで等重み平均する。
+
+| 対照の状態条件 | 全可視点PCK4 | 全可視点PCK16 | 16画素超移動点PCK16 |
+| --- | ---: | ---: | ---: |
+| 履歴あり | 18.65% | 56.47% | 19.57% |
+| Mamba状態を毎観測消去 | 28.29% | 61.39% | 22.72% |
+
+[全保存時点の結果](results/separated_encoder_pilot_seed17_framewise/final_memory.json)、
+[CPU独立検証](results/separated_encoder_pilot_seed17_framewise/verification_final_memory.json)、
+[元RGBからの再実行](results/separated_encoder_pilot_seed17_framewise/replay_final_memory.json)を保存した。
+CPUでは48予測ファイル・768指標行を再採点し、最終特徴から384回の位置探索を再実行した。
+別プロセスで書き出したエンコーダを読み込み、8シーンの履歴あり・消去、計384フレームの特徴が完全一致した。
+この対照では履歴を残すと対応精度が低い。学習したMambaの一般的な能力を否定する結果ではない。
+
+`separated_memory`は1,024更新まで到達したが、最終評価の保存が未完了。
+`separated_image`は未実行であり、分離方式や記憶の優位性についてはまだ結論しない。
+評価出力の更新が遅れているため実行状態を調査しており、プロセス生存だけを進捗の証拠にはしない。
 
 ## 再実行
 
@@ -116,3 +135,51 @@ CUBLAS_WORKSPACE_CONFIG=:4096:8 TRITON_CACHE_AUTOTUNING=1 uv run --locked python
 `--resume`は未実行の固定計画を開始する指定であり、途中学習の再開ではない。
 元の一括経路の数値差を調べるには、検査の`--execution batched --precision bfloat16`を使う。
 これは既知の許容誤差違反を再現する診断で、検査成功を期待するコマンドではない。
+
+## 保存結果とエンコーダ書き出しの独立再検証
+
+[CPU検証](exploration/verify_separated_encoder.py)は、学習プロセスと独立に、
+学習列・初期重み・凍結重み・最終書き出し重みを照合する。
+全保存時点の予測を正解座標から再採点し、最終時点では保存特徴から位置探索も再実行する。
+これだけではGPUエンコーダの実行やRGB前処理を再検証したことにはならない。
+
+別の[RGB再実行](exploration/replay_separated_encoder.py)では、自己完結したcheckpointを
+別プロセスで読み込み、元画像アーカイブから前処理をやり直す。
+全8検証シーン・全24観測・履歴あり／状態消去の各条件で、保存特徴との一致と状態量を確認する。
+この再実行は学習後のエンコーダ書き出しを検証するもので、未知画像への汎化や速度を示すものではない。
+
+[結果の集計](exploration/analyze_separated_encoder.py)はCPU検証を通過した記録を使い、
+全可視点・移動点・遮蔽経験後・再出現直後・経過観測数を分ける。
+遮蔽と再出現は4フレーム間隔で選んだ観測列上の定義であり、間の全フレームを検査していない。
+シーンを単位とする対応付きbootstrap区間は探索的なもので、多重比較を補正した有意差の主張ではない。
+
+完了した実行に対して、次をリポジトリのルートで実行する。
+最初の2コマンドは`--arm final_memory`などで完了済みの1条件だけにも適用できる。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.verify_separated_encoder --run results/new_separated_pilot
+CUBLAS_WORKSPACE_CONFIG=:4096:8 TRITON_CACHE_AUTOTUNING=1 uv run --locked python -m exploration.replay_separated_encoder --run results/new_separated_pilot
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.analyze_separated_encoder --run results/new_separated_pilot
+```
+
+## 追加学習しない新規シーン評価の準備
+
+8シーンは既に複数の探索で観察したため、それとは別に
+[32シーンを固定した計画](results/separated_encoder_holdout_seed17/plan.json)を作成した。
+公式ではなく、このリポジトリで共通に使うseed 42の300シーン検証分割から、
+対応特徴キャッシュの学習・検証シーンとoracle診断のシーンを除外した。
+準備済みの候補をseed 17で選び、評価前にIDと元データのハッシュを固定する。
+後からデータ準備が進んでも、固定した32シーンを変えない。
+
+[評価コード](exploration/evaluate_separated_holdout.py)は、3条件の1,024更新の書き出しをそのまま使用し、
+学習やcheckpoint選択を行わない。前処理・可視点の選択・連続位置照合は予備実験と揃える。
+[32シーン・768観測の元RGBと注釈の検査記録](results/separated_encoder_holdout_seed17/input_qualification_summary.json)を保存したが、エンコーダの評価結果はまだない。
+同じKubricデータ内の追加検証であり、実写への汎化や独立した最終testを意味しない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.evaluate_separated_holdout --pilot-run results/new_separated_pilot --output results/new_separated_holdout --plan-only
+CUBLAS_WORKSPACE_CONFIG=:4096:8 TRITON_CACHE_AUTOTUNING=1 uv run --locked python -m exploration.evaluate_separated_holdout --pilot-run results/new_separated_pilot --output results/new_separated_holdout --resume
+```
+
+実行には完了した3条件と各CPU検証記録、および先のoracle診断の計画が必要。
+`--resume`は固定した未実行計画の開始を意味し、途中評価の再開には対応しない。

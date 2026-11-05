@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "arm": "final_memory",
+  "source_sha256": "082cdfcfa4e83dfa287d79b055589b6070166f84669c48d672a109d9766754c3",
+  "record_sha256": "dbb3c46646b294b4e95afe7295523d683263aa083814a43c7e5412d709bede25",
+  "plan_sha256": "e83fe2c462234365c448476b76cc8ec70e5448c21a39e641aeaded11ccb5a58d",
+  "prediction_files": 48,
+  "recounted_rows": 768,
+  "final_cpu_matching_calls": 384,
+  "training_schedule_reproduced": true,
+  "initial_weights_match": true,
+  "exported_weights_match_final_training": true,
+  "frozen_backbone_exactly_matches_source": true,
+  "scope": "All curves recounted, final CPU matching rerun, and complete export tensors verified. GPU encoder and RGB preprocessing not rerun here."
+}

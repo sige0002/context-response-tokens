@@ -3,6 +3,8 @@
 \overrideIEEEmargins
 \usepackage{amsmath,amssymb}
 \usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \title{Temporal State-Space Adapters in Frozen Image Encoders}
 \author{Working draft: authors and affiliations to be supplied}
 \begin{document}
@@ -61,10 +63,11 @@ reported DINO results. Our temporal-attention control similarly does not
 reproduce MEM's shared-parameter attention or its robot training.
 
 \section{Encoder and Learning}
+\input{architecture.tex}
 Let $I_t$ be the current image and $X_t^\ell\in\mathbb{R}^{N\times D}$
 the features after spatial block $\ell$. For SigLIP 2-B/16 at $224^2$
 resolution, $N=196$ and $D=768$. We insert adapters after blocks 4, 8,
-and 12. At patch coordinate $n$, each adapter computes
+and 12 (Fig.~\ref{fig:architecture}). At patch coordinate $n$, each adapter computes
 \begin{align}
  u_{t,n}^\ell &= W_\downarrow^\ell
        \operatorname{LN}^\ell(X_{t,n}^\ell)+b_\downarrow^\ell,\\

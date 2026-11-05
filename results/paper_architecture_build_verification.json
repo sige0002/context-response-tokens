@@ -1,0 +1,70 @@
+{
+  "scope": "Architecture figure and working-draft PDF verification; no new model experiment or final performance claim",
+  "pdf": {
+    "path": "paper/build/main.pdf",
+    "sha256": "2644eea109548c96f10c4dc041b0047bcf854d70d2c51896e71b500acd71a2ca",
+    "pages": 3,
+    "page_size": "US Letter",
+    "bytes": 61878
+  },
+  "source_sha256": {
+    "paper/main.tex": "df5c5808c376929a03796e483bef3c03fe63649abf107f316c0f9fd181bfa567",
+    "paper/architecture.tex": "b0567fdc3067b8ceb4ca5ad8f366a28d047cf3760633bc36f9b719515d73871a",
+    "paper/ieeeconf.cls": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2",
+    "paper/pixi.toml": "3b0d40b75d8920229465aa04b262514aad7f2c6a87d110e8b35e547a044a8b71",
+    "paper/pixi.lock": "ffb3b39c9daf7c1b9114dfa89ad810ccabfb374c521f28ad77edcd1165f0e740",
+    "paper/generated/comparison_pending.tex": "f77c8eb929de9dbbf53b38aa582ae5de9a63e8fbf059a797263f5cdedb083d7c",
+    "paper/generated/evidence.json": "ecab95d8ba87d846763814d067f117740e2fc28109cae77454b0a1966d844a23",
+    "paper/generated/history.tex": "30660fefcd39fe274fc67cc6420409c960da5bf37ca5e42d6aa22190bf02f4a8",
+    "paper/generated/memory_layers.tex": "c5a2f6e682a27776e1e85673999e86a537d57bd4319e71e4ce41bc3d86e2224d",
+    "paper/generated/training.tex": "403062118086905d06f463ac394631a90474fde721423533392f6837f146aa1e"
+  },
+  "fonts": {
+    "count": 19,
+    "all_embedded": true
+  },
+  "log_checks": {
+    "overfull": false,
+    "undefined_references_or_errors": false,
+    "warnings": [
+      "Underfull vbox (badness 1173)",
+      "Underfull hbox (badness 2351) in bibliography"
+    ]
+  },
+  "visual_review": {
+    "method": "Rendered at 120 dpi with pdftoppm and inspected all pages with view_image",
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "Three adapter positions and separate incoming/outgoing caches",
+      "Current-frame output and final readout",
+      "Two-line module labels and nonoverlapping arrows",
+      "Equations, tables, and references remain readable"
+    ],
+    "image_sha256": {
+      "paper/build/architecture_final_page-1.png": "073539d9d94dfd582d74bdc6fc245e4e19321fc967f981b008cc9a055225ad4d",
+      "paper/build/architecture_final_page-2.png": "405b878f6584c9ba758e099ba2e4c2f05e056ef7529ddfb417d618118d4c71aa",
+      "paper/build/architecture_final_page-3.png": "555fb453e0d4098104b32272398d6c26d92950cc770f843c8278499511f22a84"
+    }
+  },
+  "implementation_references": {
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd"
+  },
+  "training_source_pins_match": {
+    "train_video.py": true,
+    "video_data.py": true,
+    "temporal_readout.py": true,
+    "temporal_siglip.py": true,
+    "train_temporal.py": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "root_uv_lock_sha256": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+  "table_content_changed": false,
+  "final_comparisons_complete": false,
+  "submission_ready": false
+}

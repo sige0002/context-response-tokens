@@ -1,0 +1,52 @@
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize,
+  block/.style={draw, rounded corners=1pt, align=center,
+    minimum height=0.82cm, inner sep=3pt},
+  frozen/.style={block, fill=black!6},
+  learned/.style={block, draw=blue!55!black, fill=blue!8},
+  cache/.style={draw=blue!55!black, dashed, rounded corners=1pt,
+    align=center, minimum width=1.4cm, minimum height=0.48cm,
+    inner sep=2pt},
+  feature/.style={-{Stealth[length=4pt]}, line width=0.6pt},
+  state/.style={-{Stealth[length=4pt]}, dashed, draw=blue!55!black,
+    line width=0.6pt}]
+\node[align=center] (image) at (0,0) {$I_t$\\$224^2$};
+\node[frozen, text width=1.12cm] (patch) at (1.3,0) {Patch +\\position};
+\node[frozen, text width=1.30cm] (spatial4) at (3.05,0) {ViT blocks\\1--4};
+\node[learned, text width=1.25cm] (temporal4) at (4.75,0) {Mamba-3\\adapter 4};
+\node[frozen, text width=1.30cm] (spatial8) at (6.45,0) {ViT blocks\\5--8};
+\node[learned, text width=1.25cm] (temporal8) at (8.15,0) {Mamba-3\\adapter 8};
+\node[frozen, text width=1.30cm] (spatial12) at (9.85,0) {ViT blocks\\9--12};
+\node[learned, text width=1.25cm] (temporal12) at (11.55,0) {Mamba-3\\adapter 12};
+\node[frozen, text width=1.08cm] (output) at (13.2,0) {Final LN\\$Z_t$};
+\node[learned, text width=1.27cm] (readout) at (15.0,0) {Readout\\at $t=T$};
+\foreach \from/\to in {image/patch,patch/spatial4,spatial4/temporal4,
+  temporal4/spatial8,spatial8/temporal8,temporal8/spatial12,
+  spatial12/temporal12,temporal12/output,output/readout}
+  \draw[feature] (\from.east) -- (\to.west);
+\foreach \depth/\x in {4/4.75,8/8.15,12/11.55} {
+  \node[cache] (past\depth) at (\x,1.12) {$s_{t-1,1:N}^{\depth}$};
+  \node[cache] (next\depth) at (\x,-1.12) {$s_{t,1:N}^{\depth}$};
+  \draw[state] (past\depth.south) -- (temporal\depth.north);
+  \draw[state] (temporal\depth.south) -- (next\depth.north);
+}
+\node[align=center] at (13.2,-0.86) {$196\times768$\\current tokens};
+\node[align=center] at (15.0,-0.86) {174 classes\\$Z_T$ only};
+\node[align=left, anchor=west] at (0.1,1.15)
+  {State from the\\previous observation};
+\node[align=left, anchor=west] at (0.1,-1.12)
+  {State retained for the\\next observation};
+\node[align=center] at (7.9,-1.85)
+  {Gray: frozen spatial weights\qquad Blue: trainable adapters/readout\qquad Dashed: recurrent cache};
+\end{tikzpicture}
+\caption{SigLIP 2 with interleaved Mamba-3 SISO adapters. Solid arrows carry current-frame
+features; dashed arrows carry the four native cache tensors (angles, SSM
+matrix, previous key, previous value) for all $N=196$ coordinates at each
+depth. Recurrence uses the same image coordinate, with no explicit motion
+alignment. The intervening ViT blocks mix coordinates. Caches reset between
+episodes; earlier frame tokens are not appended to the readout input.
+Frozen spatial blocks still transmit gradients to earlier adapters.}
+\label{fig:architecture}
+\end{figure*}

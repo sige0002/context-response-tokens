@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "source_sha256": "f618e60dc4af0f6d7418922eaaa876db3b8f87e25777ac28ca6dcf1c6bac1317",
+  "summary_sha256": "44366ab24ce505c965e2b25b6dfeb30df6149026e7a83978408c90f8b2eb88f1",
+  "prediction_files": 48,
+  "rerun_matching_calls": 1152,
+  "recounted_rows": 768,
+  "original_rgb_preprocessing_queries_and_annotations_match": true,
+  "full_reset_query_features_identical": true,
+  "state_offsets_and_four_native_buffers_verified": true,
+  "feature_changes": {
+    "0136": {
+      "4": {
+        "max_abs": 1.5996532440185547,
+        "relative_l2": 0.25479909777641296
+      },
+      "12": {
+        "max_abs": 69.58857727050781,
+        "relative_l2": 0.9161546230316162
+      }
+    },
+    "0140": {
+      "4": {
+        "max_abs": 2.288672685623169,
+        "relative_l2": 0.2274964451789856
+      },
+      "12": {
+        "max_abs": 53.43495178222656,
+        "relative_l2": 0.8201927542686462
+      }
+    },
+    "0154": {
+      "4": {
+        "max_abs": 1.6278587579727173,
+        "relative_l2": 0.2034871131181717
+      },
+      "12": {
+        "max_abs": 72.58733367919922,
+        "relative_l2": 0.8187845945358276
+      }
+    },
+    "0162": {
+      "4": {
+        "max_abs": 1.5392131805419922,
+        "relative_l2": 0.18663756549358368
+      },
+      "12": {
+        "max_abs": 56.47430419921875,
+        "relative_l2": 0.7915723919868469
+      }
+    },
+    "0238": {
+      "4": {
+        "max_abs": 2.2080860137939453,
+        "relative_l2": 0.18897734582424164
+      },
+      "12": {
+        "max_abs": 64.55511474609375,
+        "relative_l2": 0.8686167597770691
+      }
+    },
+    "0248": {
+      "4": {
+        "max_abs": 2.014676570892334,
+        "relative_l2": 0.2222805917263031
+      },
+      "12": {
+        "max_abs": 37.212833404541016,
+        "relative_l2": 0.6766080260276794
+      }
+    },
+    "0250": {
+      "4": {
+        "max_abs": 2.1476454734802246,
+        "relative_l2": 0.22046370804309845
+      },
+      "12": {
+        "max_abs": 44.96111297607422,
+        "relative_l2": 0.7824838161468506
+      }
+    },
+    "0263": {
+      "4": {
+        "max_abs": 1.0425952672958374,
+        "relative_l2": 0.18360008299350739
+      },
+      "12": {
+        "max_abs": 59.954322814941406,
+        "relative_l2": 0.9331965446472168
+      }
+    }
+  },
+  "scope": "CPU readout rerun from saved features, independent metric recount, RGB preprocessing rerun. GPU encoder inference is not rerun."
+}

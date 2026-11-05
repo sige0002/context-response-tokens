@@ -1,0 +1,9 @@
+{"scene": "0136", "readout_calls": 144, "files": 6}
+{"scene": "0140", "readout_calls": 288, "files": 12}
+{"scene": "0154", "readout_calls": 432, "files": 18}
+{"scene": "0162", "readout_calls": 576, "files": 24}
+{"scene": "0238", "readout_calls": 720, "files": 30}
+{"scene": "0248", "readout_calls": 864, "files": 36}
+{"scene": "0250", "readout_calls": 1008, "files": 42}
+{"scene": "0263", "readout_calls": 1152, "files": 48}
+{"status": "passed", "source_sha256": "f618e60dc4af0f6d7418922eaaa876db3b8f87e25777ac28ca6dcf1c6bac1317", "summary_sha256": "44366ab24ce505c965e2b25b6dfeb30df6149026e7a83978408c90f8b2eb88f1", "prediction_files": 48, "rerun_matching_calls": 1152, "recounted_rows": 768, "original_rgb_preprocessing_queries_and_annotations_match": true, "full_reset_query_features_identical": true, "state_offsets_and_four_native_buffers_verified": true, "scope": "CPU readout rerun from saved features, independent metric recount, RGB preprocessing rerun. GPU encoder inference is not rerun."}

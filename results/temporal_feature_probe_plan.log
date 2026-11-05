@@ -1,0 +1,3 @@
+/home/sadasue/mywam/.venv/lib/python3.12/site-packages/mamba_ssm/utils/determinism.py:73: UserWarning: Deterministic mode: set TRITON_CACHE_AUTOTUNING=1 for cached autotuning.
+  warnings.warn(msg)
+{"step": 4000, "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a", "conditions": ["siglip_only", "mamba_full", "mamba_reset1"], "frozen_backbone_exact_match": true}

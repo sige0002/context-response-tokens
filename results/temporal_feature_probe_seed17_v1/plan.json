@@ -1,0 +1,164 @@
+{
+  "config": {
+    "seed": 17,
+    "val": [
+      "0136",
+      "0140",
+      "0154",
+      "0162",
+      "0238",
+      "0248",
+      "0250",
+      "0263"
+    ],
+    "evaluation_queries": 128,
+    "grid": 14,
+    "depths": {
+      "4": "Block4 output, including temporal insertion where present",
+      "12": "Final post-layernorm with parameter-free LN for matching"
+    },
+    "methods": [
+      "center",
+      "field_top1",
+      "field_top4",
+      "static_query"
+    ],
+    "topk": 4,
+    "coarse_offsets": [
+      -0.5,
+      -0.25,
+      0.0,
+      0.25,
+      0.5
+    ],
+    "refinement_steps": [
+      0.125,
+      0.0625,
+      0.03125
+    ],
+    "model": "google/siglip2-base-patch16-224",
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "precision": "Spatial GPU FP32 with TF32 off; temporal BF16; matching CPU FP32",
+    "visibility": "Always visible; no threshold tuned",
+    "scope": "Exploratory fixed intermediate SSv2 checkpoint, no fitting. Same readout across history interventions.",
+    "limits": "8 repeatedly inspected rendered scenes, 24 frames at original stride4. Classification-trained intermediate features; not the formal point benchmark or evidence of final superiority.",
+    "conditions": [
+      "siglip_only",
+      "mamba_full",
+      "mamba_reset1"
+    ],
+    "feature_taps": {
+      "4": "After block4 temporal residual, or block4 spatial output for SigLIP only",
+      "12": "Actual final post-layernorm output"
+    },
+    "reset": "Fresh native Mamba states for each frame. Initial query appearance stays fixed from frame zero; reset is not memoryless tracking."
+  },
+  "checkpoint": {
+    "step": 4000,
+    "epoch": 0,
+    "cursor": 128000,
+    "checkpoint_sha256": "e53a3ea075c9fb5e575cac832924454dbbb7d24ed3fa0f2ae60625577a976c9a",
+    "checkpoint_selection": "fixed optimizer step, not best selection",
+    "config": {
+      "train": "/home/sadasue/mywam/data/ssv2/videos_trainval/train.jsonl",
+      "val": "/home/sadasue/mywam/data/ssv2/videos_trainval/val.jsonl",
+      "classes": 174,
+      "kind": "mamba",
+      "placement": "interleaved",
+      "readout": "attention",
+      "frames": 8,
+      "batch_size": 4,
+      "accumulation": 8,
+      "steps": 20000,
+      "warmup": 1000,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "evaluate_every": 1000,
+      "save_every": 500,
+      "seed": 42,
+      "model": "google/siglip2-base-patch16-224",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "readout_commit": "59249bf83311bc34bae277e2e8adec287ffe5d0f",
+      "reproducibility": {
+        "deterministic_algorithms": true,
+        "cudnn_benchmark": false,
+        "cudnn_deterministic": true,
+        "cudnn_allow_tf32": false,
+        "matmul_allow_tf32": false,
+        "cublas_workspace_config": ":4096:8"
+      },
+      "readout_sha256": "c90f3383d6c4398f9d8631b6345ca7da6f867f1b93bad73d62adfa120ff3914c",
+      "spatial_precision": "float32",
+      "temporal_precision": "bfloat16",
+      "crop_min": 0.8,
+      "sampling": "segmented history plus final observation; shared spatial crop; no flips",
+      "source_sha256": {
+        "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+        "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+        "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+        "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+        "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+        "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+        "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+      },
+      "train_sha256": "491c654a855f71df844b232c34b214caf50aaf23b29ee0b94213c6f49cc6f658",
+      "val_sha256": "7876636f584fbccb4d18724cb084bcd6e664724ff3872cbc050ba3941a989eac"
+    }
+  },
+  "video_run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+  "video_config_sha256": "41301ebec26f806af523adc9ffaa0e4385eeadf9885170ca98399ace01c01c3c",
+  "matching_run": "/home/sadasue/mywam/results/continuous_matching_seed17",
+  "matching_plan_sha256": "2b1f85843a62b0eecc0f9b5ff11f80c167e556eea1df89eaa2befa8565928108",
+  "matching_result_sha256": "bd373bfdb5d28b58d5015b01d6b3af42adf223176c35a2ab7271ed5de5919737",
+  "cache": "/home/sadasue/mywam/results/correspondence_cache_seed17",
+  "cache_summary_sha256": "2772690e248cc3b364db102577e916b4eccb08f934ca5f49b50cf3dd240fb0be",
+  "rgb_root": "/home/sadasue/mywam/data/cotracker3_kubric/scenes",
+  "images": {
+    "0136": {
+      "metadata_sha256": "6a2c4988d1e2b7435da8e4899a44d1d0f87087d48a3c5d04ad3823af3e850137",
+      "images_sha256": "7aec584ff23f7f5041dcc2863951c3009a1ba055b30fb7fbafe16c23f30fcd09"
+    },
+    "0140": {
+      "metadata_sha256": "0da02a4f5334289b80afbbc50b9f8ed7f261c5d01fc6638c1a0834a070fca189",
+      "images_sha256": "636c1bee57001befd9c408728fd528f8ef0145910a8064d203910b474572e27f"
+    },
+    "0154": {
+      "metadata_sha256": "3a9858c14fd0628790d01bfb2a654c7e15a14d6c0434938f2018af3f9a6d4d40",
+      "images_sha256": "4cec47fa4702f8645b7e50e8507838ef1d5f1f8d90ad7ac9b9fe990607d2b41e"
+    },
+    "0162": {
+      "metadata_sha256": "3f175b7de4e9ea4c1d3d77ca805816186b1e47a6e79f0259033643c18bda49a6",
+      "images_sha256": "edc23aaaaeafb0feff4a9c98d63540f8fd250da76c4a96de19fba2ef3a3d4e6a"
+    },
+    "0238": {
+      "metadata_sha256": "afcc4ac966d1c0feda2d495cc646ea778b3f21dbd8a11cf0f1b49785d84b22ad",
+      "images_sha256": "ae6033e5fee2373cb359a01604561d405457be5c914977039ac47d4673a8e6bb"
+    },
+    "0248": {
+      "metadata_sha256": "5703a5a2948935b6cc4a39a79bf5a14cc7bd417cd511cbe72ea3c10479171900",
+      "images_sha256": "e7edcfe2f3dd89a0ecc1f891b5c931b601534b046278b96c32a1f8ff2a877b25"
+    },
+    "0250": {
+      "metadata_sha256": "26e66df6820fc8a925bc34a236b8927ea9e4f6cfcb65fe3005f2f54b22244f9b",
+      "images_sha256": "d7e6967b7e4a20150852ea6d57bae43384d6a6a0024f11c6324d5ada0f283e5b"
+    },
+    "0263": {
+      "metadata_sha256": "d62952838735b25d89d2ece2aeab76d0bb036421a6001dfab14e19fc0d4a9326",
+      "images_sha256": "b6355aa538a64ec1a90f6df5aac3249fbee63913a529090445eeb3aa09b03722"
+    }
+  },
+  "frozen_backbone_sha256": "95e72a25c324426b8406d253a1933f9f10b1a1a9bffdad70c85067da7fd7f7c8",
+  "sources": {
+    "/home/sadasue/mywam/exploration/temporal_feature_probe.py": "ecf44492961661984d76c1be38c37cb0652817e7ff8a0c5608eef940745dda98",
+    "exploration/continuous_matching.py": "96c61ad771137ac0093e1438dc3e92d002a1238f43c16f8c9afdd461012431f7",
+    "exploration/evaluate_continuous_matching.py": "83f8df57c3e267d2e4fd492b05140e0d8e7ed29b7d22ac10525bb0b404c4e069",
+    "exploration/oracle_transport.py": "262565597e7d168f014b99e0df21f64dc60bbc4409e0d9deebb8f54986a6981f",
+    "exploration/readout_diagnostic.py": "6d6747c3ea8178f6940f9c461a24b4084cb484ccac6b9fbf88e5fa0c0ac9ab6b",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+    "tapvid_metrics.py": "173e37502c5cc73fcc4c25bc5fc755c99db3ad511d0da2ea3547c776adfcdf32",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  }
+}

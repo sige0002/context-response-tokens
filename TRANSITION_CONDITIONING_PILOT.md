@@ -92,6 +92,8 @@ uv run --locked python -m exploration.train_transition_conditioning \
   --output results/new_transition_conditioning --qualify
 uv run --locked python -m exploration.train_transition_conditioning \
   --output results/new_transition_conditioning --run
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.verify_transition_conditioning \
+  --output results/new_transition_conditioning
 ```
 
 [改訂後のGPU検査](results/transition_conditioning_step11000_v2/qualification/verification.json)では、
@@ -100,3 +102,9 @@ uv run --locked python -m exploration.train_transition_conditioning \
 追加する直前入力の状態はbatch 1で301,056 bytesだった。
 比較プロセスを起動し、appearance対照の学習更新を確認した。両条件の最終精度は未取得である。
 学習結果が出るまでは、候補が精度を上げるという結論を置かない。
+
+[独立のCPU再計数](exploration/verify_transition_conditioning.py)は、元のmanifestのラベル、
+初期重み・入力画像の一致、clipと逐次の予測、実行更新数、保存モデルの再実行記録を照合する。
+片方だけが完了した場合は`--arm appearance`または`--arm difference`でその条件を検査できるが、
+両条件の比較が完了した扱いにはしない。
+この再計数自体が新しいGPU推論を行うわけではない。

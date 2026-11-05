@@ -29,7 +29,34 @@
 **少なくともこの例では、時間方向の間引きが重要な観測を取り落としている。**
 入力画像の解像度やMambaの状態保持だけを原因とする説明では足りない。
 これは1動画の確認であり、全誤分類のうち何割が同じ原因かは未測定である。
-追加画像を与えれば正解へ変わるかも、まだこの動画では実測していない。
+以下の固定重みの介入で、観測を入れ替えたときの予測も確認した。
+
+## 同じ8枚の予算で、観測だけを入れ替えた結果
+
+[計画](results/event_observations_3988_step11000/plan.json)を保存してから、
+同じ11,000更新の重み・分類器・最初と最後の画像を使って比較した。
+この動画は11,000更新でも12,000更新でも同じ誤答だったが、介入には保存済み11,000更新の重みを使った。
+人が全動画を見て時刻を選んだ1例の診断であり、自動選択法や一般化性能の評価ではない。
+
+| 条件 | 変える観測 | 予測 | 正解ラベルの順位 |
+| --- | --- | --- | ---: |
+| 元の8枚 | 変更なし | 投げる（不正解） | 3 |
+| 投げ始めを含める8枚 | 0.917秒 → 0.750秒 | 上に投げて落とす（正解） | 1 |
+| 落下を含める8枚 | 1.667秒 → 1.917秒 | 投げる（不正解） | 2 |
+| 両方を含める8枚 | 上記の2枚を入れ替える | 上に投げて落とす（正解） | 1 |
+| 近傍へずらす対照8枚 | 0.917秒 → 1.000秒、1.667秒 → 1.750秒 | 投げる（不正解） | 2 |
+| 元の最初から最後までの全57枚 | 0.250〜4.917秒をすべて読む | 投げる（不正解） | 2 |
+
+一括入力と1枚ずつの逐次入力で、この表の予測クラスと正解順位は一致した。
+**この1例では、投げ始めの観測1枚を含めると、再学習なしで正解へ変わった。**
+落下を含めることまで必須だったとは言えず、モデルがその画像のどの特徴を利用したかも特定していない。
+全57枚では不正解のままだったが、8観測で学習したモデルへ更新回数を増やす介入でもあるため、
+それを追加情報の無価値や、再学習後の上限とは解釈しない。
+
+[実装](exploration/check_event_observations.py)、[結果](results/event_observations_3988_step11000/summary.json)、
+[再計数](results/event_observations_3988_step11000/verification.json)を保存した。
+12予測をlogitから再計数し、元の8枚の再推論と重み不変を確認した。
+元の予測は保存済み11,000更新の検証予測とも一致した。速度比較や正解率改善の統計的主張には使わない。
 
 [実装](exploration/analyze_video_failures.py)と[照合記録](results/ssv2_failure_examples_step12000/verification.json)を保存した。
 4時点の予測列は、公式ラベル監査で照合済みの予測列と一致する。
@@ -42,4 +69,12 @@
 ```sh
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.analyze_video_failures \
   --output results/new_ssv2_failure_examples
+```
+
+観測介入は、元の失敗例の集計と11,000更新checkpointを用意してから実行する。
+
+```sh
+uv run --locked python -m exploration.check_event_observations --output results/new_event_observations
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.check_event_observations \
+  --output results/new_event_observations --verify
 ```

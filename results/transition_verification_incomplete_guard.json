@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "reason": "Incomplete comparison was rejected",
+  "missing": "results/transition_conditioning_step11000_v2/training/appearance/summary.json"
+}

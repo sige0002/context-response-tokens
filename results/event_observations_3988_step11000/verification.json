@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "summary_sha256": "7e236f636839e6cfe4420a391792cca9ff53c0e35e9ad925ae4cbae00f7dda01",
+  "predictions_recounted": 12,
+  "scope": "Source/artifact/target checks and logit recount. One hand-selected failure, no independent GPU replay."
+}

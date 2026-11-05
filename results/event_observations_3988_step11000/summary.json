@@ -1,0 +1,416 @@
+{
+  "plan_sha256": "e04aad31b6cbbd1f728c937984ba094e05d33db3637bb336a58d3866f4c6c81c",
+  "logits_sha256": "94dcc48cb89f92bc1f96f102a649bd5df4bbabcb6c6e9dfc49eed676e33de603",
+  "results": {
+    "original_8_clip": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 3,
+      "target_margin": -1.625,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.4375
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.0
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 8.8125
+        }
+      ]
+    },
+    "original_8_stream": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 3,
+      "target_margin": -1.625,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.4375
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.0
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 8.8125
+        }
+      ]
+    },
+    "throw_8_clip": {
+      "prediction": 154,
+      "predicted_name": "Throwing something in the air and letting it fall",
+      "correct": true,
+      "target_rank": 1,
+      "target_margin": 0.875,
+      "top3": [
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 12.875
+        },
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 12.0
+        },
+        {
+          "label": 152,
+          "name": "Throwing something against something",
+          "logit": 10.5625
+        }
+      ]
+    },
+    "throw_8_stream": {
+      "prediction": 154,
+      "predicted_name": "Throwing something in the air and letting it fall",
+      "correct": true,
+      "target_rank": 1,
+      "target_margin": 0.875,
+      "top3": [
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 12.875
+        },
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 12.0
+        },
+        {
+          "label": 152,
+          "name": "Throwing something against something",
+          "logit": 10.5625
+        }
+      ]
+    },
+    "fall_8_clip": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.6875,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.25
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 9.5625
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.1875
+        }
+      ]
+    },
+    "fall_8_stream": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.6875,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.25
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 9.5625
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.1875
+        }
+      ]
+    },
+    "both_8_clip": {
+      "prediction": 154,
+      "predicted_name": "Throwing something in the air and letting it fall",
+      "correct": true,
+      "target_rank": 1,
+      "target_margin": 1.1875,
+      "top3": [
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 13.25
+        },
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 12.0625
+        },
+        {
+          "label": 152,
+          "name": "Throwing something against something",
+          "logit": 10.875
+        }
+      ]
+    },
+    "both_8_stream": {
+      "prediction": 154,
+      "predicted_name": "Throwing something in the air and letting it fall",
+      "correct": true,
+      "target_rank": 1,
+      "target_margin": 1.125,
+      "top3": [
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 13.25
+        },
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 12.125
+        },
+        {
+          "label": 152,
+          "name": "Throwing something against something",
+          "logit": 10.875
+        }
+      ]
+    },
+    "nearby_control_8_clip": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.625,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.8125
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 10.1875
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.75
+        }
+      ]
+    },
+    "nearby_control_8_stream": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.625,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 10.8125
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 10.1875
+        },
+        {
+          "label": 134,
+          "name": "Something falling like a feather or paper",
+          "logit": 9.8125
+        }
+      ]
+    },
+    "dense_57_clip": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.375,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 11.9375
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 11.5625
+        },
+        {
+          "label": 155,
+          "name": "Throwing something onto a surface",
+          "logit": 11.1875
+        }
+      ]
+    },
+    "dense_57_stream": {
+      "prediction": 151,
+      "predicted_name": "Throwing something",
+      "correct": false,
+      "target_rank": 2,
+      "target_margin": -0.375,
+      "top3": [
+        {
+          "label": 151,
+          "name": "Throwing something",
+          "logit": 11.9375
+        },
+        {
+          "label": 154,
+          "name": "Throwing something in the air and letting it fall",
+          "logit": 11.5625
+        },
+        {
+          "label": 155,
+          "name": "Throwing something onto a surface",
+          "logit": 11.1875
+        }
+      ]
+    }
+  },
+  "state_bytes": {
+    "original_8": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ],
+    "throw_8": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ],
+    "fall_8": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ],
+    "both_8": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ],
+    "nearby_control_8": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ],
+    "dense_57": [
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200,
+      79027200
+    ]
+  },
+  "weights_unchanged": true,
+  "baseline_repeat_max_abs": 0.0,
+  "baseline_matches_saved_prediction": true,
+  "limitations": [
+    "One failure selected after inspecting earlier predictions and the complete video.",
+    "Human-selected event frames: not a learned sampler, online selection rule or generalization result.",
+    "All conditions keep first and last RGB images fixed; five keep eight observations.",
+    "Dense57 changes both information and update count for an eight-observation-trained model.",
+    "11k weights, not the latest live training weights. Same classifier, no adaptation.",
+    "Both clip and single-frame streaming are measured. No runtime claim while GPU is shared."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "summary_sha256": "167c9a471e47681e4da476a2ba86adfac463f0642b408e56dddc266742892248",
+  "predictions_recounted": 1740,
+  "scope": "Source and artifact verification plus original-label recount; no independent GPU forward or source-video re-decode."
+}

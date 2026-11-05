@@ -1,0 +1,19 @@
+{
+  "scope": "Fresh batch-one baseline versus the corresponding saved full-validation predictions; same model step and source clips. Not a second independent GPU forward.",
+  "full_validation_predictions_sha256": "990ef0e47ee15f923d85e82f126a7ace8f129e59e2b634fff1d960fd9276ac2a",
+  "baseline_prediction_differences": 1,
+  "full_validation_subset_correct": 163,
+  "fresh_baseline_correct": 163,
+  "new_distinct_frames": {
+    "new_15": {
+      "minimum": 3,
+      "maximum": 7,
+      "mean": 6.977011494252873
+    },
+    "new_29": {
+      "minimum": 3,
+      "maximum": 21,
+      "mean": 20.261494252873565
+    }
+  }
+}

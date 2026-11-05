@@ -1,0 +1,37 @@
+{
+  "action": "POSIX_FADV_DONTNEED on five inactive task-owned RoboTAP raw files; no files, model weights or training state deleted",
+  "before": {
+    "MemFree": 5825269760,
+    "MemAvailable": 111209668608,
+    "Cached": 97390182400,
+    "SwapFree": 12961370112
+  },
+  "after": {
+    "MemFree": 28499169280,
+    "MemAvailable": 111203319808,
+    "Cached": 74780495872,
+    "SwapFree": 12961370112
+  },
+  "files": [
+    {
+      "path": "data/robotap/raw/robotap_split0.pkl",
+      "bytes": 6204610710
+    },
+    {
+      "path": "data/robotap/raw/robotap_split1.pkl",
+      "bytes": 6835282828
+    },
+    {
+      "path": "data/robotap/raw/robotap_split2.pkl",
+      "bytes": 7971820026
+    },
+    {
+      "path": "data/robotap/raw/robotap_split3.pkl",
+      "bytes": 8625803948
+    },
+    {
+      "path": "data/robotap/raw/robotap_split4.pkl",
+      "bytes": 8569614880
+    }
+  ]
+}

@@ -206,6 +206,65 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.inspect_temporal_d
 主学習と比較キューのソース・重み・条件は変更していない。
 この内部診断で、予定している認識精度による保持評価やAttentionとの比較を代替しない。
 
+## 観測画像の追加と更新回数を分ける診断
+
+[実装](exploration/temporal_density.py)では、11,000更新のモデルを[固定保存](results/temporal_density_step11000_v1/snapshot.json)し、
+同じ既観測348動画で、8観測を15・29観測へ増やした。
+元の8画像を捨てず、隣接する観測の間へ1枚または3枚を追加する。
+対照では、その追加位置を直前の元画像で埋める。両者で更新回数・元画像の位置・最後の画像・分類器・重みを揃える。
+最初の元画像より前の履歴は追加しない。全条件をbatch 1の因果的clip経路で新たに推論する。
+
+[固定計画](results/temporal_density_step11000_v1/evaluation_v2/plan.json)、
+[結果](results/temporal_density_step11000_v1/evaluation_v2/summary.json)、
+[元ラベルからの再計数](results/temporal_density_step11000_v1/evaluation_v2/verification.json)を保存した。
+この348動画は各クラス2本ずつの集合であり、全24,777本の53.35%とは集計の重みが異なる。
+
+| 条件 | 正解数 / 348 | 正解率 | 8観測との差 |
+| --- | ---: | ---: | ---: |
+| 元の8観測 | 163 | 46.84% | — |
+| 新しい途中画像を追加・15観測 | 165 | 47.41% | +0.57 pp |
+| 直前の元画像を保持・15観測 | 161 | 46.26% | −0.57 pp |
+| 新しい途中画像を追加・29観測 | 150 | 43.10% | −3.74 pp |
+| 直前の元画像を保持・29観測 | 135 | 38.79% | −8.05 pp |
+
+29観測では、新しい画像を使う方が保持対照より15本多く正解した（+4.31 pp、探索的な対応付き95%区間[2.59, 6.32]）。
+一方、元の8観測には13本及ばなかった。15観測の8観測に対する差の区間は[−1.72, 2.88] ppで、明確な改善とは扱わない。
+区間はクラス内2本の対応を保つ2,000回bootstrapであり、重みとこの集合に条件付けた、多重比較未補正の値である。
+
+**このモデルでは、同じ動画を細かく読むだけでは改善しなかった。**
+新しい画像のない保持対照でも、更新回数を増やすと成績が下がった。
+これは系列長・観測間隔の変化への感度を示すが、原因をSSMの忘却だけに限定しない。
+空間特徴の変化、読み出しの入力分布、8観測だけの学習も影響し得る。
+長い系列で再学習したモデルの上限、他方式への優位性、長期記憶の性能を示す実験ではない。
+次の構造検討では、追加画像の情報と、観測の細分化に伴う状態更新量を分けて扱う。
+
+全条件1,740予測の再計数が一致し、元の8観測の入力hashも以前の記録と一致した。
+モデル重みは不変で、先頭・末尾の2動画では8観測の再推論logitが完全一致した。
+[同じ動画の全件検証記録との照合](results/temporal_density_step11000_v1/evaluation_v2/global_validation_comparison.json)では、
+batchサイズの異なる以前の推論と予測が1本異なったが、両方とも不正解で、正解数は163本で一致した。
+新たな異なる画像は15観測で平均6.98枚、29観測で平均20.26枚だった。短い動画では同じ元フレームを再利用する。
+
+[CPU検査3件](results/temporal_density_tests.log)で、元画像の保持、細分化の包含関係、
+保持対照が新しい画像を使わないこと、短い動画、正解増減と予測変更数の区別を確認した。
+最初の実行は[CUDA context確保時のメモリ不足](results/temporal_density_step11000_v1/evaluation.log)で、推論前に停止した。
+使用していないRoboTAP元ファイル5本の読み込みキャッシュを`POSIX_FADV_DONTNEED`で解放し、
+[物理空きメモリが約5.8 GBから28.5 GBへ増えた](results/temporal_density_step11000_v1/cache_reclaim.json)後、
+同じ実装・重み・条件を新しい出力先で実行した。ファイルの削除や主学習の再起動はしていない。
+この挙動は[NVIDIAの共有メモリに関する既知の問題](https://docs.nvidia.com/dgx/dgx-spark/known-issues.html)と整合するが、
+ドライバ内部の原因を特定したとは主張しない。主学習とGPUを共有したため速度比較にも使わない。
+
+再実行には11,000更新の固定checkpointと、既存の履歴診断の入力記録が必要である。
+生logit・全入力記録・重みはローカル成果物であり、Gitには含めない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_temporal_density.py
+uv run --locked python -m exploration.temporal_density \
+  --checkpoint results/temporal_density_step11000_v1/checkpoint.pt \
+  --output results/new_temporal_density
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.temporal_density \
+  --output results/new_temporal_density --verify
+```
+
 ## 関連研究から分かる評価の範囲
 
 | 一次資料 | 実際に測るもの | 今回への含意 |

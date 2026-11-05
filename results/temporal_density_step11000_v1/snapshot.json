@@ -1,0 +1,6 @@
+{
+  "source": "results/ssv2_full_mamba_interleaved_seed42_rgbfix/last.pt",
+  "step": 11000,
+  "checkpoint_sha256": "89e594f8285489f01e71fc553a685ca36bbef77cd87f98598612e788eb43a9ee",
+  "selection": "Latest completed validation at 11000 updates, fixed before the density experiment; not selected by density results."
+}

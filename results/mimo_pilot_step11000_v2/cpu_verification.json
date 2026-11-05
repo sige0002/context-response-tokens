@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "plan_sha256": "7d56612f798b67e20c894f9d8de312f3ca907ef7a8fab784b1d8614e9789e4cc",
+  "cpu_tests": 9,
+  "test_log_sha256": "7710354492c89c9451e56bd6b986f7905a9009b86f0af41876a8f8ca4e1596f9",
+  "train_unique": 8192,
+  "validation_unique": 696,
+  "validation_classes": 174,
+  "validation_per_class": 4,
+  "overlap_with_previous_diagnostic_cohorts": 0,
+  "sources_match": true,
+  "scope": "CPU serialization/protocol tests and actual-data plan audit; paired GPU pilot training has not started."
+}

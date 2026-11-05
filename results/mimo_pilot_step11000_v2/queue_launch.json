@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-11-05T11:01:54.853458+00:00",
+  "queue_pid": 978774,
+  "queue_start_ticks": 102250817,
+  "status": {
+    "status": "waiting_for_main_20000",
+    "completed": [],
+    "dependency": {
+      "pid": 1307038,
+      "start_ticks": 97247271,
+      "run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix"
+    }
+  },
+  "open_pidfd_targets": [
+    1307038
+  ],
+  "plan_sha256": "7d56612f798b67e20c894f9d8de312f3ca907ef7a8fab784b1d8614e9789e4cc",
+  "sources_match": true,
+  "scope": "Live queue process and open pidfd bound to the original main trainer verified. Pilot training has not started; this is a launch receipt, not a result."
+}

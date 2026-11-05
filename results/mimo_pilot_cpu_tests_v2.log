@@ -1,0 +1,13 @@
+.........                                                                [100%]
+=============================== warnings summary ===============================
+exploration/test_mimo_pilot.py::test_siso_export_is_self_contained_and_exact
+exploration/test_mimo_pilot.py::test_siso_export_is_self_contained_and_exact
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:15: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    from cutlass.utils import LayoutEnum, block_copy
+
+exploration/test_mimo_pilot.py::test_siso_export_is_self_contained_and_exact
+  /home/sadasue/mywam/.venv/lib/python3.12/site-packages/quack/copy_utils.py:562: DeprecationWarning: cutlass.utils.LayoutEnum is deprecated; use cutlass.tensor_utils.LayoutEnum instead. It will be removed in a future release.
+    layout_c: cutlass.utils.LayoutEnum,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+9 passed, 3 warnings in 4.82s

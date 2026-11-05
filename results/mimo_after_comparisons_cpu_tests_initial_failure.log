@@ -1,0 +1,39 @@
+..........F                                                              [100%]
+=================================== FAILURES ===================================
+____________ test_binding_tracks_process_exit_and_validates_output _____________
+
+tmp_path = PosixPath('/tmp/pytest-of-sadasue/pytest-139/test_binding_tracks_process_ex0')
+
+    def test_binding_tracks_process_exit_and_validates_output(tmp_path):
+        # A controlled stand-in with the expected argv; no actual queue or GPU job.
+        child = subprocess.Popen([sys.executable, '-c', 'import time; time.sleep(20)',
+                                  'exploration.run_final_memory_layers', '--output', str(tmp_path)])
+        fd = None
+        try:
+>           fd, bound = queue.bind_dependency(child.pid, tmp_path)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+exploration/test_mimo_after_comparisons.py:92: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+pid = 1052677
+directory = PosixPath('/tmp/pytest-of-sadasue/pytest-139/test_binding_tracks_process_ex0')
+
+    def bind_dependency(pid, directory):
+        libc = ctypes.CDLL(None, use_errno=True)
+        libc.pidfd_open.argtypes = [ctypes.c_int, ctypes.c_uint]
+        libc.pidfd_open.restype = ctypes.c_int
+        fd = libc.pidfd_open(pid, 0)
+        if fd < 0:
+            raise OSError(ctypes.get_errno(), 'Cannot bind final-memory queue')
+        try:
+            proc = Path('/proc') / str(pid)
+            args = proc.joinpath('cmdline').read_bytes().decode().split('\0')
+            if ('exploration.run_final_memory_layers' not in args or '--output' not in args):
+>               raise ValueError('Dependency is not the final-memory queue')
+E               ValueError: Dependency is not the final-memory queue
+
+exploration/run_mimo_after_comparisons.py:47: ValueError
+=========================== short test summary info ============================
+FAILED exploration/test_mimo_after_comparisons.py::test_binding_tracks_process_exit_and_validates_output
+1 failed, 10 passed in 0.05s

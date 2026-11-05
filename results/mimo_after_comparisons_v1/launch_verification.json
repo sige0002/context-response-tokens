@@ -1,0 +1,18 @@
+{
+  "status": "waiting_for_final_memory_layers",
+  "pid": 1053764,
+  "start_ticks": 102882616,
+  "bound_dependency": {
+    "pid": 734870,
+    "start_ticks": 100283467,
+    "directory": "/home/sadasue/mywam/results/final_memory_layers_v1"
+  },
+  "pidfd_binding_verified": true,
+  "protected_processes_unchanged": true,
+  "original_plans_and_environment_unchanged": true,
+  "expected_release_refusal": "Final-memory queue has not completed successfully",
+  "cpu_tests_passed": 11,
+  "tests_log_sha256": "9b11cb2f3356aba2b6bea79c5002067b83ed8c2e96bb42b301fec1fe49fd2c79",
+  "plan_sha256": "c9ff6126b18939932f87d096510ba9cb56cc8873609c453813de9ba6e77a9473",
+  "scope": "Scheduling verification only; no pilot training or accuracy result"
+}

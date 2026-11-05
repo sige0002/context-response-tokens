@@ -67,7 +67,7 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_win
 
 [確認記録](results/windowed_attention_cpu_verification.json)はCPU上の数値・状態検査に限る。
 224入力の実画像・BF16 GPU経路、最終学習済み重みでの認識、速度測定は未実施である。
-主学習と既存の予約キューは維持する。次はGPU数値検査を主学習の完了後に行い、
+主学習と既存の予約キューは維持する。次はGPU数値検査を既存のGPU実験列が完了し、GPUが空いてから行い、
 その結果を確認してから同じ最終Attention重みで窓長8・32・128の認識と費用を比較する。
 固定窓を含む結果がない段階で、Attention全般に対する長履歴の優位性を主張しない。
 
@@ -101,4 +101,6 @@ uv run --locked python -m exploration.check_windowed_attention run \
 ```
 
 後半は主学習の20,000更新完了とプロセス終了を要求する。進行中の主学習を停止する処理はない。
+この起動ガードが確認するのは主学習だけなので、実行時には既存の比較列も完了し、GPUが空いていることを別に確認する。
+比較キューは各処理の開始時に他のGPUプロセスがあれば停止するため、主学習が終わっただけでこの検査を同時起動しない。
 この検査で時間を測らず、正式な費用測定には別途GPUの占有を確認した条件が必要である。

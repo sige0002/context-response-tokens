@@ -48,11 +48,26 @@ MIMO自体は既存の方式であり、置換したことだけを新規性やS
 
 ## 実行順と判断
 
-[待機用コード](exploration/run_mimo_pilot.py)は、実際の主学習プロセスをPIDファイルディスクリプタで束縛して待つ。
-そのプロセスが終了し、記録の末尾が20,000更新の`budget_complete`であることを確認してから、
-SISO学習、MIMO学習、SISO逐次評価、MIMO逐次評価、比較集計を順に実行する。
-現在の主学習と既存の比較キューのソース・設定は変更しない。
-主学習の後に走る対照モデルとGPUを共有する可能性があるため、この実験では速度を比較しない。
+[追加の待機処理](exploration/run_mimo_after_comparisons.py)は、既存の比較・費用測定・履歴診断の最後にある
+`run_final_memory_layers`の実プロセスをPIDファイルディスクリプタで束縛して待つ。
+終了後に正常完了、計画と各結果のハッシュ、主学習の20,000更新完了、GPUが空いていることを確認し、
+[元の実験コード](exploration/run_mimo_pilot.py)を起動する。
+SISO学習、MIMO学習、SISO逐次評価、MIMO逐次評価、比較集計の順序と、入力・重み・学習条件は維持する。
+
+既存の比較キューは、各処理の開始時に他のGPUプロセスがあれば停止する設計である。
+そのため、MIMOも主学習の終了直後に開始する設定では競合する。
+MIMOの元の待機プロセスだけを学習開始前に停止し、既存の比較列の後へ予約し直した。
+主学習と既存の比較キューのプロセス・ソース・設定は変更していない。
+[待機の実確認](results/mimo_after_comparisons_v1/launch_verification.json)と
+[変更前後の記録](results/mimo_queue_reschedule_v1.json)を保存した。
+旧pilotの`status.json`の`stopped`は、この待機処理を止めた記録である。
+再予約の状態は`results/mimo_after_comparisons_v1/status.json`を確認する。
+この試験は認識精度の比較であり、速度評価は別に行う。
+
+待機処理の[CPU検査11件](results/mimo_after_comparisons_cpu_tests.log)が通過した。
+先行処理の未完了・失敗、結果や計画の変更、GPU使用中を拒否し、無関係なプロセスを操作しないことを検査した。
+初回の検査では模擬プロセスの起動直後の読み取りが失敗したため、テストに起動完了の同期を追加した。
+[初回ログ](results/mimo_after_comparisons_cpu_tests_initial_failure.log)も残している。
 
 大きい比較へ進める条件は、あらかじめ次の3点にした。
 
@@ -63,14 +78,17 @@ SISO学習、MIMO学習、SISO逐次評価、MIMO逐次評価、比較集計を�
 満たしても、1 seed・短い追加学習での開発結果である。複数seed、同計算量の対照、
 全件評価、自然な長い履歴、ロボティクスでの評価、実測コストは別途必要になる。
 
-再実行はリポジトリのルートで行う。未使用の出力先を選び、`<main-training-pid>`を
-実際に確認した同じ主学習プロセスのPIDへ置き換える。
+再実行はリポジトリのルートで行う。未使用の出力先を選び、`<final-memory-queue-pid>`を
+実際に確認した`results/final_memory_layers_v1`の待機プロセスのPIDへ置き換える。
+この例は既存の比較・費用測定・履歴診断キューを準備済みの場合に使う。
 
 ```sh
 CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.mimo_pilot \
   --output results/new_mimo_pilot --mode plan
-uv run --locked python -m exploration.run_mimo_pilot \
-  --output results/new_mimo_pilot --after-pid "<main-training-pid>"
+uv run --locked python -m exploration.run_mimo_after_comparisons \
+  --pilot results/new_mimo_pilot \
+  --dependency results/final_memory_layers_v1 \
+  --after-pid "<final-memory-queue-pid>" --output results/new_mimo_schedule
 ```
 
 計画はソースと入力をハッシュで固定するため、待機開始後に対象ファイルを変更すると実行を拒否する。

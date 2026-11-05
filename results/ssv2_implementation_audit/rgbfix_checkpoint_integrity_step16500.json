@@ -1,0 +1,19 @@
+{
+  "scope": "CPU deserialization and checkpoint-content integrity only; no resumed update or GPU forward",
+  "checked_at": "2026-11-05T12:40:29.677081+00:00",
+  "step": 16500,
+  "epoch": 3,
+  "cursor": 21216,
+  "checkpoint_sha256": "746093f17dca69267b23b13f4245c554b5cc9aebbf49e3607ddadf9cbc772d15",
+  "checkpoint_bytes": 482104043,
+  "checkpoint_inode": 11948168,
+  "optimizer_parameter_tensors": 62,
+  "optimizer_parameter_elements": 9133662,
+  "model_tensors": 270,
+  "all_model_and_optimizer_values_finite": true,
+  "optimizer_steps_match": true,
+  "config_and_source_hashes_match": true,
+  "training_event_matches": true,
+  "last_validation_step": 16000,
+  "cuda_initialized": false
+}

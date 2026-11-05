@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-11-05T12:45:28.921455+00:00",
+  "reason": "MIMO and exclusive comparison queue shared the same predecessor; serialize MIMO after the existing full GPU chain",
+  "old_pid": 978774,
+  "old_start_ticks": 102250817,
+  "old_status": {
+    "status": "waiting_for_main_20000",
+    "completed": [],
+    "dependency": {
+      "pid": 1307038,
+      "start_ticks": 97247271,
+      "run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix"
+    }
+  },
+  "protected_processes": {
+    "1307038": {
+      "start_ticks": 97247271,
+      "command": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "train_video.py",
+        "--output",
+        "results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+        ""
+      ]
+    },
+    "1310800": {
+      "start_ticks": 97249146,
+      "command": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "run_video_comparisons.py",
+        "--reference",
+        "results/ssv2_full_mamba_interleaved_seed42_rgbfix",
+        "--after-pid",
+        "1307038",
+        "--output",
+        "results/ssv2_full_comparisons_seed42_rgbfix",
+        ""
+      ]
+    },
+    "1310938": {
+      "start_ticks": 97249989,
+      "command": [
+        "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3",
+        "run_gmmix_comparison.py",
+        "--video-comparisons",
+        "results/ssv2_full_comparisons_seed42_rgbfix",
+        "--integration",
+        "results/gmmix_training_integration_rgbfix_fp32",
+        "--output",
+        "results/ssv2_gmmix_comparison_seed42_rgbfix",
+        "--after-video-pid",
+        "1310800",
+        ""
+      ]
+    },
+    "630734": {
+      "start_ticks": 99452396,
+      "command": [
+        "/home/sadasue/mywam/baselines/gmmix/.venv/bin/python3",
+        "run_temporal_priority.py",
+        "--output",
+        "results/temporal_priority_seed42_rgbfix",
+        "--resume",
+        "--after-gmmix-pid",
+        "1310938",
+        ""
+      ]
+    },
+    "677738": {
+      "start_ticks": 99848207,
+      "command": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_delayed_action",
+        "--output",
+        "/home/sadasue/mywam/results/delayed_action_memory_v1/comparison_v2",
+        "--resume",
+        "--after-pid",
+        "630734",
+        ""
+      ]
+    },
+    "692152": {
+      "start_ticks": 99968826,
+      "command": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_buffered_cost",
+        "--output",
+        "/home/sadasue/mywam/results/buffered_attention_cost_control",
+        "--resume",
+        "--after-pid",
+        "677738",
+        ""
+      ]
+    },
+    "734870": {
+      "start_ticks": 100283467,
+      "command": [
+        "/home/sadasue/mywam/.venv/bin/python3",
+        "-m",
+        "exploration.run_final_memory_layers",
+        "--output",
+        "/home/sadasue/mywam/results/final_memory_layers_v1",
+        "--after-pid",
+        "692152",
+        ""
+      ]
+    }
+  },
+  "pinned_artifacts": {
+    "results/mimo_pilot_step11000_v2/plan.json": "7d56612f798b67e20c894f9d8de312f3ca907ef7a8fab784b1d8614e9789e4cc",
+    "results/final_memory_layers_v1/plan.json": "823be810b5dc6c9915497436d58a984826070859e592c91cc2656dc958c383ed",
+    "results/ssv2_full_mamba_interleaved_seed42_rgbfix/config.json": "41301ebec26f806af523adc9ffaa0e4385eeadf9885170ca98399ace01c01c3c",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "old_waiter_stopped_before_any_training": true,
+  "stopped_status": {
+    "status": "stopped",
+    "completed": [],
+    "dependency": {
+      "pid": 1307038,
+      "start_ticks": 97247271,
+      "run": "/home/sadasue/mywam/results/ssv2_full_mamba_interleaved_seed42_rgbfix"
+    },
+    "error": "InterruptedError: MIMO pilot cancelled; predecessor untouched"
+  }
+}

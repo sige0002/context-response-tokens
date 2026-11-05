@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "summary_sha256": "4197bd8819ba5e1b180a11baefdeedf1efc73b6f8b054797fe3c874c20057326",
+  "core_conditions": 12,
+  "fixture_features_exact": true,
+  "fixture_logits_exact": true,
+  "scope": "Recount saved CPU reference artifacts and verify source/checkpoint/export/input hashes. No independent model replay or native GPU inference."
+}

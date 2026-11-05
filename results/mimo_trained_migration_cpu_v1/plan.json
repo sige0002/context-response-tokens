@@ -1,0 +1,67 @@
+{
+  "checkpoint": "results/temporal_density_step11000_v1/checkpoint.pt",
+  "checkpoint_sha256": "89e594f8285489f01e71fc553a685ca36bbef77cd87f98598612e788eb43a9ee",
+  "checkpoint_step": 11000,
+  "video_id": "3988",
+  "video_sha256": "df9bf5d39071b1a49fa54622245c40bee5367c02a8b348de904ebd3372617c5d",
+  "input_sha256": "3625ae068edd7adbb9e1d33aa9a76c4ab07f700a501c4ffea8849c83726d7d2c",
+  "input_shape": [
+    1,
+    8,
+    3,
+    224,
+    224
+  ],
+  "indices": [
+    3,
+    11,
+    20,
+    28,
+    37,
+    45,
+    54,
+    59
+  ],
+  "timestamps": [
+    0.25,
+    0.917,
+    1.667,
+    2.333,
+    3.083,
+    3.75,
+    4.5,
+    4.917
+  ],
+  "random_seed": 701,
+  "core_lengths": [
+    1,
+    8,
+    17,
+    65
+  ],
+  "core_batch": 2,
+  "core_tolerances": {
+    "atol": 1e-10,
+    "rtol": 1e-10
+  },
+  "image_tolerances": {
+    "atol": 1e-05,
+    "rtol": 1e-05
+  },
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_mimo_migration.py": "07f3c17425577f367f06cbf199baeb71f5c01dd309cf882219d160205583bc4c",
+    "exploration/mimo_siglip.py": "d59c8041625351eae31dce0b3e54bbe6fe03478c2df493dad3ac0b2f269c9f5b",
+    "exploration/test_mimo_siglip.py": "76f913b35fab283c26c22cb127c8fb8b11bcad3cf8f5a3200843efbc2d7d71de",
+    "exploration/mimo_fp64_reference.py": "d77e32fa68d366b8c9d645c234653668784703af174ff3bd3c6df017c32f54a4",
+    "exploration/evaluate_video_history.py": "40b0ca3e913ac4ebf78c5be0d83558856b01d8e885c318412eb5396354e5e14a",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "temporal_readout.py": "b94789388ef2eaaea76d377234aca8ef70b7eacc9a91612dbcbae62a5ba356bd",
+    "video_checkpoint.py": "520bd1b7a9604403c6c87d34d50061e76535b37ec9180823ff699482b835dc94",
+    "video_data.py": "02741525f54b01de5447ab1d26ae72218009c15483aec950b85a86ecc7cdc9a4",
+    "train_temporal.py": "d263568b7cd880a7862aea093eb745aa7e989fe64e1f4031fd6b2433819dd93b",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+    "vendor/mamba/mamba_ssm/modules/mamba3.py": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c"
+  },
+  "scope": "CPU mathematical migration and weight export: FP32 SigLIP/readout plus substituted FP64 temporal recurrences. No native visual inference, accuracy benchmark, or latency claim."
+}

@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "plan_sha256": "b0c4ebcace4932443b0d385124ea1990f0d66679f97901fbc59128e3c73fe43c",
+  "core_checks": [
+    {
+      "layer": 4,
+      "length": 1,
+      "max_abs": 1.6653345369377348e-16,
+      "relative_l2": 2.2293388400260524e-16
+    },
+    {
+      "layer": 4,
+      "length": 8,
+      "max_abs": 4.440892098500626e-16,
+      "relative_l2": 3.161889898477135e-16
+    },
+    {
+      "layer": 4,
+      "length": 17,
+      "max_abs": 8.881784197001252e-16,
+      "relative_l2": 3.480663100281968e-16
+    },
+    {
+      "layer": 4,
+      "length": 65,
+      "max_abs": 1.7763568394002505e-15,
+      "relative_l2": 3.618582754076495e-16
+    },
+    {
+      "layer": 8,
+      "length": 1,
+      "max_abs": 1.3877787807814457e-16,
+      "relative_l2": 1.9200769671895496e-16
+    },
+    {
+      "layer": 8,
+      "length": 8,
+      "max_abs": 9.992007221626409e-16,
+      "relative_l2": 3.632006975152139e-16
+    },
+    {
+      "layer": 8,
+      "length": 17,
+      "max_abs": 2.3314683517128287e-15,
+      "relative_l2": 3.5980365248908022e-16
+    },
+    {
+      "layer": 8,
+      "length": 65,
+      "max_abs": 3.1086244689504383e-15,
+      "relative_l2": 3.7877322195877915e-16
+    },
+    {
+      "layer": 12,
+      "length": 1,
+      "max_abs": 2.220446049250313e-16,
+      "relative_l2": 2.9559790681321675e-16
+    },
+    {
+      "layer": 12,
+      "length": 8,
+      "max_abs": 7.771561172376096e-16,
+      "relative_l2": 3.6760879983947143e-16
+    },
+    {
+      "layer": 12,
+      "length": 17,
+      "max_abs": 1.7763568394002505e-15,
+      "relative_l2": 3.9523425636464283e-16
+    },
+    {
+      "layer": 12,
+      "length": 65,
+      "max_abs": 2.6645352591003757e-15,
+      "relative_l2": 3.911027446093302e-16
+    }
+  ],
+  "features": {
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "logits": {
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "export_weights_exact": true,
+  "export_reference_features_exact": true,
+  "export_reference_logits_exact": true,
+  "model_sha256": "d1aa7cd4217319cd930e0d4f667f612ce0044b2afbc49e339bd45dbce7d49d23",
+  "fixture_sha256": "6ca8b5fe18348c4a54ff8fcca5b96370a2a65e0e4428bcf15f89531ed953b4d0",
+  "prediction_siso": 151,
+  "prediction_mimo": 151,
+  "native_visual_forward_tested": false,
+  "native_streaming_tested": false,
+  "recognition_accuracy_tested": false,
+  "latency_tested": false,
+  "full_visual_model_qualified": false,
+  "scope": "CPU mathematical migration and weight export: FP32 SigLIP/readout plus substituted FP64 temporal recurrences. No native visual inference, accuracy benchmark, or latency claim."
+}

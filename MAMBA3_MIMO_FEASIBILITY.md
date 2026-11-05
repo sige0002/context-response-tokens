@@ -144,7 +144,7 @@ CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.check_mimo_migrati
 [保存出力の照合](results/mimo_visual_comparison_v2.json)を残した。
 勾配の検査ではoptimizerを更新しておらず、重みは変えていない。
 再実行では一部の勾配ノルムに小さな差があったため、native逆伝播のbitwise再現性まで確認済みとはしない。
-有限な勾配があることも、独立した参照式との勾配一致を意味しない。
+有限な勾配があることだけでは、独立した参照式との勾配一致を意味しない。追加の照合は下記に分けて示す。
 
 ### 逐次入力の分割による数値差と修正
 
@@ -186,8 +186,37 @@ uv run --no-sync --with 'apache-tvm-ffi==0.1.10' python -m exploration.check_mim
   --output results/new_mimo_visual_stream
 ```
 
-今後必要なのは、複数動画・長系列での検査、勾配の独立照合、同条件SISOとの認識精度比較、専有時の実測コストである。
+今後必要なのは、複数動画・長系列での検査、勾配照合の条件の拡張、同条件SISOとの認識精度比較、専有時の実測コストである。
 `full_visual_model_qualified`は引き続き`false`とし、1動画の動作確認をモデル全体の性能評価として扱わない。
+
+## native逆伝播と独立したCPU参照式の照合
+
+[勾配検査](exploration/check_mimo_gradients.py)で、11,000ステップ時点の第4層のコアを調べた。
+入力はランダムな隠れ特徴2系列×8観測であり、画像ではない。出力と固定したランダム目標の要素積の平均を目的関数にする。
+同じ入力・重み・目的関数を用い、native BF16コアと通常のPyTorch演算によるCPU/FP64漸化式から、
+11パラメータテンソルおよび入力への勾配をそれぞれ計算した。
+追加経路をゼロにした移行直後と、追加の書き込み・読み出し係数を非ゼロにした場合を分ける。
+
+| 条件 | パラメータ・入力ごとの勾配の最大相対L2差 | 追加で分解した投影・rank別の最大相対L2差 |
+| --- | ---: | ---: |
+| 移行直後 | 0.014849 | 0.008921 |
+| 追加経路を有効化 | 0.010296 | 0.011103 |
+
+[結果](results/mimo_gradient_reference_v1/summary.json)と[保存配列の再計数・投影/rank別の内訳](results/mimo_gradient_reference_v1/verification.json)を公開した。
+大きな投影行列全体のノルムだけでは小さい追加経路の不具合が隠れ得るため、B/C投影を各rankに分けて照合した。
+この2条件では、参照勾配が厳密にゼロの各ブロックはnativeでもゼロだった。
+nativeを2回実行した勾配も、この小規模条件では完全一致した。上記の視覚モデル全体の逆伝播の再現性を保証する結果ではない。
+
+実行前の[計画](results/mimo_gradient_reference_v1/plan.json)では、参照ノルムが`1e-8`を超え、相対L2差が0.1を超えるパラメータを調査対象にする診断基準を記録した。
+該当するものはなかった。この基準は工学的な警報条件であり、認識精度や任意入力でのカーネルの正しさを保証する上界ではない。
+複数層・長い系列・実際の画像特徴・他の損失での照合は残る。
+
+```sh
+uv run --locked python -m exploration.check_mimo_gradients \
+  --fixture results/mimo_trained_migration_cpu_v2 --output results/new_mimo_gradients
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m exploration.verify_mimo_gradients \
+  --root results/new_mimo_gradients
+```
 
 ## 再実行
 

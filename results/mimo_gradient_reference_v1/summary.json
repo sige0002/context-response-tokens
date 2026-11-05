@@ -1,0 +1,374 @@
+{
+  "completed": true,
+  "plan_sha256": "bab547ae8095718fb0e1105528a5043a16d1994234d89c099c54988d58956ea2",
+  "artifact_sha256": "efdb4783c4df3abbcc751f8c9a100c7fb4b947206a4d1f7b12402539ee691f72",
+  "results": {
+    "preserving_initialization": {
+      "output": {
+        "max_abs": 0.011081078194261629,
+        "relative_l2": 0.0061920647044757925
+      },
+      "gradients": {
+        "dt_bias": {
+          "max_abs": 2.6000623457492862e-05,
+          "relative_l2": 0.014848731741292174,
+          "reference_norm": 0.0018313058650715722,
+          "actual_norm": 0.0018107577663589798,
+          "cosine": 0.9999521703004016
+        },
+        "B_bias": {
+          "max_abs": 2.092810683669574e-06,
+          "relative_l2": 0.008921143661686035,
+          "reference_norm": 0.000712082260963602,
+          "actual_norm": 0.0007102311838620668,
+          "cosine": 0.9999634904607991
+        },
+        "C_bias": {
+          "max_abs": 1.19595388068282e-06,
+          "relative_l2": 0.008066833694403683,
+          "reference_norm": 0.0005729179937571482,
+          "actual_norm": 0.0005720289926313229,
+          "cosine": 0.9999686182998786
+        },
+        "mimo_x": {
+          "max_abs": 1.3413357136904131e-05,
+          "relative_l2": 0.006492461379659571,
+          "reference_norm": 0.009544453903940464,
+          "actual_norm": 0.009531966955040496,
+          "cosine": 0.9999797533001884
+        },
+        "mimo_z": {
+          "max_abs": 1.4322413974792586e-05,
+          "relative_l2": 0.006158876239176097,
+          "reference_norm": 0.006523087071919638,
+          "actual_norm": 0.0065097806975291704,
+          "cosine": 0.9999830801810049
+        },
+        "mimo_o": {
+          "max_abs": 1.4966381273502725e-05,
+          "relative_l2": 0.006359071736491618,
+          "reference_norm": 0.009297268782340896,
+          "actual_norm": 0.009278502402496447,
+          "cosine": 0.9999817814665211
+        },
+        "D": {
+          "max_abs": 6.404050058510724e-06,
+          "relative_l2": 0.005694777934771874,
+          "reference_norm": 0.0022260638408712298,
+          "actual_norm": 0.0022252839531723325,
+          "cosine": 0.9999838404611365
+        },
+        "in_proj.weight": {
+          "max_abs": 7.46722967955955e-05,
+          "relative_l2": 0.006099798996051436,
+          "reference_norm": 0.2278277446694646,
+          "actual_norm": 0.22772087062711355,
+          "cosine": 0.9999814975741237
+        },
+        "B_norm.weight": {
+          "max_abs": 2.2449804035747176e-06,
+          "relative_l2": 0.007181212062443854,
+          "reference_norm": 0.0008720905458575927,
+          "actual_norm": 0.0008735853110954326,
+          "cosine": 0.9999757256050408
+        },
+        "C_norm.weight": {
+          "max_abs": 2.338970127586693e-06,
+          "relative_l2": 0.007859318303783872,
+          "reference_norm": 0.0007978091864725528,
+          "actual_norm": 0.0007963501295640851,
+          "cosine": 0.9999707343445244
+        },
+        "out_proj.weight": {
+          "max_abs": 8.598399224581978e-05,
+          "relative_l2": 0.006027720464191998,
+          "reference_norm": 0.2120932043769895,
+          "actual_norm": 0.21194900762820273,
+          "cosine": 0.9999820522053815
+        },
+        "input": {
+          "max_abs": 3.7692946249080587e-06,
+          "relative_l2": 0.006413572437732029,
+          "reference_norm": 0.008385816388969018,
+          "actual_norm": 0.008379414050793212,
+          "cosine": 0.9999797089976197
+        }
+      },
+      "alarm_parameters": [],
+      "within_diagnostic_thresholds": true,
+      "forward_replay_exact": true,
+      "gradient_replay": {
+        "dt_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0018107577663589798,
+          "actual_norm": 0.0018107577663589798,
+          "cosine": 1.0
+        },
+        "B_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0007102311838620668,
+          "actual_norm": 0.0007102311838620668,
+          "cosine": 0.9999999999999998
+        },
+        "C_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0005720289926313229,
+          "actual_norm": 0.0005720289926313229,
+          "cosine": 0.9999999999999999
+        },
+        "mimo_x": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.009531966955040496,
+          "actual_norm": 0.009531966955040496,
+          "cosine": 1.0000000000000002
+        },
+        "mimo_z": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0065097806975291704,
+          "actual_norm": 0.0065097806975291704,
+          "cosine": 1.0
+        },
+        "mimo_o": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.009278502402496447,
+          "actual_norm": 0.009278502402496447,
+          "cosine": 1.0
+        },
+        "D": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0022252839531723325,
+          "actual_norm": 0.0022252839531723325,
+          "cosine": 1.0
+        },
+        "in_proj.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.22772087062711355,
+          "actual_norm": 0.22772087062711355,
+          "cosine": 1.0000000000000002
+        },
+        "B_norm.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0008735853110954326,
+          "actual_norm": 0.0008735853110954326,
+          "cosine": 1.0
+        },
+        "C_norm.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0007963501295640851,
+          "actual_norm": 0.0007963501295640851,
+          "cosine": 1.0
+        },
+        "out_proj.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.21194900762820273,
+          "actual_norm": 0.21194900762820273,
+          "cosine": 1.0
+        },
+        "input": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.008379414050793212,
+          "actual_norm": 0.008379414050793212,
+          "cosine": 1.0
+        }
+      },
+      "gradient_replay_exact": true
+    },
+    "extra_ranks_active": {
+      "output": {
+        "max_abs": 0.013124491101895397,
+        "relative_l2": 0.006615308530188916
+      },
+      "gradients": {
+        "dt_bias": {
+          "max_abs": 2.960551393672026e-05,
+          "relative_l2": 0.010295632610312239,
+          "reference_norm": 0.0029647532465634117,
+          "actual_norm": 0.0029370716244444027,
+          "cosine": 0.999990500181683
+        },
+        "B_bias": {
+          "max_abs": 1.3884751977068685e-06,
+          "relative_l2": 0.0077749423379151646,
+          "reference_norm": 0.0007853418251660888,
+          "actual_norm": 0.0007832975986724348,
+          "cosine": 0.9999730928410343
+        },
+        "C_bias": {
+          "max_abs": 1.2595707678484942e-06,
+          "relative_l2": 0.007856475290388654,
+          "reference_norm": 0.0005836207630054566,
+          "actual_norm": 0.0005826509439489888,
+          "cosine": 0.9999704694965755
+        },
+        "mimo_x": {
+          "max_abs": 1.438662336578165e-05,
+          "relative_l2": 0.006402574722233297,
+          "reference_norm": 0.009405313188908151,
+          "actual_norm": 0.009393513258107555,
+          "cosine": 0.9999802657737485
+        },
+        "mimo_z": {
+          "max_abs": 1.077071920641264e-05,
+          "relative_l2": 0.005292795949142875,
+          "reference_norm": 0.006613371866926393,
+          "actual_norm": 0.006608658971960746,
+          "cosine": 0.999986237269365
+        },
+        "mimo_o": {
+          "max_abs": 1.0247460480709348e-05,
+          "relative_l2": 0.006183605766243724,
+          "reference_norm": 0.009314855005077225,
+          "actual_norm": 0.009298834494555631,
+          "cosine": 0.9999823301276095
+        },
+        "D": {
+          "max_abs": 6.405659615064951e-06,
+          "relative_l2": 0.00568574567396926,
+          "reference_norm": 0.002228757660835322,
+          "actual_norm": 0.0022280108755604916,
+          "cosine": 0.9999838868843444
+        },
+        "in_proj.weight": {
+          "max_abs": 0.00012659816110101828,
+          "relative_l2": 0.006757063021120739,
+          "reference_norm": 0.2288452919102377,
+          "actual_norm": 0.22886695806148488,
+          "cosine": 0.9999771776921538
+        },
+        "B_norm.weight": {
+          "max_abs": 2.7828138949003703e-06,
+          "relative_l2": 0.007002271572839451,
+          "reference_norm": 0.0008996720351137143,
+          "actual_norm": 0.0009004635718762303,
+          "cosine": 0.9999758923356844
+        },
+        "C_norm.weight": {
+          "max_abs": 2.792931042659374e-06,
+          "relative_l2": 0.008463846373160153,
+          "reference_norm": 0.0008306220647865867,
+          "actual_norm": 0.0008283111986875067,
+          "cosine": 0.9999679625360741
+        },
+        "out_proj.weight": {
+          "max_abs": 0.0001279493915666164,
+          "relative_l2": 0.006537858342315524,
+          "reference_norm": 0.21297230916382268,
+          "actual_norm": 0.2127618470010219,
+          "cosine": 0.9999790958295603
+        },
+        "input": {
+          "max_abs": 4.199187666903046e-06,
+          "relative_l2": 0.006828899926218697,
+          "reference_norm": 0.008386308771409463,
+          "actual_norm": 0.008384032860745405,
+          "cosine": 0.9999767135679903
+        }
+      },
+      "alarm_parameters": [],
+      "within_diagnostic_thresholds": true,
+      "forward_replay_exact": true,
+      "gradient_replay": {
+        "dt_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0029370716244444027,
+          "actual_norm": 0.0029370716244444027,
+          "cosine": 1.0
+        },
+        "B_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0007832975986724348,
+          "actual_norm": 0.0007832975986724348,
+          "cosine": 1.0000000000000002
+        },
+        "C_bias": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0005826509439489888,
+          "actual_norm": 0.0005826509439489888,
+          "cosine": 1.0000000000000002
+        },
+        "mimo_x": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.009393513258107555,
+          "actual_norm": 0.009393513258107555,
+          "cosine": 1.0000000000000002
+        },
+        "mimo_z": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.006608658971960746,
+          "actual_norm": 0.006608658971960746,
+          "cosine": 1.0000000000000002
+        },
+        "mimo_o": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.009298834494555631,
+          "actual_norm": 0.009298834494555631,
+          "cosine": 0.9999999999999999
+        },
+        "D": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0022280108755604916,
+          "actual_norm": 0.0022280108755604916,
+          "cosine": 0.9999999999999998
+        },
+        "in_proj.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.22886695806148488,
+          "actual_norm": 0.22886695806148488,
+          "cosine": 1.0000000000000002
+        },
+        "B_norm.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0009004635718762303,
+          "actual_norm": 0.0009004635718762303,
+          "cosine": 0.9999999999999999
+        },
+        "C_norm.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.0008283111986875067,
+          "actual_norm": 0.0008283111986875067,
+          "cosine": 1.0
+        },
+        "out_proj.weight": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.2127618470010219,
+          "actual_norm": 0.2127618470010219,
+          "cosine": 0.9999999999999999
+        },
+        "input": {
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "reference_norm": 0.008384032860745405,
+          "actual_norm": 0.008384032860745405,
+          "cosine": 1.0
+        }
+      },
+      "gradient_replay_exact": true
+    }
+  },
+  "full_visual_model_qualified": false,
+  "recognition_accuracy_tested": false,
+  "scope": "Compare native MIMO gradients with an independent CPU/FP64 recurrence.\n\nTwo small numerical cases use the first trained temporal core, random hidden\ninputs, and one fixed linear output objective. This is not an image benchmark,\na general proof of kernel correctness, or a speed measurement.\n"
+}

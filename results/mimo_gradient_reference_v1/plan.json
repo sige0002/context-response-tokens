@@ -1,0 +1,34 @@
+{
+  "input_shape": [
+    2,
+    8,
+    256
+  ],
+  "seed": 701,
+  "trained_layer": 4,
+  "checkpoint_step": 11000,
+  "export_sha256": "d1aa7cd4217319cd930e0d4f667f612ce0044b2afbc49e339bd45dbce7d49d23",
+  "objective": "Mean elementwise product of the complete core output and a fixed random target.",
+  "cases": [
+    "preserving_initialization",
+    "extra_ranks_active"
+  ],
+  "native_precision": "BF16 autocast with FP32 parameters",
+  "reference_precision": "FP64",
+  "alarm_relative_l2": 0.1,
+  "alarm_reference_norm_floor": 1e-08,
+  "sources": {
+    "/home/sadasue/mywam/exploration/check_mimo_gradients.py": "817b65bd502b4d45b77c85a485e83648fab472294c47746d7ca616265fb7277a",
+    "exploration/mimo_fp64_reference.py": "d77e32fa68d366b8c9d645c234653668784703af174ff3bd3c6df017c32f54a4",
+    "train_video.py": "4e91b92b87bd5a0c61268b50a492036feb1163862d69bcc8adf673ea0d2e1c88",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5",
+    "vendor/mamba/mamba_ssm/modules/mamba3.py": "930c3dfa04dea8444b1c9ee8b6ac9cbbc7ef492dc5ae1f4c83051ef953eca33c",
+    "vendor/mamba/mamba_ssm/ops/tilelang/mamba3/mamba3_mimo_bwd.py": "f35e610f6c5c6fdf8dc72dae51df26b95605deb38625f13ae6d8cad9c32c229f"
+  },
+  "versions": {
+    "torch": "2.14.1+cu130",
+    "tilelang": "0.1.8",
+    "apache-tvm-ffi": "0.1.9"
+  },
+  "scope": "Compare native MIMO gradients with an independent CPU/FP64 recurrence.\n\nTwo small numerical cases use the first trained temporal core, random hidden\ninputs, and one fixed linear output objective. This is not an image benchmark,\na general proof of kernel correctness, or a speed measurement.\n"
+}

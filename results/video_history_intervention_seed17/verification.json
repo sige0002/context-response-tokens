@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "CPU recount and provenance; no independent GPU forward",
+  "summary_sha256": "0c9e2ed783540dcc3af19eead8c3fd2d9e5f4664dc6403abfd2dfad8a08cff33",
+  "verifier_sha256": "c02761905426818b1d04bf9bbea3bfe30141976c1009703f26c58973849b54f1",
+  "videos": 348,
+  "conditions": 5,
+  "counts": {
+    "full_clip": {
+      "correct": 105,
+      "total": 348,
+      "changed_predictions": 0,
+      "gained_vs_stream": 0,
+      "lost_vs_stream": 0
+    },
+    "full_stream": {
+      "correct": 105,
+      "total": 348,
+      "changed_predictions": 0,
+      "gained_vs_stream": 0,
+      "lost_vs_stream": 0
+    },
+    "current_only": {
+      "correct": 26,
+      "total": 348,
+      "changed_predictions": 306,
+      "gained_vs_stream": 8,
+      "lost_vs_stream": 87
+    },
+    "repeat_current": {
+      "correct": 27,
+      "total": 348,
+      "changed_predictions": 288,
+      "gained_vs_stream": 5,
+      "lost_vs_stream": 83
+    },
+    "reverse_history": {
+      "correct": 93,
+      "total": 348,
+      "changed_predictions": 110,
+      "gained_vs_stream": 9,
+      "lost_vs_stream": 21
+    }
+  },
+  "full_clip_replay": {
+    "exact": true,
+    "logit_max_abs": 0.0,
+    "changed_predictions": 0
+  }
+}

@@ -42,15 +42,16 @@ GMMixは公開コアを変更せず、この環境のPyTorch畳み込みfallback
 | 最長 | 1,337 | `15402003961862946817` |
 
 各方式・各動画を独立したプロセスで読み、1周warmup、3周測定する。異なる方式の同時GPU実行は拒否する。
-計算費用のキューは点追跡のGPUキューが終了してから動く。これはGPU利用順の制御であり、点追跡の成功を計算費用の前提にはしない。
+現在は[時間認識を優先するキュー](TEMPORAL_PRIORITY.md)から、動画比較の完了後に動く。
+点追跡を待っていた旧キューは停止済みであり、点追跡のデータ準備・学習完了は実行条件にしない。
 動画分類の5モデルについては、全更新と予定された検証の完了を確認してから測定する。
 
 ```sh
-# POINT_QUEUE_PIDは、同じpoint-comparisons出力を使う実際のPythonプロセス
-uv run --locked python run_encoder_costs.py \
-  --point-comparisons results/point_comparisons_with_gmmix_seed42_rgbfix \
-  --after-point-pid "$POINT_QUEUE_PID" \
-  --output results/new_encoder_costs
+# GMMIX_QUEUE_PIDは、既存の動画比較を待つ実際のrun_gmmix_comparison.pyプロセス
+# 同じ出力先の待機キューが既に動いている場合は重複起動しない。
+uv run --project baselines/gmmix --locked python run_temporal_priority.py \
+  --output results/new_temporal_priority \
+  --after-gmmix-pid "$GMMIX_QUEUE_PID"
 ```
 
 ## 測定値の意味と限界
@@ -66,5 +67,5 @@ uv run --locked python run_encoder_costs.py \
 - 状態を消してから測る先頭フレームと、履歴1–7、8–31、32–127、128–255、256以上を分ける。warmup後なので、プロセス起動・JITコンパイルのcold startではない。
 - メモリのピークは、当該プロセスでPyTorchが確保した重み・現在入力・状態・出力・一時領域を含む。状態の複製や動画全体のGPU保持は行わない。
 - CUDAのcontextやPyTorch外の割当はこのピークに含まれない。ドライバが返すプロセスメモリは各周の後に別途記録し、ピークとは呼ばない。
-- 固定サイズで長い動画を処理できても、必要な情報を覚えている証拠にはならない。認識・点追跡・履歴介入の結果が別途必要である。
+- 固定サイズで長い動画を処理できても、必要な情報を覚えている証拠にはならない。時間認識と履歴介入の結果が別途必要である。
 - 3本の動画・1つの機械・1つの学習seedの測定であり、一般的な高速性やSOTAを示す実験ではない。

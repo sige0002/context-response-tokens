@@ -1,0 +1,74 @@
+{
+  "scope": "CPU numerical, cache and receptive-field checks for an inference-only sliding-window attention control",
+  "tests": {
+    "command": "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_windowed_attention.py",
+    "passed": 6,
+    "log_sha256": "f7d033e63d9d29cde704aadb747c9b9a3ae1d4c2b5a67fc4c8d2cae31e148da8"
+  },
+  "numerical_reference": {
+    "method": "Chronological explicit score matrix, softmax, and weighted values; compared against dense-window SDPA and ring-buffer SDPA",
+    "dtype": "float64",
+    "width": 32,
+    "batch_size": 2,
+    "frames": 29,
+    "windows": [
+      1,
+      3,
+      8
+    ],
+    "absolute_tolerance": 1e-12,
+    "relative_tolerance": 1e-12
+  },
+  "encoder_check": {
+    "initialization": "random small SigLIP, synthetic image inputs",
+    "time_layers": 2,
+    "window_for_horizon_check": 3,
+    "maximum_input_observations": 5,
+    "per_layer_cache_can_propagate_history_beyond_one_window": true
+  },
+  "analytical_full_model_capacity": [
+    {
+      "window": 8,
+      "reserved_kv_bytes": 4816896,
+      "cpu_cursor_bytes": 24,
+      "total_state_bytes": 4816920,
+      "maximum_input_observations": 22
+    },
+    {
+      "window": 32,
+      "reserved_kv_bytes": 19267584,
+      "cpu_cursor_bytes": 24,
+      "total_state_bytes": 19267608,
+      "maximum_input_observations": 94
+    },
+    {
+      "window": 128,
+      "reserved_kv_bytes": 77070336,
+      "cpu_cursor_bytes": 24,
+      "total_state_bytes": 77070360,
+      "maximum_input_observations": 382
+    }
+  ],
+  "source_sha256": {
+    "exploration/windowed_attention.py": "857b80d3ee1a1d19b57bd2021b29e1896106a210481d19fc0df052403c0d1f77",
+    "exploration/test_windowed_attention.py": "1cb4c0a2e4ec0d8172372e8a4d8968d975484dfbd76520faec3d9121888ae785",
+    "exploration/buffered_attention.py": "8034eff2382604323194616da2ca54a032c2130cdc5045fdd2aaf65f3927c520",
+    "temporal_siglip.py": "94aca98d19ca8028e364fd43be9acf2f45f68ba59ef98b83d0f1466ffc0baecb",
+    "test_temporal_siglip.py": "3c3c12df1f87e91621d686c6c36a3eeaafbfef1abd32f60cd7334009adacd4ad",
+    "pyproject.toml": "d8a4f75177f7bf608a15c5b36bfb88368208497c10dfdd64e70c1cfb59804b90",
+    "uv.lock": "af661b8b52ed3d4cd08a33f918fac65f80c01bcaff73308b4dc9aa87175e78f5"
+  },
+  "training_source_pins_match": {
+    "train_video.py": true,
+    "video_data.py": true,
+    "temporal_readout.py": true,
+    "temporal_siglip.py": true,
+    "train_temporal.py": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "gpu_qualified": false,
+  "trained_recognition_evaluated": false,
+  "speed_measured": false,
+  "queued_for_gpu": false
+}

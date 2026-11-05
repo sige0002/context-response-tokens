@@ -89,3 +89,7 @@ uv run --locked python -m exploration.benchmark_buffered_attention \
 未使用領域を読まないバッファなので、容量を大きくしても未使用キーのAttention計算は増えない。
 ただし確保メモリは増え、長い使用履歴へのAttention自体の計算も増える。
 ここを含めて、方式の原理と実装による費用を分けて報告する。
+
+追加で、[古いK/Vを破棄する固定窓対照](WINDOWED_ATTENTION_CONTROL.md)の実装とCPU検査を用意した。
+こちらは保持する入力履歴も変える対照であり、この文書の全履歴バッファ比較とは別に評価する。
+実画像GPU検査・認識・速度は未測定で、既存の待機キューへはまだ追加していない。

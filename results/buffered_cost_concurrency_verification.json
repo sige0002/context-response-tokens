@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "-m",
+    "exploration.benchmark_buffered_attention",
+    "--selection",
+    "shortest",
+    "--output",
+    "results/buffered_cost_concurrency_rejection"
+  ],
+  "returncode": 1,
+  "no_output_created": true,
+  "scope": "Live main training correctly prevents cost measurement"
+}

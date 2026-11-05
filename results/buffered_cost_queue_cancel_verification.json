@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "test": "Bind live delayed-action queue, cancel own cost queue, leave all existing processes intact",
+  "returncode": 1,
+  "status_after": {
+    "status": "stopped",
+    "operations": [],
+    "dependency_pid": 677738,
+    "error": "InterruptedError: Cancelled while waiting; predecessor unchanged"
+  },
+  "protected_process_start_ticks": {
+    "677738": "99848207",
+    "630734": "99452396",
+    "1307038": "97247271",
+    "1310800": "97249146",
+    "1310938": "97249989"
+  }
+}

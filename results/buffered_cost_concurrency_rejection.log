@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/sadasue/mywam/exploration/benchmark_buffered_attention.py", line 162, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/sadasue/mywam/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/exploration/benchmark_buffered_attention.py", line 64, in main
+    assert_exclusive(); torch.set_num_threads(4); configure_reproducibility(42)
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/exploration/benchmark_buffered_attention.py", line 33, in assert_exclusive
+    if idle_compute_processes():
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/benchmark_streaming.py", line 45, in idle_compute_processes
+    raise RuntimeError(f"Another GPU compute process is active: pid={pid}, state={state}")
+RuntimeError: Another GPU compute process is active: pid=1307038, state=S

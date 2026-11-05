@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/sadasue/mywam/exploration/run_buffered_cost.py", line 167, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/sadasue/mywam/exploration/run_buffered_cost.py", line 164, in main
+    if not args.plan_only: execute(plan,output,status,args.after_pid)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sadasue/mywam/exploration/run_buffered_cost.py", line 105, in execute
+    if cancelled: raise InterruptedError('Cancelled while waiting; predecessor unchanged')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+InterruptedError: Cancelled while waiting; predecessor unchanged

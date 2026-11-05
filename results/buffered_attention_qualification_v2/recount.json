@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "summary_sha256": "7d0f07a6d63002bcf90e28de6ba12845d38caf6f5b7ddc06deffe1595ab53d88",
+  "frames": 136,
+  "numerical_rows_recounted": true,
+  "state_allocation_curves_recounted": true,
+  "scope": "Independent arithmetic recount of stored numerical differences/state sizes; no additional GPU forward or recognition result"
+}

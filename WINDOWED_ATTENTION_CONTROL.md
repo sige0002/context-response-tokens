@@ -252,5 +252,36 @@ uv run --locked python -m exploration.benchmark_windowed_attention \
 
 後半の実行には、既存の学習・比較列、GPU数値検査、固定窓の認識比較キューの正常完了が必要である。
 `--selection`には`shortest`、`median`、`longest`を指定し、毎回新しい出力先を使う。
-費用測定の自動起動と結果の独立再計数への接続は未完了で、GPU測定はまだ予約・実行していない。
-現時点では速度や総メモリの優位性を報告できない。認識保持は別途の遅延保持結果と合わせて判断する。
+この準備記録を保存した時点では費用測定は未予約で、その後、以下の待機処理と再計数へ接続した。
+実測値はまだ得られておらず、速度や総メモリの優位性は未確認である。認識保持は別途の遅延保持結果と合わせて判断する。
+
+## 費用測定の待機接続と結果検証
+
+[費用測定キュー](exploration/run_windowed_cost.py)を起動し、
+[固定した計画](results/windowed_attention_cost_queue_v1/plan.json)に従って、先行する固定窓の認識比較の終了を待機している。
+先行プロセスをPIDファイルディスクリプタで追跡する。終了しただけでは測定を開始せず、
+認識比較の正常完了、全9条件、対応するGPU数値検査と保存結果を照合してから、3動画を順番に測定する。
+各動画の測定前にはGPUの占有も確認する。既存の主学習・比較キューを停止する処理はない。
+
+[結果検証](exploration/verify_windowed_cost.py)は、全フレーム・全5巡の測定行を読み直し、
+履歴長別の時間分布、最大状態容量、PyTorchピーク使用量、Mambaとの費用比を再計数する。
+予定された実動画・最終checkpoint・方式・窓長・実行順・数値の警戒値と一致しない記録を拒否する。
+数値照合の全フレームが揃っていること、記録されたGPU使用量が生存中のパラメータとGPU状態を下回らないことも確認する。
+これは保存された観測値の検証であり、GPU推論を独立に再実行したことや、数学的な精度保証を意味しない。
+
+[追加のCPU検査17件](results/windowed_cost_queue_cpu_tests.log)が通過した。
+合成した時間記録による費用比の向き、hashを更新しても検出される測定条件・数値・容量の取り違え、
+模擬子プロセスによる3動画の順次実行、途中の結果の保持、待機キャンセル時に先行プロセスを維持することを確認した。
+[実際の待機接続の記録](results/windowed_attention_cost_queue_v1/launch_verification.json)では、
+先行プロセスへの接続と、既存9プロセス・固定したソースの維持を確認した。GPUを使用しているのは主学習だけだった。
+これらのCPU検査から速度・認識性能の改善は判断しない。
+
+```sh
+CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q exploration/test_windowed_cost_queue.py
+uv run --locked python -m exploration.run_windowed_cost \
+  --after-pid "<windowed-recognition-queue-pid>" --output results/new_windowed_cost_queue
+```
+
+再作成時には、先行する`run_windowed_delayed_action`が実際に稼働中であることを確認してPIDを置き換える。
+同じ費用計画を複数のキューから実行しないようロックする。既に完了した測定は検証後に再利用し、途中の結果は上書きしない。
+3動画×5方式の実測、認識保持と費用を合わせた評価、論文への最終結果の反映は残っている。

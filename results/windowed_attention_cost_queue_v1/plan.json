@@ -1,0 +1,12 @@
+{
+  "specification": "/home/sadasue/mywam/results/windowed_cost_plan_v1.json",
+  "specification_sha256": "6a805a94880f760a016852bd79c2402d8172dc750ab0f09319b5fe0987cf5cf2",
+  "predecessor": "results/windowed_delayed_action_queue_v1",
+  "sources": {
+    "exploration/run_windowed_cost.py": "e896a0917bfb0572848541565f7214e5f7d719d76aeb16703a5596264929e2ff",
+    "exploration/verify_windowed_cost.py": "8fdb4e41111392f344ed0047a566123cfc3f604a1a9f5085c87d584b452006f6",
+    "exploration/test_windowed_cost_queue.py": "8d3991fc9e0c5b5f910fd8cbf4c04e2aa6818ff9532855b0bc29aad998c6f9f1",
+    "run_point_comparisons.py": "59bbf6ffd64262c5beae133deed8c69cd1b1d75952e690b217bd9b84b580ecb2"
+  },
+  "scope": "Three prepared full-video measurements after the existing experiment chain; no training"
+}

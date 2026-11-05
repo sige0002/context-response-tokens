@@ -1,19 +1,24 @@
 {
   "sources": {
-    "results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step7000.json": "f4373fa5989cac9e3e6a7a1ac868f9f44b3f44ec6f8ff191a446bfb413983c1f",
+    "results/ssv2_implementation_audit/rgbfix_full_run_metadata_audit_step9000.json": "732d17fd5635b573153dbe3aec6aff54d0afa1e8611fa1b7122d9551d4832ba0",
     "results/video_history_intervention_seed17/summary.json": "0c9e2ed783540dcc3af19eead8c3fd2d9e5f4664dc6403abfd2dfad8a08cff33",
     "results/video_history_intervention_seed17/verification.json": "69bf9cd3ed4cbfc8ed17d91b5e04d70c71d9cf3ddebd822ff934a9738fe43eb3",
     "results/video_history_intervention_seed17/plan.json": "22da435809162af46a9371f164a6e297a55c6abc0bca4730005d18efdaf13018",
+    "results/memory_layer_intervention_seed17_v2/summary.json": "1a34b7c33f20646cf43ceacf0b9597858f7808b171f93723a9005c0eb2454003",
+    "results/memory_layer_intervention_seed17_v2/verification.json": "f65c644ddfb2ad56b29167ab61c8350f4a70ad8ceeddb83d602f51503305e1d5",
+    "results/memory_layer_intervention_seed17_v2/plan.json": "2d720a6f0ad1e70081e29279aea8d23dca3be0b4738751c42e019ec156f50cec",
     "results/temporal_priority_seed42_rgbfix/plan.json": "2cc915986c3024e1f96370934c8157a93628fd6830b5cf797b4ab70cd122dd41"
   },
-  "generator_sha256": "53e8b63aa364aab731ca3860255450515be8b8f474ea3e5e612fc8cafd31408b",
+  "generator_sha256": "f80cdcab6721d7c824befd1a645ada45f35f1347a0a2f535aafbf3ed480c547a",
   "generated": {
-    "training.tex": "7e2a5b16dcf1b0f3ce769d6bb671efc2f9cd321d2c4bc50370ac7bdf347b60a6",
+    "training.tex": "403062118086905d06f463ac394631a90474fde721423533392f6837f146aa1e",
     "history.tex": "30660fefcd39fe274fc67cc6420409c960da5bf37ca5e42d6aa22190bf02f4a8",
+    "memory_layers.tex": "c5a2f6e682a27776e1e85673999e86a537d57bd4319e71e4ce41bc3d86e2224d",
     "comparison_pending.tex": "f77c8eb929de9dbbf53b38aa582ae5de9a63e8fbf059a797263f5cdedb083d7c"
   },
   "final_comparison_status": "not populated; final trained comparisons are required",
   "history_scope": "4000 updates, balanced 348-clip previously inspected validation subset",
+  "memory_scope": "Same 4000-update checkpoint and 348 clips; all adapters run, only selected past states erased; two baselines reused",
   "learning_curve_scope": "interim clip validation on all 24777 clips; one seed",
   "submission_ready": false
 }

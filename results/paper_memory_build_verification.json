@@ -1,0 +1,62 @@
+{
+  "verified_at": "2026-11-05T05:49:10.887140+00:00",
+  "scope": "Working manuscript with interim state-erasure evidence; not a new GPU experiment or IROS submission readiness",
+  "checks": {
+    "letter_3_pages": true,
+    "no_overfull_boxes": true,
+    "no_undefined_fonts_or_references": true,
+    "all_fonts_embedded": true,
+    "no_bitmap_fonts": true,
+    "latest_count_and_score_in_pdf": true,
+    "state_erasure_counts_and_deltas_in_pdf": true,
+    "pending_comparisons_explicit": true,
+    "official_class_unchanged": true
+  },
+  "table_tests": {
+    "passed": 29,
+    "command": "CUDA_VISIBLE_DEVICES='' uv run --locked python -m pytest -q paper/test_tables.py paper/test_final_tables.py",
+    "log_sha256": "861a5e4144c59d06c4b16bd95676bf38ebf991e9ddbcdc1eb9dae189852be72f",
+    "initial_invocation_issue": "Direct pytest entrypoint did not include the repository in module search paths; python -m pytest collected and passed the tests."
+  },
+  "visual_inspection": {
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "render_scale_pixels": 1400,
+    "result": "All four tables, equations, and bibliography readable; no overlaps or clipped text observed"
+  },
+  "remaining_tex_warnings": [
+    "warning: main.tex:263: Underfull \\hbox (badness 2351) in paragraph at lines 260--263",
+    "warning: main.tex:263: Underfull \\hbox (badness 2351) in paragraph at lines 260--263"
+  ],
+  "pdf": {
+    "path": "paper/build/main.pdf",
+    "sha256": "6f7208d3e6999b7cf6d84702a4df23561a46a79b52de2d06222119468d1f7710",
+    "pages": 3,
+    "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nIHAIZV+NimbusRomNo9L-Regu            Type 1C           Custom           yes yes yes      4  0\nBZIVMZ+NimbusRomNo9L-MediItal        Type 1C           Custom           yes yes yes      5  0\nIXFAWU+NimbusRomNo9L-Medi            Type 1C           Custom           yes yes yes      6  0\nTQTHRL+CMMI10                        Type 1C           Builtin          yes yes yes      7  0\nYEUUOC+CMMI7                         Type 1C           Builtin          yes yes yes      8  0\nAKHCZK+CMSY10                        Type 1C           Builtin          yes yes yes      9  0\nVDVGTR+MSBM10                        Type 1C           Builtin          yes yes yes     10  0\nCAFSZL+CMSY7                         Type 1C           Builtin          yes yes yes     11  0\nDDIEWW+CMR10                         Type 1C           Builtin          yes yes yes     12  0\nFKPJSN+CMR7                          Type 1C           Builtin          yes yes yes     13  0\nPVTTLK+CMEX10                        Type 1C           Builtin          yes yes no      14  0\nJAGKKY+NimbusRomNo9L-ReguItal        Type 1C           Custom           yes yes yes     19  0\nNOMARO+CMR9                          Type 1C           Builtin          yes yes yes     23  0\n",
+    "info": "Creator:         tectonic\nProducer:        xdvipdfmx (0.1)\nCreationDate:    Thu Nov  5 14:47:19 2026 JST\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       50958 bytes\nOptimized:       no\nPDF version:     1.5\n"
+  },
+  "source_sha256": {
+    "paper/main.tex": "a121e71865d05a45daec4b77221b51a394a5669e63d0e13088867b502abe5071",
+    "paper/build_tables.py": "f80cdcab6721d7c824befd1a645ada45f35f1347a0a2f535aafbf3ed480c547a",
+    "paper/test_tables.py": "be99134d338a0701c777104d3d08be0754f1d4127190a81725b31d1d5c70b02a",
+    "paper/test_final_tables.py": "c38465f0c4a7f76d9618e1110e0beba6f678b21c0c5a38c55d115c71eb5b9004",
+    "paper/ieeeconf.cls": "4befef671c2a996889d325f5170d3387bf42aac9a37dcaa93724ad49816e4ec2",
+    "paper/pixi.toml": "3b0d40b75d8920229465aa04b262514aad7f2c6a87d110e8b35e547a044a8b71",
+    "paper/pixi.lock": "ffb3b39c9daf7c1b9114dfa89ad810ccabfb374c521f28ad77edcd1165f0e740",
+    "paper/generated/comparison_pending.tex": "f77c8eb929de9dbbf53b38aa582ae5de9a63e8fbf059a797263f5cdedb083d7c",
+    "paper/generated/history.tex": "30660fefcd39fe274fc67cc6420409c960da5bf37ca5e42d6aa22190bf02f4a8",
+    "paper/generated/memory_layers.tex": "c5a2f6e682a27776e1e85673999e86a537d57bd4319e71e4ce41bc3d86e2224d",
+    "paper/generated/training.tex": "403062118086905d06f463ac394631a90474fde721423533392f6837f146aa1e",
+    "paper/generated/evidence.json": "ecab95d8ba87d846763814d067f117740e2fc28109cae77454b0a1966d844a23"
+  },
+  "build_log_sha256": "ad1cd03409f76e78daa1a9c3897b741b227263ee407f46a9dc3c4ab417467169",
+  "limitations": [
+    "One interim checkpoint for the state interventions; reused inspected cohort",
+    "State-only diagnostic is not retraining or proof that early-layer memory is unnecessary",
+    "No new GPU forward evaluation in this paper update",
+    "Final matched comparisons, long-history recognition, robotics evaluation and author fields remain incomplete"
+  ]
+}

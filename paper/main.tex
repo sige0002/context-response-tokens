@@ -14,8 +14,8 @@ recognition. The implementation combines SigLIP 2 spatial processing with
 per-coordinate Mamba-3 adapters and exposes only current-frame tokens to a
 common task readout. The study is designed to compare image-only, temporal
 attention, late recurrent processing, and published GatedMambaMix cores.
-This working draft reports an intermediate learning curve and a completed
-history intervention diagnostic. Matched final-checkpoint comparisons,
+This working draft reports an intermediate learning curve and completed
+input-history and layer-state intervention diagnostics. Matched final-checkpoint comparisons,
 multiple-seed results, and long-range recognition evidence remain pending;
 the present results do not establish architectural superiority.
 \end{abstract}
@@ -28,6 +28,10 @@ We do not modify a robot policy or infer manipulation success from video
 classification. The primary question is whether recurrent updates within a
 strong spatial encoder offer a useful recognition--cost trade-off compared
 with temporal attention under matched data and training conditions.
+Spatial resolution and patch size govern which visual evidence reaches the
+encoder; temporal memory addresses how evidence from earlier observations
+affects current recognition. Improved action classification alone does not
+establish improved fine spatial localization.
 
 The current implementation is a research baseline. Using Mamba-3, inserting
 time processing between spatial layers, and returning current-frame tokens
@@ -192,6 +196,39 @@ Clip and streaming logits differ by at most 0.0625, with no predicted-class
 disagreements on these 348 examples. All 1,740 condition/example predictions
 were recounted against the original labels. No conclusion about longer
 sequences follows from this short-clip agreement.
+
+\subsection{Erasing Past State at Individual Depths}
+Removing an adapter also removes its transformation of the current image.
+We instead execute every adapter at every observation and erase only the
+past cache of one chosen depth before each observation. Other depths retain
+their caches, and absolute observation indices are unchanged. This uses
+the same archived checkpoint, classifier, images, and 348-video cohort as
+the history diagnostic.
+
+\begin{table}[t]
+\centering\small
+\caption{State-only intervention at 4,000 updates on 348 videos.
+Every adapter still executes. Original-history and all-state-reset
+baselines reuse the preceding diagnostic. Differences are in percentage
+points relative to original history.}
+\input{generated/memory_layers.tex}
+\end{table}
+Erasing block-8 or block-12 history reduces correct predictions by 33 or
+55, respectively. Erasing block-4 history produces one additional correct
+prediction, which does not establish that this state is unnecessary.
+These results identify stronger dependence on deeper past states in this
+particular fitted model and cohort. They do not establish an optimal
+placement: other layers still convey history, and effects are not additive.
+The interventions also change the classifier's input distribution.
+
+We newly evaluated 1,044 predictions across the three individual-depth
+interventions and reused 696 baseline predictions after checking checkpoint
+and input hashes. All 1,740 predictions were recounted against source labels.
+Native replay of both baselines on two predeclared clips reproduced their
+logits exactly. Erased states are regenerated at each observation, so every
+condition still allocates the same recurrent cache; no memory saving is
+demonstrated. The matched final-checkpoint Mamba and attention comparison
+at all three training seeds is scheduled but has no results yet.
 
 \section{Outstanding Evidence and Decision Criteria}
 Final six-way accuracy/cost results and the three-seed comparisons must be
